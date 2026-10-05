@@ -1,0 +1,16 @@
+.venv*/
+.build/
+cvxpy_benchmarks/
+__pycache__/
+*.pyc
+.DS_Store
+
+# transient worker files
+_worker_result.json
+_worker_stderr.log
+_thesis_worker*
+results_*.txt
+results_*.json
+!results/**/results_*.txt
+!results/**/results_*.json
+results/plots/
