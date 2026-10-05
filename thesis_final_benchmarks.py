@@ -280,7 +280,7 @@ def _sparse_close(M1, M2, tol=1e-9):
     return err <= tol * scale, err
 
 
-def worker_verify(module, name, seed, out_path):
+def worker_verify(module, name, seed, out_path, only=None):
     """Correctness (Legrain vii): (P, c, A, b) of every engine target against the
     stock backends of the same interpreter, at the same parameter values, both on
     the first canonicalization and after a parameter update."""
@@ -314,6 +314,9 @@ def worker_verify(module, name, seed, out_path):
     engine = ["DIFFENGINE", "DE_NODENSE"] + (
         ["de_cached", "de_cached_nodense", "de_cached_rebuild"] if parametric else [])
     stock = ["SCIPY", "COO"] if ref_target else []
+    if only:
+        engine = [t for t in engine if t in only]
+        stock = [t for t in stock if t in only]
     for update in ([False, True] if parametric else [False]):
         tag = "update" if update else "first"
         try:
@@ -402,6 +405,13 @@ def environment():
             env["cvxpy_git"] = subprocess.run(
                 ["git", "-C", str(root), "rev-parse", "HEAD"],
                 capture_output=True, text=True).stdout.strip()
+        else:  # installed from a git URL (envs/setup_fork.sh): pip records the commit
+            url = json.loads(md.distribution("cvxpy").read_text("direct_url.json") or "{}")
+            env["cvxpy_git"] = url.get("vcs_info", {}).get("commit_id")
+    except Exception:  # noqa: BLE001
+        pass
+    try:
+        env["numpy_blas_build"] = np.__config__.CONFIG["Build Dependencies"]["blas"]["name"]
     except Exception:  # noqa: BLE001
         pass
     try:
@@ -412,8 +422,9 @@ def environment():
         env["engine_blas"] = sorted({ln.split()[0] for ln in links.splitlines()[1:]
                                      if any(k in ln.lower() for k in
                                             ("accelerate", "blas", "lapack", "mkl"))})
-        env["engine_commit"] = os.environ.get("ENGINE_COMMIT")
         env["engine_built_commit"] = _built_engine_commit()
+        env["engine_commit"] = (os.environ.get("ENGINE_COMMIT")
+                                if env["engine_built_commit"] else None)
         env["engine_so_sha256"] = hashlib.sha256(Path(se.__file__).read_bytes()).hexdigest()
     except Exception:  # noqa: BLE001
         pass
@@ -459,14 +470,30 @@ def run_time(problems, kind, targets, out):
                     if len(row["samples"][t]) < want[t] and t not in row["status"]]
             res, status = _spawn(["--worker-time", module, name, kind, ",".join(todo),
                                   str(seed), str(tmp)], tmp)
+            if status != "ok" and len(todo) > 1:
+                # One target timed out or crashed and took the worker down; rerun
+                # each target alone so a slow ablation variant (e.g. DE_NODENSE on
+                # SimpleLP, O(n^2)) cannot cost the others their sample.
+                res, per_status = {"targets": {}}, {}
+                for t in todo:
+                    r1, st1 = _spawn(["--worker-time", module, name, kind, t,
+                                      str(seed), str(tmp)], tmp)
+                    for k in ("is_dpp", "dims"):
+                        if k in r1:
+                            res.setdefault(k, r1[k])
+                    if t in r1.get("targets", {}):
+                        res["targets"][t] = r1["targets"][t]
+                    per_status[t] = st1
+            else:
+                per_status = {t: status for t in todo}
             for k in ("is_dpp", "dims"):
                 if k in res and k not in row:
                     row[k] = res[k]
             for t in todo:
                 rec = res.get("targets", {}).get(t)
                 if rec is None:
-                    row["status"][t] = status if status != "ok" else "crashed: " + \
-                        rbb._stderr_tail(HERE / "_thesis_worker_stderr.log")
+                    row["status"][t] = per_status[t] if per_status[t] != "ok" else \
+                        "crashed: " + rbb._stderr_tail(HERE / "_thesis_worker_stderr.log")
                 elif "skip" in rec or "error" in rec:
                     row["status"][t] = rec.get("skip") or rec.get("error")
                 else:
@@ -496,6 +523,10 @@ def run_memory(problems, kind, targets, out):
         out.write_text(json.dumps({"meta": meta, "rows": rows}, indent=1))
 
 
+VERIFY_TARGETS = ("DIFFENGINE", "DE_NODENSE", "de_cached", "de_cached_nodense",
+                  "de_cached_rebuild", "SCIPY", "COO")
+
+
 def run_verify(problems, out):
     tmp = HERE / "_thesis_worker.json"
     rows = []
@@ -503,6 +534,17 @@ def run_verify(problems, out):
     for module, name in problems:
         print(f"[verify] {name}", flush=True)
         res, status = _spawn(["--worker-verify", module, name, "0", str(tmp)], tmp)
+        if status != "ok":
+            # A target timed out or crashed: check each one in its own worker, so
+            # only that target is reported as failed.
+            res = {"module": module, "class": name, "checks": {}, "worker": status}
+            for t in VERIFY_TARGETS:
+                r1, st1 = _spawn(["--worker-verify", module, name, "0", str(tmp), t], tmp)
+                res.setdefault("reference", r1.get("reference"))
+                res["checks"].update(r1.get("checks", {}))
+                if st1 != "ok" and not any(k.endswith(":" + t) for k in r1.get("checks", {})):
+                    res["checks"][f"first:{t}"] = f"ERR {st1}"
+            res["done"] = True
         rows.append(res if res else {"module": module, "class": name, "error": status})
         out.write_text(json.dumps({"meta": meta, "rows": rows}, indent=1))
 
@@ -516,8 +558,9 @@ def main():
         elif mode == "--worker-memory":
             worker_memory(*a)
         elif mode == "--worker-verify":
-            module, name, seed, out = a
-            worker_verify(module, name, int(seed), out)
+            module, name, seed, out, *only = a
+            worker_verify(module, name, int(seed), out,
+                          set(only[0].split(",")) if only else None)
         return
     ap = argparse.ArgumentParser()
     ap.add_argument("mode", choices=["time", "memory", "verify"])
