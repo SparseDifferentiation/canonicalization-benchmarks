@@ -71,3 +71,10 @@ gap to the stock backends after both switches are off.
   the phase timers' small overhead. The baselines do not.
 - `DE_NODENSE` is "no dense blocks for constant data", not "everything in CSR":
   parametric matrices stay dense.
+- **The CSR path is quadratic on a long dense constant row.** On SimpleLPBenchmark
+  (`c @ x`, `c` dense of length n) with `DIFFENGINE_NO_DENSE=1`, the time spent in
+  `block_left_multiply_fill_values` (gradient) grows as n²: 0.04 s at n=10⁴, 0.29 s at
+  3·10⁴, 3.2 s at 10⁵, so about 9 h at the suite's n=10⁷. The dense path takes 17 ms at
+  10⁵. Engines `4dbb53b` and `64f7432` behave the same, so this is not a #125
+  regression. The cell hits `BENCH_TIMEOUT`. In the write-up, this is the dense
+  representation avoiding an O(n²) CSR kernel, not a constant-factor gain.

@@ -7,6 +7,11 @@
 #   .venv-upstream  cvxpy 1.9.2
 set -euo pipefail
 cd "$(dirname "$0")"
+# Keep the machine awake: a sleep pauses the monotonic clock behind BENCH_TIMEOUT and
+# makes any sample that spans it meaningless (a lid-close stalled a smoke run 40 min).
+if [ "$(uname)" = Darwin ] && [ -z "${CAFFEINATED:-}" ]; then
+  exec env CAFFEINATED=1 caffeinate -dimsu "$0" "$@"
+fi
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1
 export ENGINE_COMMIT=${ENGINE_COMMIT:-64f7432}
 OUT=results/thesis
