@@ -71,10 +71,21 @@ gap to the stock backends after both switches are off.
   the phase timers' small overhead. The baselines do not.
 - `DE_NODENSE` is "no dense blocks for constant data", not "everything in CSR":
   parametric matrices stay dense.
-- **The CSR path is quadratic on a long dense constant row.** On SimpleLPBenchmark
-  (`c @ x`, `c` dense of length n) with `DIFFENGINE_NO_DENSE=1`, the time spent in
-  `block_left_multiply_fill_values` (gradient) grows as n²: 0.04 s at n=10⁴, 0.29 s at
-  3·10⁴, 3.2 s at 10⁵, so about 9 h at the suite's n=10⁷. The dense path takes 17 ms at
-  10⁵. Engines `4dbb53b` and `64f7432` behave the same, so this is not a #125
-  regression. The cell hits `BENCH_TIMEOUT`. In the write-up, this is the dense
-  representation avoiding an O(n²) CSR kernel, not a constant-factor gain.
+- **The CSR value fill was quadratic on long rows (fixed, engine `ba46030`).**
+  `block_left_multiply_fill_values` took a merge-based dot of a whole row of A per
+  output entry. On SimpleLPBenchmark (`c @ x`, `c` dense of length n) with
+  `DIFFENGINE_NO_DENSE=1` this meant 3.2 s at n=10⁵ and 49 s at 4·10⁵, about 8.5 h
+  at the suite's n=10⁷. cvxpy's backends take 6.4–7.4 s there; the dense path takes
+  1.36 s. Engine `4dbb53b` already behaved the same, so it is not from #125.
+  Without the fix, the ablation would have credited dense blocks with avoiding a
+  CSR bug.
+  - The fix, on engine branch `fix-block-left-fill-values-quadratic`, is Gustavson
+    scatter/gather through the sparse matrix's cached CSC mirror. It is linear
+    (`NO_DENSE` at 10⁷: 1.59 s).
+  - It is bit-identical: an engine C test compares it against the old kernel, and
+    `(P, c, A, b)` hash-match `64f7432` on all 25 suite problems, dense and
+    `NO_DENSE`.
+  - It also applies to `DIFFENGINE` wherever a constant goes to CSR (density below
+    0.05).
+  - **Pin it before the final runs** (`ENGINE_COMMIT` in `envs/setup_fork.sh` and
+    `run_thesis_final.sh`) once the branch is pushed.
