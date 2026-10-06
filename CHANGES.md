@@ -7,7 +7,7 @@ ablation switches can isolate it. Pinned builds:
 
 | Component | Commit | Source |
 |---|---|---|
-| SparseDiffEngine | `64f7432` (main, #125 merged) | github.com/SparseDifferentiation/SparseDiffEngine |
+| SparseDiffEngine | `4f42e05` (branch `fix-block-left-fill-values-quadratic`: main `64f7432` with #125, plus the linear CSR value fill) | github.com/SparseDifferentiation/SparseDiffEngine |
 | SparseDiffPy (bindings) | `9e0246e`, submodule moved to the engine commit above | github.com/SparseDifferentiation/SparseDiffPy |
 | CVXPY fork | `35e81b1` (`thesis-ablation`) | github.com/Transurgeon/cvxpy |
 | CVXPY baseline | 1.9.2 (PyPI) | — |
@@ -21,6 +21,7 @@ ablation switches can isolate it. Pinned builds:
 | E3 | `64f7432` (#125) | The warm refresh walk skips parameter-free subtrees (memoised `has_params`). | Engine-build A/B only. Measured in `results/supplementary/pr125_ab/`: engine share up to 14.9× faster, end-to-end warm geomean 1.302× → 1.172×. |
 | E4 | #120, #121, `8321d59`, `4dbb53b` | Matrix-class refactor (`row_gather`, `row_reduce`). | Engine build only. |
 | E5 | `9699559` (#96) | Dense-P `quad_form` binding. | Unused when `DIFFENGINE_NO_DENSE=1`. |
+| E6 | `ba46030` (branch `fix-block-left-fill-values-quadratic`, head `4f42e05`) | Linear CSR value fill in `block_left_multiply_fill_values` (Gustavson scatter/gather through the CSC mirror). Bit-identical output. See the caveat below. | No. Without it, `DE_NODENSE` is quadratic on long rows. |
 | — | `960e02b` (branch `lazy-inv-arrays`) | Lazy inverse arrays: lower memory on the kron path (OptimalAdvertising peaked at 5.9 GB). | **Not merged; not in any measured build.** |
 
 ## CVXPY (upstream PRs the fork includes)
@@ -87,5 +88,6 @@ gap to the stock backends after both switches are off.
     `NO_DENSE`.
   - It also applies to `DIFFENGINE` wherever a constant goes to CSR (density below
     0.05).
-  - **Pin it before the final runs** (`ENGINE_COMMIT` in `envs/setup_fork.sh` and
-    `run_thesis_final.sh`) once the branch is pushed.
+  - Pinned for the final runs: engine `4f42e05`, the branch head (`ba46030` plus
+    two test commits), in `envs/setup_fork.sh` and `run_thesis_final.sh`. It is not
+    yet merged into engine main.

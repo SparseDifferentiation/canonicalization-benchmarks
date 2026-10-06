@@ -13,7 +13,10 @@ if [ "$(uname)" = Darwin ] && [ -z "${CAFFEINATED:-}" ]; then
   exec env CAFFEINATED=1 caffeinate -dimsu "$0" "$@"
 fi
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1
-export ENGINE_COMMIT=${ENGINE_COMMIT:-64f7432}
+export ENGINE_COMMIT=${ENGINE_COMMIT:-4f42e05}
+# Slow targets (first sample > 30 s) keep 10 replicates, not 5: at 5 vs 5 the smallest
+# two-sided Mann-Whitney p is 2/252 = 0.008, which Holm can push above 0.05.
+export BENCH_SLOW_REPS=${BENCH_SLOW_REPS:-10}
 OUT=results/thesis
 FORK=.venv-thesis/bin/python
 UP=.venv-upstream/bin/python

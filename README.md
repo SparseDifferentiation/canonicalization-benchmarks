@@ -31,7 +31,7 @@ compiler. Run everything from the repo root.
 
 ```bash
 envs/setup_suite.sh      # clone cvxpy/benchmarks at the pinned commit -> cvxpy_benchmarks/
-envs/setup_fork.sh       # .venv-thesis: cvxpy fork @35e81b1 + engine 64f7432, stamped
+envs/setup_fork.sh       # .venv-thesis: cvxpy fork @35e81b1 + engine 4f42e05, stamped
 envs/setup_upstream.sh   # .venv-upstream: stock cvxpy 1.9.2 (baselines)
 
 ./run_thesis_final.sh    # correctness gate, then every timing/memory run -> results/thesis/
@@ -40,7 +40,7 @@ envs/setup_upstream.sh   # .venv-upstream: stock cvxpy 1.9.2 (baselines)
 `run_thesis_final.sh` does the following:
 
 1. It runs the correctness gate first.
-2. It times each measurement in a fresh subprocess, 20 replicates (5 when one sample
+2. It times each measurement in a fresh subprocess, 20 replicates (10 when one sample
    takes more than 30 s).
 3. It resumes where it stopped, skipping problems already in an output file.
 4. It ends by writing `results/thesis/summary.md` with `thesis_stats.py`.

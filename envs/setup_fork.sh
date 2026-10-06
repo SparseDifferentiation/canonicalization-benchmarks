@@ -11,7 +11,7 @@ cd "$(dirname "$0")/.."
 PYTHON=${PYTHON:-3.13}
 CVXPY_COMMIT=${CVXPY_COMMIT:-35e81b1296627ba8ee06caf2d79e055287152d7e}  # Transurgeon/cvxpy@thesis-ablation
 SDP_COMMIT=${SDP_COMMIT:-9e0246e}      # SparseDifferentiation/SparseDiffPy (bindings)
-ENGINE_COMMIT=${ENGINE_COMMIT:-64f7432} # SparseDifferentiation/SparseDiffEngine (#125 merged)
+ENGINE_COMMIT=${ENGINE_COMMIT:-4f42e05} # SparseDifferentiation/SparseDiffEngine (#125 + linear CSR fill)
 VENV=.venv-thesis
 SRC=.build/SparseDiffPy
 
