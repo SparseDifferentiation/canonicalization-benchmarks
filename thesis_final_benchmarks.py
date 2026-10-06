@@ -312,7 +312,8 @@ def worker_verify(module, name, seed, out_path, only=None):
     # non-DPP parametric problem has no stock reference in the fork.
     ref_target = "CPP" if (not parametric or dpp) else None
     engine = ["DIFFENGINE", "DE_NODENSE"] + (
-        ["de_cached", "de_cached_nodense", "de_cached_rebuild"] if parametric else [])
+        ["de_cached", "de_cached_nodense", "de_cached_rebuild",
+         "de_cached_nodense_rebuild"] if parametric else [])
     stock = ["SCIPY", "COO"] if ref_target else []
     if only:
         engine = [t for t in engine if t in only]
@@ -510,10 +511,13 @@ def run_time(problems, kind, targets, out):
 
 def run_memory(problems, kind, targets, out):
     tmp = HERE / "_thesis_worker.json"
-    rows = []
+    rows = json.loads(out.read_text())["rows"] if out.exists() else []
+    done = {(r["module"], r["class"]) for r in rows}
     meta = {"environment": environment(), "kind": kind, "targets": targets,
             "iters": ITERS}
     for module, name in problems:
+        if (module, name) in done:
+            continue
         print(f"[memory {kind}] {name}", flush=True)
         row = {"module": module, "class": name, "targets": {}}
         for t in targets:
@@ -524,7 +528,7 @@ def run_memory(problems, kind, targets, out):
 
 
 VERIFY_TARGETS = ("DIFFENGINE", "DE_NODENSE", "de_cached", "de_cached_nodense",
-                  "de_cached_rebuild", "SCIPY", "COO")
+                  "de_cached_rebuild", "de_cached_nodense_rebuild", "SCIPY", "COO")
 
 
 def run_verify(problems, out):

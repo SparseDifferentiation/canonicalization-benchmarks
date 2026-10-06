@@ -28,10 +28,19 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
+import thesis_extra_problems as extra
+
 BASELINES_COLD = ["CPP_ND", "SCIPY_ND", "COO_ND"]
 ENGINE_COLD = "DIFFENGINE"
 PHASES = ["convert", "symbolic", "numeric", "assemble", "format"]
 RNG = np.random.default_rng(12345)
+NONDPP = set(extra.SETS["nondpp"])
+SWEEP = set(extra.SETS["sensitivity"]) | set(extra.SETS["scaling"])
+
+
+def is_suite(name):
+    """The 25 cvxpy/benchmarks classes; extra specs all contain a colon."""
+    return ":" not in name
 
 
 def load(paths):
@@ -106,11 +115,11 @@ def fmt(x, d=3):
     return f"{x:.{d}f}"
 
 
-def contrast(rows, kind, num, den, label, md, csv_rows):
+def contrast(rows, kind, num, den, label, md, csv_rows, keep=is_suite):
     """Per-problem num/den ratio of medians, Mann-Whitney + Holm, suite tests."""
     recs = []
     for (k, name), row in sorted(rows.items()):
-        if k != kind:
+        if k != kind or not keep(name):
             continue
         a, b = times(row, num), times(row, den)
         if not len(a) or not len(b):
@@ -135,11 +144,12 @@ def contrast(rows, kind, num, den, label, md, csv_rows):
               f"{sum(p < 0.05 for p in adj)}/{len(ratios)} significant at 5% after Holm.")
 
 
-def best_baseline(rows, md, csv_rows):
+def best_baseline(rows, md, csv_rows, keep=is_suite,
+                  title="Table 4.1: first canonicalization"):
     """diffengine against the best CVXPY backend of each problem (Table 4.1)."""
     recs = []
     for (k, name), row in sorted(rows.items()):
-        if k != "cold":
+        if k != "cold" or not keep(name):
             continue
         de = times(row, ENGINE_COLD)
         base = {t: times(row, t) for t in BASELINES_COLD if len(times(row, t))}
@@ -154,7 +164,7 @@ def best_baseline(rows, md, csv_rows):
     if not recs:
         return
     adj = holm([r[7] if not math.isnan(r[7]) else 1.0 for r in recs])
-    md.append("\n## Table 4.1: first canonicalization, mean ± std (s)\n")
+    md.append(f"\n## {title}, mean ± std (s)\n")
     md.append("| problem | n | m | nnz(A) | " + " | ".join(BASELINES_COLD) +
               " | diffengine | best | ratio | p (Holm) |")
     md.append("|---|---:|---:|---:|" + "---:|" * len(BASELINES_COLD) + "---:|---|---:|---:|")
@@ -165,7 +175,7 @@ def best_baseline(rows, md, csv_rows):
         md.append(f"| {r[0]} | {dm.get('n', '–')} | {dm.get('m', '–')} | "
                   f"{dm.get('nnz_A', '–')} | " + " | ".join(cells) +
                   f" | {fmt(r[2])} ± {fmt(r[3])} | {r[5]} | {fmt(r[6])} | {fmt(float(p))} |")
-        csv_rows.append(["table41", "cold", ENGINE_COLD, r[5], r[0], r[2], None, r[6], r[7],
+        csv_rows.append([title, "cold", ENGINE_COLD, r[5], r[0], r[2], None, r[6], r[7],
                          float(p)])
     ratios = [r[6] for r in recs]
     g, lo, hi = geomean_ci(ratios)
@@ -182,7 +192,7 @@ def phase_table(rows, kind, target, md):
     md.append("| problem | time (s) | front end | " + " | ".join(PHASES) + " |")
     md.append("|---|---:|---:|" + "---:|" * len(PHASES))
     for (k, name), row in sorted(rows.items()):
-        if k != kind or not row["samples"].get(target):
+        if k != kind or not is_suite(name) or not row["samples"].get(target):
             continue
         shares = defaultdict(list)
         tot = []
@@ -210,7 +220,7 @@ def sweep_csv(rows, prefix, out):
     """One CSV row per extra spec: its parameters and the median of every target."""
     recs = []
     for (k, name), row in sorted(rows.items()):
-        if not name.startswith(prefix):
+        if name not in SWEEP or not name.startswith(prefix):
             continue
         fam, *parts = name.split(":")
         kw = dict(p.split("=", 1) for p in parts)
@@ -229,12 +239,74 @@ def sweep_csv(rows, prefix, out):
         w.writerows(recs)
 
 
+def load_aux(paths):
+    """The memory rows {(kind, class): {target: result}} and the verify rows."""
+    memory, verify = {}, {}
+    for p in paths:
+        d = json.loads(Path(p).read_text())
+        for r in d.get("rows", []):
+            if "targets" in r and "kind" in d.get("meta", {}):
+                memory.setdefault((d["meta"]["kind"], r["class"]), {}).update(r["targets"])
+            elif "checks" in r or "error" in r:
+                verify[r["class"]] = r
+    return memory, verify
+
+
+def gate_table(verify, md):
+    """Correctness gate (Legrain vii): every check of every problem."""
+    if not verify:
+        return set()
+    failed = set()
+    md.append("\n## Correctness gate: (P, c, A, b) vs the reference (rel. 1e-9)\n")
+    md.append("| problem | reference | checks passed | failures |")
+    md.append("|---|---|---:|---|")
+    for name, r in sorted(verify.items()):
+        checks = r.get("checks", {})
+        bad = [k for k, v in checks.items() if not (isinstance(v, dict) and v.get("ok"))]
+        if "error" in r:
+            bad.append(f"worker: {r['error']}")
+        for k in bad:
+            failed.add((name, k.split(":", 1)[-1]))
+        ref = r.get("reference") or "–"
+        if ref == "DIFFENGINE":
+            ref = "DIFFENGINE (no stock reference: non-DPP)"
+        md.append(f"| {name} | {ref} | {len(checks) - len(bad)}/{len(checks)} | "
+                  f"{', '.join(bad) or '–'} |")
+    md.append(f"\n{len(failed)} failed (problem, target) checks.")
+    return failed
+
+
+def memory_table(memory, md):
+    """Peak-RSS delta and the engine's own peak, one measurement per cell."""
+    for kind in ("cold", "warm"):
+        cells = {name: t for (k, name), t in memory.items() if k == kind}
+        if not cells:
+            continue
+        targets = sorted({t for v in cells.values() for t in v})
+        md.append(f"\n## Memory ({kind}): peak-RSS delta (MB) [engine peak MB]\n")
+        md.append("| problem | " + " | ".join(targets) + " |")
+        md.append("|---|" + "---:|" * len(targets))
+        for name, v in sorted(cells.items()):
+            out = []
+            for t in targets:
+                r = v.get(t, {})
+                if "delta_mb" in r:
+                    c = f"{r['delta_mb']:.1f}" + (" (floor)" if r.get("floor") else "")
+                    if r.get("engine_peak_mb") is not None:
+                        c += f" [{r['engine_peak_mb']:.1f}]"
+                else:
+                    c = r.get("skip") or r.get("error") or "–"
+                out.append(c)
+            md.append(f"| {name} | " + " | ".join(out) + " |")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("files", nargs="+")
     ap.add_argument("--out", required=True)
     a = ap.parse_args()
     rows, envs = load(a.files)
+    memory, verify = load_aux(a.files)
     out = Path(a.out)
     md = ["# Final-deposit experiments: summary", "", "## Environments", ""]
     for p, e in envs:
@@ -243,6 +315,13 @@ def main():
                   f"sparsediffpy {e.get('sparsediffpy')} (engine {e.get('engine_commit')}) / "
                   f"BLAS {e.get('engine_blas')}")
     csv_rows = []
+    failed = gate_table(verify, md)
+    # A timing counts only if its problem passed the gate: drop failed engine targets.
+    for (k, name), row in rows.items():
+        for t in list(row["samples"]):
+            if (name, t) in failed:
+                row["status"][t] = "failed the correctness gate"
+                del row["samples"][t]
     best_baseline(rows, md, csv_rows)
     md.append("\n## Ablation (jury J1b, Legrain ii)")
     contrast(rows, "cold", "DE_NODENSE", "DIFFENGINE", "Dense blocks off", md, csv_rows)
@@ -256,8 +335,15 @@ def main():
     md.append("\n## Re-solves")
     for b in ("dpp", "dpp_coo", "dpp_scipy", "nodpp_cpp"):
         contrast(rows, "warm", "de_cached", b, f"Engine re-solve vs {b}", md, csv_rows)
+    md.append("\n## Non-DPP re-solves and first compiles (jury J1e, Legrain iii)")
+    nd = NONDPP.__contains__
+    for b in ("nodpp_cpp", "nodpp_coo", "dpp", "de_cached_rebuild"):
+        contrast(rows, "warm", "de_cached", b, f"Engine re-solve vs {b}", md, csv_rows,
+                 keep=nd)
+    best_baseline(rows, md, csv_rows, keep=nd, title="Non-DPP set: first canonicalization")
     phase_table(rows, "cold", ENGINE_COLD, md)
     phase_table(rows, "warm", "de_cached", md)
+    memory_table(memory, md)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("\n".join(md) + "\n")
     with open(out.with_suffix(".contrasts.csv"), "w", newline="") as f:

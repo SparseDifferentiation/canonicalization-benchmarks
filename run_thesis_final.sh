@@ -68,5 +68,6 @@ $FORK thesis_final_benchmarks.py memory --set suite --kind warm \
   --targets de_cached,de_cached_nodense,de_cached_rebuild,de_cached_nodense_rebuild \
   --out $OUT/memory_warm_fork.json
 
-$FORK thesis_stats.py $OUT/cold_*.json $OUT/warm_*.json $OUT/nondpp_*.json \
-  $OUT/sensitivity_*.json $OUT/scaling_*.json --out $OUT/summary.md
+$FORK thesis_stats.py $OUT/verify_*.json $OUT/cold_*.json $OUT/warm_*.json \
+  $OUT/nondpp_*.json $OUT/sensitivity_*.json $OUT/scaling_*.json $OUT/memory_*.json \
+  --out $OUT/summary.md
