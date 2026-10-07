@@ -394,6 +394,38 @@ def run_worker(module_name, class_name, out_path):
 # --------------------------------------------------------------------------- #
 # Parent orchestration
 # --------------------------------------------------------------------------- #
+MAX_WORKER_MB = float(os.environ.get("BENCH_MAX_MB", "16000"))
+MEM_POLL_S = 0.25
+
+
+def _footprint_mb(pid):
+    """Physical footprint of `pid` in MB (macOS: proc_pid_rusage; Linux: VmRSS)."""
+    try:
+        if sys.platform == "darwin":
+            import ctypes
+            buf = ctypes.create_string_buffer(96)  # struct rusage_info_v0
+            if _libproc().proc_pid_rusage(pid, 0, buf) != 0:
+                return None
+            return int.from_bytes(buf.raw[72:80], "little") / 2**20  # ri_phys_footprint
+        with open(f"/proc/{pid}/status") as f:
+            for line in f:
+                if line.startswith("VmRSS:"):
+                    return int(line.split()[1]) / 1024
+    except Exception:  # noqa: BLE001
+        return None
+    return None
+
+
+_LIBPROC = []
+
+
+def _libproc():
+    if not _LIBPROC:
+        import ctypes
+        _LIBPROC.append(ctypes.CDLL("/usr/lib/libproc.dylib"))
+    return _LIBPROC[0]
+
+
 def _run_worker_subprocess(cmd, timeout, stderr_path=None):
     """Run one worker, and actually come back within roughly `timeout`.
 
@@ -421,13 +453,25 @@ def _run_worker_subprocess(cmd, timeout, stderr_path=None):
         if stderr_path:
             err.close()
 
-    try:
-        proc.wait(timeout=timeout)
-        return "ok"
-    except subprocess.TimeoutExpired:
-        pass
-
+    # Memory cap: a worker that outgrows physical memory does not fail, it pages
+    # until the machine hangs. On the M2 (24 GB) a 62 GB verify worker stalled
+    # watchdogd for 93 s and the kernel panicked. Poll the child's footprint and
+    # kill it above BENCH_MAX_MB.
+    deadline = time.monotonic() + timeout
     status = f"TIMEOUT(>{timeout:.0f}s)"
+    while True:
+        try:
+            proc.wait(timeout=min(MEM_POLL_S, max(deadline - time.monotonic(), 0.0)))
+            return "ok"
+        except subprocess.TimeoutExpired:
+            pass
+        mb = _footprint_mb(proc.pid)
+        if mb is not None and mb > MAX_WORKER_MB:
+            status = f"MEMCAP(>{MAX_WORKER_MB:.0f}MB)"
+            break
+        if time.monotonic() >= deadline:
+            break
+
     for sig, grace in ((signal.SIGTERM, 5.0), (signal.SIGKILL, 10.0)):
         try:
             os.killpg(os.getpgid(proc.pid), sig)

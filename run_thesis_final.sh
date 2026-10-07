@@ -26,6 +26,13 @@ mkdir -p $OUT
 $FORK thesis_final_benchmarks.py verify --set suite --out $OUT/verify_suite.json
 $FORK thesis_final_benchmarks.py verify --set nondpp --out $OUT/verify_nondpp.json
 
+# Timings on battery are not comparable: wait for mains power before timing.
+if [ "$(uname)" = Darwin ]; then
+  until pmset -g batt | grep -q "AC Power"; do
+    echo "waiting for AC power before timing ($(date +%H:%M))"; sleep 60
+  done
+fi
+
 # Table 4.1 and the dense-block ablation: first canonicalization.
 $FORK thesis_final_benchmarks.py time --set suite --kind cold \
   --targets DIFFENGINE,DE_NODENSE --out $OUT/cold_fork.json
