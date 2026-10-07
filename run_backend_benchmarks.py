@@ -394,7 +394,7 @@ def run_worker(module_name, class_name, out_path):
 # --------------------------------------------------------------------------- #
 # Parent orchestration
 # --------------------------------------------------------------------------- #
-MAX_WORKER_MB = float(os.environ.get("BENCH_MAX_MB", "16000"))
+MAX_WORKER_MB = float(os.environ.get("BENCH_MAX_MB", "20000"))
 MEM_POLL_S = 0.25
 
 

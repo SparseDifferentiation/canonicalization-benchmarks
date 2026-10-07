@@ -268,8 +268,6 @@ def gate_table(verify, md):
         for k in bad:
             failed.add((name, k.split(":", 1)[-1]))
         ref = r.get("reference") or "–"
-        if ref == "DIFFENGINE":
-            ref = "DIFFENGINE (no stock reference: non-DPP)"
         md.append(f"| {name} | {ref} | {len(checks) - len(bad)}/{len(checks)} | "
                   f"{', '.join(bad) or '–'} |")
     md.append(f"\n{len(failed)} failed (problem, target) checks.")

@@ -266,18 +266,46 @@ def worker_memory(module, name, kind, target, out_path):
     Path(out_path).write_text(json.dumps(res))
 
 
-def _sparse_close(M1, M2, tol=1e-9):
-    """Same discipline as _compare._sparse_close (pattern check aside): equal modulo explicit zeros."""
+def _split_nan(M):
+    """(M with NaN entries zeroed, set of NaN positions). NaN enters only through
+    the problem data (OptimalAdvertising: R_i = lognormal(0/0) when c_i rounds to 0)."""
     import scipy.sparse as sp
 
-    M1, M2 = sp.csr_matrix(M1), sp.csr_matrix(M2)
+    if sp.issparse(M):
+        M = sp.coo_matrix(M)
+        bad = np.isnan(M.data)
+        pos = set(zip(M.row[bad].tolist(), M.col[bad].tolist()))
+        data = np.where(bad, 0.0, M.data)
+        return sp.csr_matrix((data, (M.row, M.col)), shape=M.shape), pos
+    M = np.asarray(M, dtype=float)
+    bad = np.isnan(M)
+    return np.where(bad, 0.0, M), set(map(tuple, np.argwhere(bad).tolist()))
+
+
+def _sparse_close(M1, M2, tol=1e-9):
+    """Same discipline as _compare._sparse_close (pattern check aside): equal modulo
+    explicit zeros. NaN equals NaN at the same position; NaN anywhere else fails."""
+    import scipy.sparse as sp
+
+    (M1, n1), (M2, n2) = _split_nan(sp.csr_matrix(M1)), _split_nan(sp.csr_matrix(M2))
     if M1.shape != M2.shape:
-        return False, float("inf")
+        return False, float("inf"), 0
     M1.eliminate_zeros(); M2.eliminate_zeros()
     d = abs(M1 - M2)
     err = float(d.max()) if d.nnz else 0.0
     scale = max(float(abs(M1).max()) if M1.nnz else 0.0, 1.0)
-    return err <= tol * scale, err
+    nan_diff = len(n1 ^ n2)
+    return err <= tol * scale and not nan_diff, err, nan_diff
+
+
+def _dense_close(v1, v2, tol=1e-9):
+    (v1, n1), (v2, n2) = _split_nan(v1), _split_nan(v2)
+    if v1.shape != v2.shape:
+        return False, float("inf"), 0
+    err = float(np.max(np.abs(v1 - v2), initial=0.0))
+    scale = max(float(np.max(np.abs(v1), initial=0.0)), 1.0)
+    nan_diff = len(n1 ^ n2)
+    return err <= tol * scale and not nan_diff, err, nan_diff
 
 
 def worker_verify(module, name, seed, out_path, only=None):
@@ -291,6 +319,22 @@ def worker_verify(module, name, seed, out_path, only=None):
     res = {"module": module, "class": name, "checks": {}}
 
     def data_for(target, update):
+        if target.endswith("_EVAL"):
+            # Stock reference for a parametric problem: the parameters are replaced
+            # by their values (EvalParams, what ignore_dpp does in stock CVXPY) and
+            # the parameter-free problem is canonicalized by a cvxcore backend. The
+            # DPP tensor is never built: pinned CPP needs > 18 GB for it on
+            # ParametrizedQP and SimpleFullyParametrizedLP.
+            from cvxpy.reductions.eval_params import EvalParams
+            prob, rng = fresh_problem(Cls, seed)
+            if update:
+                upd = np.random.default_rng(seed + 1000)
+                for p in prob.parameters():
+                    rbb._assign_param(p, upd)
+            fixed = EvalParams().apply(prob)[0]
+            data, _, _ = fixed.get_problem_data(
+                solver=SOLVER, canon_backend=target[:-len("_EVAL")])
+            return data
         kwargs, env = TARGETS[target]
         set_switches(env)
         try:
@@ -307,44 +351,45 @@ def worker_verify(module, name, seed, out_path, only=None):
 
     prob0, _ = fresh_problem(Cls, seed)
     parametric = bool(prob0.parameters())
-    dpp = rbb._chain_is_dpp(prob0)
-    # Reference: CVXPY's CPP backend, which builds the tensor on the DPP path; a
-    # non-DPP parametric problem has no stock reference in the fork.
-    ref_target = "CPP" if (not parametric or dpp) else None
+    # Reference: CVXPY's CPP backend; for a parametric problem (DPP or not), CPP on
+    # the problem with its parameters evaluated, which is the artefact of the
+    # stock ignore_dpp baselines.
+    suffix = "_EVAL" if parametric else ""
+    ref_target = "CPP" + suffix
     engine = ["DIFFENGINE", "DE_NODENSE"] + (
         ["de_cached", "de_cached_nodense", "de_cached_rebuild",
          "de_cached_nodense_rebuild"] if parametric else [])
-    stock = ["SCIPY", "COO"] if ref_target else []
+    stock = ["SCIPY" + suffix, "COO" + suffix]
     if only:
         engine = [t for t in engine if t in only]
         stock = [t for t in stock if t in only]
     for update in ([False, True] if parametric else [False]):
         tag = "update" if update else "first"
         try:
-            ref = data_for(ref_target or "DIFFENGINE", update)
+            ref = data_for(ref_target, update)
         except Exception as exc:  # noqa: BLE001
             res["checks"][f"{tag}:reference"] = f"ERR {type(exc).__name__}: {exc}"[:200]
             continue
-        res.setdefault("reference", ref_target or "DIFFENGINE")
+        res.setdefault("reference", ref_target)
         for t in engine + stock:
             if t == res["reference"]:
                 continue
             try:
                 d = data_for(t, update)
-                ok, errs = True, {}
-                for key in ("P", "A"):
+                ok, errs, nans = True, {}, {}
+                for key in ("P", "A", "c", "b"):
                     if ref.get(key) is None and d.get(key) is None:
                         continue
-                    k_ok, err = _sparse_close(ref[key], d[key])
+                    close = _sparse_close if key in ("P", "A") else _dense_close
+                    k_ok, err, nan_diff = close(ref[key], d[key])
                     ok &= k_ok
                     errs[key] = err
-                for key in ("c", "b"):
-                    err = float(np.max(np.abs(np.asarray(ref[key]) - np.asarray(d[key])),
-                                       initial=0.0))
-                    scale = max(float(np.max(np.abs(ref[key]), initial=0.0)), 1.0)
-                    ok &= err <= 1e-9 * scale
-                    errs[key] = err
-                res["checks"][f"{tag}:{t}"] = {"ok": bool(ok), "max_abs_err": errs}
+                    if nan_diff:
+                        nans[key] = nan_diff
+                rec = {"ok": bool(ok), "max_abs_err": errs}
+                if nans:
+                    rec["nan_mismatch"] = nans
+                res["checks"][f"{tag}:{t}"] = rec
             except Exception as exc:  # noqa: BLE001
                 res["checks"][f"{tag}:{t}"] = f"ERR {type(exc).__name__}: {exc}"[:200]
     res["done"] = True
@@ -531,7 +576,8 @@ def run_memory(problems, kind, targets, out):
 
 
 VERIFY_TARGETS = ("DIFFENGINE", "DE_NODENSE", "de_cached", "de_cached_nodense",
-                  "de_cached_rebuild", "de_cached_nodense_rebuild", "SCIPY", "COO")
+                  "de_cached_rebuild", "de_cached_nodense_rebuild", "SCIPY", "COO",
+                  "SCIPY_EVAL", "COO_EVAL")
 
 
 def run_verify(problems, out):
