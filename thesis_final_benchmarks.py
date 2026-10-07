@@ -624,9 +624,18 @@ VERIFY_TARGETS = ("DIFFENGINE", "DE_NODENSE", "de_cached", "de_cached_nodense",
 
 def run_verify(problems, out):
     tmp = HERE / "_thesis_worker.json"
-    rows = []
+    # Resumes like the other modes, but only from a file of the same build.
     meta = {"environment": environment()}
+    rows = []
+    if out.exists():
+        prev = json.loads(out.read_text())
+        same = all(prev.get("meta", {}).get("environment", {}).get(k) == meta["environment"].get(k)
+                   for k in ("cvxpy_git", "engine_commit", "engine_so_sha256"))
+        rows = prev.get("rows", []) if same else []
+    done = {(r.get("module"), r.get("class")) for r in rows}
     for module, name in problems:
+        if (module, name) in done:
+            continue
         print(f"[verify] {name}", flush=True)
         res, status = _spawn(["--worker-verify", module, name, "0", str(tmp)], tmp)
         if status != "ok":
