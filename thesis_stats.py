@@ -115,13 +115,15 @@ def fmt(x, d=3):
     return f"{x:.{d}f}"
 
 
-def contrast(rows, kind, num, den, label, md, csv_rows, keep=is_suite):
-    """Per-problem num/den ratio of medians, Mann-Whitney + Holm, suite tests."""
+def contrast(rows, kind, num, den, label, md, csv_rows, keep=is_suite, pick=None):
+    """Per-problem num/den ratio of medians, Mann-Whitney + Holm, suite tests.
+    ``pick(name) -> (num, den)`` chooses the pair per problem (num/den then only label)."""
     recs = []
     for (k, name), row in sorted(rows.items()):
         if k != kind or not keep(name):
             continue
-        a, b = times(row, num), times(row, den)
+        n_t, d_t = pick(name) if pick else (num, den)
+        a, b = times(row, n_t), times(row, d_t)
         if not len(a) or not len(b):
             continue
         recs.append([name, float(np.median(a)), float(np.median(b)),
@@ -135,7 +137,8 @@ def contrast(rows, kind, num, den, label, md, csv_rows, keep=is_suite):
     for r, p in zip(recs, adj):
         md.append(f"| {r[0]} | {fmt(r[1], 4)} | {fmt(r[2], 4)} | {fmt(r[3])} | "
                   f"{fmt(float(p))} | {r[5]}/{r[6]} |")
-        csv_rows.append([label, kind, num, den, r[0], r[1], r[2], r[3], r[4], float(p)])
+        n_t, d_t = pick(r[0]) if pick else (num, den)
+        csv_rows.append([label, kind, n_t, d_t, r[0], r[1], r[2], r[3], r[4], float(p)])
     ratios = [r[3] for r in recs]
     g, lo, hi = geomean_ci(ratios)
     md.append(f"\nGeometric-mean ratio **{fmt(g)}** (bootstrap 95% CI {fmt(lo)}–{fmt(hi)}), "
@@ -339,7 +342,21 @@ def main():
                 del row["samples"][t]
     best_baseline(rows, md, csv_rows)
     md.append("\n## Ablation (jury J1b, Legrain ii)")
-    contrast(rows, "cold", "DE_NODENSE", "DIFFENGINE", "Dense blocks off", md, csv_rows)
+    contrast(rows, "cold", "DE_NODENSE", "DIFFENGINE",
+             "Dense blocks off for constant data (parametric matrices stay dense)", md, csv_rows)
+    # Fully CSR: DE_NODENSE has no dense class on a parameter-free problem; on a
+    # parametric one the parameters are evaluated first (DE_*_EVAL) to get there.
+    def parametric(name):
+        return bool(rows.get(("warm", name), {}).get("samples", {}).get("de_cached"))
+    contrast(rows, "cold", "DE_NODENSE", "DIFFENGINE",
+             "Fully CSR, parameter-free problems", md, csv_rows,
+             keep=lambda n: is_suite(n) and not parametric(n))
+    contrast(rows, "cold", "DE_NODENSE_EVAL", "DE_EVAL",
+             "Fully CSR, parametric problems (parameters evaluated)", md, csv_rows)
+    contrast(rows, "cold", "fully CSR", "dense blocks on",
+             "Fully CSR, all problems", md, csv_rows,
+             pick=lambda n: (("DE_NODENSE_EVAL", "DE_EVAL") if parametric(n)
+                             else ("DE_NODENSE", "DIFFENGINE")))
     for b in BASELINES_COLD:
         contrast(rows, "cold", "DE_NODENSE", b, f"Engine without dense blocks vs {b}",
                  md, csv_rows)

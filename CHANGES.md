@@ -41,6 +41,7 @@ ablation switches can isolate it. Pinned builds:
 | C6 | `b7bb765` (= cvxpy #3449 head) | `ConeProg` split: `DiffengineConeProg` carries no parameter tensors. | No switch. |
 | C7 | `35e81b1` | Benchmark-only switches and phase timers (below). | — |
 | C8 | older converter code | Constant matmuls below density 0.05 go to CSR at conversion; `_build_jacobian_csc` drops exact zeros. | **No switch.** The 0.05 routing already sends sparse constants to CSR in both variants. |
+| C9 | #3524 (`6207f12`), on branch `thesis-ablation-pr3524` @ `5c07151` | Matmul chains that end in a parameter-free constant are reassociated so the constant moves toward the leaves (`(A @ B) @ c -> A @ (B @ c)`), keeping intermediates narrow (issue #2205). Fires on UnconstrainedQP, QuantumHilbertMatrix, SDPSegfault1132, OptimalAdvertising, SlowPruning. Measured in `results/thesis-pr3524/` (UnconstrainedQP cold 22.9 s -> 0.016 s). | No switch. Rerun only on the affected problems; see `run_pr3524_rerun.sh`. |
 
 ## Ablation switches (fork `35e81b1`)
 
@@ -48,7 +49,7 @@ All are read on every call and default to off.
 
 | Variable | Effect |
 |---|---|
-| `DIFFENGINE_NO_DENSE=1` | Constant matrices in left/right matmul use the CSR bindings, constant `quad_form` P ignores the density threshold and uses CSR, and constant P in symbolic `quad_form` uses CSR. **Parametric matrices stay dense in both variants.** |
+| `DIFFENGINE_NO_DENSE=1` | Fully CSR only on parameter-free problems: every dense class (PD/SPD) starts in the dense left/right matmul or the dense `quad_form`, and the engine never promotes a CSR product to one. On a parametric problem a parametric `A @ x` / `x @ A` keeps a dense-class Jacobian and a parametric `quad_form` P a dense Hessian (the engine has no CSR path for a parametric matrix). Constant matrices in left/right matmul use the CSR bindings, constant `quad_form` P ignores the density threshold and uses CSR, and constant P in symbolic `quad_form` uses CSR. **Parametric matrices stay dense in both variants.** |
 | `DIFFENGINE_REBUILD=1` | `update_parameters` calls `extractor.rebuild()`: conversion and the symbolic pass (`init_jacobian_coo`, Hessian init) are repeated on every update. |
 | `DIFFENGINE_PROFILE=1` | Phase times in `extractor.PHASE_TIMES`: convert, symbolic, numeric, assemble (COO→CSC), format (`_restructure`). |
 
@@ -59,6 +60,11 @@ The runner exposes the switches as targets:
 | cold | `DIFFENGINE` | `DE_NODENSE` |
 | warm, split on | `de_cached` | `de_cached_nodense` |
 | warm, split off | `de_cached_rebuild` | `de_cached_nodense_rebuild` |
+| cold, parameters evaluated (fully CSR when off) | `DE_EVAL` | `DE_NODENSE_EVAL` |
+
+`DE_EVAL` / `DE_NODENSE_EVAL` time `EvalParams` plus `get_problem_data` on the parameter-free
+result (as stock `ignore_dpp` does), on parametric problems only. Their ratio is the
+dense-block contrast with no dense class on the parametric problems.
 
 **What the 2×2 does not separate.** The examiner names three sources of the speedup:
 dense representations, the two-pass split, and "a leaner C implementation". The 2×2

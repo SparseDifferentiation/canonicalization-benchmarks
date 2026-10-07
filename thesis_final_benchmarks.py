@@ -71,6 +71,12 @@ TARGETS = {
     # -- cold: first canonicalization ------------------------------------- #
     "DIFFENGINE": (DE, {}),
     "DE_NODENSE": (DE, NO_DENSE),
+    # Parameters evaluated first (EvalParams, inside the timer as in stock
+    # ignore_dpp), then the parameter-free problem on DIFFENGINE. Under NO_DENSE
+    # this is fully CSR: a parametric matrix has no CSR path in the engine, so
+    # DE_NODENSE keeps dense classes on parametric problems.
+    "DE_EVAL": (DE_CACHED, {}),
+    "DE_NODENSE_EVAL": (DE_CACHED, NO_DENSE),
     "CPP_ND": ({"canon_backend": "CPP", "ignore_dpp": True}, {}),      # upstream
     "SCIPY_ND": ({"canon_backend": "SCIPY", "ignore_dpp": True}, {}),  # upstream
     "COO_ND": ({"canon_backend": "COO", "ignore_dpp": True}, {}),      # upstream
@@ -92,6 +98,13 @@ TARGETS = {
     "nodpp_coo": ({"canon_backend": "COO", "ignore_dpp": True}, {}),
 }
 SWITCHES = ("DIFFENGINE_NO_DENSE", "DIFFENGINE_REBUILD")
+EVAL_TARGETS = {"DE_EVAL", "DE_NODENSE_EVAL"}
+
+
+def _evaluated(prob):
+    """The problem with every parameter replaced by its value (stock ignore_dpp)."""
+    from cvxpy.reductions.eval_params import EvalParams
+    return EvalParams().apply(prob)[0]
 REQUIRES_DPP = {"dpp", "dpp_scipy", "dpp_coo", "CPP", "SCIPY", "COO"}
 
 
@@ -194,10 +207,16 @@ def worker_time(module, name, kind, targets, seed, out_path):
             if kind == "warm" and not params:
                 rec["skip"] = "no parameters"
                 continue
+            if t in EVAL_TARGETS and (kind != "cold" or not params):
+                rec["skip"] = "no parameters" if not params else "cold only"
+                continue
             if ph is not None:
                 ph.clear()
             t0 = time.perf_counter()
-            data, _, _ = prob.get_problem_data(solver=SOLVER, **kwargs)
+            if t in EVAL_TARGETS:
+                data, _, _ = _evaluated(prob).get_problem_data(solver=SOLVER, **kwargs)
+            else:
+                data, _, _ = prob.get_problem_data(solver=SOLVER, **kwargs)
             first = time.perf_counter() - t0
             if "dims" not in res:
                 res["dims"] = dims(prob, data)
@@ -244,10 +263,15 @@ def worker_memory(module, name, kind, target, out_path):
                 res["skip"] = "no parameters"
                 raise StopIteration
             prob.get_problem_data(solver=SOLVER, **kwargs)
+        if target in EVAL_TARGETS and (kind != "cold" or not prob.parameters()):
+            res["skip"] = "no parameters"
+            raise StopIteration
         gc.collect()
         pre = rbb._maxrss_mb()
         eng_pre = rbb._engine_counters_mb()
-        if kind == "cold":
+        if target in EVAL_TARGETS:
+            _evaluated(prob).get_problem_data(solver=SOLVER, **kwargs)
+        elif kind == "cold":
             prob.get_problem_data(solver=SOLVER, **kwargs)
         else:
             for _ in range(ITERS):
@@ -319,6 +343,19 @@ def worker_verify(module, name, seed, out_path, only=None):
     res = {"module": module, "class": name, "checks": {}}
 
     def data_for(target, update):
+        if target in EVAL_TARGETS:
+            kwargs, env = TARGETS[target]
+            set_switches(env)
+            try:
+                prob, rng = fresh_problem(Cls, seed)
+                if update:
+                    upd = np.random.default_rng(seed + 1000)
+                    for p in prob.parameters():
+                        rbb._assign_param(p, upd)
+                data, _, _ = _evaluated(prob).get_problem_data(solver=SOLVER, **kwargs)
+                return data
+            finally:
+                set_switches({})
         if target.endswith("_EVAL"):
             # Stock reference for a parametric problem: the parameters are replaced
             # by their values (EvalParams, what ignore_dpp does in stock CVXPY) and
@@ -358,7 +395,7 @@ def worker_verify(module, name, seed, out_path, only=None):
     ref_target = "CPP" + suffix
     engine = ["DIFFENGINE", "DE_NODENSE"] + (
         ["de_cached", "de_cached_nodense", "de_cached_rebuild",
-         "de_cached_nodense_rebuild"] if parametric else [])
+         "de_cached_nodense_rebuild", "DE_EVAL", "DE_NODENSE_EVAL"] if parametric else [])
     stock = ["SCIPY" + suffix, "COO" + suffix]
     if only:
         engine = [t for t in engine if t in only]
@@ -582,7 +619,7 @@ def run_memory(problems, kind, targets, out):
 
 VERIFY_TARGETS = ("DIFFENGINE", "DE_NODENSE", "de_cached", "de_cached_nodense",
                   "de_cached_rebuild", "de_cached_nodense_rebuild", "SCIPY", "COO",
-                  "SCIPY_EVAL", "COO_EVAL")
+                  "SCIPY_EVAL", "COO_EVAL", "DE_EVAL", "DE_NODENSE_EVAL")
 
 
 def run_verify(problems, out):
