@@ -513,13 +513,18 @@ def run_time(problems, kind, targets, out):
                "status": {}}
         want = {t: REPS for t in targets}
         seed = 0
+        split = False  # once a shared worker fails, give each target its own
         while any(len(row["samples"][t]) < want[t] and t not in row["status"]
                   for t in targets):
             todo = [t for t in targets
                     if len(row["samples"][t]) < want[t] and t not in row["status"]]
-            res, status = _spawn(["--worker-time", module, name, kind, ",".join(todo),
-                                  str(seed), str(tmp)], tmp)
+            if split and len(todo) > 1:
+                status = "split"
+            else:
+                res, status = _spawn(["--worker-time", module, name, kind, ",".join(todo),
+                                      str(seed), str(tmp)], tmp)
             if status != "ok" and len(todo) > 1:
+                split = True
                 # One target timed out or crashed and took the worker down; rerun
                 # each target alone so a slow ablation variant (e.g. DE_NODENSE on
                 # SimpleLP, O(n^2)) cannot cost the others their sample.
