@@ -135,8 +135,14 @@ def advertising(variant="free", n=1000, seed=1):
     return cp.Problem(cp.Maximize(cp.sum(Si)), constraints)
 
 
+def scaled(cls, s=1.0, density=1.0):
+    """A suite problem with its sizes scaled (see thesis_scaled_problems)."""
+    import thesis_scaled_problems
+    return thesis_scaled_problems.build(cls, s, density)
+
+
 FAMILIES = {"lasso": lasso, "factor_cov": factor_cov, "huber": huber,
-            "advertising": advertising}
+            "advertising": advertising, "scaled": scaled}
 
 
 def parse_spec(spec):
@@ -180,3 +186,11 @@ SCALING = ([f"huber:n={n}:seed={s}" for n in (300, 1000, 3000, 6000) for s in SE
               for n in (1000, 5000, 25000, 50000) for s in SEEDS])
 
 SETS = {"nondpp": NONDPP, "sensitivity": SENSITIVITY, "scaling": SCALING}
+
+
+def _scaled_sets():
+    import thesis_scaled_problems
+    return thesis_scaled_problems.SETS
+
+
+SETS.update(_scaled_sets())

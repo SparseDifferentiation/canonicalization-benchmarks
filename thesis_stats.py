@@ -318,6 +318,89 @@ def memory_table(memory, md):
             md.append(f"| {name} | " + " | ".join(out) + " |")
 
 
+def _spec(name):
+    fam, *parts = name.split(":")
+    return fam, dict(p.split("=", 1) for p in parts)
+
+
+def _ratio_cell(row):
+    """diffengine / best CVXPY backend (medians), or why it is missing."""
+    if row is None:
+        return None, "–"
+    de = times(row, ENGINE_COLD)
+    base = [times(row, t) for t in BASELINES_COLD if len(times(row, t))]
+    if not len(de):
+        st = row["status"].get(ENGINE_COLD, "")
+        return None, "cap" if "MEMCAP" in st else ("timeout" if "TIMEOUT" in st else "–")
+    if not base:
+        return None, "no baseline"
+    r = float(np.median(de) / min(np.median(b) for b in base))
+    return r, fmt(r, 2)
+
+
+def scaled_tables(rows, md, out):
+    """Scaling (25 problems x 3 sizes, 10 families x 5 sizes) and density (5 x 5)."""
+    cold = {name: row for (k, name), row in rows.items() if k == "cold"}
+    sc = {}
+    for name, row in cold.items():
+        fam, kw = _spec(name)
+        if fam == "scaled":
+            sc[(kw["cls"], float(kw.get("s", 1)), float(kw.get("density", 1)))] = row
+    if not sc:
+        return
+    for name in list(cold):
+        if is_suite(name):
+            sc.setdefault((name, 1.0, 1.0), cold[name])
+    lasso = {}
+    for name, row in cold.items():
+        fam, kw = _spec(name)
+        if fam == "lasso" and kw.get("variant") == "free" and kw.get("seed", "0") == "0":
+            lasso[(int(kw["n"]), float(kw.get("density", 1)))] = row
+    recs = []
+
+    def table(title, keys, cols, colname, get):
+        md.append(f"\n## {title}\n")
+        md.append(f"diffengine / best CVXPY backend, medians of 5 replicates (s = 1 from the suite runs). "
+                  f"“cap”: engine over the 20 GB cap.\n")
+        md.append(f"| problem | " + " | ".join(f"{colname} {c:g}" for c in cols) + " | nnz(A) range |")
+        md.append("|---|" + "---:|" * len(cols) + "---|")
+        for key in keys:
+            cells, nnz = [], []
+            for c in cols:
+                row = get(key, c)
+                r, txt = _ratio_cell(row)
+                cells.append(txt)
+                if row is not None and row.get("dims"):
+                    nnz.append(row["dims"].get("nnz_A"))
+                recs.append([title, key, c, r, (row or {}).get("dims", {}).get("nnz_A")])
+            nz = [x for x in nnz if x]
+            md.append(f"| {key} | " + " | ".join(cells) + f" | {min(nz):,}–{max(nz):,} |" if nz
+                      else f"| {key} | " + " | ".join(cells) + " | – |")
+
+    import thesis_scaled_problems as tsp
+    table("Scaling: 25 problems at s = 1/2, 1, 2", tsp.ALL25, (0.5, 1, 2), "s",
+          lambda k, c: sc.get((k, float(c), 1.0)))
+    fam_keys = tsp.FAMILIES10 + ["lasso"]
+
+    def fam_get(k, c):
+        if k == "lasso":
+            n = {0.25: 250, 0.5: 500, 1: 1000, 2: 2000, 4: 4000}[c]
+            return lasso.get((n, 1.0))
+        return sc.get((k, float(c), 1.0))
+    table("Scaling: 10 families at five sizes", fam_keys, (0.25, 0.5, 1, 2, 4), "s", fam_get)
+
+    def dens_get(k, c):
+        if k == "lasso (n = 1000)":
+            return lasso.get((1000, float(c)))  # seed 0 of the sensitivity grid
+        return sc.get((k, 1.0, float(c)))
+    table("Density: 5 problems at five densities", list(tsp.DENSITY_PROBLEMS) + ["lasso (n = 1000)"],
+          (0.01, 0.05, 0.2, 0.5, 1.0), "density", dens_get)
+    with open(out, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["table", "problem", "level", "ratio", "nnz_A"])
+        w.writerows(recs)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("files", nargs="+")
@@ -373,6 +456,7 @@ def main():
         contrast(rows, "warm", "de_cached", b, f"Engine re-solve vs {b}", md, csv_rows,
                  keep=nd)
     best_baseline(rows, md, csv_rows, keep=nd, title="Non-DPP set: first canonicalization")
+    scaled_tables(rows, md, out.with_name(f"{out.stem}.scaled.csv"))
     phase_table(rows, "cold", ENGINE_COLD, md)
     phase_table(rows, "warm", "de_cached", md)
     memory_table(memory, md)
