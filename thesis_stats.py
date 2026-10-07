@@ -283,7 +283,10 @@ def gate_table(verify, md):
         ref = r.get("reference") or "–"
         md.append(f"| {name} | {ref} | {len(checks) - len(bad)}/{len(checks)} | "
                   f"{', '.join(bad) or '–'} |")
-    md.append(f"\n{len(failed)} failed (problem, target) checks.")
+    nmem = sum(1 for name, r in verify.items() for k, v in r.get("checks", {}).items()
+               if isinstance(v, str) and "MEMCAP" in v)
+    md.append(f"\n{len(failed)} failed (problem, target) checks"
+              + (f", of which {nmem} only ran out of memory (unverified, not wrong)." if nmem else "."))
     if notes:
         md.append("\nPassed with a footnote (NaN in the problem data):\n")
         md.extend(f"- {n}" for n in notes)
@@ -331,6 +334,8 @@ def _ratio_cell(row):
     base = [times(row, t) for t in BASELINES_COLD if len(times(row, t))]
     if not len(de):
         st = row["status"].get(ENGINE_COLD, "")
+        if "correctness gate" in st:
+            return None, "unverified"
         return None, "cap" if "MEMCAP" in st else ("timeout" if "TIMEOUT" in st else "–")
     if not base:
         return None, "no baseline"
@@ -361,7 +366,8 @@ def scaled_tables(rows, md, out):
     def table(title, keys, cols, colname, get):
         md.append(f"\n## {title}\n")
         md.append(f"diffengine / best CVXPY backend, medians of 5 replicates (s = 1 from the suite runs). "
-                  f"“cap”: engine over the 20 GB cap.\n")
+                  f"“cap”: engine over the 20 GB cap. “unverified”: the correctness check did not fit "
+                  f"in 20 GB, so the timing is not reported.\n")
         md.append(f"| problem | " + " | ".join(f"{colname} {c:g}" for c in cols) + " | nnz(A) range |")
         md.append("|---|" + "---:|" * len(cols) + "---|")
         for key in keys:
