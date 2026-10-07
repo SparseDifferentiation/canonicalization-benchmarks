@@ -1,0 +1,9942 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-upstream/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "1.9.2",
+   "sparsediffpy": "0.3.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": null,
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": null,
+   "engine_commit": null,
+   "engine_so_sha256": "11635606f60c6704bdc2d118b151a10b809f488fbf99205fd6ecd36de9757209",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "CPP_ND",
+   "SCIPY_ND",
+   "COO_ND"
+  ],
+  "reps": 5,
+  "slow_s": 30.0,
+  "slow_reps": 10,
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.01:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0034324580010434147,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.00339591699957964,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003385542000614805,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003386041000339901,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003426541999942856,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.002525333999074064,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002549291999457637,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0025297079992014915,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00248666600236902,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0025257080014853273,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0022595830014324747,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0022421670000767335,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002219165999122197,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.002193458996771369,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0022364169999491423,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 800,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.005
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.01:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.003451249998761341,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0034425000012561213,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0034590409995871596,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00343908300055773,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003414458999031922,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0025112080002145376,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0025503340002615005,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00249120800071978,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0024954999971669167,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0025606249982956797,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.002228417000878835,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0022277089992712718,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002303875000507105,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0022124999995867256,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.002244582999992417,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 811,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00506875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.01:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.003420666998863453,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0034863750006479677,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003403749997232808,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0034163749987783376,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0033935419996851124,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.002511917002266273,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.00252537499909522,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0024946659978013486,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0025054580000869464,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0025125409993052017,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.002225332998932572,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002244125000288477,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002274832997500198,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0022384590010915417,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0022274160000961274,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 789,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00493125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.01:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0034002079992205836,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0033750419970601797,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0033678750005492475,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00345170800210326,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003402667000045767,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0025080420018639416,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0024847500026226044,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002495333999831928,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.002507082997908583,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0025183329998981208,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.002215083000919549,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0022241250007937197,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0021901670006627683,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0022862080004415475,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0022192920005181804,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 813,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00508125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.01:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0034157920017605647,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0034392919988022186,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003644375003204914,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003403624999918975,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0033873329994094092,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0024955000008048955,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002510209000320174,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002629582999361446,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0025005000024975743,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0024897500006773043,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0022319589988910593,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002218666999397101,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003824084000370931,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0022103329974925146,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0022135420003905892,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 807,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00504375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.05:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0035305419987707864,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003506917000777321,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0035097500003757887,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0035268329993414227,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003501082999719074,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.002642209001351148,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002631499999552034,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002621834002638934,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0026352079985372256,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0026313329981348943,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0023822909970476758,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002357916000619298,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0023708330008958,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0023912920005386695,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0023702079997747205,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 1598,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0099875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.05:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.003558249998604879,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0035646670003188774,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003520874997775536,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0035391669989621732,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003502832998492522,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.002633332998811966,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0026164160008192994,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0026326669976697303,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0026414160020067357,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0026599160009936895,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.002373084000282688,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0023554170002171304,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002370874997723149,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.002362457998970058,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00235929100017529,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 1600,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.01
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.05:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.003553250000550179,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003530666999722598,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003552792000846239,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0035439999992377125,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003519457997754216,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.002614832999825012,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0026218749990221113,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0026234580000163987,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0026131660015380476,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0026163330003328156,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.002376666001509875,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0024020420023589395,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0023557500026072375,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0023743329984426964,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0023916669997561257,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 1570,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0098125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.05:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0035448339986032806,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0035870410029019695,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00354512500052806,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00363854199895286,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0035535419992811512,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.002646790999278892,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002665042000444373,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002737333001277875,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0026330000000598375,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0026369590013928246,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0024034999987634365,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0023869169999670703,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0023755410002195276,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.002360041999054374,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0023760000003676396,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 1631,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.01019375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.05:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0035830830020131543,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003555957999196835,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0035398750005697366,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003515000000334112,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003555957999196835,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.002627292000397574,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0026279160010744818,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002639499998622341,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.002626082998176571,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0026384999982838053,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0024280830002680887,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0023707500004093163,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002370541998971021,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.002369082998484373,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0023514589993283153,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 1577,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00985625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.2:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004006417002528906,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004024582998681581,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004039666000608122,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0040156659997592214,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004025875001389068,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0031517919996986166,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.00315016700187698,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003111707999778446,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0031567909973091446,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0031159579993982334,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0029203329977463,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0029687920032301918,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002914000000600936,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0029124590000719763,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0028558329977386165,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 4656,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0291
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.2:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.00400120799895376,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003992750000179512,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004064249998918967,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003986250001617009,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00399370800005272,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0030862919993523974,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0031283340031222906,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0030830420000711456,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0030816250000498258,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0030960830008552875,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0029204579986981116,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0028433339975890703,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0030573750009352807,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0028868750014225952,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0028912090019730385,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 4533,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.02833125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.2:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.003971833000832703,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003975708001235034,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003987500000221189,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004053625001688488,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004077041001437465,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.003079250000155298,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003080124999542022,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003094084000622388,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003149250002024928,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0030980000010458753,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0028529590017569717,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002839416996721411,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002837500000168802,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0029119999999238644,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.002836209001543466,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 4574,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0285875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.2:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004006584000308067,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003992541998741217,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004041374999360414,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004034749999846099,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004017957999167265,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.003090999998676125,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003085084001213545,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003073042000323767,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00311620899810805,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003111166999588022,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.002890625000873115,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.002864084002794698,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.002853792000678368,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0028778340019925963,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0029046250019746367,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 4577,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.02860625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.2:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.003997750001872191,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003998042000603164,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004030083000543527,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0039994590006244835,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004047749996971106,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.003096417000051588,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003091333001066232,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0031334999985119794,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0030776249986956827,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0031082919995242264,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0028669579987763427,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0029714159973082133,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00285375000021304,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.002899083003285341,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0029805410013068467,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 4575,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.02859375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.5:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004857832998823142,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004860540997469798,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004882707999058766,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004849792003369657,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004841875001147855,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004045083001983585,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004036624999571359,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004037250000692438,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004054874996654689,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004242000002705026,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0036722920012834948,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0039222089981194586,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0038782079973316286,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0036904580010741483,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0038147919985931367,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 10590,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0661875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.5:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004879165997408563,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004895374997431645,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0048637079999025445,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004842832997383084,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004915875000733649,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004041708001750521,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004050041003210936,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0040246249991469085,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004054416000144556,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004077458001120249,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.003713041998707922,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003716250001161825,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0039039170005708,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0037118750005902257,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003982916998211294,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 10645,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06653125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.5:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004955874999723164,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004889874999207677,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004879125001025386,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004864957998506725,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004901208001683699,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004049457998917205,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004089040998223936,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004059582999616396,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004030167001474183,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0040753749999566935,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0037201669983915053,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0036634589996538125,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003912374999345047,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003685584000777453,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003749915998923825,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 10564,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.066025
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.5:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.00487208399863448,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.00482075000036275,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004843916998652276,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0048799159994814545,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004893540997727541,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.003996457999164704,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0040489169987267815,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004069083002832485,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004214374999719439,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0040448330000799615,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0037569999985862523,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0038740419986424968,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003733874997124076,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003766458001337014,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003995625000243308,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 10508,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.065675
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=0.5:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004838499997276813,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004860917000769405,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004913208002108149,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004832499998883577,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004862291996687418,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004053165997902397,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004031458000099519,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004043583001475781,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00401195800077403,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004040040999825578,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.003862166999169858,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0039034579967847094,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0036981249977543484,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003695542000059504,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00370945800023037,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 10552,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06595
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=1.0:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.005966832999547478,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005971374997898238,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.006000124998536194,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005944833999819821,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005998541997541906,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.005295791997923516,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0053485409989662,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005415499999799067,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005402165999839781,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005378959001973271,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.004925582998112077,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004917333997582318,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005011083001591032,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0050016249988402706,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004969416000676574,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 20600,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=1.0:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.005967166998743778,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005972916002065176,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005952083000011044,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006000250003125984,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006017374998918967,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.005429540997283766,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0054005419988243375,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005383374998928048,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005353708002076019,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005338708000635961,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.00495641700035776,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004971250000380678,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004922333999274997,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004945124997902894,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0049553339995327406,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 20600,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=1.0:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0059952919982606545,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005942499999946449,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.006023833997460315,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005985708001389867,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006068832997698337,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.005342042000847869,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005478957999002887,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005360041999665555,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005447874998935731,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005395791002229089,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.004947792000166373,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005036791000748053,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005030416999943554,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005064207998657366,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004949209000187693,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 20600,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=1.0:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0059451250017446,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.00600858300094842,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005970375001197681,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0059894170008192305,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005955832999461563,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.005360874998586951,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0054297499991662335,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005348957998648984,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005375707998609869,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005335917001502821,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.004944208998495014,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005035665999457706,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004917792000924237,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004918209000607021,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004971374997694511,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 20600,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=100:density=1.0:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.005926834001002135,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006028250001691049,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.006041249998816056,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005984249997709412,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005960334001429146,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.005318832998455036,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005355791003239574,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005354458000510931,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005377666999265784,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0053178749985818285,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0049585419983486645,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005004624999855878,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004983332997653633,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004941250001138542,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0049508330012031365,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 400,
+    "m": 400,
+    "nnz_A": 20600,
+    "nnz_P": 200,
+    "n_vars_user": 100,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.01:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004370665999886114,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004326083999330876,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0043107919991598465,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004324124998674961,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004311917000450194,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0037789999987580813,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0036098750024393667,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00375625000015134,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003718083000421757,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0036064169980818406,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.003408500000659842,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0032268340000882745,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0032669169995642733,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003226959001040086,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003263875001721317,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 3581,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0024868055555555555
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.01:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004347292000602465,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004656749999412568,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004256958000041777,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004294207999919308,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004244916002789978,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.003614334000303643,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0037142910005059093,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003610125000705011,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0036419999996724073,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0035700000007636845,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.003274709000834264,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0033260829986829776,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003257208998547867,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003225790998840239,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00319212499744026,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 3550,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0024652777777777776
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.01:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.00428358299905085,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004287291001674021,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004305624999688007,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004258040997228818,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004274749997421168,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.003607167000154732,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003641584000433795,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0036332919989945367,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003775417000724701,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003628584003308788,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.003207290999853285,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003207374997145962,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003203709002264077,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0033363750007993076,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0032150840015674476,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 3566,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.002476388888888889
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.01:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.00427299999864772,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0043103339994559065,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00426316700031748,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004263750000973232,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004234332998748869,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.003599416999350069,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003598540999519173,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003589125000871718,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0036162920005153865,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0037578750016109552,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.003193874999851687,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.003189374998328276,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003166000002238434,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0031883749979897402,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.003266166000685189,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 3580,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0024861111111111112
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.01:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.004305709000618663,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004324541998357745,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004321834003349068,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004419332999532344,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004306208000343759,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0036541250010486692,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.00361170799806132,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003589416002796497,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.003643375002866378,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0035952079997514375,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0032128749990079086,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0031959999978425913,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.003203791999112582,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0032470419973833486,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0032013749987527262,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 3623,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0025159722222222224
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.05:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.005329415998858167,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0053493749983317684,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005332541000825586,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005355249999411171,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00540033299694187,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004759750001539942,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004767207999975653,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0047572500006936025,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004888125000434229,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004749083997012349,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.004336083002272062,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004346165998867946,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00432849999924656,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004382708000775892,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004371333001472522,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 10795,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.007496527777777778
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.05:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0053272500008461066,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005360749997635139,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00538241699905484,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005324834000930423,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005331500000465894,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004741292003018316,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004721500001323875,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004680833000747953,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00474262500210898,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004723041998659028,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.004307708997657755,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004360832997917896,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004345458000898361,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004340750001574634,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00432520799949998,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 10862,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0075430555555555555
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.05:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.005364667002140777,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0053906249995634425,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00539362500057905,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005358834001526702,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005317667000781512,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004764500001328997,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004822499999136198,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004783500000485219,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00480312500076252,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004809292000572896,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.004332292002800386,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004415249997691717,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004386874999909196,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0043476249993545935,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0043692499966709875,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 10861,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.007542361111111111
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.05:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.005385791999287903,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005369582999264821,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005362208001315594,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005331583000952378,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005336084002919961,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004854667000472546,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004758332997880643,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004753166998852976,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004742708999401657,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004772332998982165,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0043364159973862115,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004321374999562977,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00432820900095976,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004303375000745291,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004320708001614548,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 10722,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.007445833333333333
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.05:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.005376417000661604,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0053892920004727785,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005379333000746556,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0053399169992189854,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005415040999650955,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.004756667000037851,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004757791000884026,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004939957998431055,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.004732542001875117,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004792749998159707,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.004405416999361478,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.004386165997857461,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.004405957999551902,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0043704170020646416,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.004397500000777654,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 10940,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.007597222222222222
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.2:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.009941874999640277,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.009787082999537233,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.009886583000479732,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.009897250001813518,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00980254100068123,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.008993707997433376,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.009009499997773673,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.009020500001497567,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.008979167003417388,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008927833998313872,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.008580249999795342,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.008739583001442952,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.008630374999484047,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.008614333000878105,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008596374998887768,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 37984,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.026377777777777778
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.2:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.00992745800249395,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.009856791999482084,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.009880790999886813,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.009907249997922918,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.009824542001297232,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.009042208999744616,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.00904087500020978,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00895716699960758,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00903712500075926,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008979291000287049,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.008671084000525298,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.008577874999900814,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.008647082999232225,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.008598541997344,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008789874998910818,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 37967,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.02636597222222222
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.2:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.009801707998121856,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.00982487500004936,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00979012499738019,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.009802917000342859,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.009770208998816088,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.008938209000916686,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.008946583002398256,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.008942583997850306,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.008999041001516161,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008946124999056337,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.008723541999643203,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.008666749999974854,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.008531999999831896,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.008573999999498483,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008587874999648193,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 37821,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.026264583333333334
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.2:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.009727959000883857,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.009766999999555992,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.009923457997501828,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.009871833000943298,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.009758416999829933,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.008912165998481214,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.008900291999452747,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.008972999999969034,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.008938791997934459,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008956542002124479,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.008545874999981606,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0086025829987193,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.008489707997796359,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.008434791001491249,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008516582998709055,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 37573,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.02609236111111111
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.2:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.00993279199974495,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.009857332999672508,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.009923082998284372,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00996179199864855,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00994775000071968,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.009084290999453515,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.009026291001646314,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.009020208999572787,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.009065666999958921,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.009000124999147374,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.008731458998227026,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.008785541998804547,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.008818416998110479,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.008676541998283938,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.008804541001154575,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 38225,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.02654513888888889
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.5:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.01816083299854654,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.018253000002005138,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.018147541999496752,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01807800000096904,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.01829066600112128,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.01790962499944726,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.017659875000390457,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01770145800037426,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.017781708000256913,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0177145420020679,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.017280332998780068,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.017160125000373228,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.017167624999274267,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01724020800247672,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.01714575000005425,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 91893,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06381458333333333
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.5:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.018265250000695232,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.018263834001118084,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01835229199787136,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.018323874999623513,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.018276583999977447,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.017669583001406863,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.017655416999332374,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01757845900283428,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01770787499845028,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.017602792002435308,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.01713745800225297,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.017112749999796506,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.017068000001017936,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0172195000013744,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.01713891699910164,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 91966,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06386527777777778
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.5:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.018295541001862148,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.018182416999479756,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.018191708000813378,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.018203750001703156,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.01817408400165732,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.017751000003045192,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.017722917000355665,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01766058300199802,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.017715125002723653,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.017669750002824003,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.017311250001512235,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.01721949999773642,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01723337500152411,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.017399000000295928,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.017396541999914916,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 92024,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06390555555555555
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.5:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.018176708999817492,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.018216958997072652,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0182083750005404,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.018167166999774054,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.018267667001055088,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.01779004199852352,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.017740499999490567,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.017657415999565274,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.017630792001000373,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.017662709000433097,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.017277459002798423,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.017277124999964144,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01732645800075261,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.017153499997220933,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.01735470799758332,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 91906,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06382361111111111
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=0.5:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.017977499999688007,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.01809891700031585,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.018063083000015467,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01801904100284446,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.018123625002772314,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.017660500001511537,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.017601874998945277,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.017674874998192536,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.017722125001455424,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.017724624998663785,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.01722341700224206,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.01708045899795252,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01711333299681428,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01713324999946053,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.017242499998246785,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 91770,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06372916666666667
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=1.0:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.029828624999936437,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.029933083002106287,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0297435829997994,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.029831583000486717,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.029885457999625942,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.03057016700040549,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.030749416000617202,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.030764708000788232,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.030788666997977998,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.030720124999788823,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.030020749996765517,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.030091541000729194,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.030160499998601153,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.030106375001196284,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.030077167000854388,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 181800,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=1.0:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.029852374998881714,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.030051124998863088,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.029799209001794225,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.029880375001084758,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.030141582999931416,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.030778208001720486,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.030802582998148864,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.030720083999767667,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.031065667000802932,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.031237292001605965,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.030207458999939263,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.030239208001148654,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02995737499804818,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.030133625001326436,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.030096916998445522,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 181800,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=1.0:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.029614084000058938,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.029626874998939456,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.029714333002630156,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.029679791998205474,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.029550999999628402,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.030573666997952387,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.03061195800182759,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03071999999883701,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.030509917000017595,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.03049891699993168,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.029942166998807807,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.03005608300009044,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.029986457997438265,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02993695899931481,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.030237958999350667,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 181800,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=1.0:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.02973845900123706,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.029693207998207072,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02968808299920056,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.029697208003199194,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.029640749999089167,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.03049045800071326,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.030645999999251217,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03048379200117779,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.030413874999794643,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.03079000000070664,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.030005125001480337,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02990404099909938,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.030068500000197673,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.029986708002979867,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.030122833002678817,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 181800,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=300:density=1.0:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.029804958001477644,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.029856083001504885,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.029785457998514175,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.029696540997974807,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.029699750000872882,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0306224169980851,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.030695292000018526,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03092300000207615,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.031043791997944936,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.030608167002355913,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.02996704199904343,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.03026812499956577,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03032095800153911,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.030056625000725035,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.03004329200120992,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1200,
+    "m": 1200,
+    "nnz_A": 181800,
+    "nnz_P": 600,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.12625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.01:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.011682375003147172,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.011589958001422929,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.011476791001769016,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.011453750001237495,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.011480416000267724,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.012890959002106683,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.012825082998460857,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012872625000454718,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.012832874999730848,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012928500000271015,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.012419541999406647,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.012395749999996042,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012434249998477753,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.012580957998579834,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012397833001159597,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 25872,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.001617
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.01:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.011563167001440888,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.011630209002760239,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01157483299903106,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.011549209000804694,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.011506791997817345,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.012973750002856832,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.013051375000941334,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012956750000739703,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01296429200010607,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012932749999890802,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.01250104200153146,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.01251349999802187,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012658042000111891,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.012534500001493143,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012468541000998812,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 25918,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.001619875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.01:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.011518167000758694,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.011471875001006993,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.011612292000791058,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.011481666999316076,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.011468207998404978,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.013008582998736529,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.012840874998801155,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01292279100016458,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01283754199903342,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012869750000390923,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.012454959000024246,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.012418291000358295,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012493209000240313,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.012432332998287166,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012531915999716148,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 25995,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0016246875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.01:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.011606208001467166,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.011415542001486756,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.011595791998843197,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.011602250000578351,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.011554790999070974,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.012919500000862172,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.012991249997867271,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012883125000371365,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01303554200057988,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012981708001461811,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.012485084000218194,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.012504667000030167,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012454666000849102,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.012497332998464117,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012517166000179714,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 25873,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0016170625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.01:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.011499457999889273,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.011662124998110812,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.011516249996930128,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0115706249998766,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.011607791002461454,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.01293791599891847,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.01280879100158927,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012986916000954807,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.01298112500080606,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012914584000100149,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.012453749997803243,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.012384042001940543,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.012527416001830716,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.012466249998396961,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012546041998575674,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 25999,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0016249375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.05:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.02445491700200364,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.024431583002296975,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.024430707999272272,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02447037499950966,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.024477958999341354,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.02655462500115391,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.026639915999112418,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02674670800115564,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02668041600190918,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.026589917000819696,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.02616887499971199,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02610395800002152,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02650629200070398,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02657675000227755,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02611741700093262,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 105820,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00661375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.05:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.02445212499878835,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02435979200163274,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02429245799794444,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.024504249999154126,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02457291600148892,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.026563584000541596,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.026544583997747395,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.026328791998821544,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.026709208999818657,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02648679200137849,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.026187667001067894,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.026004292001744034,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02601324999704957,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.026021792000392452,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02590687500196509,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 105739,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0066086875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.05:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.02437929100051406,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.024457416999212,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0245261659983953,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.024371291998249944,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.024439291999442503,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.026478625000891043,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.026493749999644933,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02660370800003875,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02647287500076345,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02646262499911245,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.02610570899923914,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02611508299742127,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.026172375000896864,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.026311624998925254,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.026182833000348182,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 105744,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.006609
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.05:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.024691082999197533,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.024603499998193,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.024537666999094654,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02456233299744781,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.024438415999611607,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.026805624998814892,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02660904099684558,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.026631084001564886,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.026679750000766944,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.026723374998255167,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.026383583001006627,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0262614580024092,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.026221625001198845,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.026245625002047746,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.026290583999070805,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 105871,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0066169375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.05:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.024554457999329315,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.024673459000041476,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.024416292002570117,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.024591583998699207,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02457858399793622,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.02673033400060376,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.026800666000781348,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.026641207998181926,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.026802917000168236,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.027258499998424668,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.026396792000014102,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.026255000000674045,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.026617790997988777,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.026253083000483457,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.026276165997842327,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 106372,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00664825
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.2:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.07806870800050092,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07757254199896124,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07748883300155285,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07733779199770652,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07770283299760194,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0802213329989172,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.08042795900109923,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.08052029100144864,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.08019820900153718,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.08029812500171829,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.07835337500000605,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07857383300142828,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07878870800050208,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07845545899908757,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07872704200053704,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 406009,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0253755625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.2:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.07716508399971644,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07740995800122619,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07728504199985764,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07689733399820398,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07706499999767402,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.08021054200071376,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.08032887499939534,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.08043595799972536,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.08037004200014053,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.08076741699915146,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.07860991699999431,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07851762499922188,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07923725000000559,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07842587500272202,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07948483400105033,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 405556,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.02534725
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.2:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.07774441600122373,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07728241700169747,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0775783750032133,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07708662500226637,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07728133399723447,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.08071408300020266,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.08065579100002651,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.08071383300193702,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.08028679200288025,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.08054587500009802,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0789182919979794,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07889554100256646,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07907945799888694,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07887912499791128,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07927104199916357,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 405649,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0253530625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.2:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.07726187499793014,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07723591700050747,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.08012970900017535,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07672558299964294,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07717712500016205,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.07991341600063606,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0798091669967107,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.08023783300086507,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07938016700063599,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07958420899740304,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.07903787499890313,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07923941699846182,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07854712500193273,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07830341599765234,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07995712500269292,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 405227,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0253266875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.2:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0774731250021432,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07697358400037047,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0772354170003382,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07702820800113841,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07689224999921862,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.08031824999852688,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.08023229199898196,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.08039133400234277,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.08031124999979511,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.08009837500139838,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.07875445800164016,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07963466599903768,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07887437499812222,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07949841699883109,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07855566600119346,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 406077,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0253798125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.5:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.18169099999795435,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.18235658399862587,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.18273645899898838,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18279920799977845,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.18262220799806528,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.19013241699940409,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.19222654099939973,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1914028329993016,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.19140620899997884,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.19202500000028522,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.1898635830002604,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.19003924999924493,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.18959374999758438,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.19054070799757028,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.19040837500142516,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 1005401,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0628375625
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.5:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.1828311669996765,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.18279570800223155,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1832602089998545,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18243858300047577,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.1833541249980044,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.19248558300023433,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.19205487499857554,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1927734579985554,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.19271291599943652,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.19261249999908614,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.1905015420015843,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.19020104199807975,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.18929895800101804,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18927845900179818,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.18993500000215136,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 1006516,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06290725
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.5:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.1820647500026098,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.1826736249968235,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1820945830004348,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18230087499978254,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.18291679200046929,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.1933329169987701,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.1917579580003803,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.19291391699880478,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.19239816700064694,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.19255370799874072,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.18971145800242084,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.18857958299849997,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.18919362499946146,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18929999999818392,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.18886795800062828,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 1005637,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0628523125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.5:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.1825238330020511,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.18253774999902816,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.18308287500258302,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18415395800184342,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.18275145799998427,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.1905284999993455,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.19084541700067348,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.19014412500109756,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.19083416699868394,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.19069925000076182,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.18957887500073412,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.20110879200001364,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.18939045800289023,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18989774999863585,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.18875808300072094,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 1004732,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06279575
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.5:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.18237070800023503,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.18182870900272974,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1826968340028543,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18250787500073784,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.18248208300065016,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.19190183399769012,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.1926986250000482,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.19195733400192694,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.19169849999889266,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.19323349999831407,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.19032591699942714,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.18905545899906429,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.18902274999709334,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.18886658400151646,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.18892295799741987,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 1005648,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.062853
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=1.0:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.3330939160005073,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3335441660019569,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3333211669996672,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3330646249996789,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3356010839997907,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.3658334579995426,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.36379704199862317,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3636460839989013,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.36447162500189734,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3659484169984353,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.3584837080015859,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3603943340021942,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.361124999999447,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.35970212500251364,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3615418340014003,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 2006000,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=1.0:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.3339940830010164,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.33407029199952376,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.33339887499823817,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3324525839998387,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.33649979199981317,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.3647692919985275,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.364076040998043,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.36568008299946086,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3649024169972108,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3654887909979152,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.3608639169979142,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.35928058300123666,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.36018166600115364,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.37151479099702556,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3601411249983357,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 2006000,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=1.0:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.3341094589995919,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.33264675000100397,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3325973749997502,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3343456670008891,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.33318954200149165,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.36373516599996947,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.36529662500106497,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3648436250005034,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3652926249997108,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3788844579976285,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.3589085410021653,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3614967499997874,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3604420840019884,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3602121250005439,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3735079170000972,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 2006000,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=1.0:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.3309389580026618,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3327449999997043,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3336838750001334,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.33090570800050045,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.33362133300033747,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.36452612499851966,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.36387562500021886,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3633808750018943,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.36294695800097543,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.36406124999848544,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.35975095799949486,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.35824562500056345,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3580594579980243,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3590930419995857,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.35986004100050195,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 2006000,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=1.0:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.33387820899952203,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3334911249985453,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3328050420022919,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3322705419996055,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3336972920005792,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.3662594160014123,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.36414179200073704,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3652921670000069,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3631454999995185,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.364340041000105,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.3605691670018132,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3607530829976895,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.35927554199952283,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.36048979200131726,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.36033258399766055,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 2006000,
+    "nnz_P": 2000,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125375
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.01:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.21419341600267217,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.10573429099895293,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1290749580002739,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.13894883299872163,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.10726404200249817,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.09125033400050597,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0913814999985334,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.09154495799884899,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09146737500122981,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09116729200104601,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.09025854200081085,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09027441599755548,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.09057137499985402,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09032379100244725,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09067599999980303,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 197634,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0013724583333333334
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.01:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.10422704199663713,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.18984070799706387,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.11147729099684511,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.11417495799832977,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.11994691700238036,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.0912994999998773,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09179674999904819,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.09141375000035623,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09102233399971738,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09181633399930433,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.09059274999890476,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09060474999932921,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.09075816699987627,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09068974999900092,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09042691700233263,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 197778,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0013734583333333333
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.01:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.22655324999868753,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.12580991700087907,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1515199580026092,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.10917079199862201,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09954158400068991,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.09157133400003659,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09128733399847988,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0918297079988406,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09159816700048395,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0917201659976854,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.09084570899722166,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09035324999786098,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.09046183299869881,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09066045800136635,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09070154200162506,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 197573,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0013720347222222222
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.01:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.1236529169982532,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.13997749999907683,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.17414562500198372,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.10878012499961187,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.13897670799997286,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.09169883399954415,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09160387500014622,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.09125225000025239,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09155412499967497,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09158962499714107,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.09078524999858928,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09050562499760417,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.090867499999149,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09069375000035507,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09110333399803494,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 198490,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0013784027777777779
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.01:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.13643758399848593,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.10442291700019268,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.12931704200309468,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.1108087920001708,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09860295899852645,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.09135029100070824,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09142420799980755,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0912032080013887,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.09117016699747182,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09105199999976321,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.09033324999836623,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.09020812500239117,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.09050250000291271,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0903035830015142,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.09041075000277488,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 198188,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0013763055555555555
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.05:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.24459904200193705,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.23950691599748097,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.261766625000746,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.24462800000037532,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2717602499978966,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.22867933299858123,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.22787400000015623,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22832820799885667,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.24220037499981117,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.22708262500236742,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.22777299999870593,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.22637037499953294,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2263770410027064,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.22789791700051865,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.22603512500063516,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 917197,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.006369423611111111
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.05:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.23050133399738115,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.25109170899668243,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2325850419983908,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2607955839994247,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.23241841599883628,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.2262282910014619,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.22670849999849452,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22647016599876224,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.22786241699941456,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.22775587499927497,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.22523370799899567,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2255855410003278,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22614125000109198,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2261421250004787,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.22906933299964294,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 918341,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.006377368055555555
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.05:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.2510022080023191,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.31137179100187495,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.24543533399992157,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2469615000009071,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2988595839997288,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.22930858300242107,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.22942375000275206,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22939475000021048,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2290375420016062,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2286450829997193,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.22739924999768846,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.22767791700243833,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22716583299916238,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.22665979100202094,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2268474580014299,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 917059,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.006368465277777778
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.05:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.30950141599896597,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.23489470899949083,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2665337920007005,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.32445999999981723,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2397813749994384,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.2286124589991232,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.22726200000033714,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22824100000070757,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.22834270900057163,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.22756445900085964,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.22632558300028904,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.22615583299921127,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22656862499934505,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.22653420799906598,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2262965420013643,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 919407,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0063847708333333334
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.05:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.2662827499989362,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.23513258299863082,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.23734124999828055,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2517321249979432,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2570217499996943,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.22788095899886684,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2283775420000893,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22803091699825018,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.22841620799954399,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.22774412500075414,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.22634154200204648,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.22621320899997954,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.22671654200166813,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2265958749994752,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2262746669985063,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 918077,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0063755347222222225
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.2:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.8357421250002517,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7765034170006402,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7639004580014443,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7819127500006289,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.8608679579992895,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.782497374999366,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7738391249986307,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7807732499968552,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7790185420017224,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7744748750010331,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.7764133750024484,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7796227090002503,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7764057079984923,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7728215000024647,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7797677079979621,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 3618084,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.025125583333333333
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.2:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.7794062499997381,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7648067089976394,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7633664580025652,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7831285829997796,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.8162318329996197,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.7789794590025849,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7720123330000206,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7680363330000546,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7795868339999288,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7731142089978675,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.7740988330006076,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7715844160011329,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7711767079999845,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7690433750030934,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7731818329993985,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 3614807,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.025102826388888888
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.2:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.8897517080004036,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7962224999973841,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.8118223750025209,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.8569114160018216,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.8177022919990122,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.7770509999973001,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7719226250010252,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7723546660017746,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7691170830003102,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7742640420001408,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.779755749998003,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.776630208001734,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7706503330009582,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7682887919982022,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7746092079978553,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 3616685,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.025115868055555556
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.2:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.7772647079982562,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7757589169996209,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7793874160015548,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.8110642920000828,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7904708329988352,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.7777727909997338,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7771296249993611,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7745670829972369,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7815860829978192,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7775692499999423,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.7772074589993281,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7798728749985457,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7711257089977153,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7768826659994374,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.781609292000212,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 3616255,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.025112881944444443
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.2:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.8330417500001204,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7697207079982036,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7660862499978975,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7968668749999779,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7841548750002403,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.7740721669979393,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.769107083997369,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7765044580009999,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7689903329992376,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7680298749983194,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.7730459999984305,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7650009999997565,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7779929999996966,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7672028749984747,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7652667090005707,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 3616912,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.025117444444444446
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.5:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.917797750000318,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9359307499980787,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9223091249987192,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9369717500012484,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9541040409967536,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.951263207996817,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9523351669995463,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9553712499982794,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.952241333998245,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.954411667000386,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.9301374579990807,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9295483749992854,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.930812499998865,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.944062833001226,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.925816417002352,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 9019422,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.062634875
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.5:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.938068250001379,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9102513339967118,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9142609169975913,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.906676291997428,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9371514999984356,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.960525709000649,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9565729579990148,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.963414207999449,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.959958249997726,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9825396250016638,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.9222395420001703,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9307426669984125,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9551167079989682,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9271378750017902,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9275185830010741,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 9016037,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06261136805555556
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.5:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.9715857919982227,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.935443041002145,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.910746499997913,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9270301669967012,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.91966120899815,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.9630243749998044,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9514351669968164,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.96116450000045,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9574012080011016,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9586902919982094,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.934208665999904,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9408159170016006,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9345370829978492,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9423917079984676,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9378723749978235,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 9014888,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06260338888888889
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.5:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.9114944169996306,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9472515000015846,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.916065665998758,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9811100420010916,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9153367079998134,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.9787633749983797,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9602785410024808,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9730459160018654,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.967465916997753,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.965587709000829,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.9260724999985541,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.930004124998959,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9252994579983351,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9321041670009436,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9344558750017313,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 9016020,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06261125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=0.5:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.9343802079965826,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9819210830028169,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.902756583000155,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.0603644590009935,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9297690840030555,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.993767709001986,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.96999154200239,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9784215839972603,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9630109589998028,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9725538330021664,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.9542626669972378,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.962710584000888,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9469590000007884,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9440344159993401,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.990058333001798,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 9020242,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06264056944444445
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=1.0:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 3.6085585830005584,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.6302173330004734,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.621406416001264,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.6323542079990148,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.613497708000068,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.8656737909986987,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.8561282500013476,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.85492954199799,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.8500336249999236,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.848177374999068,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.8020970420002413,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.8028643340003327,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.822172584001237,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.7847468750005646,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.8464324999986275,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 18018000,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=1.0:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 3.6175203749990033,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.627569708001829,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.6246059160002915,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.63348570800008,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.6165734579990385,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.8507740839995677,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.856080583998846,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.8624388330026704,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.8561196250011562,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.8469924999990326,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.80078995799704,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.8000754580025387,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.8135937500010186,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.8121435409993865,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.825528499997745,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 18018000,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=1.0:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 3.625669624998409,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.626036416997522,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.6289980830006243,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.6322052079995046,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.6272800419974374,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.8690327500007697,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.850191667002946,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.8652523749988177,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.8520246250009222,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.838136083999416,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.7880704580020392,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.7942607500008307,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.8153160420006316,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.8103631250014587,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.8283690409989504,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 18018000,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=1.0:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 3.626977875002922,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.61609533400042,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.6258982500003185,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.623172292001982,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.628893707998941,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.858253041998978,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.848191749999387,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.868044540999108,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.853638458997011,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.8523087089997716,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.802235292001569,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.7978879170004802,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.7937765829992713,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.8149646670026414,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.8168332909990568,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 18018000,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125125
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=3000:density=1.0:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 3.6331336250004824,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.631206582998857,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.646986250001646,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.623803375001444,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.6227399169983983,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.8547926249993907,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.85523933299919,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.8729940000011993,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.851816708000115,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.8839316250014235,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.795035708000796,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.806356916000368,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.8073496249999152,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.797609332999855,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.8057789169979515,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 12000,
+    "m": 12000,
+    "nnz_A": 18018000,
+    "nnz_P": 6000,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.125125
+   }
+  }
+ ]
+}

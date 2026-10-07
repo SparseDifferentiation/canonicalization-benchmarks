@@ -1,0 +1,1014 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-upstream/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "1.9.2",
+   "sparsediffpy": "0.3.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": null,
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": null,
+   "engine_commit": null,
+   "engine_so_sha256": "11635606f60c6704bdc2d118b151a10b809f488fbf99205fd6ecd36de9757209",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "CPP_ND",
+   "SCIPY_ND",
+   "COO_ND"
+  ],
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "finance",
+   "class": "CVaRBenchmark",
+   "targets": {
+    "CPP_ND": {
+     "module": "finance",
+     "class": "CVaRBenchmark",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 4021.65625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "finance",
+     "class": "CVaRBenchmark",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 2803.859375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "finance",
+     "class": "CVaRBenchmark",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 3587.015625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "finance",
+   "class": "FactorCovarianceModel",
+   "targets": {
+    "CPP_ND": {
+     "module": "finance",
+     "class": "FactorCovarianceModel",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 1129.125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "finance",
+     "class": "FactorCovarianceModel",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 1046.796875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "finance",
+     "class": "FactorCovarianceModel",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 1334.0625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Cajas",
+   "targets": {
+    "CPP_ND": {
+     "module": "gini_portfolio",
+     "class": "Cajas",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 1192.828125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "gini_portfolio",
+     "class": "Cajas",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 298.359375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "gini_portfolio",
+     "class": "Cajas",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 320.015625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Murray",
+   "targets": {
+    "CPP_ND": {
+     "module": "gini_portfolio",
+     "class": "Murray",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 2849.46875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "gini_portfolio",
+     "class": "Murray",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 219.75,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "gini_portfolio",
+     "class": "Murray",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 305.34375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Yitzhaki",
+   "targets": {
+    "CPP_ND": {
+     "module": "gini_portfolio",
+     "class": "Yitzhaki",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 448.984375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "gini_portfolio",
+     "class": "Yitzhaki",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 437.09375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "gini_portfolio",
+     "class": "Yitzhaki",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 504.484375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "high_dim_convex_plasticity",
+   "class": "ConvexPlasticity",
+   "targets": {
+    "CPP_ND": {
+     "module": "high_dim_convex_plasticity",
+     "class": "ConvexPlasticity",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 82.53125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "high_dim_convex_plasticity",
+     "class": "ConvexPlasticity",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 82.421875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "high_dim_convex_plasticity",
+     "class": "ConvexPlasticity",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 82.46875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "huber_regression",
+   "class": "HuberRegression",
+   "targets": {
+    "CPP_ND": {
+     "module": "huber_regression",
+     "class": "HuberRegression",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 2223.171875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "huber_regression",
+     "class": "HuberRegression",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 2245.734375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "huber_regression",
+     "class": "HuberRegression",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 3121.171875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ConeMatrixStuffingBench",
+   "targets": {
+    "CPP_ND": {
+     "module": "matrix_stuffing",
+     "class": "ConeMatrixStuffingBench",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 2009.890625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "matrix_stuffing",
+     "class": "ConeMatrixStuffingBench",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 963.515625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "matrix_stuffing",
+     "class": "ConeMatrixStuffingBench",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 3729.984375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ParamConeMatrixStuffing",
+   "targets": {
+    "CPP_ND": {
+     "module": "matrix_stuffing",
+     "class": "ParamConeMatrixStuffing",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 9.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "matrix_stuffing",
+     "class": "ParamConeMatrixStuffing",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 8.265625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "matrix_stuffing",
+     "class": "ParamConeMatrixStuffing",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 12.28125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ParamSmallMatrixStuffing",
+   "targets": {
+    "CPP_ND": {
+     "module": "matrix_stuffing",
+     "class": "ParamSmallMatrixStuffing",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 17.1875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "matrix_stuffing",
+     "class": "ParamSmallMatrixStuffing",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 12.984375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "matrix_stuffing",
+     "class": "ParamSmallMatrixStuffing",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 21.921875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "SmallMatrixStuffing",
+   "targets": {
+    "CPP_ND": {
+     "module": "matrix_stuffing",
+     "class": "SmallMatrixStuffing",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 1189.671875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "matrix_stuffing",
+     "class": "SmallMatrixStuffing",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 633.96875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "matrix_stuffing",
+     "class": "SmallMatrixStuffing",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 2405.09375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "optimal_advertising",
+   "class": "OptimalAdvertising",
+   "targets": {
+    "CPP_ND": {
+     "module": "optimal_advertising",
+     "class": "OptimalAdvertising",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 172.625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "optimal_advertising",
+     "class": "OptimalAdvertising",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 181.40625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "optimal_advertising",
+     "class": "OptimalAdvertising",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 196.859375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "quantum_hilbert_matrix",
+   "class": "QuantumHilbertMatrix",
+   "targets": {
+    "CPP_ND": {
+     "module": "quantum_hilbert_matrix",
+     "class": "QuantumHilbertMatrix",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 221.703125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "quantum_hilbert_matrix",
+     "class": "QuantumHilbertMatrix",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 217.6875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "quantum_hilbert_matrix",
+     "class": "QuantumHilbertMatrix",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 287.953125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "sdp_segfault_1132_benchmark",
+   "class": "SDPSegfault1132Benchmark",
+   "targets": {
+    "CPP_ND": {
+     "module": "sdp_segfault_1132_benchmark",
+     "class": "SDPSegfault1132Benchmark",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 7536.53125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "sdp_segfault_1132_benchmark",
+     "class": "SDPSegfault1132Benchmark",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 3460.140625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "sdp_segfault_1132_benchmark",
+     "class": "SDPSegfault1132Benchmark",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 12983.21875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "semidefinite_programming",
+   "class": "SemidefiniteProgramming",
+   "targets": {
+    "CPP_ND": {
+     "module": "semidefinite_programming",
+     "class": "SemidefiniteProgramming",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 1317.140625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "semidefinite_programming",
+     "class": "SemidefiniteProgramming",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 350.0,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "semidefinite_programming",
+     "class": "SemidefiniteProgramming",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 640.0625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleFullyParametrizedLPBenchmark",
+   "targets": {
+    "CPP_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleFullyParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 517.21875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleFullyParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 493.5625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleFullyParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 526.015625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleLPBenchmark",
+   "targets": {
+    "CPP_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleLPBenchmark",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 5352.5,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleLPBenchmark",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 4960.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleLPBenchmark",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 5027.4375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleScalarParametrizedLPBenchmark",
+   "targets": {
+    "CPP_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleScalarParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 1087.75,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleScalarParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 1024.078125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleScalarParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 1067.90625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "LeastSquares",
+   "targets": {
+    "CPP_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "LeastSquares",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 2140.046875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "LeastSquares",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 2326.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "LeastSquares",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 3020.65625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "ParametrizedQPBenchmark",
+   "targets": {
+    "CPP_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "ParametrizedQPBenchmark",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 2035.171875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "ParametrizedQPBenchmark",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 2173.90625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "ParametrizedQPBenchmark",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 2997.84375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "SimpleQPBenchmark",
+   "targets": {
+    "CPP_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "SimpleQPBenchmark",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 2194.109375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "SimpleQPBenchmark",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 2355.171875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "SimpleQPBenchmark",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 3236.46875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "UnconstrainedQP",
+   "targets": {
+    "CPP_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "UnconstrainedQP",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 1427.078125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "UnconstrainedQP",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 1057.828125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "simple_QP_benchmarks",
+     "class": "UnconstrainedQP",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 2105.015625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "slow_pruning_1668_benchmark",
+   "class": "SlowPruningBenchmark",
+   "targets": {
+    "CPP_ND": {
+     "module": "slow_pruning_1668_benchmark",
+     "class": "SlowPruningBenchmark",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 1351.78125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "slow_pruning_1668_benchmark",
+     "class": "SlowPruningBenchmark",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 1425.03125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "slow_pruning_1668_benchmark",
+     "class": "SlowPruningBenchmark",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 1827.84375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "svm_l1_regularization",
+   "class": "SVMWithL1Regularization",
+   "targets": {
+    "CPP_ND": {
+     "module": "svm_l1_regularization",
+     "class": "SVMWithL1Regularization",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 1976.296875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "svm_l1_regularization",
+     "class": "SVMWithL1Regularization",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 2041.828125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "svm_l1_regularization",
+     "class": "SVMWithL1Regularization",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 2904.421875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "tv_inpainting",
+   "class": "TvInpainting",
+   "targets": {
+    "CPP_ND": {
+     "module": "tv_inpainting",
+     "class": "TvInpainting",
+     "kind": "cold",
+     "target": "CPP_ND",
+     "delta_mb": 704.96875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "SCIPY_ND": {
+     "module": "tv_inpainting",
+     "class": "TvInpainting",
+     "kind": "cold",
+     "target": "SCIPY_ND",
+     "delta_mb": 857.84375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "COO_ND": {
+     "module": "tv_inpainting",
+     "class": "TvInpainting",
+     "kind": "cold",
+     "target": "COO_ND",
+     "delta_mb": 993.875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  }
+ ]
+}

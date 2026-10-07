@@ -1,0 +1,646 @@
+[verify] CVaRBenchmark
+[verify] FactorCovarianceModel
+[verify] Cajas
+[verify] Murray
+[verify] Yitzhaki
+[verify] ConvexPlasticity
+[verify] HuberRegression
+[verify] ConeMatrixStuffingBench
+[verify] ParamConeMatrixStuffing
+[verify] ParamSmallMatrixStuffing
+[verify] SmallMatrixStuffing
+[verify] OptimalAdvertising
+[verify] QuantumHilbertMatrix
+[verify] SDPSegfault1132Benchmark
+[verify] SemidefiniteProgramming
+[verify] SimpleFullyParametrizedLPBenchmark
+[verify] SimpleLPBenchmark
+[verify] SimpleScalarParametrizedLPBenchmark
+[verify] LeastSquares
+[verify] ParametrizedQPBenchmark
+=== restart Tue Oct  6 22:18:17 EDT 2026 after kernel panic (memory cap added, f4f68f8) ===
+[verify] CVaRBenchmark
+[verify] FactorCovarianceModel
+[verify] Cajas
+[verify] Murray
+[verify] Yitzhaki
+[verify] ConvexPlasticity
+[verify] HuberRegression
+[verify] ConeMatrixStuffingBench
+[verify] ParamConeMatrixStuffing
+[verify] ParamSmallMatrixStuffing
+[verify] SmallMatrixStuffing
+[verify] OptimalAdvertising
+[verify] QuantumHilbertMatrix
+[verify] SDPSegfault1132Benchmark
+[verify] SemidefiniteProgramming
+[verify] SimpleFullyParametrizedLPBenchmark
+[verify] SimpleLPBenchmark
+[verify] SimpleScalarParametrizedLPBenchmark
+[verify] LeastSquares
+[verify] ParametrizedQPBenchmark
+[verify] SimpleQPBenchmark
+[verify] UnconstrainedQP
+[verify] SlowPruningBenchmark
+[verify] SVMWithL1Regularization
+[verify] TvInpainting
+[verify] lasso:variant=dpp:n=1000:seed=0
+[verify] lasso:variant=nondpp:n=1000:seed=0
+[verify] lasso:variant=free:n=1000:seed=0
+[verify] factor_cov:variant=dpp:n=5000:seed=0
+[verify] factor_cov:variant=nondpp:n=5000:seed=0
+[verify] factor_cov:variant=free:n=5000:seed=0
+[cold] CVaRBenchmark
+  worker CVaRBenchmark cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>16000MB)
+  worker CVaRBenchmark cold DIFFENGINE,DE_NODENSE 1: MEMCAP(>16000MB)
+=== paused Tue Oct  6 22:39:20 EDT 2026 to fix verify reference (MEMCAP) and OptimalAdvertising NaN ===
+=== restart Tue Oct  6 22:44:26 EDT 2026 (EvalParams reference, NaN-aware verify, 20 GB cap) ===
+[verify] CVaRBenchmark
+  worker CVaRBenchmark 0: MEMCAP(>20000MB)
+[verify] FactorCovarianceModel
+[verify] Cajas
+[verify] Murray
+[verify] Yitzhaki
+[verify] ConvexPlasticity
+[verify] HuberRegression
+[verify] ConeMatrixStuffingBench
+[verify] ParamConeMatrixStuffing
+[verify] ParamSmallMatrixStuffing
+[verify] SmallMatrixStuffing
+[verify] OptimalAdvertising
+[verify] QuantumHilbertMatrix
+[verify] SDPSegfault1132Benchmark
+  worker SDPSegfault1132Benchmark 0: MEMCAP(>20000MB)
+[verify] SemidefiniteProgramming
+[verify] SimpleFullyParametrizedLPBenchmark
+[verify] SimpleLPBenchmark
+[verify] SimpleScalarParametrizedLPBenchmark
+[verify] LeastSquares
+[verify] ParametrizedQPBenchmark
+[verify] SimpleQPBenchmark
+[verify] UnconstrainedQP
+[verify] SlowPruningBenchmark
+[verify] SVMWithL1Regularization
+[verify] TvInpainting
+[verify] lasso:variant=dpp:n=1000:seed=0
+[verify] lasso:variant=nondpp:n=1000:seed=0
+[verify] lasso:variant=free:n=1000:seed=0
+[verify] factor_cov:variant=dpp:n=5000:seed=0
+[verify] factor_cov:variant=nondpp:n=5000:seed=0
+[verify] factor_cov:variant=free:n=5000:seed=0
+[cold] CVaRBenchmark
+[cold] FactorCovarianceModel
+[cold] Cajas
+[cold] Murray
+[cold] Yitzhaki
+[cold] ConvexPlasticity
+[cold] HuberRegression
+[cold] ConeMatrixStuffingBench
+[cold] ParamConeMatrixStuffing
+[cold] ParamSmallMatrixStuffing
+[cold] SmallMatrixStuffing
+[cold] OptimalAdvertising
+[cold] QuantumHilbertMatrix
+[cold] SDPSegfault1132Benchmark
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 1: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 2: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 3: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 4: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 5: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 6: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 7: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 8: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 9: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 10: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 11: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 12: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 13: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 14: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 15: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 16: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 17: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 18: MEMCAP(>20000MB)
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 19: MEMCAP(>20000MB)
+[cold] SemidefiniteProgramming
+[cold] SimpleFullyParametrizedLPBenchmark
+[cold] SimpleLPBenchmark
+[cold] SimpleScalarParametrizedLPBenchmark
+[cold] LeastSquares
+[cold] ParametrizedQPBenchmark
+[cold] SimpleQPBenchmark
+[cold] UnconstrainedQP
+[cold] SlowPruningBenchmark
+[cold] SVMWithL1Regularization
+[cold] TvInpainting
+[cold] CVaRBenchmark
+[cold] FactorCovarianceModel
+[cold] Cajas
+[cold] Murray
+[cold] Yitzhaki
+[cold] ConvexPlasticity
+[cold] HuberRegression
+[cold] ConeMatrixStuffingBench
+[cold] ParamConeMatrixStuffing
+[cold] ParamSmallMatrixStuffing
+[cold] SmallMatrixStuffing
+[cold] OptimalAdvertising
+[cold] QuantumHilbertMatrix
+[cold] SDPSegfault1132Benchmark
+[cold] SemidefiniteProgramming
+[cold] SimpleFullyParametrizedLPBenchmark
+[cold] SimpleLPBenchmark
+[cold] SimpleScalarParametrizedLPBenchmark
+[cold] LeastSquares
+[cold] ParametrizedQPBenchmark
+[cold] SimpleQPBenchmark
+[cold] UnconstrainedQP
+[cold] SlowPruningBenchmark
+[cold] SVMWithL1Regularization
+[cold] TvInpainting
+[warm] CVaRBenchmark
+[warm] FactorCovarianceModel
+[warm] Cajas
+[warm] Murray
+[warm] Yitzhaki
+[warm] ConvexPlasticity
+[warm] HuberRegression
+[warm] ConeMatrixStuffingBench
+[warm] ParamConeMatrixStuffing
+[warm] ParamSmallMatrixStuffing
+[warm] SmallMatrixStuffing
+[warm] OptimalAdvertising
+[warm] QuantumHilbertMatrix
+[warm] SDPSegfault1132Benchmark
+[warm] SemidefiniteProgramming
+[warm] SimpleFullyParametrizedLPBenchmark
+[warm] SimpleLPBenchmark
+[warm] SimpleScalarParametrizedLPBenchmark
+[warm] LeastSquares
+[warm] ParametrizedQPBenchmark
+[warm] SimpleQPBenchmark
+[warm] UnconstrainedQP
+[warm] SlowPruningBenchmark
+[warm] SVMWithL1Regularization
+[warm] TvInpainting
+[warm] CVaRBenchmark
+[warm] FactorCovarianceModel
+[warm] Cajas
+[warm] Murray
+[warm] Yitzhaki
+[warm] ConvexPlasticity
+[warm] HuberRegression
+[warm] ConeMatrixStuffingBench
+[warm] ParamConeMatrixStuffing
+[warm] ParamSmallMatrixStuffing
+[warm] SmallMatrixStuffing
+[warm] OptimalAdvertising
+[warm] QuantumHilbertMatrix
+[warm] SDPSegfault1132Benchmark
+[warm] SemidefiniteProgramming
+[warm] SimpleFullyParametrizedLPBenchmark
+  worker SimpleFullyParametrizedLPBenchmark warm dpp,dpp_coo,dpp_scipy,nodpp_cpp,nodpp_coo,nodpp_scipy 0: MEMCAP(>20000MB)
+  worker SimpleFullyParametrizedLPBenchmark warm dpp 0: MEMCAP(>20000MB)
+  worker SimpleFullyParametrizedLPBenchmark warm dpp_scipy 0: MEMCAP(>20000MB)
+[warm] SimpleLPBenchmark
+[warm] SimpleScalarParametrizedLPBenchmark
+[warm] LeastSquares
+[warm] ParametrizedQPBenchmark
+  worker ParametrizedQPBenchmark warm dpp,dpp_coo,dpp_scipy,nodpp_cpp,nodpp_coo,nodpp_scipy 0: MEMCAP(>20000MB)
+  worker ParametrizedQPBenchmark warm dpp 0: MEMCAP(>20000MB)
+  worker ParametrizedQPBenchmark warm dpp_scipy 0: TIMEOUT(>1800s)
+[warm] SimpleQPBenchmark
+[warm] UnconstrainedQP
+[warm] SlowPruningBenchmark
+[warm] SVMWithL1Regularization
+[warm] TvInpainting
+[warm] lasso:variant=dpp:n=1000:seed=0
+[warm] lasso:variant=nondpp:n=1000:seed=0
+[warm] lasso:variant=free:n=1000:seed=0
+[warm] factor_cov:variant=dpp:n=5000:seed=0
+[warm] factor_cov:variant=nondpp:n=5000:seed=0
+[warm] factor_cov:variant=free:n=5000:seed=0
+[warm] lasso:variant=dpp:n=1000:seed=0
+[warm] lasso:variant=nondpp:n=1000:seed=0
+[warm] lasso:variant=free:n=1000:seed=0
+[warm] factor_cov:variant=dpp:n=5000:seed=0
+[warm] factor_cov:variant=nondpp:n=5000:seed=0
+[warm] factor_cov:variant=free:n=5000:seed=0
+[cold] lasso:variant=dpp:n=1000:seed=0
+[cold] lasso:variant=nondpp:n=1000:seed=0
+[cold] lasso:variant=free:n=1000:seed=0
+[cold] factor_cov:variant=dpp:n=5000:seed=0
+[cold] factor_cov:variant=nondpp:n=5000:seed=0
+[cold] factor_cov:variant=free:n=5000:seed=0
+[cold] lasso:variant=dpp:n=1000:seed=0
+[cold] lasso:variant=nondpp:n=1000:seed=0
+[cold] lasso:variant=free:n=1000:seed=0
+[cold] factor_cov:variant=dpp:n=5000:seed=0
+[cold] factor_cov:variant=nondpp:n=5000:seed=0
+[cold] factor_cov:variant=free:n=5000:seed=0
+[cold] lasso:variant=free:n=100:density=0.01:seed=0
+[cold] lasso:variant=free:n=100:density=0.01:seed=1
+[cold] lasso:variant=free:n=100:density=0.01:seed=2
+[cold] lasso:variant=free:n=100:density=0.01:seed=3
+[cold] lasso:variant=free:n=100:density=0.01:seed=4
+[cold] lasso:variant=free:n=100:density=0.05:seed=0
+[cold] lasso:variant=free:n=100:density=0.05:seed=1
+[cold] lasso:variant=free:n=100:density=0.05:seed=2
+[cold] lasso:variant=free:n=100:density=0.05:seed=3
+[cold] lasso:variant=free:n=100:density=0.05:seed=4
+[cold] lasso:variant=free:n=100:density=0.2:seed=0
+[cold] lasso:variant=free:n=100:density=0.2:seed=1
+[cold] lasso:variant=free:n=100:density=0.2:seed=2
+[cold] lasso:variant=free:n=100:density=0.2:seed=3
+[cold] lasso:variant=free:n=100:density=0.2:seed=4
+[cold] lasso:variant=free:n=100:density=0.5:seed=0
+[cold] lasso:variant=free:n=100:density=0.5:seed=1
+[cold] lasso:variant=free:n=100:density=0.5:seed=2
+[cold] lasso:variant=free:n=100:density=0.5:seed=3
+[cold] lasso:variant=free:n=100:density=0.5:seed=4
+[cold] lasso:variant=free:n=100:density=1.0:seed=0
+[cold] lasso:variant=free:n=100:density=1.0:seed=1
+[cold] lasso:variant=free:n=100:density=1.0:seed=2
+[cold] lasso:variant=free:n=100:density=1.0:seed=3
+[cold] lasso:variant=free:n=100:density=1.0:seed=4
+[cold] lasso:variant=free:n=300:density=0.01:seed=0
+[cold] lasso:variant=free:n=300:density=0.01:seed=1
+[cold] lasso:variant=free:n=300:density=0.01:seed=2
+[cold] lasso:variant=free:n=300:density=0.01:seed=3
+[cold] lasso:variant=free:n=300:density=0.01:seed=4
+[cold] lasso:variant=free:n=300:density=0.05:seed=0
+[cold] lasso:variant=free:n=300:density=0.05:seed=1
+[cold] lasso:variant=free:n=300:density=0.05:seed=2
+[cold] lasso:variant=free:n=300:density=0.05:seed=3
+[cold] lasso:variant=free:n=300:density=0.05:seed=4
+[cold] lasso:variant=free:n=300:density=0.2:seed=0
+[cold] lasso:variant=free:n=300:density=0.2:seed=1
+[cold] lasso:variant=free:n=300:density=0.2:seed=2
+[cold] lasso:variant=free:n=300:density=0.2:seed=3
+[cold] lasso:variant=free:n=300:density=0.2:seed=4
+[cold] lasso:variant=free:n=300:density=0.5:seed=0
+[cold] lasso:variant=free:n=300:density=0.5:seed=1
+[cold] lasso:variant=free:n=300:density=0.5:seed=2
+[cold] lasso:variant=free:n=300:density=0.5:seed=3
+[cold] lasso:variant=free:n=300:density=0.5:seed=4
+[cold] lasso:variant=free:n=300:density=1.0:seed=0
+[cold] lasso:variant=free:n=300:density=1.0:seed=1
+[cold] lasso:variant=free:n=300:density=1.0:seed=2
+[cold] lasso:variant=free:n=300:density=1.0:seed=3
+[cold] lasso:variant=free:n=300:density=1.0:seed=4
+[cold] lasso:variant=free:n=1000:density=0.01:seed=0
+[cold] lasso:variant=free:n=1000:density=0.01:seed=1
+[cold] lasso:variant=free:n=1000:density=0.01:seed=2
+[cold] lasso:variant=free:n=1000:density=0.01:seed=3
+[cold] lasso:variant=free:n=1000:density=0.01:seed=4
+[cold] lasso:variant=free:n=1000:density=0.05:seed=0
+[cold] lasso:variant=free:n=1000:density=0.05:seed=1
+[cold] lasso:variant=free:n=1000:density=0.05:seed=2
+[cold] lasso:variant=free:n=1000:density=0.05:seed=3
+[cold] lasso:variant=free:n=1000:density=0.05:seed=4
+[cold] lasso:variant=free:n=1000:density=0.2:seed=0
+[cold] lasso:variant=free:n=1000:density=0.2:seed=1
+[cold] lasso:variant=free:n=1000:density=0.2:seed=2
+[cold] lasso:variant=free:n=1000:density=0.2:seed=3
+[cold] lasso:variant=free:n=1000:density=0.2:seed=4
+[cold] lasso:variant=free:n=1000:density=0.5:seed=0
+[cold] lasso:variant=free:n=1000:density=0.5:seed=1
+[cold] lasso:variant=free:n=1000:density=0.5:seed=2
+[cold] lasso:variant=free:n=1000:density=0.5:seed=3
+[cold] lasso:variant=free:n=1000:density=0.5:seed=4
+[cold] lasso:variant=free:n=1000:density=1.0:seed=0
+[cold] lasso:variant=free:n=1000:density=1.0:seed=1
+[cold] lasso:variant=free:n=1000:density=1.0:seed=2
+[cold] lasso:variant=free:n=1000:density=1.0:seed=3
+[cold] lasso:variant=free:n=1000:density=1.0:seed=4
+[cold] lasso:variant=free:n=3000:density=0.01:seed=0
+[cold] lasso:variant=free:n=3000:density=0.01:seed=1
+[cold] lasso:variant=free:n=3000:density=0.01:seed=2
+[cold] lasso:variant=free:n=3000:density=0.01:seed=3
+[cold] lasso:variant=free:n=3000:density=0.01:seed=4
+[cold] lasso:variant=free:n=3000:density=0.05:seed=0
+[cold] lasso:variant=free:n=3000:density=0.05:seed=1
+[cold] lasso:variant=free:n=3000:density=0.05:seed=2
+[cold] lasso:variant=free:n=3000:density=0.05:seed=3
+[cold] lasso:variant=free:n=3000:density=0.05:seed=4
+[cold] lasso:variant=free:n=3000:density=0.2:seed=0
+[cold] lasso:variant=free:n=3000:density=0.2:seed=1
+[cold] lasso:variant=free:n=3000:density=0.2:seed=2
+[cold] lasso:variant=free:n=3000:density=0.2:seed=3
+[cold] lasso:variant=free:n=3000:density=0.2:seed=4
+[cold] lasso:variant=free:n=3000:density=0.5:seed=0
+[cold] lasso:variant=free:n=3000:density=0.5:seed=1
+[cold] lasso:variant=free:n=3000:density=0.5:seed=2
+[cold] lasso:variant=free:n=3000:density=0.5:seed=3
+[cold] lasso:variant=free:n=3000:density=0.5:seed=4
+[cold] lasso:variant=free:n=3000:density=1.0:seed=0
+[cold] lasso:variant=free:n=3000:density=1.0:seed=1
+[cold] lasso:variant=free:n=3000:density=1.0:seed=2
+[cold] lasso:variant=free:n=3000:density=1.0:seed=3
+[cold] lasso:variant=free:n=3000:density=1.0:seed=4
+[cold] lasso:variant=free:n=100:density=0.01:seed=0
+[cold] lasso:variant=free:n=100:density=0.01:seed=1
+[cold] lasso:variant=free:n=100:density=0.01:seed=2
+[cold] lasso:variant=free:n=100:density=0.01:seed=3
+[cold] lasso:variant=free:n=100:density=0.01:seed=4
+[cold] lasso:variant=free:n=100:density=0.05:seed=0
+[cold] lasso:variant=free:n=100:density=0.05:seed=1
+[cold] lasso:variant=free:n=100:density=0.05:seed=2
+[cold] lasso:variant=free:n=100:density=0.05:seed=3
+[cold] lasso:variant=free:n=100:density=0.05:seed=4
+[cold] lasso:variant=free:n=100:density=0.2:seed=0
+[cold] lasso:variant=free:n=100:density=0.2:seed=1
+[cold] lasso:variant=free:n=100:density=0.2:seed=2
+[cold] lasso:variant=free:n=100:density=0.2:seed=3
+[cold] lasso:variant=free:n=100:density=0.2:seed=4
+[cold] lasso:variant=free:n=100:density=0.5:seed=0
+[cold] lasso:variant=free:n=100:density=0.5:seed=1
+[cold] lasso:variant=free:n=100:density=0.5:seed=2
+[cold] lasso:variant=free:n=100:density=0.5:seed=3
+[cold] lasso:variant=free:n=100:density=0.5:seed=4
+[cold] lasso:variant=free:n=100:density=1.0:seed=0
+[cold] lasso:variant=free:n=100:density=1.0:seed=1
+[cold] lasso:variant=free:n=100:density=1.0:seed=2
+[cold] lasso:variant=free:n=100:density=1.0:seed=3
+[cold] lasso:variant=free:n=100:density=1.0:seed=4
+[cold] lasso:variant=free:n=300:density=0.01:seed=0
+[cold] lasso:variant=free:n=300:density=0.01:seed=1
+[cold] lasso:variant=free:n=300:density=0.01:seed=2
+[cold] lasso:variant=free:n=300:density=0.01:seed=3
+[cold] lasso:variant=free:n=300:density=0.01:seed=4
+[cold] lasso:variant=free:n=300:density=0.05:seed=0
+[cold] lasso:variant=free:n=300:density=0.05:seed=1
+[cold] lasso:variant=free:n=300:density=0.05:seed=2
+[cold] lasso:variant=free:n=300:density=0.05:seed=3
+[cold] lasso:variant=free:n=300:density=0.05:seed=4
+[cold] lasso:variant=free:n=300:density=0.2:seed=0
+[cold] lasso:variant=free:n=300:density=0.2:seed=1
+[cold] lasso:variant=free:n=300:density=0.2:seed=2
+[cold] lasso:variant=free:n=300:density=0.2:seed=3
+[cold] lasso:variant=free:n=300:density=0.2:seed=4
+[cold] lasso:variant=free:n=300:density=0.5:seed=0
+[cold] lasso:variant=free:n=300:density=0.5:seed=1
+[cold] lasso:variant=free:n=300:density=0.5:seed=2
+[cold] lasso:variant=free:n=300:density=0.5:seed=3
+[cold] lasso:variant=free:n=300:density=0.5:seed=4
+[cold] lasso:variant=free:n=300:density=1.0:seed=0
+[cold] lasso:variant=free:n=300:density=1.0:seed=1
+[cold] lasso:variant=free:n=300:density=1.0:seed=2
+[cold] lasso:variant=free:n=300:density=1.0:seed=3
+[cold] lasso:variant=free:n=300:density=1.0:seed=4
+[cold] lasso:variant=free:n=1000:density=0.01:seed=0
+[cold] lasso:variant=free:n=1000:density=0.01:seed=1
+[cold] lasso:variant=free:n=1000:density=0.01:seed=2
+[cold] lasso:variant=free:n=1000:density=0.01:seed=3
+[cold] lasso:variant=free:n=1000:density=0.01:seed=4
+[cold] lasso:variant=free:n=1000:density=0.05:seed=0
+[cold] lasso:variant=free:n=1000:density=0.05:seed=1
+[cold] lasso:variant=free:n=1000:density=0.05:seed=2
+[cold] lasso:variant=free:n=1000:density=0.05:seed=3
+[cold] lasso:variant=free:n=1000:density=0.05:seed=4
+[cold] lasso:variant=free:n=1000:density=0.2:seed=0
+[cold] lasso:variant=free:n=1000:density=0.2:seed=1
+[cold] lasso:variant=free:n=1000:density=0.2:seed=2
+[cold] lasso:variant=free:n=1000:density=0.2:seed=3
+[cold] lasso:variant=free:n=1000:density=0.2:seed=4
+[cold] lasso:variant=free:n=1000:density=0.5:seed=0
+[cold] lasso:variant=free:n=1000:density=0.5:seed=1
+[cold] lasso:variant=free:n=1000:density=0.5:seed=2
+[cold] lasso:variant=free:n=1000:density=0.5:seed=3
+[cold] lasso:variant=free:n=1000:density=0.5:seed=4
+[cold] lasso:variant=free:n=1000:density=1.0:seed=0
+[cold] lasso:variant=free:n=1000:density=1.0:seed=1
+[cold] lasso:variant=free:n=1000:density=1.0:seed=2
+[cold] lasso:variant=free:n=1000:density=1.0:seed=3
+[cold] lasso:variant=free:n=1000:density=1.0:seed=4
+[cold] lasso:variant=free:n=3000:density=0.01:seed=0
+[cold] lasso:variant=free:n=3000:density=0.01:seed=1
+[cold] lasso:variant=free:n=3000:density=0.01:seed=2
+[cold] lasso:variant=free:n=3000:density=0.01:seed=3
+[cold] lasso:variant=free:n=3000:density=0.01:seed=4
+[cold] lasso:variant=free:n=3000:density=0.05:seed=0
+[cold] lasso:variant=free:n=3000:density=0.05:seed=1
+[cold] lasso:variant=free:n=3000:density=0.05:seed=2
+[cold] lasso:variant=free:n=3000:density=0.05:seed=3
+[cold] lasso:variant=free:n=3000:density=0.05:seed=4
+[cold] lasso:variant=free:n=3000:density=0.2:seed=0
+[cold] lasso:variant=free:n=3000:density=0.2:seed=1
+[cold] lasso:variant=free:n=3000:density=0.2:seed=2
+[cold] lasso:variant=free:n=3000:density=0.2:seed=3
+[cold] lasso:variant=free:n=3000:density=0.2:seed=4
+[cold] lasso:variant=free:n=3000:density=0.5:seed=0
+[cold] lasso:variant=free:n=3000:density=0.5:seed=1
+[cold] lasso:variant=free:n=3000:density=0.5:seed=2
+[cold] lasso:variant=free:n=3000:density=0.5:seed=3
+[cold] lasso:variant=free:n=3000:density=0.5:seed=4
+[cold] lasso:variant=free:n=3000:density=1.0:seed=0
+[cold] lasso:variant=free:n=3000:density=1.0:seed=1
+[cold] lasso:variant=free:n=3000:density=1.0:seed=2
+[cold] lasso:variant=free:n=3000:density=1.0:seed=3
+[cold] lasso:variant=free:n=3000:density=1.0:seed=4
+[cold] huber:n=300:seed=0
+[cold] huber:n=300:seed=1
+[cold] huber:n=300:seed=2
+[cold] huber:n=300:seed=3
+[cold] huber:n=300:seed=4
+[cold] huber:n=1000:seed=0
+[cold] huber:n=1000:seed=1
+[cold] huber:n=1000:seed=2
+[cold] huber:n=1000:seed=3
+[cold] huber:n=1000:seed=4
+[cold] huber:n=3000:seed=0
+[cold] huber:n=3000:seed=1
+[cold] huber:n=3000:seed=2
+[cold] huber:n=3000:seed=3
+[cold] huber:n=3000:seed=4
+[cold] huber:n=6000:seed=0
+[cold] huber:n=6000:seed=1
+[cold] huber:n=6000:seed=2
+[cold] huber:n=6000:seed=3
+[cold] huber:n=6000:seed=4
+[cold] advertising:n=200:seed=0
+[cold] advertising:n=200:seed=1
+[cold] advertising:n=200:seed=2
+[cold] advertising:n=200:seed=3
+[cold] advertising:n=200:seed=4
+[cold] advertising:n=500:seed=0
+[cold] advertising:n=500:seed=1
+[cold] advertising:n=500:seed=2
+[cold] advertising:n=500:seed=3
+[cold] advertising:n=500:seed=4
+[cold] advertising:n=1000:seed=0
+[cold] advertising:n=1000:seed=1
+[cold] advertising:n=1000:seed=2
+[cold] advertising:n=1000:seed=3
+[cold] advertising:n=1000:seed=4
+[cold] advertising:n=2000:seed=0
+  worker advertising:n=2000:seed=0 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker advertising:n=2000:seed=0 cold DIFFENGINE 0: MEMCAP(>20000MB)
+[cold] advertising:n=2000:seed=1
+  worker advertising:n=2000:seed=1 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker advertising:n=2000:seed=1 cold DIFFENGINE 0: MEMCAP(>20000MB)
+[cold] advertising:n=2000:seed=2
+  worker advertising:n=2000:seed=2 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker advertising:n=2000:seed=2 cold DIFFENGINE 0: MEMCAP(>20000MB)
+[cold] advertising:n=2000:seed=3
+  worker advertising:n=2000:seed=3 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker advertising:n=2000:seed=3 cold DIFFENGINE 0: MEMCAP(>20000MB)
+[cold] advertising:n=2000:seed=4
+  worker advertising:n=2000:seed=4 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker advertising:n=2000:seed=4 cold DIFFENGINE 0: MEMCAP(>20000MB)
+[cold] factor_cov:variant=dpp:n=1000:seed=0
+[cold] factor_cov:variant=dpp:n=1000:seed=1
+[cold] factor_cov:variant=dpp:n=1000:seed=2
+[cold] factor_cov:variant=dpp:n=1000:seed=3
+[cold] factor_cov:variant=dpp:n=1000:seed=4
+[cold] factor_cov:variant=dpp:n=5000:seed=0
+[cold] factor_cov:variant=dpp:n=5000:seed=1
+[cold] factor_cov:variant=dpp:n=5000:seed=2
+[cold] factor_cov:variant=dpp:n=5000:seed=3
+[cold] factor_cov:variant=dpp:n=5000:seed=4
+[cold] factor_cov:variant=dpp:n=25000:seed=0
+[cold] factor_cov:variant=dpp:n=25000:seed=1
+[cold] factor_cov:variant=dpp:n=25000:seed=2
+[cold] factor_cov:variant=dpp:n=25000:seed=3
+[cold] factor_cov:variant=dpp:n=25000:seed=4
+[cold] factor_cov:variant=dpp:n=50000:seed=0
+[cold] factor_cov:variant=dpp:n=50000:seed=1
+[cold] factor_cov:variant=dpp:n=50000:seed=2
+[cold] factor_cov:variant=dpp:n=50000:seed=3
+[cold] factor_cov:variant=dpp:n=50000:seed=4
+[cold] huber:n=300:seed=0
+[cold] huber:n=300:seed=1
+[cold] huber:n=300:seed=2
+[cold] huber:n=300:seed=3
+[cold] huber:n=300:seed=4
+[cold] huber:n=1000:seed=0
+[cold] huber:n=1000:seed=1
+[cold] huber:n=1000:seed=2
+[cold] huber:n=1000:seed=3
+[cold] huber:n=1000:seed=4
+[cold] huber:n=3000:seed=0
+[cold] huber:n=3000:seed=1
+[cold] huber:n=3000:seed=2
+[cold] huber:n=3000:seed=3
+[cold] huber:n=3000:seed=4
+[cold] huber:n=6000:seed=0
+[cold] huber:n=6000:seed=1
+[cold] huber:n=6000:seed=2
+[cold] huber:n=6000:seed=3
+[cold] huber:n=6000:seed=4
+[cold] advertising:n=200:seed=0
+[cold] advertising:n=200:seed=1
+[cold] advertising:n=200:seed=2
+[cold] advertising:n=200:seed=3
+[cold] advertising:n=200:seed=4
+[cold] advertising:n=500:seed=0
+[cold] advertising:n=500:seed=1
+[cold] advertising:n=500:seed=2
+[cold] advertising:n=500:seed=3
+[cold] advertising:n=500:seed=4
+[cold] advertising:n=1000:seed=0
+[cold] advertising:n=1000:seed=1
+[cold] advertising:n=1000:seed=2
+[cold] advertising:n=1000:seed=3
+[cold] advertising:n=1000:seed=4
+[cold] advertising:n=2000:seed=0
+[cold] advertising:n=2000:seed=1
+[cold] advertising:n=2000:seed=2
+[cold] advertising:n=2000:seed=3
+[cold] advertising:n=2000:seed=4
+[cold] factor_cov:variant=dpp:n=1000:seed=0
+[cold] factor_cov:variant=dpp:n=1000:seed=1
+[cold] factor_cov:variant=dpp:n=1000:seed=2
+[cold] factor_cov:variant=dpp:n=1000:seed=3
+[cold] factor_cov:variant=dpp:n=1000:seed=4
+[cold] factor_cov:variant=dpp:n=5000:seed=0
+[cold] factor_cov:variant=dpp:n=5000:seed=1
+[cold] factor_cov:variant=dpp:n=5000:seed=2
+[cold] factor_cov:variant=dpp:n=5000:seed=3
+[cold] factor_cov:variant=dpp:n=5000:seed=4
+[cold] factor_cov:variant=dpp:n=25000:seed=0
+[cold] factor_cov:variant=dpp:n=25000:seed=1
+[cold] factor_cov:variant=dpp:n=25000:seed=2
+[cold] factor_cov:variant=dpp:n=25000:seed=3
+[cold] factor_cov:variant=dpp:n=25000:seed=4
+[cold] factor_cov:variant=dpp:n=50000:seed=0
+[cold] factor_cov:variant=dpp:n=50000:seed=1
+[cold] factor_cov:variant=dpp:n=50000:seed=2
+[cold] factor_cov:variant=dpp:n=50000:seed=3
+[cold] factor_cov:variant=dpp:n=50000:seed=4
+[memory cold] CVaRBenchmark
+[memory cold] FactorCovarianceModel
+[memory cold] Cajas
+[memory cold] Murray
+[memory cold] Yitzhaki
+[memory cold] ConvexPlasticity
+[memory cold] HuberRegression
+[memory cold] ConeMatrixStuffingBench
+[memory cold] ParamConeMatrixStuffing
+[memory cold] ParamSmallMatrixStuffing
+[memory cold] SmallMatrixStuffing
+[memory cold] OptimalAdvertising
+[memory cold] QuantumHilbertMatrix
+[memory cold] SDPSegfault1132Benchmark
+[memory cold] SemidefiniteProgramming
+[memory cold] SimpleFullyParametrizedLPBenchmark
+[memory cold] SimpleLPBenchmark
+[memory cold] SimpleScalarParametrizedLPBenchmark
+[memory cold] LeastSquares
+[memory cold] ParametrizedQPBenchmark
+[memory cold] SimpleQPBenchmark
+[memory cold] UnconstrainedQP
+[memory cold] SlowPruningBenchmark
+[memory cold] SVMWithL1Regularization
+[memory cold] TvInpainting
+[memory cold] CVaRBenchmark
+[memory cold] FactorCovarianceModel
+[memory cold] Cajas
+[memory cold] Murray
+[memory cold] Yitzhaki
+[memory cold] ConvexPlasticity
+[memory cold] HuberRegression
+[memory cold] ConeMatrixStuffingBench
+[memory cold] ParamConeMatrixStuffing
+[memory cold] ParamSmallMatrixStuffing
+[memory cold] SmallMatrixStuffing
+[memory cold] OptimalAdvertising
+[memory cold] QuantumHilbertMatrix
+[memory cold] SDPSegfault1132Benchmark
+[memory cold] SemidefiniteProgramming
+[memory cold] SimpleFullyParametrizedLPBenchmark
+[memory cold] SimpleLPBenchmark
+[memory cold] SimpleScalarParametrizedLPBenchmark
+[memory cold] LeastSquares
+[memory cold] ParametrizedQPBenchmark
+[memory cold] SimpleQPBenchmark
+[memory cold] UnconstrainedQP
+[memory cold] SlowPruningBenchmark
+[memory cold] SVMWithL1Regularization
+[memory cold] TvInpainting
+[memory warm] CVaRBenchmark
+[memory warm] FactorCovarianceModel
+[memory warm] Cajas
+[memory warm] Murray
+[memory warm] Yitzhaki
+[memory warm] ConvexPlasticity
+[memory warm] HuberRegression
+[memory warm] ConeMatrixStuffingBench
+[memory warm] ParamConeMatrixStuffing
+[memory warm] ParamSmallMatrixStuffing
+[memory warm] SmallMatrixStuffing
+[memory warm] OptimalAdvertising
+[memory warm] QuantumHilbertMatrix
+[memory warm] SDPSegfault1132Benchmark
+[memory warm] SemidefiniteProgramming
+[memory warm] SimpleFullyParametrizedLPBenchmark
+[memory warm] SimpleLPBenchmark
+[memory warm] SimpleScalarParametrizedLPBenchmark
+[memory warm] LeastSquares
+[memory warm] ParametrizedQPBenchmark
+[memory warm] SimpleQPBenchmark
+[memory warm] UnconstrainedQP
+[memory warm] SlowPruningBenchmark
+[memory warm] SVMWithL1Regularization
+[memory warm] TvInpainting
+wrote results/thesis/summary.md

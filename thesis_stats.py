@@ -290,11 +290,15 @@ def gate_table(verify, md):
 def memory_table(memory, md):
     """Peak-RSS delta and the engine's own peak, one measurement per cell."""
     for kind in ("cold", "warm"):
-        cells = {name: t for (k, name), t in memory.items() if k == kind}
+        cells = {name: t for (k, name), t in memory.items() if k == kind
+                 and any("delta_mb" in r for r in t.values())}
         if not cells:
             continue
         targets = sorted({t for v in cells.values() for t in v})
-        md.append(f"\n## Memory ({kind}): peak-RSS delta (MB) [engine peak MB]\n")
+        eng = any(r.get("engine_peak_mb") is not None for v in cells.values()
+                  for r in v.values())
+        md.append(f"\n## Memory ({kind}): peak-RSS delta (MB)"
+                  + (" [engine peak MB]" if eng else "") + ", one measurement per cell\n")
         md.append("| problem | " + " | ".join(targets) + " |")
         md.append("|---|" + "---:|" * len(targets))
         for name, v in sorted(cells.items()):

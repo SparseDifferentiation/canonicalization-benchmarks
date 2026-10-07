@@ -1,0 +1,738 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-thesis/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "0.1.0.dev4044+g35e81b129",
+   "sparsediffpy": "0.7.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": "35e81b1296627ba8ee06caf2d79e055287152d7e",
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": "4f42e05",
+   "engine_commit": "4f42e05",
+   "engine_so_sha256": "77ee8cd5550bcc650622eb05a5dabbe247a33b673a6513fba62bb4e036933115",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "DIFFENGINE",
+   "DE_NODENSE"
+  ],
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "finance",
+   "class": "CVaRBenchmark",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "finance",
+     "class": "CVaRBenchmark",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 8093.9375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "finance",
+     "class": "CVaRBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 2211.15625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "finance",
+   "class": "FactorCovarianceModel",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "finance",
+     "class": "FactorCovarianceModel",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 759.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "finance",
+     "class": "FactorCovarianceModel",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 999.21875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Cajas",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "gini_portfolio",
+     "class": "Cajas",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 341.0625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "gini_portfolio",
+     "class": "Cajas",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 342.484375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Murray",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "gini_portfolio",
+     "class": "Murray",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 307.90625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "gini_portfolio",
+     "class": "Murray",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 305.84375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Yitzhaki",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "gini_portfolio",
+     "class": "Yitzhaki",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 476.125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "gini_portfolio",
+     "class": "Yitzhaki",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 572.25,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "high_dim_convex_plasticity",
+   "class": "ConvexPlasticity",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "high_dim_convex_plasticity",
+     "class": "ConvexPlasticity",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1329.578125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "high_dim_convex_plasticity",
+     "class": "ConvexPlasticity",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 25.5625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "huber_regression",
+   "class": "HuberRegression",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "huber_regression",
+     "class": "HuberRegression",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1412.734375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "huber_regression",
+     "class": "HuberRegression",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1865.5625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ConeMatrixStuffingBench",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "matrix_stuffing",
+     "class": "ConeMatrixStuffingBench",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 478.796875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "matrix_stuffing",
+     "class": "ConeMatrixStuffingBench",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1701.0,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ParamConeMatrixStuffing",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "matrix_stuffing",
+     "class": "ParamConeMatrixStuffing",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 6.3125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "matrix_stuffing",
+     "class": "ParamConeMatrixStuffing",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 6.328125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ParamSmallMatrixStuffing",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "matrix_stuffing",
+     "class": "ParamSmallMatrixStuffing",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 10.515625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "matrix_stuffing",
+     "class": "ParamSmallMatrixStuffing",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 10.5,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "SmallMatrixStuffing",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "matrix_stuffing",
+     "class": "SmallMatrixStuffing",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 322.734375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "matrix_stuffing",
+     "class": "SmallMatrixStuffing",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1117.3125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "optimal_advertising",
+   "class": "OptimalAdvertising",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "optimal_advertising",
+     "class": "OptimalAdvertising",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 6066.25,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "optimal_advertising",
+     "class": "OptimalAdvertising",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 944.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "quantum_hilbert_matrix",
+   "class": "QuantumHilbertMatrix",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "quantum_hilbert_matrix",
+     "class": "QuantumHilbertMatrix",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1195.03125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "quantum_hilbert_matrix",
+     "class": "QuantumHilbertMatrix",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1194.84375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "sdp_segfault_1132_benchmark",
+   "class": "SDPSegfault1132Benchmark",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "sdp_segfault_1132_benchmark",
+     "class": "SDPSegfault1132Benchmark",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 10413.3125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "sdp_segfault_1132_benchmark",
+     "class": "SDPSegfault1132Benchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 12885.203125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "semidefinite_programming",
+   "class": "SemidefiniteProgramming",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "semidefinite_programming",
+     "class": "SemidefiniteProgramming",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1137.890625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "semidefinite_programming",
+     "class": "SemidefiniteProgramming",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1137.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleFullyParametrizedLPBenchmark",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleFullyParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 492.125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleFullyParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 492.109375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleLPBenchmark",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleLPBenchmark",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 4792.15625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleLPBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 5056.75,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleScalarParametrizedLPBenchmark",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleScalarParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1008.828125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleScalarParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1008.8125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "LeastSquares",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "simple_QP_benchmarks",
+     "class": "LeastSquares",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1459.296875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "simple_QP_benchmarks",
+     "class": "LeastSquares",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1893.5625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "ParametrizedQPBenchmark",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "simple_QP_benchmarks",
+     "class": "ParametrizedQPBenchmark",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1775.28125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "simple_QP_benchmarks",
+     "class": "ParametrizedQPBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1775.3125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "SimpleQPBenchmark",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "simple_QP_benchmarks",
+     "class": "SimpleQPBenchmark",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1654.859375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "simple_QP_benchmarks",
+     "class": "SimpleQPBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 2204.109375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "UnconstrainedQP",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "simple_QP_benchmarks",
+     "class": "UnconstrainedQP",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1753.921875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "simple_QP_benchmarks",
+     "class": "UnconstrainedQP",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 644.28125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "slow_pruning_1668_benchmark",
+   "class": "SlowPruningBenchmark",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "slow_pruning_1668_benchmark",
+     "class": "SlowPruningBenchmark",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1796.859375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "slow_pruning_1668_benchmark",
+     "class": "SlowPruningBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1120.359375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "svm_l1_regularization",
+   "class": "SVMWithL1Regularization",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "svm_l1_regularization",
+     "class": "SVMWithL1Regularization",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 2033.53125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "svm_l1_regularization",
+     "class": "SVMWithL1Regularization",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 2416.765625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "tv_inpainting",
+   "class": "TvInpainting",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "tv_inpainting",
+     "class": "TvInpainting",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1048.359375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "tv_inpainting",
+     "class": "TvInpainting",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1048.296875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  }
+ ]
+}

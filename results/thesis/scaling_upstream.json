@@ -1,0 +1,5982 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-upstream/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "1.9.2",
+   "sparsediffpy": "0.3.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": null,
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": null,
+   "engine_commit": null,
+   "engine_so_sha256": "11635606f60c6704bdc2d118b151a10b809f488fbf99205fd6ecd36de9757209",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "CPP_ND",
+   "SCIPY_ND",
+   "COO_ND"
+  ],
+  "reps": 5,
+  "slow_s": 30.0,
+  "slow_reps": 10,
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "extra",
+   "class": "huber:n=300:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.027850082999066217,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02378329100247356,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02364208300059545,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02383075000034296,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023806500001228414,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.024141416000929894,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.023535667001851834,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.023621542000910267,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02348254100070335,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023411583999404684,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.02268591700340039,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.022815000000264263,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0228663330017298,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02280666699880385,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02279770800305414,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1650,
+    "m": 1350,
+    "nnz_A": 137700,
+    "nnz_P": 450,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06181818181818182
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=300:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.023559834000479896,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.023610833999555325,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02380158300002222,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02370870899903821,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023774833000061335,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.02350374999878113,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.023530708996986505,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02348800000254414,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02346495799793047,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023468125000363216,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.022776957997848513,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.022626791000220692,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.022649667000223417,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.022787999998399755,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.022917541999049718,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1650,
+    "m": 1350,
+    "nnz_A": 137700,
+    "nnz_P": 450,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06181818181818182
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=300:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.023665708002226893,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02372658400054206,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.023738542000501184,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.023736832998110913,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023731290999421617,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.023416333002387546,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02346912500070175,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02362412500224309,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.023599291998834815,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023496666999562876,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.02272975000232691,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02284654200047953,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.022752624998247484,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02281924999988405,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.022699749999446794,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1650,
+    "m": 1350,
+    "nnz_A": 137700,
+    "nnz_P": 450,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06181818181818182
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=300:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.023674583000683924,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.023699042001680937,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.023614292000274872,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.02372691699929419,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023791083000105573,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.023412791000737343,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0236544170002162,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02350937499795691,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.023443833000783343,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023700915997324046,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.022712875001161592,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.022643000000243774,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02266724999935832,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.022763375000067754,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02266162500018254,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1650,
+    "m": 1350,
+    "nnz_A": 137700,
+    "nnz_P": 450,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06181818181818182
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=300:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.023539999998320127,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02373829199859756,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.023736667000775924,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.023824791998777073,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.023655207998672267,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.02352624999912223,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.023719333003100473,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.023638999999093357,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.023503083000832703,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.02339316600046004,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.022573624999495223,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.022742749999451917,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.022835958003270207,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.022600291998969624,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.022554084000148578,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1650,
+    "m": 1350,
+    "nnz_A": 137700,
+    "nnz_P": 450,
+    "n_vars_user": 300,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06181818181818182
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=1000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.2538961250029388,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2686026250012219,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.25333325000246987,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.252881125001295,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.25412733299890533,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.26637699999992037,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2657510409990209,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2674692500004312,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.268057666002278,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2659847909999371,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.2622079590000794,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.26305408400003216,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2617215419995773,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.26217066700337455,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.26184770799955004,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 5500,
+    "m": 4500,
+    "nnz_A": 1509000,
+    "nnz_P": 1500,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06096969696969697
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=1000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.25296850000086124,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2530786670031375,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2526890419976553,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.253419083001063,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.25413929099886445,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.26684812500025146,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2670609160013555,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2656946249990142,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.26558624999961467,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2663959999990766,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.2617837079997116,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2615335420014162,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.26217199999882723,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.26247970899930806,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2613779999992403,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 5500,
+    "m": 4500,
+    "nnz_A": 1509000,
+    "nnz_P": 1500,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06096969696969697
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=1000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.2540705829997023,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.25253020899981493,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2523044169975037,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2513941249999334,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2525004160015669,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.266639582998323,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.26669212500200956,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2646663749983418,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2668867920001503,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2653064580008504,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.2634317500014731,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2824360840022564,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.26100270899769384,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2619408749997092,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2612342499996885,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 5500,
+    "m": 4500,
+    "nnz_A": 1509000,
+    "nnz_P": 1500,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06096969696969697
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=1000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.25240970800223295,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.25259066600119695,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.25245054100014386,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2537574579982902,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2543740410001192,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.26458445800017216,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.26592449999952805,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.26442004199998337,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2655625420011347,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2656514169975708,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.26137241600008565,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2614624999987427,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2620598749999772,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.26414925000062794,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2617683339994983,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 5500,
+    "m": 4500,
+    "nnz_A": 1509000,
+    "nnz_P": 1500,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06096969696969697
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=1000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.25321491599970614,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.25470687500273925,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2539587909996044,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.252987416999531,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.25361699999848497,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.2668668329970387,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.265758083001856,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.26567900000009104,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.26646241699927486,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2669238340022275,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.2615397080007824,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.2619477080006618,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.26095908299976145,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.26217404199996963,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.262993042000744,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 5500,
+    "m": 4500,
+    "nnz_A": 1509000,
+    "nnz_P": 1500,
+    "n_vars_user": 1000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06096969696969697
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=3000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.7769671249989187,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.775023250000231,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.7749001669981226,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.7658750000009604,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.75977800000328,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.8586724170017987,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.858272917001159,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.8446458329999587,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.8540010420001636,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.893780207999953,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.8035963749971415,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.793853125000169,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.8065106659996673,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.783327583998471,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.791380750000826,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 16500,
+    "m": 13500,
+    "nnz_A": 13527000,
+    "nnz_P": 4500,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06072727272727273
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=3000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.7670375000016065,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.7692615410014696,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.7675800830002117,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.757161999998061,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.7584931250021327,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.8581000420017517,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8498482499999227,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.853367708001315,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.857428333001735,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.849095875000785,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.8070293750024575,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.7994628330015985,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.803025625002192,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.798040666999441,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.7886509999989357,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 16500,
+    "m": 13500,
+    "nnz_A": 13527000,
+    "nnz_P": 4500,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06072727272727273
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=3000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.7671298750028654,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8097455829993123,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.764736791999894,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.7894977910000307,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.7643642090006324,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.8584963329994935,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8625788329991337,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.8385377499980677,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.847994709001796,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.8752696250012377,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.7911097920004977,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8024629579995235,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.7979698330018437,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.7968207919984707,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.812375665998843,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 16500,
+    "m": 13500,
+    "nnz_A": 13527000,
+    "nnz_P": 4500,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06072727272727273
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=3000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.77426454200031,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.7644214590000047,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.7766195830008655,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.7501146670001617,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.7705907079980534,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.8591195000008156,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8493802080010937,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.8911803340015467,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.8554174579985556,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.8575292080022336,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.7971748340023623,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8047562499996275,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.800155332999566,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.8028172080012155,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.798964582998451,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 16500,
+    "m": 13500,
+    "nnz_A": 13527000,
+    "nnz_P": 4500,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06072727272727273
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=3000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.7772161249995406,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.760017084001447,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.756932374999451,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.7660806249987218,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.8131284160008363,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.8475954170025943,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8582399999977497,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.8615423749979527,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.8508357079990674,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.8472704169980716,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.8082312920014374,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.7937024169987126,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.7969767920003505,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.7886904580009286,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.8050415409998095,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 16500,
+    "m": 13500,
+    "nnz_A": 13527000,
+    "nnz_P": 4500,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06072727272727273
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=6000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 11.372455207998428,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.310861999998451,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.41014208300112,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.358014999997977,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.404900541001552,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 12.247671542001626,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.995132916999864,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.893559583000751,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.86744283400185,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.849206666996906,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 12.879811165999854,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 12.00972204199934,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.767974582999159,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.749146666999877,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.691505833998235,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 33000,
+    "m": 27000,
+    "nnz_A": 54054000,
+    "nnz_P": 9000,
+    "n_vars_user": 6000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06066666666666667
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=6000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 11.375579917003051,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.388618291002786,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.405528541999956,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.39180670800124,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.423576666998997,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 11.88289954100037,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.86198258299919,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.881314250000287,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.869194250000874,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.886208500000066,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 11.7588005409998,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.746447834000719,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.750145458001498,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.752228332999948,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.767667084001005,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 33000,
+    "m": 27000,
+    "nnz_A": 54054000,
+    "nnz_P": 9000,
+    "n_vars_user": 6000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06066666666666667
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=6000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 11.399177292001696,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.421821334002743,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.3961636669992,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.37492766700234,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.416804083000898,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 11.935555999996723,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.906286333000025,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.92933708399869,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 12.016502875001606,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.950979291999829,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 11.72120399999767,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.693974707999587,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.783149915998365,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 12.106931000002078,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.755402374998084,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 33000,
+    "m": 27000,
+    "nnz_A": 54054000,
+    "nnz_P": 9000,
+    "n_vars_user": 6000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06066666666666667
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=6000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 11.379165916998318,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.394282417000795,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.384317208998255,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.376826874999097,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.400685374999739,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 11.874762666000606,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 12.156433625001227,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.852237958002661,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 12.008220916999562,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.908220500001335,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 11.85224308299803,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 12.18755095799861,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.75400987499961,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 12.117986958000984,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.744988375001412,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 33000,
+    "m": 27000,
+    "nnz_A": 54054000,
+    "nnz_P": 9000,
+    "n_vars_user": 6000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06066666666666667
+   }
+  },
+  {
+   "module": "extra",
+   "class": "huber:n=6000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 11.376219458998094,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.45699812499879,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.42747541600329,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.415324375000637,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 11.321229667002626,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 11.873231792000297,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.884174124999845,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.87368612499995,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.913713709000149,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 12.12416929200117,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 11.759541125000396,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 11.745840209001472,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 11.81688783300342,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 11.787650541999028,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 12.122392667002714,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 33000,
+    "m": 27000,
+    "nnz_A": 54054000,
+    "nnz_P": 9000,
+    "n_vars_user": 6000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06066666666666667
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=200:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.04469970900026965,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04439358300078311,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04475558300327975,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04446091700083343,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.044473166002717335,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.04288770799757913,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04295866699976614,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04221029100153828,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04210341699945275,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.042537583998637274,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.032905542000662535,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.03297629200096708,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03322350000235019,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.03275487499922747,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.03292991699709091,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 10050,
+    "m": 10350,
+    "nnz_A": 40100,
+    "nnz_P": 0,
+    "n_vars_user": 10000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0003855120532602687
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=200:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.044674042001133785,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04445454100277857,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.044253500000195345,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04435429200020735,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.044409875001292676,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.04240099999879021,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.042634708999685245,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04220833399813273,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04263600000194856,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04208899999866844,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.032747417000791756,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.032902124999964144,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03285775000040303,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.03288674999930663,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0327028749998135,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 10050,
+    "m": 10350,
+    "nnz_A": 40100,
+    "nnz_P": 0,
+    "n_vars_user": 10000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0003855120532602687
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=200:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.044395541000994854,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04452862500329502,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0443296659977932,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.044399457998224534,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04438762499921722,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.042053417000715854,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04209104099936667,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04220420799902058,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04200900000068941,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.042677540997829055,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.03279108399874531,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0327971249971597,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03289116700034356,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.032924540999374585,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.032968040999548975,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 10050,
+    "m": 10350,
+    "nnz_A": 40100,
+    "nnz_P": 0,
+    "n_vars_user": 10000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0003855120532602687
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=200:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.044380416999047156,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.044642709002800984,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.044502332999400096,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.044634249999944586,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04444708400114905,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.042036541999550536,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04234679099681671,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04203912500088336,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04203174999929615,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04248474999985774,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.03331845799766597,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.032859999999345746,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03267645799860475,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.03301474999898346,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.03305933299998287,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 10050,
+    "m": 10350,
+    "nnz_A": 40100,
+    "nnz_P": 0,
+    "n_vars_user": 10000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0003855120532602687
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=200:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.04438975000084611,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04471483400266152,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04472374999750173,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04440625000279397,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04423700000188546,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.04222775000016554,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04231979099859018,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0423110000010638,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04217116599829751,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04209445800006506,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.032820124997670064,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.033118542000011075,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.032896790999075165,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.032780666999315144,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.033059291999961715,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 10050,
+    "m": 10350,
+    "nnz_A": 40100,
+    "nnz_P": 0,
+    "n_vars_user": 10000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0003855120532602687
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=500:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.3831744590024755,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3860895830002846,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.38528891599708004,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3845880840017344,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3832769170003303,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.15506791699954192,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.15500262499699602,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.15641758299898356,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.15491179200034821,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.15483799999856274,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.1315060410015576,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.13097000000198022,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1319297500012908,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.13149125000200002,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.13010674999895855,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 62625,
+    "m": 63375,
+    "nnz_A": 250250,
+    "nnz_P": 0,
+    "n_vars_user": 62500,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 6.305338041864988e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=500:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.38318270799936727,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.383958791000623,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.38538899999912246,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.38400049999836483,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.382989916997758,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.15516404200025136,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.15592370800004574,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1549780829991505,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.1553877089972957,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.15604495799925644,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.1312772919991403,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.1318383329999051,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1307568749980419,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.1310852079986944,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.13190537500122446,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 62625,
+    "m": 63375,
+    "nnz_A": 250250,
+    "nnz_P": 0,
+    "n_vars_user": 62500,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 6.305338041864988e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=500:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.38448670899742865,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3841497089997574,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.383156500000041,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3844607499995618,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.38192729099682765,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.15574045900211786,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.15448883299904992,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.15493837500252994,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.15694674999758718,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.15355649999764864,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.1316830840005423,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.13110491699990234,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1312772089986538,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.1314996670007531,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.13002049999704468,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 62625,
+    "m": 63375,
+    "nnz_A": 250250,
+    "nnz_P": 0,
+    "n_vars_user": 62500,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 6.305338041864988e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=500:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.38203191600041464,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3818444999997155,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3809022500026913,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.38179433299956145,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.3813980000013544,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.15386054199916543,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.15358520800145925,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.15439866700035054,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.1541234579999582,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.1536497090019111,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.13008304100003443,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.13037933299710858,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1298949160009215,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.12962104200050817,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.12946716700025718,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 62625,
+    "m": 63375,
+    "nnz_A": 250250,
+    "nnz_P": 0,
+    "n_vars_user": 62500,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 6.305338041864988e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=500:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.38448525000058,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.38304254099784885,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.3840158339990012,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.3826911249998375,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.38280787500116276,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.1548778329997731,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.15478416599944467,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.15449145800084807,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.1549555000019609,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.1560312090005027,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.13227254199955496,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.1311580830006278,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.13147120899884612,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.13082841700088466,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.13177241700032027,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 62625,
+    "m": 63375,
+    "nnz_A": 250250,
+    "nnz_P": 0,
+    "n_vars_user": 62500,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 6.305338041864988e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=1000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.573932582999987,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.573400249999395,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.5732275000009395,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.5690009589998226,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.568694041998242,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.5933182500011753,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.6087059170022258,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.59434729199711,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5924518329993589,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5939775420010847,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.5347776249982417,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5331547919995501,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5345924590001232,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5375820420013042,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5356177079993358,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 250250,
+    "m": 251750,
+    "nnz_A": 1000500,
+    "nnz_P": 0,
+    "n_vars_user": 250000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.5880842097326705e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=1000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.5735524160008936,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.57595633299934,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.5860336250007094,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.5743598749977536,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.5653284170002735,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.5930442919998313,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5923571250023087,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5941710000006424,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5926513750018785,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5965974159989855,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.5335282090018154,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5331152920007298,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5350449580000713,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5314475829982257,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5343783330026781,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 250250,
+    "m": 251750,
+    "nnz_A": 1000500,
+    "nnz_P": 0,
+    "n_vars_user": 250000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.5880842097326705e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=1000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.5862783339980524,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.5541829580033664,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.56031379200067,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.572926875000121,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.573502125000232,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.6183085829979973,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.587010791998182,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.607948041997588,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.6095687500019267,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5922602079990611,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.5387300420006795,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5284278330000234,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5322918750025565,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5334499579985277,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5329295830015326,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 250250,
+    "m": 251750,
+    "nnz_A": 1000500,
+    "nnz_P": 0,
+    "n_vars_user": 250000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.5880842097326705e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=1000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.572783999999956,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.5669010000019625,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.5708402500022203,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.5671257079993666,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.5875474170024972,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.5948920419978094,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5979761250018782,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5907541250016948,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5931857079995098,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.592620542000077,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.5344314579997445,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5334260419986094,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5371881669998402,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5332011249993229,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.533679125001072,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 250250,
+    "m": 251750,
+    "nnz_A": 1000500,
+    "nnz_P": 0,
+    "n_vars_user": 250000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.5880842097326705e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=1000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.575003250000009,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.57502208400183,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.5716029579998576,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.5672301249978773,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.591440500000317,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.6091832499987504,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5924121669995657,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5935009999993781,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5947297499988053,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.6231747910023842,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.5325133749975066,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5328567079995992,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5344805829990946,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5345914169993193,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5346058340001036,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 250250,
+    "m": 251750,
+    "nnz_A": 1000500,
+    "nnz_P": 0,
+    "n_vars_user": 250000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.5880842097326705e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=2000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 19.576256207998085,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 19.580523374999757,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 19.602289832997485,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 19.60044950000156,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 19.600143084000592,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.0083393750028335,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.0167224169999827,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.015898332996585,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.019847999999911,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.0319382499983476,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.0706367089987907,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.0593169999992824,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.071461250001448,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.0653553749980347,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.0658827500010375,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1000500,
+    "m": 1003500,
+    "nnz_A": 4001000,
+    "nnz_P": 0,
+    "n_vars_user": 1000000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 3.985052814897982e-06
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=2000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 19.597205333000602,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 19.612305583003035,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 19.57961195900134,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 19.616989291997015,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 19.60467887500272,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.0217798329977086,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.0554566659993725,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.0092676670028595,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.0156990830000723,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.0242988749996584,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.066218249998201,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.063524832999974,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.073293624998769,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.069378707998112,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.0672144169984676,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1000500,
+    "m": 1003500,
+    "nnz_A": 4001000,
+    "nnz_P": 0,
+    "n_vars_user": 1000000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 3.985052814897982e-06
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=2000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 19.59218250000049,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 19.595475416997942,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 19.580725207997602,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 19.616419332996884,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 19.59032658399883,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.0231261250009993,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.017488207999122,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.0167797499998414,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.0051165420009056,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.021176334001211,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.0680254159997276,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.0678325420012698,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.0672731669983477,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.0605824170015694,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.072246666000865,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1000500,
+    "m": 1003500,
+    "nnz_A": 4001000,
+    "nnz_P": 0,
+    "n_vars_user": 1000000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 3.985052814897982e-06
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=2000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 19.581811290998303,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 19.606005458001164,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 19.583942792000016,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 19.591020207997644,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 19.603102832999866,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.0065502079996804,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.0209127089983667,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.017689332998998,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.0191099170006055,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.013109624997014,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.110214749998704,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.0661095840005146,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.0701486250000016,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.0674241250017076,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.07693087500229,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1000500,
+    "m": 1003500,
+    "nnz_A": 4001000,
+    "nnz_P": 0,
+    "n_vars_user": 1000000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 3.985052814897982e-06
+   }
+  },
+  {
+   "module": "extra",
+   "class": "advertising:n=2000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 19.61640124999758,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 19.59485883399975,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 19.601166792002914,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 19.578677166999114,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 19.608097291999,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.0189392499996757,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.045042707999528,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.0204118750007183,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.019692666002811,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.0103451660033897,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.062076583999442,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.062070500000118,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.0612646249974205,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.070253791000141,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.0675911670005007,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1000500,
+    "m": 1003500,
+    "nnz_A": 4001000,
+    "nnz_P": 0,
+    "n_vars_user": 1000000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 3.985052814897982e-06
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=1000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.007068584000080591,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.008100250001007225,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.006784875000448665,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006788499998947373,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006790415998693788,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.006806583998695714,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.007050374999380438,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0064781250002852175,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006354082997859223,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006411374997696839,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.0056828749984561,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006123750001279404,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005635207999148406,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005552583999815397,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005598040999757359,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 3010,
+    "m": 3012,
+    "nnz_A": 18010,
+    "nnz_P": 1100,
+    "n_vars_user": 1010,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001986516834103233
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=1000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.006804250002460321,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006786665999243269,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00684245800221106,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006777582999347942,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006809250000515021,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.006410833000700222,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006389750000380445,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.006555500000104075,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006543040999531513,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006525916996906744,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.005587166997429449,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005609292002191069,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005689707999408711,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005687916996976128,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00564904199927696,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 3010,
+    "m": 3012,
+    "nnz_A": 18010,
+    "nnz_P": 1100,
+    "n_vars_user": 1010,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001986516834103233
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=1000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.006795000001147855,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006781208001484629,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0067882080002164,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006811625000409549,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.00679195799966692,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.006336999998893589,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006527917001221795,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.006367250000039348,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006338291001156904,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006371958999807248,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.005590917000517948,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005652708001434803,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005566875002841698,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005582249999861233,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005601750002824701,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 3010,
+    "m": 3012,
+    "nnz_A": 18010,
+    "nnz_P": 1100,
+    "n_vars_user": 1010,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001986516834103233
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=1000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.006891832999826875,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006869707998703234,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.006858832999569131,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006836832999397302,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006823415998951532,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.00638624999919557,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006482958000560757,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0063837910020083655,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006597333998797694,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006351292002364062,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.00558633300170186,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005605833001027349,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005605083002592437,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005629291998047847,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005581165998592041,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 3010,
+    "m": 3012,
+    "nnz_A": 18010,
+    "nnz_P": 1100,
+    "n_vars_user": 1010,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001986516834103233
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=1000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.006844624997029314,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006843709001259413,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.006937833000847604,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006917708000401035,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006904332996782614,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.006421624999347841,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.006390791000740137,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.00641962499867077,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.006489333998615621,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.006370708997565089,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.005600624997896375,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.005585625000094296,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.005624999997962732,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.005674542000633664,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.005604042002232745,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 3010,
+    "m": 3012,
+    "nnz_A": 18010,
+    "nnz_P": 1100,
+    "n_vars_user": 1010,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001986516834103233
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=5000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.053290792002371745,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.053141541000513826,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.053164959001151146,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.05329054100002395,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.05318558300132281,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.04723374999957741,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04789800000071409,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04728654199789162,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.047422249997907784,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04759933400055161,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.047064374997717096,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.047303540999564575,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0468847089978226,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04732449999937671,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04716745800033095,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 15050,
+    "m": 15052,
+    "nnz_A": 290050,
+    "nnz_P": 7500,
+    "n_vars_user": 5050,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0012803896657699598
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=5000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.05343554099817993,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.053567291997751454,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.05327462499917601,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.053424417001224356,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.05309720800141804,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.04747470900110784,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04753329200320877,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.047288791996834334,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0477595830016071,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0473846249988128,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.047230749998561805,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04730583299897262,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04678516700005275,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04709737499797484,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.047113667002122384,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 15050,
+    "m": 15052,
+    "nnz_A": 290050,
+    "nnz_P": 7500,
+    "n_vars_user": 5050,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0012803896657699598
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=5000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.053113999998458894,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.05308412500016857,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.05333120800059987,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.05317579100301373,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.05320729099912569,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.04735399999844958,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.047622125002817484,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04766866600039066,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04765387500083307,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04736958300054539,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.047101915999519406,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04696541699740919,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04714333399897441,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04747533299814677,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04724312499820371,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 15050,
+    "m": 15052,
+    "nnz_A": 290050,
+    "nnz_P": 7500,
+    "n_vars_user": 5050,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0012803896657699598
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=5000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.05336062499918626,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.05307729199921596,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.05350033299691859,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.05333954199886648,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.053287165999790886,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.04737437500079977,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.047131541003182065,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.047656292001192924,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.047579207999660866,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04744012499941164,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.047322916998382425,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.046894708000763785,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04715958299857448,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04700912499902188,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04712604200176429,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 15050,
+    "m": 15052,
+    "nnz_A": 290050,
+    "nnz_P": 7500,
+    "n_vars_user": 5050,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0012803896657699598
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=5000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.05317674999969313,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.05317920900051831,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.0532695000001695,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.053542625002592104,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.05331354199734051,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.04742700000133482,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.047189125001750654,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04729175000102259,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04755433299942524,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04803829099910217,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.04720058300154051,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04688529100167216,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04705916599777993,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04709454200201435,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0474610000019311,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 15050,
+    "m": 15052,
+    "nnz_A": 290050,
+    "nnz_P": 7500,
+    "n_vars_user": 5050,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0012803896657699598
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=25000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.2148643330001505,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.2057547090007574,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.2080603750000591,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.207371749998856,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.2026203330024146,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.1621422079988406,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1581315830007952,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1628305000012915,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1562876659991161,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1537902079980995,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.1538431250010035,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1489767499988375,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1518528749984398,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1495628750017204,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1476106660011283,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 75250,
+    "m": 75252,
+    "nnz_A": 6450250,
+    "nnz_P": 87500,
+    "n_vars_user": 25250,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001139074150499946
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=25000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.2049450000013167,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.2106478750029055,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1943509579978127,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.19874883400189,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.204372667001735,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.15783937499873,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1617440409972914,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1549742499992135,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1581647909988533,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1629076250028447,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.149321125001734,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1754703750011686,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1501494589974754,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1621616250013176,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1482973339989258,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 75250,
+    "m": 75252,
+    "nnz_A": 6450250,
+    "nnz_P": 87500,
+    "n_vars_user": 25250,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001139074150499946
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=25000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.2058871670014923,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.211871332998271,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.2043777079998108,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.2007459579981514,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.2081000830003177,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.1574775829976716,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1608397089985374,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1620228749998205,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.160476834000292,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1578732919988397,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.1472887499985518,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1513779160013655,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1499584580014925,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1509018340002513,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1567591669991089,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 75250,
+    "m": 75252,
+    "nnz_A": 6450250,
+    "nnz_P": 87500,
+    "n_vars_user": 25250,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001139074150499946
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=25000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.202957042001799,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.2217926249977609,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.2027956249985436,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.2038294580015645,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.20631449999928,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.155409499999223,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1586584159995255,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1578609999996843,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1611392089980654,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1553759169983095,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.1519377500007977,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.153460042001825,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.148120124998968,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1488089999984368,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1560430000026827,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 75250,
+    "m": 75252,
+    "nnz_A": 6450250,
+    "nnz_P": 87500,
+    "n_vars_user": 25250,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001139074150499946
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=25000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.2041775829966355,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.2342642080002406,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.2052544580001268,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.2041465420006716,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.2033902080002008,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.1558052909967955,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1580574590007018,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1567357500025537,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1630932090010901,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.163652250001178,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.1527054580001277,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.143187666999438,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1476574579974113,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1488322500008508,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1515852910015383,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 75250,
+    "m": 75252,
+    "nnz_A": 6450250,
+    "nnz_P": 87500,
+    "n_vars_user": 25250,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001139074150499946
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=50000:seed=0",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 5.421270874998299,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 5.445918583001912,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.446645874999376,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 5.420360416999756,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 5.462497624997923,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 4.906392625001899,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.898658291000174,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.905796958999417,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.8986748330025875,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.918681125000148,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 4.840622542000347,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.836132125001313,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.8611151249970135,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.833472583999537,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.8409567500020785,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 150500,
+    "m": 150502,
+    "nnz_A": 25400500,
+    "nnz_P": 300000,
+    "n_vars_user": 50500,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0011214075984288417
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=50000:seed=1",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 5.443126458998449,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 5.4468935420009075,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.4443627079999715,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 5.480000292001932,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 5.441094084002543,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 4.893237374999444,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.928417333001562,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.910548833999201,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.956351666001865,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.9089071250018605,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 4.845202625001548,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.850357207997149,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.835974290999729,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.843913583001267,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.845047124999837,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 150500,
+    "m": 150502,
+    "nnz_A": 25400500,
+    "nnz_P": 300000,
+    "n_vars_user": 50500,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0011214075984288417
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=50000:seed=2",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 5.475447458000417,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 5.451144124999701,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.450846750001801,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 5.4576754169975175,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 5.445737166999606,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 4.919985917000304,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.903653125002165,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.914603208999324,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.909329750000325,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.900445958999626,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 4.858137958999578,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.8526392500025395,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.844176292001066,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.872951792000094,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.837499917000969,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 150500,
+    "m": 150502,
+    "nnz_A": 25400500,
+    "nnz_P": 300000,
+    "n_vars_user": 50500,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0011214075984288417
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=50000:seed=3",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 5.447125458998926,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 5.479739125003107,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.488072749998537,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 5.429670207999152,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 5.443052665999858,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 4.899353124998015,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.9053243749985995,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.940962166998361,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.903607749998628,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.936026707997371,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 4.855430832998536,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.8576877920022525,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.844194041001174,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.870847417001642,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.854210208002769,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 150500,
+    "m": 150502,
+    "nnz_A": 25400500,
+    "nnz_P": 300000,
+    "n_vars_user": 50500,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0011214075984288417
+   }
+  },
+  {
+   "module": "extra",
+   "class": "factor_cov:variant=dpp:n=50000:seed=4",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 5.427778834000492,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 5.4924211659999855,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.431623667001986,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 5.485455999998521,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 5.432429749998846,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 4.9108002909997595,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.925509250002506,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.915625417001138,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.920456749998266,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.918899084001168,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 4.838824250000471,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.8328852920021745,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.839636833999975,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.8441199170010805,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.824235749998479,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 150500,
+    "m": 150502,
+    "nnz_A": 25400500,
+    "nnz_P": 300000,
+    "n_vars_user": 50500,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.0011214075984288417
+   }
+  }
+ ]
+}

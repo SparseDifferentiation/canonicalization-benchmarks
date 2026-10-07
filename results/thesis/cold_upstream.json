@@ -1,0 +1,8142 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-upstream/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "1.9.2",
+   "sparsediffpy": "0.3.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": null,
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": null,
+   "engine_commit": null,
+   "engine_so_sha256": "11635606f60c6704bdc2d118b151a10b809f488fbf99205fd6ecd36de9757209",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "CPP_ND",
+   "SCIPY_ND",
+   "COO_ND"
+  ],
+  "reps": 20,
+  "slow_s": 30.0,
+  "slow_reps": 10,
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "finance",
+   "class": "CVaRBenchmark",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 7.229558540999278,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 7.1733794170013425,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 7.1915898749994085,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 7.244806874999995,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 7.191445290998672,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 7.190380166999603,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 7.221315459000834,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 7.208484249998946,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 7.204282833999969,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 7.202322791999904,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 7.2135224170015135,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 7.203984540999954,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 7.2000152909968165,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 7.199980082998081,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 7.201768542003265,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 7.191487084000983,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 7.201688209002896,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 7.235084625001036,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 7.196609916998568,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 7.189732875001937,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 6.509779541000171,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 6.493279250000342,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 6.504480542000238,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 6.475655166999786,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 6.513049207998847,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 6.522183208999195,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 6.530923832999179,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 6.522076083001593,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 6.4894615409994,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 6.502369207999436,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 6.477003833999333,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 6.505065334000392,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 6.5439702500007115,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 6.510999125002854,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 6.504933083997457,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 6.462941750000027,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 6.514465125001152,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 6.484987749998254,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 6.505393166997237,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 6.529143291001674,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 6.5590644590010925,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 6.452566124999066,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 6.507071583999277,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 6.495406832998924,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 6.52378708300057,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 6.4955029579996335,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 6.5007622909997735,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 6.556418291000227,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 6.521022708999226,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 6.472368583999923,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 6.446754209002393,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 6.4732784159969015,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 6.498930499998096,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 6.485418041997036,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 6.5458632499976375,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 6.447655624997424,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 6.5226504579986795,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 6.480072957998345,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 6.489052666998759,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 6.505456584000058,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 131841,
+    "m": 263681,
+    "nnz_A": 25691649,
+    "nnz_P": 0,
+    "n_vars_user": 769,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0007390309974172294
+   }
+  },
+  {
+   "module": "finance",
+   "class": "FactorCovarianceModel",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.2034617909994267,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.2015803329995833,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.2061947920010425,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.2043282079976052,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.2033375000028173,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.2084714579978026,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.2116968750015076,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.207432457998948,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.2013590829992609,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.2057875000027707,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.2108142910001334,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.1977123329997994,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.2036517500018817,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.2056192089985416,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.2110168330000306,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.2055001670014462,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.2023487920014304,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.2029735000032815,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.2027397920028307,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.202225458000612,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.1600188329975936,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1644687919979333,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1561549580001156,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1540662500010512,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.157381875000283,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.1571882909993292,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.1618830410006922,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.1612642079999205,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.1627724999998463,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.164298959000007,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.1866282090013556,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.1543011249996198,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.1607492080001975,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.1651031660003355,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.1595653330005007,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.164924874999997,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.15982754200013,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.1561284999988857,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.1575778339974931,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.1602525419984886,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.146042332999059,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1496003329993982,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.153878832999908,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1575696660001995,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1495628749980824,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.1475911660018028,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.1461214169976301,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.1532132499996806,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.1476556249981513,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.1492234170000302,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.151171333000093,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.1604993749970163,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.1501259579999896,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.147915749999811,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.1515014169999631,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.1484875419992022,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.1517377499985741,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.1590734170022188,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.1502713750014664,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.1488185419984802,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 75250,
+    "m": 75252,
+    "nnz_A": 6450250,
+    "nnz_P": 87500,
+    "n_vars_user": 25250,
+    "n_param_objects": 2,
+    "n_param_entries": 2,
+    "density_A": 0.001139074150499946
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Cajas",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 3.5748775840002054,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.561958207999851,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.568325833999552,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.538362416999007,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.4773396250020596,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 3.5651439590001246,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 3.575304124999093,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 3.5622036669992667,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 3.5601278340000135,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 3.574598958999559,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 3.5658109999967564,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 3.571797249998781,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 3.5718126669999037,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 3.565298374996928,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 3.4684510410006624,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 3.522210499999346,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 3.561677958998189,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 3.5597696249969886,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 3.5649749590011197,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 3.5681844589998946,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.6855227500018373,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.6868755830000737,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.6829188329975295,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.6761464579976746,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.6809232920022623,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.6861320829993929,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.684136584000953,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.6859316250011034,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.686320082997554,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.6845311249999213,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.6858058750003693,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.6833677499998885,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.6832351250013744,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.6852590000016789,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.6737965419997636,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.683102457998757,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.683838332999585,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.6838536659997771,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.6833088749990566,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.6842179579980439,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.6958122500000172,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.6949993330017605,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.6904916669991508,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.685422959002608,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.687626499999169,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.6901682499992603,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.6917821659990295,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.6903958339971723,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.6906060410001373,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.6887687909984379,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.6915802500006976,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.692371874996752,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.6937182910005504,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.6976256250018196,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.6867853330004436,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.6917959999991581,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.6901347919992986,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.6891629169986118,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.69065354200211,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.6898699999983364,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 2450,
+    "m": 640851,
+    "nnz_A": 1960900,
+    "nnz_P": 0,
+    "n_vars_user": 2450,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.001248913315168074
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Murray",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.251989958997001,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.234091250000347,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.238109792000614,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.2307824170020467,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.2423271670013492,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.2327590830027475,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.20967145800023,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.2130442909983685,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.235886832997494,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.2375062920000346,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.2271669580004527,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.2348663750017295,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.2355083340007695,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.2383242910000263,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.2345494159999362,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.2495920410001418,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.2419115409975348,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.232116249997489,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.231703416997334,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.2434159590011404,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.2254614589983248,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.2277208330015128,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.224638583000342,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.2239164999991772,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.222896541999944,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.2208496250023018,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.2197423329998855,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.2204886250001437,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.2228505419989233,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.226398667000467,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.2264047499993467,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.2226543329998094,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.2212122920027468,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.2226107500027865,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.2225307500011695,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.224047874999087,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.222848208999494,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.2268555000009655,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.2247383750000154,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.2511971249987255,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.2191077919997042,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.2183349160004582,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.2183314579997386,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.2208667499980947,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.21783958299784,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.2451765000005253,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.2147638339993136,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.2176755420005065,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.2205274160005501,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.2143477499994333,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.21928108299835,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.2213711670010525,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.2298097499988216,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.2169402500003343,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.2178077079988725,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.231246999999712,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.217054458000348,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.2172321670004749,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.2173050829987915,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.2223107909994724,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 245400,
+    "m": 490051,
+    "nnz_A": 1503700,
+    "nnz_P": 0,
+    "n_vars_user": 245400,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.2503896252156794e-05
+   }
+  },
+  {
+   "module": "gini_portfolio",
+   "class": "Yitzhaki",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.9153020000012475,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.9165567079980974,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.9257712500002526,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.9164380420006637,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.9213051669976267,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.9202741250010149,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.9175734589989588,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.9215394589991774,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.9218652919989836,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.9235008750001725,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.9187385830009589,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.9242678340015118,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.9170261250001204,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.9176604999993287,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.9245592500010389,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.9461276250003721,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.9462744169977668,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.9286527500007651,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.92526641600125,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.9483192499974393,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.9672064579972357,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.9707751249989087,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.973595583000133,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.9719370000020717,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.9718969999994442,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.9712309999995341,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.9734546660001797,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.9765491250000196,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.9702234159994987,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.9719512090014177,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.9716102920028789,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.975284083000588,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.9925677909996011,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.9748611670001992,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.0126131249999162,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.9774982090020785,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.9928743339987705,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.9783638330009126,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.9810422500013374,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.9954574999974284,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.99565016699853,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.9895630829996662,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.9885680830011552,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.9915730839966272,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.9917787499980477,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.9903327920001175,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.98668866600201,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.9906069579992618,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.9940583749994403,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.9864763330006099,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.9859609169980104,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.9888355000002775,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.9925494999988587,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.0255424579991086,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.0609037909998733,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.026225000001432,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.997888875001081,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.9959711250012333,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.0210265839996282,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.0056102089984051,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 44900,
+    "m": 89751,
+    "nnz_A": 4574800,
+    "nnz_P": 0,
+    "n_vars_user": 44900,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.001135236837755454
+   }
+  },
+  {
+   "module": "high_dim_convex_plasticity",
+   "class": "ConvexPlasticity",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.0784092089998012,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07801520800057915,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07822000000305707,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07815429100082838,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07917383299718495,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.07828370800052653,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.07901270799993654,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.07821120899825473,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.07834391699725529,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.07961929199882434,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.07957454200004577,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.08243991699782782,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.07819441700121388,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.07657462499992107,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.07930774999840651,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.07861116699859849,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.07900166699982947,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.0787086670025019,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.07881116700082202,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.07913120900047943,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.07460933300171746,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07381262499984587,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07600662500044564,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.0755080419985461,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07468120799967437,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.074152958997729,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.0744602919985482,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.07433016699724249,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.07584516600036295,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.0748343749983178,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.07305237500258954,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.07560729200122296,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.07343141700039268,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.07402550000188057,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.07408516700161272,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.07482895800058031,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.07447545800096123,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.07427195799755282,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.0742114170025161,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.07508120800048346,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.07115570799942361,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07186341600026935,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07164212499992573,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07211854100023629,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.07176166700082831,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.07263000000239117,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.0720391249997192,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.0709942499997851,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.07226224999976694,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.07130079199851025,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.07233412500136183,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.0753469999981462,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.07061970900031156,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.0723958330017922,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.0732489580004767,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.07189870799993514,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.071215875002963,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.06947070900059771,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.07111895900015952,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.07118483299927902,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": false,
+   "dims": {
+    "n": 33000,
+    "m": 36000,
+    "nnz_A": 72000,
+    "nnz_P": 33000,
+    "n_vars_user": 15000,
+    "n_param_objects": 3,
+    "n_param_entries": 27000,
+    "density_A": 6.0606060606060605e-05
+   }
+  },
+  {
+   "module": "huber_regression",
+   "class": "HuberRegression",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.800457875000575,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.7662026670004707,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.7217754170014814,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.736019916999794,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.737874999998894,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.7427903749994584,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.7477372499997728,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.7489049159994465,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.7707665829984762,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.7542224579992762,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.7356643749990326,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.742794458001299,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.735481375002564,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.735980457997357,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.7501052919978974,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.7264171249989886,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.741549833001045,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.739045250000345,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.744542917000217,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.7362439579992497,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.8974260420000064,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8940260829986073,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.8477821670021513,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.8626059160014847,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.8502692080000998,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.8527426670007117,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.851570625000022,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.845617584000138,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.842325499997969,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.8610215410008095,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.852529959000094,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.8454973339976277,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.8435870419998537,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.856075250001595,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.888705083001696,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.8548453340008564,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.843441207998694,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.844137292002415,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.883239582999522,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.845688624998729,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.8607310420011345,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8121259159997862,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.7989126249995024,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.8001721250002447,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.8001254580012755,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.7999287080019712,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.7987719580014527,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.7948300409989315,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.79771029100084,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.798973291999573,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.8148909169976832,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.8061124999985623,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.7895352499981527,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.7976424580010644,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.794868624998344,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.8036305000023276,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.7945250420016237,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.8007392910003546,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.808572334000928,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.810804125001596,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 16500,
+    "m": 13500,
+    "nnz_A": 13527000,
+    "nnz_P": 4500,
+    "n_vars_user": 3000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06072727272727273
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ConeMatrixStuffingBench",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.4826049170005717,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.4423421249994135,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.4848032500012778,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.492386458998226,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.5012556670008053,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.5001972909994947,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.491008041000896,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.476695166002173,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.48790100000042,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.483351291000872,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.4804371249992982,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.4855933750004624,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.4716331669987994,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.5012030840007355,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.5109500419966935,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.4897810830007074,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.4969863750011427,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.49098262500047,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.421787082999799,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.4899147920004907,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.1536420410011488,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.1420810829986294,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.1510077089988044,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.1346569580018695,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.141390208998928,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.150613792000513,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.177577583002858,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.152617666997685,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.1440154170013557,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.1447547919997305,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.1443483750008454,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.149824208998325,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.1096173750011076,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.147738499999832,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.1617019589975826,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.1304217920005613,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.156529625000985,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.1490663749973464,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.117771499997616,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.1375033330004953,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 3.50612829199963,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.4991323329995794,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.5239910839991353,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.4954033750000235,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.486839458000759,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 3.513151791998098,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 3.4807550420009647,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 3.4974341670022113,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 3.4915226249977422,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 3.496894459000032,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 3.5180326250010694,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 3.506475624999439,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 3.4862805000011576,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 3.5002717499992286,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 3.4934938749975117,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 3.4922163330011244,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 3.4884153330021945,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 3.5216034590011986,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 3.5007987079989107,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 3.4905200419998437,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 5000,
+    "m": 5000,
+    "nnz_A": 5000,
+    "nnz_P": 0,
+    "n_vars_user": 5000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0002
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ParamConeMatrixStuffing",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.04258699999991222,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04276479100008146,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04285525000159396,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.042710292000265326,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0426941670011729,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.043374707998736994,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.042895708000287414,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.04238608399828081,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.04264391700053238,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.04334920799738029,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.042866583997238195,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.042935959001624724,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.04293541700099013,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.04266049999932875,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.04294004199982737,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.04317562500000349,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.04265424999903189,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.04260937499930151,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.042423375001817476,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.042787458001839695,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.07187120800153934,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.07199341700106743,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.07209291600156575,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.07216795799831743,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.0720206669975596,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.07279154199932236,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.0721527910027362,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.07219420799810905,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.07187045899991062,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.07265275000099791,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.07191745800082572,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.0724509579995356,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.07242987499921583,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.07281820899879676,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.07209212499947171,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.07190624999930151,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.07206570799826295,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.07176358299693675,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.07170016599775408,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.07149587499952759,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.08829316699848277,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.08915374999924097,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.08910891699997592,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.08921379199819057,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.08873058300014236,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.08938837499954388,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.08913545900213649,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.08869379200041294,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.08867137500055833,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.08894158299881383,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.08878049999839277,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.08877241699883598,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.08939333399757743,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.08888608300185297,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.08946687499701511,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.08922083300058148,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.08881312499943306,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.08912570800021058,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.09034649999739486,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.08801262499764562,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 200,
+    "m": 200,
+    "nnz_A": 200,
+    "nnz_P": 0,
+    "n_vars_user": 200,
+    "n_param_objects": 3,
+    "n_param_entries": 40300,
+    "density_A": 0.005
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ParamSmallMatrixStuffing",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.06378212500203517,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.06337304200133076,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.06332504199963296,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.06374991700067767,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.06271445899983519,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.06313079100073082,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.06323070799771813,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.0630507089990715,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.06305462499949499,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.06373891700059175,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.06311870799981989,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.06348220799918636,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.06534299999839277,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.06353762499929871,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.06296545800068998,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.06326125000123284,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.06399049999890849,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.06366629200056195,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.06361491699863109,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.06357395899976837,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.12777983300111373,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.1275523330004944,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.1272099999987404,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.12764112500008196,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.12649066700032563,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.1268757910002023,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.1273147499996412,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.12730970900156535,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.12696845800019219,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.12755020799886552,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.1271192499989411,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.12791324999852804,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.12820270899828756,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.12807750000138185,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.12768470800074283,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.12814150000122027,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.1274810830000206,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.12721754200174473,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.12740349999876344,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.1283168330010085,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.11251808299857657,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.11376433300029021,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.11283291699874098,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.11416187500071828,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.11209633299949928,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.11206312500144122,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.11382554200099548,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.11314662500080885,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.11252416700153844,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.11365775000012945,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.11272741600259906,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.11340833299982478,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.11333250000097905,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.11257083300006343,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.11383820800256217,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.11433633399792598,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.11296637499981443,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.11269937500037486,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.1121987500009709,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.11345191600048565,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 300,
+    "m": 300,
+    "nnz_A": 300,
+    "nnz_P": 0,
+    "n_vars_user": 300,
+    "n_param_objects": 3,
+    "n_param_entries": 90450,
+    "density_A": 0.0033333333333333335
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "SmallMatrixStuffing",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.6690547079997486,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.638307082997926,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.6877084580009978,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.6693516249979439,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.6730992090015206,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.6708017919991107,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.6727112499975192,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.6637092919991119,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.6649610000022221,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.6470155410024745,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.6661153749992081,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.655637084000773,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.6589254589998745,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.657900124999287,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.6760946250033157,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.6614604169990344,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.6281738329998916,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.6784841250009777,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.6652757080009906,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.6659081670004525,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.8419187090003106,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.8127095000018016,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.8235089160007192,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.8153470830002334,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.8228776670002844,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.822124457998143,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.8153300830017542,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.8156230829990818,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.8041704580027726,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.8216122919984628,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.8213845419995778,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.8142479169982835,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.812181834000512,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.8131862080008432,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.8165901669999585,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.819260749998648,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.8083781659988745,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.8163010419993952,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.8153825830013375,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.8182022080000024,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.4707882499969855,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.493140583999775,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.5101165830019454,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.4774157499996363,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.488444292001077,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.4903615830007766,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.499066625001433,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.5003312500011816,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.471543749998091,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.494049458000518,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.485839916000259,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.4904454999996233,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.493537207999907,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.487706583000545,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.484239958001126,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.5203039580010227,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.469555292002042,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.484955040999921,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.489545041000383,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.4920995840002433,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4000,
+    "m": 4000,
+    "nnz_A": 4000,
+    "nnz_P": 0,
+    "n_vars_user": 4000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00025
+   }
+  },
+  {
+   "module": "optimal_advertising",
+   "class": "OptimalAdvertising",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.574532499998895,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.5742604170009145,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.5691770000012184,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.576492042000609,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.5757601660006912,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.578835166998033,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.6055498750029074,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.5607271250009944,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.564793165998708,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.5699877080005535,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.573759124999924,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.5779932080004073,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.5760665420020814,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.5983473750020494,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.5783075409999583,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.575925291999738,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.5728789580025477,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.5770924579992425,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.576208290996874,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.5782337919990823,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.5983005000016419,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.613477791997866,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5936135829979321,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5933046249992913,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.592536125001061,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.5951994579991151,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.5914169579991722,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.592082457998913,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.5963697079969279,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.5936908749972645,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.592236790998868,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.5928368750028312,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.5943969590007327,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.5935681250011839,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.5959094999998342,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.6124345000025642,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.5920475419989089,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.6086942090005323,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.5937107090030622,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.5926760000002105,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.5338384169990604,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5358791670005303,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5347609170021315,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5339470830003847,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5339653339979122,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.5354023330000928,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.5316454999992857,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.5313457079973887,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.5386578750003537,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.5333908329994301,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.5351262500007579,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.533896332999575,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.5380875410010049,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.5328580829991552,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.5344624159988598,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.5359173329998157,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.5345377080011531,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.5328851660015061,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.5354612920018553,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.5349110839997593,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 250250,
+    "m": 251750,
+    "nnz_A": 1000500,
+    "nnz_P": 0,
+    "n_vars_user": 250000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.5880842097326705e-05
+   }
+  },
+  {
+   "module": "quantum_hilbert_matrix",
+   "class": "QuantumHilbertMatrix",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.0614214579982217,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.0552219589990273,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.0581916250012,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.0608542499976465,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.0584298750000016,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.0606046249995416,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.059954000000289,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.0600792500008538,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.0621226250004838,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.0572917089994007,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.061273125000298,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.0625194159983948,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.0605451250012266,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.061877584001195,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.0631422090009437,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.057950834001531,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.0582617910004046,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.058478416998696,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.0590679580018332,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.0598147909986437,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.8030727910008864,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7978283750016999,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.8035362920018088,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.8043732080004702,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.8006261250011448,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.8057102080019831,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.8049222499976167,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.7986335000023246,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.801904125000874,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.8062110419996316,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.803629957998055,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.8238494170000195,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.8015645830018912,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.8011074169990025,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.8083867499990447,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.801044957999693,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.8008934579993365,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.8121529159980128,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.804484832999151,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.8006686250009807,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.8255207920010434,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7892442499978642,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7824441250013479,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7910427919996437,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7865005000021483,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.7857366250027553,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.7933809579990339,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.7870490829991468,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.7863043329998618,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.7921639999985928,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.7860714999987977,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.7851514160029183,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.7891860000017914,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.7865534579977975,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.7902063750007073,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.7846326660001068,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.7840983329988376,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.7862266669981182,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.7877715419999731,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.7796208750005462,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 6176,
+    "m": 6176,
+    "nnz_A": 81072,
+    "nnz_P": 4096,
+    "n_vars_user": 4096,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0021254765228596742
+   }
+  },
+  {
+   "module": "sdp_segfault_1132_benchmark",
+   "class": "SDPSegfault1132Benchmark",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 8.010313957998733,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 7.978946750001342,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 7.960908542001562,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 7.966707084000518,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 7.958681832998991,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 7.96255116699831,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 7.9873161659998,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 7.959904125000321,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 7.957531083000504,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 8.015083625003172,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 7.957303416998911,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 7.963437250000425,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 8.018782709001243,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 8.006968416997552,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 8.007085000001098,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 8.010864249998122,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 7.960609916000976,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 7.971997500000725,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 7.952840040998126,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 7.968517749999592,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.4977687080026953,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.493453999999474,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.4992131660001178,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.4917984170024283,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.4963044590003847,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.4971840830003202,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.5002862500004994,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.662344625001424,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.4893928329984192,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.496932416997879,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.4879070829992997,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.500361416998203,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.5069773750001332,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.5517010410003422,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.520553624999593,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.5110483749995183,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.5030962500022724,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.495649874999799,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.5090802080012509,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.4955688329973782,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 9.186788416998752,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 8.940048084001319,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 8.960414791999938,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 8.93320012500044,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 8.930281249999098,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 8.955698582998593,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 8.941592541999853,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 8.881142999998701,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 8.88150662499902,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 8.997324457999639,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 8.904482583999197,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 8.874706874998083,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 8.935522332998517,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 9.04477012499774,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 8.849572375002026,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 8.822593917000631,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 8.91771987500033,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 8.919283082999755,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 8.78582841699972,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 8.910799833000056,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 4951,
+    "m": 14951,
+    "nnz_A": 1014157,
+    "nnz_P": 0,
+    "n_vars_user": 9801,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.013700676907251361
+   }
+  },
+  {
+   "module": "semidefinite_programming",
+   "class": "SemidefiniteProgramming",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.1732900829993014,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.169483500001661,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.171623083002487,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1727059170007124,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1717804159998195,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.1693311249982798,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.172165625001071,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.1698794580006506,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.1720144159990014,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.1495001249968482,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.1559453339978063,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.1660604160024377,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.1734582499993849,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.1728258750008536,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.1687869580018742,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.1692289160018845,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.1678331669972977,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.1747712090000277,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.1698909160004405,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.1695662079982867,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.6343445829988923,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.6323807920016407,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.6313533749998896,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.6324397909993422,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.637166291999165,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.6350020829995628,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.6323258750016976,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.6358749589999206,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.6349245830024302,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.6293140829984623,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.6293177500010643,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.6305370420013787,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.6347262910021527,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.6325404160015751,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.6349076250007784,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.6329507500013278,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.6302115420003247,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.6346514169999864,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.63210033300129,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.6332529159990372,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.9955919589992845,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.9975757499996689,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.9940687910020642,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.9928281249995052,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.9958971249980095,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.9933207499998389,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.99278066700208,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.9935175829996297,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.0235318339982769,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.9898093330011761,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.9896552499994868,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.0008163750026142,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.990652874999796,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.9916290410001238,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.9958577079996758,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.0108372909999161,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.9930517499997222,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.9930494159998489,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.9991490419997717,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.9954227500020352,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 20100,
+    "m": 20220,
+    "nnz_A": 2432100,
+    "nnz_P": 0,
+    "n_vars_user": 40000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0059841740850642925
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleFullyParametrizedLPBenchmark",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.6179394589998992,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.6139980420011852,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.6132414169987896,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.6149963339994429,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.6127912910014857,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.6142754169995897,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.613470291998965,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.6117601659971115,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.614547124998353,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.6094039580020763,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.6106870419971528,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.6096361670024635,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.608204084001045,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.6120540000010806,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.6128870419997838,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.612381999999343,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.6134564579988364,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.6124466250003024,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.6149562499995227,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.6116078750019369,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.5566992910025874,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5578600420012663,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5574367500012158,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.555446458998631,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5553110419969016,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.5550030830017931,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.5562062499993772,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.556591667002067,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.5560896249990037,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.5547506250004517,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.5543833329975314,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.5556075829990732,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.5558564169987221,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.5571598329988774,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.557994000002509,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.5566171250029583,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.5558467080008995,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.5596114580002904,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.557665457999974,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.5552310000020952,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.5244000409984437,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.5276492919983866,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.5262277920010092,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.5236818749981467,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.5238907500024652,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.5253752090029593,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.5261175839987118,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.5245098340019467,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.5264849169980153,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.5233225410011073,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.5229085419996409,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.5222232090018224,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.5265875830009463,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.5253338330003317,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.5254267909986083,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.5245821669996076,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.5253262919977715,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.5254961669998011,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.525449207998463,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.5249431249976624,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1000000,
+    "m": 2000000,
+    "nnz_A": 2000000,
+    "nnz_P": 0,
+    "n_vars_user": 1000000,
+    "n_param_objects": 1,
+    "n_param_entries": 1000000,
+    "density_A": 1e-06
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleLPBenchmark",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 6.840994957998191,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 6.855050624999421,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 6.844062916999974,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 6.855834665999282,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 6.857339166999736,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 6.837004458000592,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 6.840956832998927,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 6.840069999998377,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 6.8254083749998244,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 6.850244749999547,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 6.830928625000524,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 6.854057749998901,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 6.846608291998564,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 6.845777624999755,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 6.828219250000984,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 6.843848291999166,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 6.849430833000952,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 6.823156750000635,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 6.849864833002357,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 6.858119290998729,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 6.3165571659992565,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 6.3627290000003995,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 6.344868583000789,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 6.353599250000116,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 6.3423115000005055,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 6.30994204200033,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 6.328352833003009,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 6.342685999999958,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 6.309019124997576,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 6.318085707996943,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 6.296089583000139,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 6.308420249999472,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 6.33845916700011,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 6.30109999999695,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 6.316933083999174,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 6.40062345899787,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 6.292339334002463,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 6.301082417001453,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 6.345650584000396,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 6.35644287499963,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 5.965995999998995,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 6.010754458002339,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.975155500000255,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 5.978595165997831,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 5.991253249998408,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 5.980382500001724,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 5.979328167002677,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 6.013618624998344,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 5.978875249998964,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 5.984183666001627,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 5.996993790999113,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 5.980683666002733,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 5.967783000000054,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 6.00520091600265,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 5.991735374998825,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 5.95474699999977,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 5.979017124998791,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 5.986314334000781,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 5.956936124999629,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 5.999730499999714,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 10000000,
+    "m": 20000000,
+    "nnz_A": 20000000,
+    "nnz_P": 0,
+    "n_vars_user": 10000000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1e-07
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleScalarParametrizedLPBenchmark",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.2604923340004461,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.2555534160019306,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.2664581249991897,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.2630500829982338,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.269630209000752,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.2672413750005944,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.2650365420013259,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.2616206659986346,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.2662621660019795,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.2663347919988155,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.2685889999993378,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.2655563750013243,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.2622515419971023,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.2639616659980675,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.2830272920000425,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.262637250001717,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.2719885420010542,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.2656647919975512,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.2641115830010676,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.2644365839987586,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.1479667499988864,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.1499717499973485,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.147956125001656,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.1476525420002872,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.143382833000942,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.147669041001791,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.1520262500016543,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.1462434170025517,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.1463660419976804,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.1507635000016307,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.1466694999980973,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.1486551669986511,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.150116374999925,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.1469864999999118,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.1684712919995945,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.1411962499987567,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.1520980000022973,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.1506799580020015,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.1473897910000233,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.145675540999946,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 1.0814822499996808,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.0870773749993532,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.0895638749971113,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.0886580000005779,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.0849112500000047,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.0828267090000736,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.0884645420010202,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.090310125000542,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.0834892920029233,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.0897490419993119,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.0836000410017732,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.0883622090004792,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.08943200000067,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.0842537919997994,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.091298374998587,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.0849382920023345,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.0881388339985278,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.0877934170021035,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.0849431669994374,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.0849075419973815,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 2000000,
+    "m": 4000000,
+    "nnz_A": 4000000,
+    "nnz_P": 0,
+    "n_vars_user": 2000000,
+    "n_param_objects": 1,
+    "n_param_entries": 1,
+    "density_A": 5e-07
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "LeastSquares",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.401498209001147,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.4073229169989645,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.3978107500006445,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.4005259580007987,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.4121718750029686,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.4003631669984316,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.3952908749997732,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.399183625002479,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.388658541996847,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.4409466669967514,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.4331788750023406,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.378289499996754,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.3955806659978407,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.3944941670015396,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.4067939999986265,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.389549416999216,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.4047164590010652,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.3856715420006367,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.405140458002279,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.394298457998957,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.8953994160001457,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.8906466250009544,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.8905426250021264,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.9002359580008488,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.9020746249989315,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.905075750000833,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.924590915998124,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.8988892910019786,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.9073379580004257,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.916779167000641,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.9588368750009977,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.891291291998641,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.9007467499977793,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.9062430000012682,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.89750908300266,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.8947378340017167,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.8972623750014463,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.8817026670003543,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.8997689579991857,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.89776429199992,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.9394440409996605,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.945471417002409,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.938773958998354,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.9429172910022317,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.939047040999867,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.9405239579973568,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.9270941669965396,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.940617416999885,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.9315204580016143,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.982706999999209,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.9230212080001365,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.935390875001758,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.9326765409969084,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.924539083000127,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.930102292000811,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.9259761670000444,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.9722374160010077,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.9412728330025857,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.94235929199931,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.9287309579995053,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 9000,
+    "m": 7000,
+    "nnz_A": 14007000,
+    "nnz_P": 7000,
+    "n_vars_user": 2000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.22233333333333333
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "ParametrizedQPBenchmark",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.9527995829994325,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.9634491249998973,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.959378833998926,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.98054754199984,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.959361875000468,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.9366767079991405,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.958730958001979,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.9484827920023235,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.9522504580017994,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.974063166999258,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.9979966250029975,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.9372689580013684,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.957709749996866,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.9797204169990437,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.958670791998884,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 3.034160499999416,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.9707905830000527,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 3.0663432500005,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.958711958999629,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.9722534169995924,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 3.010824834000232,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.0076895830025023,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.0164926659999765,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.015455082997505,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.0169534999986354,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 3.0162116669998795,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 3.0117228329982026,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 3.0255557500022405,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 3.0109246659994824,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 3.0037568750012724,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 3.008472041998175,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 3.0039027919992805,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 3.0140266249982233,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 3.010840292001376,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 3.00852741700146,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.9991807080004946,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 3.0092082919982204,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 3.004971624999598,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 3.0092292910012475,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 3.0077979170018807,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.99158024999997,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.9930232090009667,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.0002964160012198,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.9936617919993296,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.987477165999735,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.994301875001838,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.989655749999656,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.980477915996744,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.984304833000351,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.9825767500005895,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.998114000001806,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.9923596669977996,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.9848923749996175,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.9934321670007193,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.996676541002671,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.9902916669998376,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.9925633749990084,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.983715791000577,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.993447417000425,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.98979079199853,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 8400,
+    "m": 10800,
+    "nnz_A": 14410800,
+    "nnz_P": 6000,
+    "n_vars_user": 2400,
+    "n_param_objects": 2,
+    "n_param_entries": 14406000,
+    "density_A": 0.15884920634920635
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "SimpleQPBenchmark",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.8957476249997853,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.891965958999208,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.8709699159990123,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.877421334000246,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.8741996660028235,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.878031167001609,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.8731506660005834,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.8852793340010976,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.871309874997678,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.8709322909999173,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.864066250000178,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.8592850839995663,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.875148207996972,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.879964708998159,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.8615322909972747,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.8751709580028546,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.8773692089998804,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.8884127079982136,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.8700747920011054,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.886645624999801,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.936817042002076,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.9257609590022184,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.9203723749997152,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.931638166999619,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.9298232500004815,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.9335925829982443,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.9373902090010233,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.9242997499968624,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.934554040999501,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.938382250002178,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.930563792000612,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.929929000001721,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.934030417000031,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.928382040998258,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.93350808300238,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.9353202089987462,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.945419874999061,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.9364596250015893,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.9348204160014575,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.9317702500011364,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.9261225839982217,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.9266586669982644,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.9315397499995015,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.9308046249971085,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.934800750001159,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.937476458002493,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.938257874997362,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.915437416999339,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.9296350000004168,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.9375650840011076,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.9273087500005204,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.9353860419978446,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.9248342499995488,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.928502083999774,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.9297657080023782,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.9302305419987533,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.937606167000922,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.93121891699775,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.926753167001152,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.9166484999987006,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1600,
+    "m": 8020,
+    "nnz_A": 12832000,
+    "nnz_P": 2560000,
+    "n_vars_user": 1600,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.0
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "UnconstrainedQP",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.9470052090000536,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.948151249998773,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9495704170003592,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.9486077500005194,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.9557260000001406,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.9494383330020355,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.9509131670019997,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.9690176660005818,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.9454684170013934,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.9507947500023874,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.950954666997859,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.9475522499997169,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.9539257910000742,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.9494036659998528,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.9511010829992301,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.953722750000452,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.9486415410028712,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.9488594169997668,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.9533734579999873,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.9505114999992657,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 1.9825210839990177,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.9798303750030755,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.9766615840017039,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.99373037499754,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.982060125003045,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.9806266250016051,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.9814852500021516,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.9726019590016222,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.9844763749970298,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.9764505000021018,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.981684917001985,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.985290917000384,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.9829392499996175,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.9782805840004585,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.9858898330021475,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.9778122089992394,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.010511874999793,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.9762284159987757,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.9770728750008857,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.9881513330001326,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.435317125000438,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.430332208001346,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.4345144580001943,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.4282583749991318,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.4336012079984357,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.4349127499990573,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.4316901249985676,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.4759597499978554,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.4283383329966455,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.4268171250005253,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.4322299169980397,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.4274842500017257,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.4297180419998767,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.431289000000106,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.4300152079995314,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.4333217499988677,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.428029249997053,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.4296079170017038,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.445315582997864,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.4279510829983337,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 289,
+    "m": 1009,
+    "nnz_A": 18649,
+    "nnz_P": 0,
+    "n_vars_user": 18,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.06395382731883635
+   }
+  },
+  {
+   "module": "slow_pruning_1668_benchmark",
+   "class": "SlowPruningBenchmark",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 1.7947747080033878,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.8062542089974158,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.7848334160007653,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.7954517079997458,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.7852331249996496,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 1.8264367499978107,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 1.7869818749968545,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 1.785169583003153,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 1.7857334159998572,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 1.798052916998131,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 1.7900157910007692,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 1.7884805840003537,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 1.8139311659979285,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 1.7897489170027256,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 1.8157115829999384,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 1.784139833998779,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 1.7885762080004497,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 1.784054207997542,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 1.8047983750002459,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 1.781970750002074,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.1807382089973544,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.1782763749979495,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.1809491669991985,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.188667833997897,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.177420500000153,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.178155333000177,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.1786335830001917,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.1779176669988374,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.184514124997804,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.1728652079982567,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.174358249998477,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.181015333000687,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.1791245409986004,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.1828692909984966,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.179506833999767,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.1763526249997085,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.1734110830002464,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.183782959000382,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.1805608329996176,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.180214874999365,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.1562650840023707,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.1453134160001355,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.1356201249982405,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.150923500001227,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.1501229999994393,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.13984445800088,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.148394415999064,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.153178417000163,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.1419761249999283,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.142727084003127,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.1632272909992025,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.143404541999189,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.1460860000006505,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.145196624998789,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.1337961249992077,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.148376165998343,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.147198999999091,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.143130624997866,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.155086875001871,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.1482418330015207,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 402000,
+    "m": 400000,
+    "nnz_A": 8400000,
+    "nnz_P": 400000,
+    "n_vars_user": 2000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 5.223880597014925e-05
+   }
+  },
+  {
+   "module": "svm_l1_regularization",
+   "class": "SVMWithL1Regularization",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 2.7768081659996824,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.7822787080003764,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.805666083997494,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.7761013329982234,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.7968160829987028,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.7790383749998,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.775418457997148,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.7734459999992396,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.768084874998749,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.763125666999258,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.7836554999994405,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.799491792000481,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.7840854169990052,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.7713275419991987,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.774891334000131,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.805883000000904,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.7816226669965545,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.780184791001375,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.7839706250015297,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.7856272919998446,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 2.622216166000726,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.641682666999259,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.6180567919982423,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.6259895830007736,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.62516766599947,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.6332899170010933,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.623995957997977,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.6255020419994253,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.6305552500016347,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.626392499998474,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.6234087080010795,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.6154817500028003,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.6187199580017477,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.6262177499993413,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.6266841249998834,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.626523332997749,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.624398833999294,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.6216391249981825,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.6270154170015303,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.6167490829975577,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 2.747893916999601,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.7509963329976017,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.7242079580028076,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.7363070419996802,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.7438542499985488,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 2.730460832997778,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 2.7422049999986484,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 2.731450000002951,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 2.7589315840014024,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 2.7400991249996878,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 2.7395015000001877,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 2.7458581659993797,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 2.7368629169977794,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 2.7380876669994905,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 2.7281076250001206,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 2.733735500001785,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 2.7511782080000557,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 2.7405435840009886,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 2.7388439159985865,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 2.7462752499995986,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 26002,
+    "m": 51001,
+    "nnz_A": 12577501,
+    "nnz_P": 0,
+    "n_vars_user": 501,
+    "n_param_objects": 1,
+    "n_param_entries": 1,
+    "density_A": 0.009484379321627505
+   }
+  },
+  {
+   "module": "tv_inpainting",
+   "class": "TvInpainting",
+   "samples": {
+    "CPP_ND": [
+     {
+      "seed": 0,
+      "time": 0.922548791000736,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.9202520420003566,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.9228688330003934,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.9228292079969833,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.9201293750011246,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.9130813330011733,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.9160996659993543,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.9187148329983756,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.9207339999993565,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.9188586250020307,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.9232304170000134,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.9234342080017086,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.9205947920017934,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.9225033749971772,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.9205352909993962,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.9207367499984684,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.9192592500003229,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.9190928750031162,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.9213005420024274,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.9192197080010374,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND": [
+     {
+      "seed": 0,
+      "time": 0.908379958000296,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.9059752499997558,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.9072981249992154,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.9060710000012477,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.9395577079994837,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.9025630830001319,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.9000956250019954,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.9091610830000718,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.9083441250004398,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.9060516669997014,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.9082921249973879,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.9054264580008748,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.9064732919978269,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.9048225830010779,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.9059435409981234,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.9064487499999814,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.9067206250001618,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.905833791999612,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.9067838750015653,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.9113607910003338,
+      "phases": null
+     }
+    ],
+    "COO_ND": [
+     {
+      "seed": 0,
+      "time": 0.8125945830033743,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.81343195899899,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.8131475000009232,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.8143452500007697,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.8183434170023247,
+      "phases": null
+     },
+     {
+      "seed": 5,
+      "time": 0.814058500000101,
+      "phases": null
+     },
+     {
+      "seed": 6,
+      "time": 0.8125498749977851,
+      "phases": null
+     },
+     {
+      "seed": 7,
+      "time": 0.8170912499990663,
+      "phases": null
+     },
+     {
+      "seed": 8,
+      "time": 0.8140833329998713,
+      "phases": null
+     },
+     {
+      "seed": 9,
+      "time": 0.8136614159993769,
+      "phases": null
+     },
+     {
+      "seed": 10,
+      "time": 0.8165691670001252,
+      "phases": null
+     },
+     {
+      "seed": 11,
+      "time": 0.8136103750002803,
+      "phases": null
+     },
+     {
+      "seed": 12,
+      "time": 0.8139362920010171,
+      "phases": null
+     },
+     {
+      "seed": 13,
+      "time": 0.8161678329997812,
+      "phases": null
+     },
+     {
+      "seed": 14,
+      "time": 0.8146225829987088,
+      "phases": null
+     },
+     {
+      "seed": 15,
+      "time": 0.8135489579981368,
+      "phases": null
+     },
+     {
+      "seed": 16,
+      "time": 0.8160426249996817,
+      "phases": null
+     },
+     {
+      "seed": 17,
+      "time": 0.8147807079985796,
+      "phases": null
+     },
+     {
+      "seed": 18,
+      "time": 0.8127079170008074,
+      "phases": null
+     },
+     {
+      "seed": 19,
+      "time": 0.8127919170001405,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 1047553,
+    "m": 2614279,
+    "nnz_A": 3630958,
+    "nnz_P": 0,
+    "n_vars_user": 786432,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 1.3258466209898016e-06
+   }
+  }
+ ]
+}
