@@ -445,6 +445,9 @@ def _spawn(args, out):
         out.unlink()
     status = rbb._run_worker_subprocess([sys.executable, __file__, *args], TIMEOUT,
                                         stderr_path=HERE / "_thesis_worker_stderr.log")
+    if status != "ok":
+        what = " ".join(a for a in args[2:] if not a.endswith(".json"))
+        print(f"  worker {what}: {status}", flush=True)
     try:
         return json.loads(out.read_text()), status
     except Exception:  # noqa: BLE001
