@@ -1,0 +1,151 @@
+table,problem,level,ratio,nnz_A
+"Scaling: 25 problems at s = 1/2, 1, 2",CVaRBenchmark,0.5,0.5517513010278788,12846593
+"Scaling: 25 problems at s = 1/2, 1, 2",CVaRBenchmark,1,0.657581060506706,25691649
+"Scaling: 25 problems at s = 1/2, 1, 2",CVaRBenchmark,2,,51381761
+"Scaling: 25 problems at s = 1/2, 1, 2",Cajas,0.5,0.28586068891231275,990034
+"Scaling: 25 problems at s = 1/2, 1, 2",Cajas,1,0.29234306165559715,1960900
+"Scaling: 25 problems at s = 1/2, 1, 2",Cajas,2,0.26550834911175347,3894133
+"Scaling: 25 problems at s = 1/2, 1, 2",ConeMatrixStuffingBench,0.5,0.31365266314899,3536
+"Scaling: 25 problems at s = 1/2, 1, 2",ConeMatrixStuffingBench,1,0.2951823189472364,5000
+"Scaling: 25 problems at s = 1/2, 1, 2",ConeMatrixStuffingBench,2,0.29306824487073624,7072
+"Scaling: 25 problems at s = 1/2, 1, 2",ConvexPlasticity,0.5,5.289867388597993,36000
+"Scaling: 25 problems at s = 1/2, 1, 2",ConvexPlasticity,1,6.94330844002338,72000
+"Scaling: 25 problems at s = 1/2, 1, 2",ConvexPlasticity,2,8.684638349931827,144000
+"Scaling: 25 problems at s = 1/2, 1, 2",FactorCovarianceModel,0.5,0.15010710852437323,3225250
+"Scaling: 25 problems at s = 1/2, 1, 2",FactorCovarianceModel,1,0.1433677313213446,6450250
+"Scaling: 25 problems at s = 1/2, 1, 2",FactorCovarianceModel,2,0.17653289852287157,12900250
+"Scaling: 25 problems at s = 1/2, 1, 2",HuberRegression,0.5,0.18107368317319128,6765987
+"Scaling: 25 problems at s = 1/2, 1, 2",HuberRegression,1,0.17314063132227864,13527000
+"Scaling: 25 problems at s = 1/2, 1, 2",HuberRegression,2,0.17147861943696366,27040636
+"Scaling: 25 problems at s = 1/2, 1, 2",LeastSquares,0.5,0.15150213590951014,7004250
+"Scaling: 25 problems at s = 1/2, 1, 2",LeastSquares,1,0.17331851736173376,14007000
+"Scaling: 25 problems at s = 1/2, 1, 2",LeastSquares,2,0.17201763739381243,28004271
+"Scaling: 25 problems at s = 1/2, 1, 2",Murray,0.5,1.1410310471743732,758935
+"Scaling: 25 problems at s = 1/2, 1, 2",Murray,1,0.9548423004575903,1503700
+"Scaling: 25 problems at s = 1/2, 1, 2",Murray,2,1.0087004191059554,2987920
+"Scaling: 25 problems at s = 1/2, 1, 2",OptimalAdvertising,0.5,1.0893927555768925,500500
+"Scaling: 25 problems at s = 1/2, 1, 2",OptimalAdvertising,1,1.6674006877848977,1000500
+"Scaling: 25 problems at s = 1/2, 1, 2",OptimalAdvertising,2,,2000500
+"Scaling: 25 problems at s = 1/2, 1, 2",ParamConeMatrixStuffing,0.5,0.5134407713087176,142
+"Scaling: 25 problems at s = 1/2, 1, 2",ParamConeMatrixStuffing,1,0.5258039330380921,200
+"Scaling: 25 problems at s = 1/2, 1, 2",ParamConeMatrixStuffing,2,0.5270554351789507,282
+"Scaling: 25 problems at s = 1/2, 1, 2",ParamSmallMatrixStuffing,0.5,0.5235219438220754,212
+"Scaling: 25 problems at s = 1/2, 1, 2",ParamSmallMatrixStuffing,1,0.518332903028821,300
+"Scaling: 25 problems at s = 1/2, 1, 2",ParamSmallMatrixStuffing,2,0.5063472406194947,424
+"Scaling: 25 problems at s = 1/2, 1, 2",ParametrizedQPBenchmark,0.5,0.2317868693915555,7208008
+"Scaling: 25 problems at s = 1/2, 1, 2",ParametrizedQPBenchmark,1,0.2449071919645255,14410800
+"Scaling: 25 problems at s = 1/2, 1, 2",ParametrizedQPBenchmark,2,0.22829369152509996,28813363
+"Scaling: 25 problems at s = 1/2, 1, 2",QuantumHilbertMatrix,0.5,1.1733252805319,1560
+"Scaling: 25 problems at s = 1/2, 1, 2",QuantumHilbertMatrix,1,0.6270755182807458,81072
+"Scaling: 25 problems at s = 1/2, 1, 2",QuantumHilbertMatrix,2,,
+"Scaling: 25 problems at s = 1/2, 1, 2",SDPSegfault1132Benchmark,0.5,1.2905704180692006,501736
+"Scaling: 25 problems at s = 1/2, 1, 2",SDPSegfault1132Benchmark,1,1.267050288808395,1014157
+"Scaling: 25 problems at s = 1/2, 1, 2",SDPSegfault1132Benchmark,2,,2023126
+"Scaling: 25 problems at s = 1/2, 1, 2",SVMWithL1Regularization,0.5,0.1434060190291898,6290001
+"Scaling: 25 problems at s = 1/2, 1, 2",SVMWithL1Regularization,1,0.13788359357239835,12577501
+"Scaling: 25 problems at s = 1/2, 1, 2",SVMWithL1Regularization,2,0.1506346538255703,25152501
+"Scaling: 25 problems at s = 1/2, 1, 2",SemidefiniteProgramming,0.5,0.6060005509339841,1211331
+"Scaling: 25 problems at s = 1/2, 1, 2",SemidefiniteProgramming,1,0.6287699625066782,2432100
+"Scaling: 25 problems at s = 1/2, 1, 2",SemidefiniteProgramming,2,0.6334427902827454,4862506
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleFullyParametrizedLPBenchmark,0.5,0.21650361629317946,1000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleFullyParametrizedLPBenchmark,1,0.21129224162701557,2000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleFullyParametrizedLPBenchmark,2,0.20068205642681727,4000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleLPBenchmark,0.5,0.1927310079713981,10000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleLPBenchmark,1,0.1836933237816887,20000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleLPBenchmark,2,0.17412978070558482,40000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleQPBenchmark,0.5,0.14656655735750676,6420687
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleQPBenchmark,1,0.1504414755126666,12832000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleQPBenchmark,2,0.16047254448132986,25648842
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleScalarParametrizedLPBenchmark,0.5,0.2092127223848708,2000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleScalarParametrizedLPBenchmark,1,0.20199374262560782,4000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SimpleScalarParametrizedLPBenchmark,2,0.19812969059320973,8000000
+"Scaling: 25 problems at s = 1/2, 1, 2",SlowPruningBenchmark,0.5,0.2142937855263786,4200000
+"Scaling: 25 problems at s = 1/2, 1, 2",SlowPruningBenchmark,1,0.21966991470753822,8400000
+"Scaling: 25 problems at s = 1/2, 1, 2",SlowPruningBenchmark,2,0.2115623683508493,16800000
+"Scaling: 25 problems at s = 1/2, 1, 2",SmallMatrixStuffing,0.5,0.29359349641689136,2828
+"Scaling: 25 problems at s = 1/2, 1, 2",SmallMatrixStuffing,1,0.2992849648680987,4000
+"Scaling: 25 problems at s = 1/2, 1, 2",SmallMatrixStuffing,2,0.2700833169286588,5656
+"Scaling: 25 problems at s = 1/2, 1, 2",TvInpainting,0.5,0.3075610618695145,1812574
+"Scaling: 25 problems at s = 1/2, 1, 2",TvInpainting,1,0.2994018072997192,3630958
+"Scaling: 25 problems at s = 1/2, 1, 2",TvInpainting,2,0.2964410093116206,7267080
+"Scaling: 25 problems at s = 1/2, 1, 2",UnconstrainedQP,0.5,0.024744125819163926,13319
+"Scaling: 25 problems at s = 1/2, 1, 2",UnconstrainedQP,1,0.008133344038149677,18649
+"Scaling: 25 problems at s = 1/2, 1, 2",UnconstrainedQP,2,0.005001361290162882,26641
+"Scaling: 25 problems at s = 1/2, 1, 2",Yitzhaki,0.5,0.14997323686677186,2281432
+"Scaling: 25 problems at s = 1/2, 1, 2",Yitzhaki,1,0.14463788587585302,4574800
+"Scaling: 25 problems at s = 1/2, 1, 2",Yitzhaki,2,0.1391057884138096,9147052
+Scaling: 10 families at five sizes,HuberRegression,0.25,0.15435509296870167,3388500
+Scaling: 10 families at five sizes,HuberRegression,0.5,0.18107368317319128,6765987
+Scaling: 10 families at five sizes,HuberRegression,1,0.17314063132227864,13527000
+Scaling: 10 families at five sizes,HuberRegression,2,0.17147861943696366,27040636
+Scaling: 10 families at five sizes,HuberRegression,4,0.16714971566950218,54054000
+Scaling: 10 families at five sizes,FactorCovarianceModel,0.25,0.15778687133402258,1612750
+Scaling: 10 families at five sizes,FactorCovarianceModel,0.5,0.15010710852437323,3225250
+Scaling: 10 families at five sizes,FactorCovarianceModel,1,0.1433677313213446,6450250
+Scaling: 10 families at five sizes,FactorCovarianceModel,2,0.17653289852287157,12900250
+Scaling: 10 families at five sizes,FactorCovarianceModel,4,0.2236754002161939,25800250
+Scaling: 10 families at five sizes,OptimalAdvertising,0.25,0.7781923678059967,250500
+Scaling: 10 families at five sizes,OptimalAdvertising,0.5,1.0893927555768925,500500
+Scaling: 10 families at five sizes,OptimalAdvertising,1,1.6674006877848977,1000500
+Scaling: 10 families at five sizes,OptimalAdvertising,2,,2000500
+Scaling: 10 families at five sizes,OptimalAdvertising,4,,4000500
+Scaling: 10 families at five sizes,SVMWithL1Regularization,0.25,0.150656692100136,3146251
+Scaling: 10 families at five sizes,SVMWithL1Regularization,0.5,0.1434060190291898,6290001
+Scaling: 10 families at five sizes,SVMWithL1Regularization,1,0.13788359357239835,12577501
+Scaling: 10 families at five sizes,SVMWithL1Regularization,2,0.1506346538255703,25152501
+Scaling: 10 families at five sizes,SVMWithL1Regularization,4,,50302501
+Scaling: 10 families at five sizes,LeastSquares,0.25,0.15496030830818824,3503500
+Scaling: 10 families at five sizes,LeastSquares,0.5,0.15150213590951014,7004250
+Scaling: 10 families at five sizes,LeastSquares,1,0.17331851736173376,14007000
+Scaling: 10 families at five sizes,LeastSquares,2,0.17201763739381243,28004271
+Scaling: 10 families at five sizes,LeastSquares,4,0.1758755854051048,56014000
+Scaling: 10 families at five sizes,SimpleQPBenchmark,0.25,0.15111221975538774,3216000
+Scaling: 10 families at five sizes,SimpleQPBenchmark,0.5,0.14656655735750676,6420687
+Scaling: 10 families at five sizes,SimpleQPBenchmark,1,0.1504414755126666,12832000
+Scaling: 10 families at five sizes,SimpleQPBenchmark,2,0.16047254448132986,25648842
+Scaling: 10 families at five sizes,SimpleQPBenchmark,4,0.16121276406517623,51264000
+Scaling: 10 families at five sizes,Yitzhaki,0.25,0.13011665737745162,1139950
+Scaling: 10 families at five sizes,Yitzhaki,0.5,0.14997323686677186,2281432
+Scaling: 10 families at five sizes,Yitzhaki,1,0.14463788587585302,4574800
+Scaling: 10 families at five sizes,Yitzhaki,2,0.1391057884138096,9147052
+Scaling: 10 families at five sizes,Yitzhaki,4,0.13451162948794668,18329500
+Scaling: 10 families at five sizes,CVaRBenchmark,0.25,0.5708873408976265,6424065
+Scaling: 10 families at five sizes,CVaRBenchmark,0.5,0.5517513010278788,12846593
+Scaling: 10 families at five sizes,CVaRBenchmark,1,0.657581060506706,25691649
+Scaling: 10 families at five sizes,CVaRBenchmark,2,,51381761
+Scaling: 10 families at five sizes,CVaRBenchmark,4,,
+Scaling: 10 families at five sizes,SemidefiniteProgramming,0.25,0.5814813441340625,611050
+Scaling: 10 families at five sizes,SemidefiniteProgramming,0.5,0.6060005509339841,1211331
+Scaling: 10 families at five sizes,SemidefiniteProgramming,1,0.6287699625066782,2432100
+Scaling: 10 families at five sizes,SemidefiniteProgramming,2,0.6334427902827454,4862506
+Scaling: 10 families at five sizes,SemidefiniteProgramming,4,0.6655408630773263,9704200
+Scaling: 10 families at five sizes,lasso,0.25,0.2065066884256813,126500
+Scaling: 10 families at five sizes,lasso,0.5,0.1497038218056344,503000
+Scaling: 10 families at five sizes,lasso,1,0.13872117668962544,2006000
+Scaling: 10 families at five sizes,lasso,2,0.14728812225723115,8012000
+Scaling: 10 families at five sizes,lasso,4,0.15021119751272993,32024000
+Density: 5 problems at five densities,LeastSquares,0.01,0.8073889360833789,146860
+Density: 5 problems at five densities,LeastSquares,0.05,1.1274283450566396,707837
+Density: 5 problems at five densities,LeastSquares,0.2,0.575317722607314,2808760
+Density: 5 problems at five densities,LeastSquares,0.5,0.33251896680130905,7006148
+Density: 5 problems at five densities,LeastSquares,1.0,0.17331851736173376,14007000
+Density: 5 problems at five densities,HuberRegression,0.01,2.557081585827114,161911
+Density: 5 problems at five densities,HuberRegression,0.05,1.6974964070328604,702812
+Density: 5 problems at five densities,HuberRegression,0.2,0.6524528720540276,2728960
+Density: 5 problems at five densities,HuberRegression,0.5,0.3365686962963471,6776072
+Density: 5 problems at five densities,HuberRegression,1.0,0.17314063132227864,13527000
+Density: 5 problems at five densities,SVMWithL1Regularization,0.01,0.7213302488884268,202469
+Density: 5 problems at five densities,SVMWithL1Regularization,0.05,1.401485078609768,703155
+Density: 5 problems at five densities,SVMWithL1Regularization,0.2,0.6303156502974957,2579438
+Density: 5 problems at five densities,SVMWithL1Regularization,0.5,0.32349439498725613,6326630
+Density: 5 problems at five densities,SVMWithL1Regularization,1.0,0.13788359357239835,12577501
+Density: 5 problems at five densities,SimpleQPBenchmark,0.01,0.3978381479225288,159980
+Density: 5 problems at five densities,SimpleQPBenchmark,0.05,0.6022875542164943,672649
+Density: 5 problems at five densities,SimpleQPBenchmark,0.2,0.45255878740381467,2593913
+Density: 5 problems at five densities,SimpleQPBenchmark,0.5,0.29332146136221715,6431453
+Density: 5 problems at five densities,SimpleQPBenchmark,1.0,0.1504414755126666,12832000
+Density: 5 problems at five densities,lasso (n = 1000),0.01,0.8804414402206924,25872
+Density: 5 problems at five densities,lasso (n = 1000),0.05,0.5744584207140477,105820
+Density: 5 problems at five densities,lasso (n = 1000),0.2,0.5765877183738203,406009
+Density: 5 problems at five densities,lasso (n = 1000),0.5,0.32134645968463094,1005401
+Density: 5 problems at five densities,lasso (n = 1000),1.0,0.13872117668962544,2006000

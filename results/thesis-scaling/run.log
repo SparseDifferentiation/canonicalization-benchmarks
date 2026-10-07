@@ -1,0 +1,348 @@
+[verify] scaled:cls=CVaRBenchmark:s=0.5
+[verify] scaled:cls=CVaRBenchmark:s=2
+  worker scaled:cls=CVaRBenchmark:s=2 0: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=2 0 DIFFENGINE: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=2 0 DE_NODENSE: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=2 0 COO: MEMCAP(>20000MB)
+[verify] scaled:cls=Cajas:s=0.5
+[verify] scaled:cls=Cajas:s=2
+[verify] scaled:cls=ConeMatrixStuffingBench:s=0.5
+[verify] scaled:cls=ConeMatrixStuffingBench:s=2
+[verify] scaled:cls=ConvexPlasticity:s=0.5
+[verify] scaled:cls=ConvexPlasticity:s=2
+[verify] scaled:cls=FactorCovarianceModel:s=0.5
+[verify] scaled:cls=FactorCovarianceModel:s=2
+[verify] scaled:cls=HuberRegression:s=0.5
+[verify] scaled:cls=HuberRegression:s=2
+[verify] scaled:cls=LeastSquares:s=0.5
+[verify] scaled:cls=LeastSquares:s=2
+[verify] scaled:cls=Murray:s=0.5
+[verify] scaled:cls=Murray:s=2
+  worker scaled:cls=Murray:s=2 0: MEMCAP(>20000MB)
+[verify] scaled:cls=OptimalAdvertising:s=0.5
+[verify] scaled:cls=OptimalAdvertising:s=2
+  worker scaled:cls=OptimalAdvertising:s=2 0: MEMCAP(>20000MB)
+  worker scaled:cls=OptimalAdvertising:s=2 0 DIFFENGINE: MEMCAP(>20000MB)
+[verify] scaled:cls=ParamConeMatrixStuffing:s=0.5
+[verify] scaled:cls=ParamConeMatrixStuffing:s=2
+[verify] scaled:cls=ParamSmallMatrixStuffing:s=0.5
+[verify] scaled:cls=ParamSmallMatrixStuffing:s=2
+[verify] scaled:cls=ParametrizedQPBenchmark:s=0.5
+[verify] scaled:cls=ParametrizedQPBenchmark:s=2
+[verify] scaled:cls=QuantumHilbertMatrix:s=0.5
+[verify] scaled:cls=QuantumHilbertMatrix:s=2
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 DIFFENGINE: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 DE_NODENSE: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 de_cached: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 de_cached_nodense: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 de_cached_rebuild: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 de_cached_nodense_rebuild: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 SCIPY: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 COO: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 SCIPY_EVAL: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 COO_EVAL: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 DE_EVAL: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 0 DE_NODENSE_EVAL: MEMCAP(>20000MB)
+[verify] scaled:cls=SDPSegfault1132Benchmark:s=0.5
+[verify] scaled:cls=SDPSegfault1132Benchmark:s=2
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 0: MEMCAP(>20000MB)
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 0 DIFFENGINE: MEMCAP(>20000MB)
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 0 DE_NODENSE: MEMCAP(>20000MB)
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 0 COO: MEMCAP(>20000MB)
+[verify] scaled:cls=SVMWithL1Regularization:s=0.5
+[verify] scaled:cls=SVMWithL1Regularization:s=2
+[verify] scaled:cls=SemidefiniteProgramming:s=0.5
+[verify] scaled:cls=SemidefiniteProgramming:s=2
+[verify] scaled:cls=SimpleFullyParametrizedLPBenchmark:s=0.5
+[verify] scaled:cls=SimpleFullyParametrizedLPBenchmark:s=2
+[verify] scaled:cls=SimpleLPBenchmark:s=0.5
+[verify] scaled:cls=SimpleLPBenchmark:s=2
+  worker scaled:cls=SimpleLPBenchmark:s=2 0: MEMCAP(>20000MB)
+[verify] scaled:cls=SimpleQPBenchmark:s=0.5
+[verify] scaled:cls=SimpleQPBenchmark:s=2
+[verify] scaled:cls=SimpleScalarParametrizedLPBenchmark:s=0.5
+[verify] scaled:cls=SimpleScalarParametrizedLPBenchmark:s=2
+[verify] scaled:cls=SlowPruningBenchmark:s=0.5
+[verify] scaled:cls=SlowPruningBenchmark:s=2
+[verify] scaled:cls=SmallMatrixStuffing:s=0.5
+[verify] scaled:cls=SmallMatrixStuffing:s=2
+[verify] scaled:cls=TvInpainting:s=0.5
+[verify] scaled:cls=TvInpainting:s=2
+[verify] scaled:cls=UnconstrainedQP:s=0.5
+[verify] scaled:cls=UnconstrainedQP:s=2
+[verify] scaled:cls=Yitzhaki:s=0.5
+[verify] scaled:cls=Yitzhaki:s=2
+[verify] scaled:cls=HuberRegression:s=0.25
+[verify] scaled:cls=HuberRegression:s=4
+  worker scaled:cls=HuberRegression:s=4 0: MEMCAP(>20000MB)
+=== paused Wed Oct  7 11:12:16 EDT 2026 at the user's request ===
+=== resumed Wed Oct  7 15:14:20 EDT 2026 ===
+[verify] scaled:cls=HuberRegression:s=4
+  worker scaled:cls=HuberRegression:s=4 0: MEMCAP(>20000MB)
+[verify] scaled:cls=FactorCovarianceModel:s=0.25
+[verify] scaled:cls=FactorCovarianceModel:s=4
+[verify] scaled:cls=OptimalAdvertising:s=0.25
+[verify] scaled:cls=OptimalAdvertising:s=4
+  worker scaled:cls=OptimalAdvertising:s=4 0: MEMCAP(>20000MB)
+  worker scaled:cls=OptimalAdvertising:s=4 0 DIFFENGINE: MEMCAP(>20000MB)
+[verify] scaled:cls=SVMWithL1Regularization:s=0.25
+[verify] scaled:cls=SVMWithL1Regularization:s=4
+  worker scaled:cls=SVMWithL1Regularization:s=4 0: MEMCAP(>20000MB)
+  worker scaled:cls=SVMWithL1Regularization:s=4 0 DIFFENGINE: MEMCAP(>20000MB)
+  worker scaled:cls=SVMWithL1Regularization:s=4 0 DE_NODENSE: MEMCAP(>20000MB)
+  worker scaled:cls=SVMWithL1Regularization:s=4 0 de_cached: MEMCAP(>20000MB)
+  worker scaled:cls=SVMWithL1Regularization:s=4 0 de_cached_nodense: MEMCAP(>20000MB)
+  worker scaled:cls=SVMWithL1Regularization:s=4 0 de_cached_rebuild: MEMCAP(>20000MB)
+  worker scaled:cls=SVMWithL1Regularization:s=4 0 de_cached_nodense_rebuild: MEMCAP(>20000MB)
+  worker scaled:cls=SVMWithL1Regularization:s=4 0 DE_EVAL: MEMCAP(>20000MB)
+  worker scaled:cls=SVMWithL1Regularization:s=4 0 DE_NODENSE_EVAL: MEMCAP(>20000MB)
+[verify] scaled:cls=LeastSquares:s=0.25
+[verify] scaled:cls=LeastSquares:s=4
+  worker scaled:cls=LeastSquares:s=4 0: MEMCAP(>20000MB)
+[verify] scaled:cls=SimpleQPBenchmark:s=0.25
+[verify] scaled:cls=SimpleQPBenchmark:s=4
+  worker scaled:cls=SimpleQPBenchmark:s=4 0: MEMCAP(>20000MB)
+[verify] scaled:cls=Yitzhaki:s=0.25
+[verify] scaled:cls=Yitzhaki:s=4
+[verify] scaled:cls=CVaRBenchmark:s=0.25
+[verify] scaled:cls=CVaRBenchmark:s=4
+  worker scaled:cls=CVaRBenchmark:s=4 0: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 DIFFENGINE: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 DE_NODENSE: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 de_cached: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 de_cached_nodense: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 de_cached_rebuild: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 de_cached_nodense_rebuild: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 SCIPY: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 COO: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 SCIPY_EVAL: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 COO_EVAL: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 DE_EVAL: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 0 DE_NODENSE_EVAL: MEMCAP(>20000MB)
+[verify] scaled:cls=SemidefiniteProgramming:s=0.25
+[verify] scaled:cls=SemidefiniteProgramming:s=4
+[verify] lasso:variant=free:n=250:seed=0
+[verify] lasso:variant=free:n=500:seed=0
+[verify] lasso:variant=free:n=1000:seed=0
+[verify] lasso:variant=free:n=2000:seed=0
+[verify] lasso:variant=free:n=4000:seed=0
+[verify] scaled:cls=LeastSquares:density=0.01
+[verify] scaled:cls=LeastSquares:density=0.05
+[verify] scaled:cls=LeastSquares:density=0.2
+[verify] scaled:cls=LeastSquares:density=0.5
+[verify] scaled:cls=HuberRegression:density=0.01
+[verify] scaled:cls=HuberRegression:density=0.05
+[verify] scaled:cls=HuberRegression:density=0.2
+[verify] scaled:cls=HuberRegression:density=0.5
+[verify] scaled:cls=SVMWithL1Regularization:density=0.01
+[verify] scaled:cls=SVMWithL1Regularization:density=0.05
+[verify] scaled:cls=SVMWithL1Regularization:density=0.2
+[verify] scaled:cls=SVMWithL1Regularization:density=0.5
+[verify] scaled:cls=SimpleQPBenchmark:density=0.01
+[verify] scaled:cls=SimpleQPBenchmark:density=0.05
+[verify] scaled:cls=SimpleQPBenchmark:density=0.2
+[verify] scaled:cls=SimpleQPBenchmark:density=0.5
+[cold] scaled:cls=CVaRBenchmark:s=0.5
+[cold] scaled:cls=CVaRBenchmark:s=2
+  worker scaled:cls=CVaRBenchmark:s=2 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=2 cold DIFFENGINE 0: MEMCAP(>20000MB)
+[cold] scaled:cls=Cajas:s=0.5
+[cold] scaled:cls=Cajas:s=2
+[cold] scaled:cls=ConeMatrixStuffingBench:s=0.5
+[cold] scaled:cls=ConeMatrixStuffingBench:s=2
+[cold] scaled:cls=ConvexPlasticity:s=0.5
+[cold] scaled:cls=ConvexPlasticity:s=2
+[cold] scaled:cls=FactorCovarianceModel:s=0.5
+[cold] scaled:cls=FactorCovarianceModel:s=2
+[cold] scaled:cls=HuberRegression:s=0.5
+[cold] scaled:cls=HuberRegression:s=2
+[cold] scaled:cls=LeastSquares:s=0.5
+[cold] scaled:cls=LeastSquares:s=2
+[cold] scaled:cls=Murray:s=0.5
+[cold] scaled:cls=Murray:s=2
+[cold] scaled:cls=OptimalAdvertising:s=0.5
+[cold] scaled:cls=OptimalAdvertising:s=2
+  worker scaled:cls=OptimalAdvertising:s=2 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+[cold] scaled:cls=ParamConeMatrixStuffing:s=0.5
+[cold] scaled:cls=ParamConeMatrixStuffing:s=2
+[cold] scaled:cls=ParamSmallMatrixStuffing:s=0.5
+[cold] scaled:cls=ParamSmallMatrixStuffing:s=2
+[cold] scaled:cls=ParametrizedQPBenchmark:s=0.5
+[cold] scaled:cls=ParametrizedQPBenchmark:s=2
+[cold] scaled:cls=QuantumHilbertMatrix:s=0.5
+[cold] scaled:cls=QuantumHilbertMatrix:s=2
+  worker scaled:cls=QuantumHilbertMatrix:s=2 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 cold DIFFENGINE 0: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 cold DE_NODENSE 0: MEMCAP(>20000MB)
+[cold] scaled:cls=SDPSegfault1132Benchmark:s=0.5
+[cold] scaled:cls=SDPSegfault1132Benchmark:s=2
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 cold DIFFENGINE 0: MEMCAP(>20000MB)
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 cold DE_NODENSE 0: MEMCAP(>20000MB)
+[cold] scaled:cls=SVMWithL1Regularization:s=0.5
+[cold] scaled:cls=SVMWithL1Regularization:s=2
+[cold] scaled:cls=SemidefiniteProgramming:s=0.5
+[cold] scaled:cls=SemidefiniteProgramming:s=2
+[cold] scaled:cls=SimpleFullyParametrizedLPBenchmark:s=0.5
+[cold] scaled:cls=SimpleFullyParametrizedLPBenchmark:s=2
+[cold] scaled:cls=SimpleLPBenchmark:s=0.5
+[cold] scaled:cls=SimpleLPBenchmark:s=2
+[cold] scaled:cls=SimpleQPBenchmark:s=0.5
+[cold] scaled:cls=SimpleQPBenchmark:s=2
+[cold] scaled:cls=SimpleScalarParametrizedLPBenchmark:s=0.5
+[cold] scaled:cls=SimpleScalarParametrizedLPBenchmark:s=2
+[cold] scaled:cls=SlowPruningBenchmark:s=0.5
+[cold] scaled:cls=SlowPruningBenchmark:s=2
+[cold] scaled:cls=SmallMatrixStuffing:s=0.5
+[cold] scaled:cls=SmallMatrixStuffing:s=2
+[cold] scaled:cls=TvInpainting:s=0.5
+[cold] scaled:cls=TvInpainting:s=2
+[cold] scaled:cls=UnconstrainedQP:s=0.5
+[cold] scaled:cls=UnconstrainedQP:s=2
+[cold] scaled:cls=Yitzhaki:s=0.5
+[cold] scaled:cls=Yitzhaki:s=2
+[cold] scaled:cls=CVaRBenchmark:s=0.5
+[cold] scaled:cls=CVaRBenchmark:s=2
+[cold] scaled:cls=Cajas:s=0.5
+[cold] scaled:cls=Cajas:s=2
+[cold] scaled:cls=ConeMatrixStuffingBench:s=0.5
+[cold] scaled:cls=ConeMatrixStuffingBench:s=2
+[cold] scaled:cls=ConvexPlasticity:s=0.5
+[cold] scaled:cls=ConvexPlasticity:s=2
+[cold] scaled:cls=FactorCovarianceModel:s=0.5
+[cold] scaled:cls=FactorCovarianceModel:s=2
+[cold] scaled:cls=HuberRegression:s=0.5
+[cold] scaled:cls=HuberRegression:s=2
+[cold] scaled:cls=LeastSquares:s=0.5
+[cold] scaled:cls=LeastSquares:s=2
+[cold] scaled:cls=Murray:s=0.5
+[cold] scaled:cls=Murray:s=2
+[cold] scaled:cls=OptimalAdvertising:s=0.5
+[cold] scaled:cls=OptimalAdvertising:s=2
+[cold] scaled:cls=ParamConeMatrixStuffing:s=0.5
+[cold] scaled:cls=ParamConeMatrixStuffing:s=2
+[cold] scaled:cls=ParamSmallMatrixStuffing:s=0.5
+[cold] scaled:cls=ParamSmallMatrixStuffing:s=2
+[cold] scaled:cls=ParametrizedQPBenchmark:s=0.5
+[cold] scaled:cls=ParametrizedQPBenchmark:s=2
+[cold] scaled:cls=QuantumHilbertMatrix:s=0.5
+[cold] scaled:cls=QuantumHilbertMatrix:s=2
+  worker scaled:cls=QuantumHilbertMatrix:s=2 cold CPP_ND,SCIPY_ND,COO_ND 0: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 cold CPP_ND 0: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 cold SCIPY_ND 0: MEMCAP(>20000MB)
+  worker scaled:cls=QuantumHilbertMatrix:s=2 cold COO_ND 0: MEMCAP(>20000MB)
+[cold] scaled:cls=SDPSegfault1132Benchmark:s=0.5
+[cold] scaled:cls=SDPSegfault1132Benchmark:s=2
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 cold CPP_ND,SCIPY_ND,COO_ND 0: MEMCAP(>20000MB)
+  worker scaled:cls=SDPSegfault1132Benchmark:s=2 cold COO_ND 0: MEMCAP(>20000MB)
+[cold] scaled:cls=SVMWithL1Regularization:s=0.5
+[cold] scaled:cls=SVMWithL1Regularization:s=2
+[cold] scaled:cls=SemidefiniteProgramming:s=0.5
+[cold] scaled:cls=SemidefiniteProgramming:s=2
+[cold] scaled:cls=SimpleFullyParametrizedLPBenchmark:s=0.5
+[cold] scaled:cls=SimpleFullyParametrizedLPBenchmark:s=2
+[cold] scaled:cls=SimpleLPBenchmark:s=0.5
+[cold] scaled:cls=SimpleLPBenchmark:s=2
+[cold] scaled:cls=SimpleQPBenchmark:s=0.5
+[cold] scaled:cls=SimpleQPBenchmark:s=2
+[cold] scaled:cls=SimpleScalarParametrizedLPBenchmark:s=0.5
+[cold] scaled:cls=SimpleScalarParametrizedLPBenchmark:s=2
+[cold] scaled:cls=SlowPruningBenchmark:s=0.5
+[cold] scaled:cls=SlowPruningBenchmark:s=2
+[cold] scaled:cls=SmallMatrixStuffing:s=0.5
+[cold] scaled:cls=SmallMatrixStuffing:s=2
+[cold] scaled:cls=TvInpainting:s=0.5
+[cold] scaled:cls=TvInpainting:s=2
+[cold] scaled:cls=UnconstrainedQP:s=0.5
+[cold] scaled:cls=UnconstrainedQP:s=2
+[cold] scaled:cls=Yitzhaki:s=0.5
+[cold] scaled:cls=Yitzhaki:s=2
+[cold] scaled:cls=HuberRegression:s=0.25
+[cold] scaled:cls=HuberRegression:s=4
+[cold] scaled:cls=FactorCovarianceModel:s=0.25
+[cold] scaled:cls=FactorCovarianceModel:s=4
+[cold] scaled:cls=OptimalAdvertising:s=0.25
+[cold] scaled:cls=OptimalAdvertising:s=4
+  worker scaled:cls=OptimalAdvertising:s=4 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker scaled:cls=OptimalAdvertising:s=4 cold DIFFENGINE 0: MEMCAP(>20000MB)
+[cold] scaled:cls=SVMWithL1Regularization:s=0.25
+[cold] scaled:cls=SVMWithL1Regularization:s=4
+[cold] scaled:cls=LeastSquares:s=0.25
+[cold] scaled:cls=LeastSquares:s=4
+[cold] scaled:cls=SimpleQPBenchmark:s=0.25
+[cold] scaled:cls=SimpleQPBenchmark:s=4
+[cold] scaled:cls=Yitzhaki:s=0.25
+[cold] scaled:cls=Yitzhaki:s=4
+[cold] scaled:cls=CVaRBenchmark:s=0.25
+[cold] scaled:cls=CVaRBenchmark:s=4
+  worker scaled:cls=CVaRBenchmark:s=4 cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 cold DIFFENGINE 0: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 cold DE_NODENSE 0: MEMCAP(>20000MB)
+[cold] scaled:cls=SemidefiniteProgramming:s=0.25
+[cold] scaled:cls=SemidefiniteProgramming:s=4
+[cold] lasso:variant=free:n=250:seed=0
+[cold] lasso:variant=free:n=500:seed=0
+[cold] lasso:variant=free:n=1000:seed=0
+[cold] lasso:variant=free:n=2000:seed=0
+[cold] lasso:variant=free:n=4000:seed=0
+[cold] scaled:cls=HuberRegression:s=0.25
+[cold] scaled:cls=HuberRegression:s=4
+[cold] scaled:cls=FactorCovarianceModel:s=0.25
+[cold] scaled:cls=FactorCovarianceModel:s=4
+[cold] scaled:cls=OptimalAdvertising:s=0.25
+[cold] scaled:cls=OptimalAdvertising:s=4
+[cold] scaled:cls=SVMWithL1Regularization:s=0.25
+[cold] scaled:cls=SVMWithL1Regularization:s=4
+[cold] scaled:cls=LeastSquares:s=0.25
+[cold] scaled:cls=LeastSquares:s=4
+[cold] scaled:cls=SimpleQPBenchmark:s=0.25
+[cold] scaled:cls=SimpleQPBenchmark:s=4
+[cold] scaled:cls=Yitzhaki:s=0.25
+[cold] scaled:cls=Yitzhaki:s=4
+[cold] scaled:cls=CVaRBenchmark:s=0.25
+[cold] scaled:cls=CVaRBenchmark:s=4
+  worker scaled:cls=CVaRBenchmark:s=4 cold CPP_ND,SCIPY_ND,COO_ND 0: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 cold CPP_ND 0: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 cold SCIPY_ND 0: MEMCAP(>20000MB)
+  worker scaled:cls=CVaRBenchmark:s=4 cold COO_ND 0: MEMCAP(>20000MB)
+[cold] scaled:cls=SemidefiniteProgramming:s=0.25
+[cold] scaled:cls=SemidefiniteProgramming:s=4
+[cold] lasso:variant=free:n=250:seed=0
+[cold] lasso:variant=free:n=500:seed=0
+[cold] lasso:variant=free:n=1000:seed=0
+[cold] lasso:variant=free:n=2000:seed=0
+[cold] lasso:variant=free:n=4000:seed=0
+[cold] scaled:cls=LeastSquares:density=0.01
+[cold] scaled:cls=LeastSquares:density=0.05
+[cold] scaled:cls=LeastSquares:density=0.2
+[cold] scaled:cls=LeastSquares:density=0.5
+[cold] scaled:cls=HuberRegression:density=0.01
+[cold] scaled:cls=HuberRegression:density=0.05
+[cold] scaled:cls=HuberRegression:density=0.2
+[cold] scaled:cls=HuberRegression:density=0.5
+[cold] scaled:cls=SVMWithL1Regularization:density=0.01
+[cold] scaled:cls=SVMWithL1Regularization:density=0.05
+[cold] scaled:cls=SVMWithL1Regularization:density=0.2
+[cold] scaled:cls=SVMWithL1Regularization:density=0.5
+[cold] scaled:cls=SimpleQPBenchmark:density=0.01
+[cold] scaled:cls=SimpleQPBenchmark:density=0.05
+[cold] scaled:cls=SimpleQPBenchmark:density=0.2
+[cold] scaled:cls=SimpleQPBenchmark:density=0.5
+[cold] scaled:cls=LeastSquares:density=0.01
+[cold] scaled:cls=LeastSquares:density=0.05
+[cold] scaled:cls=LeastSquares:density=0.2
+[cold] scaled:cls=LeastSquares:density=0.5
+[cold] scaled:cls=HuberRegression:density=0.01
+[cold] scaled:cls=HuberRegression:density=0.05
+[cold] scaled:cls=HuberRegression:density=0.2
+[cold] scaled:cls=HuberRegression:density=0.5
+[cold] scaled:cls=SVMWithL1Regularization:density=0.01
+[cold] scaled:cls=SVMWithL1Regularization:density=0.05
+[cold] scaled:cls=SVMWithL1Regularization:density=0.2
+[cold] scaled:cls=SVMWithL1Regularization:density=0.5
+[cold] scaled:cls=SimpleQPBenchmark:density=0.01
+[cold] scaled:cls=SimpleQPBenchmark:density=0.05
+[cold] scaled:cls=SimpleQPBenchmark:density=0.2
+[cold] scaled:cls=SimpleQPBenchmark:density=0.5
+wrote results/thesis-scaling/summary.md
