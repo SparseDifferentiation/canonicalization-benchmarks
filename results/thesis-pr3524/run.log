@@ -1,0 +1,92 @@
+[verify] ConvexPlasticity
+[verify] FactorCovarianceModel
+[verify] ParamConeMatrixStuffing
+[verify] ParamSmallMatrixStuffing
+[verify] ParametrizedQPBenchmark
+[verify] SVMWithL1Regularization
+[verify] SimpleFullyParametrizedLPBenchmark
+[verify] SimpleScalarParametrizedLPBenchmark
+[verify] CVaRBenchmark
+  worker CVaRBenchmark 0: MEMCAP(>20000MB)
+[verify] ConeMatrixStuffingBench
+[verify] HuberRegression
+[verify] LeastSquares
+[verify] OptimalAdvertising
+[verify] QuantumHilbertMatrix
+[verify] SDPSegfault1132Benchmark
+  worker SDPSegfault1132Benchmark 0: MEMCAP(>20000MB)
+[verify] SimpleLPBenchmark
+[verify] SimpleQPBenchmark
+[verify] SlowPruningBenchmark
+[verify] SmallMatrixStuffing
+[verify] UnconstrainedQP
+[verify] Yitzhaki
+[cold] ConvexPlasticity
+[cold] FactorCovarianceModel
+[cold] ParamConeMatrixStuffing
+[cold] ParamSmallMatrixStuffing
+[cold] ParametrizedQPBenchmark
+[cold] SVMWithL1Regularization
+[cold] SimpleFullyParametrizedLPBenchmark
+[cold] SimpleScalarParametrizedLPBenchmark
+[cold] CVaRBenchmark
+[cold] ConeMatrixStuffingBench
+[cold] HuberRegression
+[cold] LeastSquares
+[cold] OptimalAdvertising
+[cold] QuantumHilbertMatrix
+[cold] SDPSegfault1132Benchmark
+  worker SDPSegfault1132Benchmark cold DIFFENGINE,DE_NODENSE 0: MEMCAP(>20000MB)
+[cold] SimpleLPBenchmark
+[cold] SimpleQPBenchmark
+[cold] SlowPruningBenchmark
+[cold] SmallMatrixStuffing
+[cold] UnconstrainedQP
+[cold] Yitzhaki
+[cold] ConvexPlasticity
+[cold] FactorCovarianceModel
+[cold] ParamConeMatrixStuffing
+[cold] ParamSmallMatrixStuffing
+[cold] ParametrizedQPBenchmark
+[cold] SVMWithL1Regularization
+[cold] SimpleFullyParametrizedLPBenchmark
+[cold] SimpleScalarParametrizedLPBenchmark
+[warm] ConvexPlasticity
+[warm] FactorCovarianceModel
+[warm] ParamConeMatrixStuffing
+[warm] ParamSmallMatrixStuffing
+[warm] ParametrizedQPBenchmark
+[warm] SVMWithL1Regularization
+[warm] SimpleFullyParametrizedLPBenchmark
+[warm] SimpleScalarParametrizedLPBenchmark
+[memory cold] ConvexPlasticity
+[memory cold] FactorCovarianceModel
+[memory cold] ParamConeMatrixStuffing
+[memory cold] ParamSmallMatrixStuffing
+[memory cold] ParametrizedQPBenchmark
+[memory cold] SVMWithL1Regularization
+[memory cold] SimpleFullyParametrizedLPBenchmark
+[memory cold] SimpleScalarParametrizedLPBenchmark
+[memory cold] CVaRBenchmark
+[memory cold] ConeMatrixStuffingBench
+[memory cold] HuberRegression
+[memory cold] LeastSquares
+[memory cold] OptimalAdvertising
+[memory cold] QuantumHilbertMatrix
+[memory cold] SDPSegfault1132Benchmark
+[memory cold] SimpleLPBenchmark
+[memory cold] SimpleQPBenchmark
+[memory cold] SlowPruningBenchmark
+[memory cold] SmallMatrixStuffing
+[memory cold] UnconstrainedQP
+[memory cold] Yitzhaki
+[memory cold] ConvexPlasticity
+[memory cold] FactorCovarianceModel
+[memory cold] ParamConeMatrixStuffing
+[memory cold] ParamSmallMatrixStuffing
+[memory cold] ParametrizedQPBenchmark
+[memory cold] SVMWithL1Regularization
+[memory cold] SimpleFullyParametrizedLPBenchmark
+[memory cold] SimpleScalarParametrizedLPBenchmark
+wrote results/thesis-pr3524/summary.md
+wrote results/thesis-pr3524/compare.md

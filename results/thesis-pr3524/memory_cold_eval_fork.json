@@ -1,0 +1,262 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-thesis-pr3524/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "0.1.0.dev4045+g5c071510a",
+   "sparsediffpy": "0.7.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": "5c071510a272c445b82b15dfbbfa332f0ae5ff3a",
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": "4f42e05",
+   "engine_commit": "4f42e05",
+   "engine_so_sha256": "77ee8cd5550bcc650622eb05a5dabbe247a33b673a6513fba62bb4e036933115",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "DE_EVAL",
+   "DE_NODENSE_EVAL"
+  ],
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "high_dim_convex_plasticity",
+   "class": "ConvexPlasticity",
+   "targets": {
+    "DE_EVAL": {
+     "module": "high_dim_convex_plasticity",
+     "class": "ConvexPlasticity",
+     "kind": "cold",
+     "target": "DE_EVAL",
+     "delta_mb": 1327.640625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE_EVAL": {
+     "module": "high_dim_convex_plasticity",
+     "class": "ConvexPlasticity",
+     "kind": "cold",
+     "target": "DE_NODENSE_EVAL",
+     "delta_mb": 24.140625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "finance",
+   "class": "FactorCovarianceModel",
+   "targets": {
+    "DE_EVAL": {
+     "module": "finance",
+     "class": "FactorCovarianceModel",
+     "kind": "cold",
+     "target": "DE_EVAL",
+     "delta_mb": 759.65625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE_EVAL": {
+     "module": "finance",
+     "class": "FactorCovarianceModel",
+     "kind": "cold",
+     "target": "DE_NODENSE_EVAL",
+     "delta_mb": 999.234375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ParamConeMatrixStuffing",
+   "targets": {
+    "DE_EVAL": {
+     "module": "matrix_stuffing",
+     "class": "ParamConeMatrixStuffing",
+     "kind": "cold",
+     "target": "DE_EVAL",
+     "delta_mb": 7.046875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE_EVAL": {
+     "module": "matrix_stuffing",
+     "class": "ParamConeMatrixStuffing",
+     "kind": "cold",
+     "target": "DE_NODENSE_EVAL",
+     "delta_mb": 8.53125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "matrix_stuffing",
+   "class": "ParamSmallMatrixStuffing",
+   "targets": {
+    "DE_EVAL": {
+     "module": "matrix_stuffing",
+     "class": "ParamSmallMatrixStuffing",
+     "kind": "cold",
+     "target": "DE_EVAL",
+     "delta_mb": 11.46875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE_EVAL": {
+     "module": "matrix_stuffing",
+     "class": "ParamSmallMatrixStuffing",
+     "kind": "cold",
+     "target": "DE_NODENSE_EVAL",
+     "delta_mb": 14.921875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "ParametrizedQPBenchmark",
+   "targets": {
+    "DE_EVAL": {
+     "module": "simple_QP_benchmarks",
+     "class": "ParametrizedQPBenchmark",
+     "kind": "cold",
+     "target": "DE_EVAL",
+     "delta_mb": 1501.5,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE_EVAL": {
+     "module": "simple_QP_benchmarks",
+     "class": "ParametrizedQPBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE_EVAL",
+     "delta_mb": 2001.390625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "svm_l1_regularization",
+   "class": "SVMWithL1Regularization",
+   "targets": {
+    "DE_EVAL": {
+     "module": "svm_l1_regularization",
+     "class": "SVMWithL1Regularization",
+     "kind": "cold",
+     "target": "DE_EVAL",
+     "delta_mb": 2033.640625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE_EVAL": {
+     "module": "svm_l1_regularization",
+     "class": "SVMWithL1Regularization",
+     "kind": "cold",
+     "target": "DE_NODENSE_EVAL",
+     "delta_mb": 2416.8125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleFullyParametrizedLPBenchmark",
+   "targets": {
+    "DE_EVAL": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleFullyParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "DE_EVAL",
+     "delta_mb": 480.640625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE_EVAL": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleFullyParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE_EVAL",
+     "delta_mb": 513.671875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "simple_LP_benchmarks",
+   "class": "SimpleScalarParametrizedLPBenchmark",
+   "targets": {
+    "DE_EVAL": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleScalarParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "DE_EVAL",
+     "delta_mb": 963.015625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE_EVAL": {
+     "module": "simple_LP_benchmarks",
+     "class": "SimpleScalarParametrizedLPBenchmark",
+     "kind": "cold",
+     "target": "DE_NODENSE_EVAL",
+     "delta_mb": 1021.109375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  }
+ ]
+}
