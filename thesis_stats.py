@@ -471,9 +471,11 @@ def main():
         contrast(rows, "cold", ENGINE_COLD, "best stock backend",
                  "diffengine vs best stock backend", md, csv_rows, keep=has_ra,
                  pick=lambda n: (ENGINE_COLD, best_of(n, BASELINES_COLD)))
-        contrast(rows, "cold", ENGINE_COLD, "best backend with the rewrite",
-                 "diffengine vs best backend with the rewrite", md, csv_rows, keep=has_ra,
-                 pick=lambda n: (ENGINE_COLD, best_of(n, RA)))
+        # A user can apply the rewrite or not, so the fair baseline is the best of both
+        # (the rewrite slows SCIPY down 4.5x on SDPSegfault1132).
+        contrast(rows, "cold", ENGINE_COLD, "best CVXPY, with or without the rewrite",
+                 "diffengine vs best CVXPY backend, with or without the rewrite", md, csv_rows,
+                 keep=has_ra, pick=lambda n: (ENGINE_COLD, best_of(n, BASELINES_COLD + RA)))
     md.append("\n## Re-solves")
     for b in ("dpp", "dpp_coo", "dpp_scipy", "nodpp_cpp"):
         contrast(rows, "warm", "de_cached", b, f"Engine re-solve vs {b}", md, csv_rows)

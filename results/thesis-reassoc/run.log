@@ -1,0 +1,11 @@
+[verify-ra] UnconstrainedQP
+[verify-ra] QuantumHilbertMatrix
+[verify-ra] SDPSegfault1132Benchmark
+[verify-ra] OptimalAdvertising
+[verify-ra] SlowPruningBenchmark
+[cold] UnconstrainedQP
+[cold] QuantumHilbertMatrix
+[cold] SDPSegfault1132Benchmark
+[cold] OptimalAdvertising
+[cold] SlowPruningBenchmark
+wrote results/thesis-reassoc/summary.md

@@ -1,0 +1,203 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-upstream/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "1.9.2",
+   "sparsediffpy": "0.3.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": null,
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": null,
+   "engine_commit": null,
+   "engine_so_sha256": "11635606f60c6704bdc2d118b151a10b809f488fbf99205fd6ecd36de9757209",
+   "numpy_blas": []
+  }
+ },
+ "rows": [
+  {
+   "module": "simple_QP_benchmarks",
+   "class": "UnconstrainedQP",
+   "checks": {
+    "first:COO_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 1.7053025658242404e-13,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:CPP_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 1.7053025658242404e-13,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 1.7053025658242404e-13,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_ND",
+   "rewrites": 2,
+   "done": true
+  },
+  {
+   "module": "quantum_hilbert_matrix",
+   "class": "QuantumHilbertMatrix",
+   "checks": {
+    "first:COO_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:CPP_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_ND",
+   "rewrites": 80,
+   "done": true
+  },
+  {
+   "module": "sdp_segfault_1132_benchmark",
+   "class": "SDPSegfault1132Benchmark",
+   "checks": {
+    "first:COO_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 2.220446049250313e-16,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:CPP_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_ND",
+   "rewrites": 3,
+   "done": true
+  },
+  {
+   "module": "optimal_advertising",
+   "class": "OptimalAdvertising",
+   "checks": {
+    "first:COO_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:CPP_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_ND",
+   "rewrites": 0,
+   "done": true
+  },
+  {
+   "module": "slow_pruning_1668_benchmark",
+   "class": "SlowPruningBenchmark",
+   "checks": {
+    "first:COO_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:CPP_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_ND",
+   "rewrites": 0,
+   "done": true
+  }
+ ]
+}
