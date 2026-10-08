@@ -80,6 +80,11 @@ TARGETS = {
     "CPP_ND": ({"canon_backend": "CPP", "ignore_dpp": True}, {}),      # upstream
     "SCIPY_ND": ({"canon_backend": "SCIPY", "ignore_dpp": True}, {}),  # upstream
     "COO_ND": ({"canon_backend": "COO", "ignore_dpp": True}, {}),      # upstream
+    # Stock backends on the problem after the matmul reassociation of CVXPY #3524
+    # (reassociate.py, inside the timer), so the rewrite is credited to neither side.
+    "CPP_ND_RA": ({"canon_backend": "CPP", "ignore_dpp": True}, {}),      # upstream
+    "SCIPY_ND_RA": ({"canon_backend": "SCIPY", "ignore_dpp": True}, {}),  # upstream
+    "COO_ND_RA": ({"canon_backend": "COO", "ignore_dpp": True}, {}),      # upstream
     "CPP": ({"canon_backend": "CPP"}, {}),       # DPP path: builds the tensor
     "SCIPY": ({"canon_backend": "SCIPY"}, {}),
     "COO": ({"canon_backend": "COO"}, {}),
@@ -99,6 +104,7 @@ TARGETS = {
 }
 SWITCHES = ("DIFFENGINE_NO_DENSE", "DIFFENGINE_REBUILD")
 EVAL_TARGETS = {"DE_EVAL", "DE_NODENSE_EVAL"}
+RA_TARGETS = {"CPP_ND_RA", "SCIPY_ND_RA", "COO_ND_RA"}
 
 
 def _evaluated(prob):
@@ -215,6 +221,9 @@ def worker_time(module, name, kind, targets, seed, out_path):
             t0 = time.perf_counter()
             if t in EVAL_TARGETS:
                 data, _, _ = _evaluated(prob).get_problem_data(solver=SOLVER, **kwargs)
+            elif t in RA_TARGETS:
+                from reassociate import reassociate
+                data, _, _ = reassociate(prob)[0].get_problem_data(solver=SOLVER, **kwargs)
             else:
                 data, _, _ = prob.get_problem_data(solver=SOLVER, **kwargs)
             first = time.perf_counter() - t0
@@ -431,6 +440,55 @@ def worker_verify(module, name, seed, out_path, only=None):
                 res["checks"][f"{tag}:{t}"] = f"ERR {type(exc).__name__}: {exc}"[:200]
     res["done"] = True
     Path(out_path).write_text(json.dumps(res, default=float))
+
+
+def worker_verify_ra(module, name, seed, out_path):
+    """(P, c, A, b) of each RA target against stock CPP on the original problem
+    (same interpreter, first canonicalization)."""
+    warnings.filterwarnings("ignore")
+    from reassociate import reassociate
+
+    Cls = load_class(module, name)
+    res = {"module": module, "class": name, "checks": {}, "reference": "CPP_ND"}
+    try:
+        prob, _ = fresh_problem(Cls, seed)
+        ref, _, _ = prob.get_problem_data(solver=SOLVER, **TARGETS["CPP_ND"][0])
+        res["rewrites"] = reassociate(prob)[1]
+    except Exception as exc:  # noqa: BLE001
+        res["checks"]["first:reference"] = f"ERR {type(exc).__name__}: {exc}"[:200]
+        ref = None
+    for t in sorted(RA_TARGETS) if ref is not None else []:
+        try:
+            prob, _ = fresh_problem(Cls, seed)
+            d, _, _ = reassociate(prob)[0].get_problem_data(solver=SOLVER, **TARGETS[t][0])
+            ok, errs, nans = True, {}, {}
+            for key in ("P", "A", "c", "b"):
+                if ref.get(key) is None and d.get(key) is None:
+                    continue
+                close = _sparse_close if key in ("P", "A") else _dense_close
+                k_ok, err, nan_diff = close(ref[key], d[key])
+                ok &= k_ok
+                errs[key] = err
+                if nan_diff:
+                    nans[key] = nan_diff
+            rec = {"ok": bool(ok), "max_abs_err": errs}
+            if nans:
+                rec["nan_mismatch"] = nans
+            res["checks"][f"first:{t}"] = rec
+        except Exception as exc:  # noqa: BLE001
+            res["checks"][f"first:{t}"] = f"ERR {type(exc).__name__}: {exc}"[:200]
+    res["done"] = True
+    Path(out_path).write_text(json.dumps(res, default=float))
+
+
+def run_verify_ra(problems, out):
+    tmp = HERE / "_thesis_worker.json"
+    rows, meta = [], {"environment": environment()}
+    for module, name in problems:
+        print(f"[verify-ra] {name}", flush=True)
+        res, status = _spawn(["--worker-verify-ra", module, name, "0", str(tmp)], tmp)
+        rows.append(res if res else {"module": module, "class": name, "error": status})
+        out.write_text(json.dumps({"meta": meta, "rows": rows}, indent=1))
 
 
 # --------------------------------------------------------------------------- #
@@ -661,13 +719,16 @@ def main():
             worker_time(module, name, kind, targets.split(","), int(seed), out)
         elif mode == "--worker-memory":
             worker_memory(*a)
+        elif mode == "--worker-verify-ra":
+            module, name, seed, out = a
+            worker_verify_ra(module, name, int(seed), out)
         elif mode == "--worker-verify":
             module, name, seed, out, *only = a
             worker_verify(module, name, int(seed), out,
                           set(only[0].split(",")) if only else None)
         return
     ap = argparse.ArgumentParser()
-    ap.add_argument("mode", choices=["time", "memory", "verify"])
+    ap.add_argument("mode", choices=["time", "memory", "verify", "verify-ra"])
     ap.add_argument("--set", default="suite")
     ap.add_argument("--kind", choices=["cold", "warm"], default="cold")
     ap.add_argument("--targets", default="")
@@ -680,8 +741,11 @@ def main():
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     targets = [t for t in args.targets.split(",") if t]
-    check_engine(args.mode, targets)
-    if args.mode == "time":
+    if args.mode != "verify-ra":  # verify-ra runs only stock backends
+        check_engine(args.mode, targets)
+    if args.mode == "verify-ra":
+        run_verify_ra(problems, out)
+    elif args.mode == "time":
         run_time(problems, args.kind, targets, out)
     elif args.mode == "memory":
         run_memory(problems, args.kind, targets, out)

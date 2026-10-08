@@ -453,6 +453,27 @@ def main():
     contrast(rows, "warm", "de_cached_rebuild", "de_cached", "Split off", md, csv_rows)
     contrast(rows, "warm", "de_cached_nodense_rebuild", "de_cached", "Both off", md,
              csv_rows)
+    # CVXPY #3524's reassociation applied to the stock backends too (reassociate.py)
+    RA = ["CPP_ND_RA", "SCIPY_ND_RA", "COO_ND_RA"]
+
+    def has_ra(name):
+        return any(len(times(rows.get(("cold", name), {"samples": {}}), t)) for t in RA)
+
+    def best_of(name, ts):
+        row = rows[("cold", name)]
+        ts = [t for t in ts if len(times(row, t))]
+        return min(ts, key=lambda t: np.median(times(row, t)))
+    if any(has_ra(n) for (k, n) in rows if k == "cold"):
+        md.append("\n## The #3524 reassociation applied to CVXPY too")
+        for b in BASELINES_COLD:
+            contrast(rows, "cold", b + "_RA", b, f"{b} with the rewrite vs stock", md, csv_rows,
+                     keep=has_ra)
+        contrast(rows, "cold", ENGINE_COLD, "best stock backend",
+                 "diffengine vs best stock backend", md, csv_rows, keep=has_ra,
+                 pick=lambda n: (ENGINE_COLD, best_of(n, BASELINES_COLD)))
+        contrast(rows, "cold", ENGINE_COLD, "best backend with the rewrite",
+                 "diffengine vs best backend with the rewrite", md, csv_rows, keep=has_ra,
+                 pick=lambda n: (ENGINE_COLD, best_of(n, RA)))
     md.append("\n## Re-solves")
     for b in ("dpp", "dpp_coo", "dpp_scipy", "nodpp_cpp"):
         contrast(rows, "warm", "de_cached", b, f"Engine re-solve vs {b}", md, csv_rows)
