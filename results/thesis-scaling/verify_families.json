@@ -748,11 +748,56 @@
    "module": "extra",
    "class": "scaled:cls=SVMWithL1Regularization:s=4",
    "checks": {
-    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
     "first:DE_NODENSE": "ERR MEMCAP(>20000MB)",
-    "first:de_cached": "ERR MEMCAP(>20000MB)",
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
     "first:de_cached_nodense": "ERR MEMCAP(>20000MB)",
-    "first:de_cached_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
     "first:de_cached_nodense_rebuild": "ERR MEMCAP(>20000MB)",
     "first:SCIPY_EVAL": {
      "ok": true,
@@ -786,11 +831,26 @@
       "b": 0.0
      }
     },
-    "first:DE_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
     "first:DE_NODENSE_EVAL": "ERR MEMCAP(>20000MB)"
    },
    "worker": "MEMCAP(>20000MB)",
-   "reference": null,
+   "reference": "CPP_EVAL",
    "done": true
   },
   {

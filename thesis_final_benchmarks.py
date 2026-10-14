@@ -41,6 +41,7 @@ import hashlib
 import importlib
 import json
 import os
+import pickle
 import platform
 import subprocess
 import sys
@@ -409,10 +410,17 @@ def worker_verify(module, name, seed, out_path, only=None):
     if only:
         engine = [t for t in engine if t in only]
         stock = [t for t in stock if t in only]
+    ref_file = os.environ.get("BENCH_VERIFY_REF")
     for update in ([False, True] if parametric else [False]):
         tag = "update" if update else "first"
         try:
-            ref = data_for(ref_target, update)
+            if ref_file:
+                # The reference was computed by its own worker (see run_verify), so
+                # that this one holds only its matrices, not CPP's intermediates.
+                with open(ref_file, "rb") as f:
+                    ref = pickle.load(f)[tag]
+            else:
+                ref = data_for(ref_target, update)
         except Exception as exc:  # noqa: BLE001
             res["checks"][f"{tag}:reference"] = f"ERR {type(exc).__name__}: {exc}"[:200]
             continue
@@ -440,6 +448,31 @@ def worker_verify(module, name, seed, out_path, only=None):
                 res["checks"][f"{tag}:{t}"] = f"ERR {type(exc).__name__}: {exc}"[:200]
     res["done"] = True
     Path(out_path).write_text(json.dumps(res, default=float))
+
+
+def worker_verify_ref(module, name, seed, out_path, ref_path):
+    """The reference of worker_verify alone, (P, c, A, b) pickled to ref_path."""
+    warnings.filterwarnings("ignore")
+    from cvxpy.reductions.eval_params import EvalParams
+
+    Cls = load_class(module, name)
+    prob0, _ = fresh_problem(Cls, seed)
+    parametric = bool(prob0.parameters())
+    ref_target = "CPP_EVAL" if parametric else "CPP"
+    out = {}
+    for update in ([False, True] if parametric else [False]):
+        prob, _ = fresh_problem(Cls, seed)
+        if update:
+            upd = np.random.default_rng(seed + 1000)
+            for p in prob.parameters():
+                rbb._assign_param(p, upd)
+        if parametric:
+            prob = EvalParams().apply(prob)[0]
+        data, _, _ = prob.get_problem_data(solver=SOLVER, canon_backend="CPP")
+        out["update" if update else "first"] = {k: data.get(k) for k in ("P", "A", "c", "b")}
+    with open(ref_path, "wb") as f:
+        pickle.dump(out, f, protocol=pickle.HIGHEST_PROTOCOL)
+    Path(out_path).write_text(json.dumps({"reference": ref_target}))
 
 
 def worker_verify_ra(module, name, seed, out_path):
@@ -699,13 +732,24 @@ def run_verify(problems, out):
         if status != "ok":
             # A target timed out or crashed: check each one in its own worker, so
             # only that target is reported as failed.
+            # The reference is computed first by a worker of its own and read from
+            # disk, so that no worker holds CPP's intermediates and an engine's at once.
             res = {"module": module, "class": name, "checks": {}, "worker": status}
+            ref_path = HERE / "_thesis_verify_ref.pkl"
+            r0, st0 = _spawn(["--worker-verify-ref", module, name, "0", str(tmp),
+                              str(ref_path)], tmp)
+            if st0 == "ok":
+                os.environ["BENCH_VERIFY_REF"] = str(ref_path)
+            else:
+                res["reference_worker"] = st0
             for t in VERIFY_TARGETS:
                 r1, st1 = _spawn(["--worker-verify", module, name, "0", str(tmp), t], tmp)
                 res.setdefault("reference", r1.get("reference"))
                 res["checks"].update(r1.get("checks", {}))
                 if st1 != "ok" and not any(k.endswith(":" + t) for k in r1.get("checks", {})):
                     res["checks"][f"first:{t}"] = f"ERR {st1}"
+            os.environ.pop("BENCH_VERIFY_REF", None)
+            ref_path.unlink(missing_ok=True)
             res["done"] = True
         rows.append(res if res else {"module": module, "class": name, "error": status})
         out.write_text(json.dumps({"meta": meta, "rows": rows}, indent=1))
@@ -722,6 +766,9 @@ def main():
         elif mode == "--worker-verify-ra":
             module, name, seed, out = a
             worker_verify_ra(module, name, int(seed), out)
+        elif mode == "--worker-verify-ref":
+            module, name, seed, out, ref_path = a
+            worker_verify_ref(module, name, int(seed), out, ref_path)
         elif mode == "--worker-verify":
             module, name, seed, out, *only = a
             worker_verify(module, name, int(seed), out,

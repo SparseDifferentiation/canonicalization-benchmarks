@@ -1307,7 +1307,17 @@
    "module": "extra",
    "class": "scaled:cls=OptimalAdvertising:s=2",
    "checks": {
-    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DIFFENGINE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 1
+     }
+    },
     "first:DE_NODENSE": {
      "ok": false,
      "max_abs_err": {
@@ -1337,7 +1347,7 @@
     }
    },
    "worker": "MEMCAP(>20000MB)",
-   "reference": null,
+   "reference": "CPP",
    "done": true
   },
   {

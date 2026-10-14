@@ -25,7 +25,7 @@ table,problem,level,ratio,nnz_A
 "Scaling: 25 problems at s = 1/2, 1, 2",Murray,2,1.0087004191059554,2987920
 "Scaling: 25 problems at s = 1/2, 1, 2",OptimalAdvertising,0.5,1.0893927555768925,500500
 "Scaling: 25 problems at s = 1/2, 1, 2",OptimalAdvertising,1,1.6674006877848977,1000500
-"Scaling: 25 problems at s = 1/2, 1, 2",OptimalAdvertising,2,,2000500
+"Scaling: 25 problems at s = 1/2, 1, 2",OptimalAdvertising,2,3.0596509917252552,2000500
 "Scaling: 25 problems at s = 1/2, 1, 2",ParamConeMatrixStuffing,0.5,0.5134407713087176,142
 "Scaling: 25 problems at s = 1/2, 1, 2",ParamConeMatrixStuffing,1,0.5258039330380921,200
 "Scaling: 25 problems at s = 1/2, 1, 2",ParamConeMatrixStuffing,2,0.5270554351789507,282
@@ -87,13 +87,13 @@ Scaling: 10 families at five sizes,FactorCovarianceModel,4,0.2236754002161939,25
 Scaling: 10 families at five sizes,OptimalAdvertising,0.25,0.7781923678059967,250500
 Scaling: 10 families at five sizes,OptimalAdvertising,0.5,1.0893927555768925,500500
 Scaling: 10 families at five sizes,OptimalAdvertising,1,1.6674006877848977,1000500
-Scaling: 10 families at five sizes,OptimalAdvertising,2,,2000500
+Scaling: 10 families at five sizes,OptimalAdvertising,2,3.0596509917252552,2000500
 Scaling: 10 families at five sizes,OptimalAdvertising,4,,4000500
 Scaling: 10 families at five sizes,SVMWithL1Regularization,0.25,0.150656692100136,3146251
 Scaling: 10 families at five sizes,SVMWithL1Regularization,0.5,0.1434060190291898,6290001
 Scaling: 10 families at five sizes,SVMWithL1Regularization,1,0.13788359357239835,12577501
 Scaling: 10 families at five sizes,SVMWithL1Regularization,2,0.1506346538255703,25152501
-Scaling: 10 families at five sizes,SVMWithL1Regularization,4,,50302501
+Scaling: 10 families at five sizes,SVMWithL1Regularization,4,0.15699589404059336,50302501
 Scaling: 10 families at five sizes,LeastSquares,0.25,0.15496030830818824,3503500
 Scaling: 10 families at five sizes,LeastSquares,0.5,0.15150213590951014,7004250
 Scaling: 10 families at five sizes,LeastSquares,1,0.17331851736173376,14007000

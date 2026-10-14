@@ -87,7 +87,7 @@
 | scaled:cls=Murray:s=2 | CPP | 4/4 | – |
 | scaled:cls=OptimalAdvertising:s=0.25 | CPP | 4/4 | – |
 | scaled:cls=OptimalAdvertising:s=0.5 | CPP | 4/4 | – |
-| scaled:cls=OptimalAdvertising:s=2 | – | 3/4 | first:DIFFENGINE |
+| scaled:cls=OptimalAdvertising:s=2 | CPP | 4/4 | – |
 | scaled:cls=OptimalAdvertising:s=4 | – | 3/4 | first:DIFFENGINE |
 | scaled:cls=ParamConeMatrixStuffing:s=0.5 | CPP_EVAL | 20/20 | – |
 | scaled:cls=ParamConeMatrixStuffing:s=2 | CPP_EVAL | 20/20 | – |
@@ -106,7 +106,7 @@
 | scaled:cls=SVMWithL1Regularization:s=0.25 | CPP_EVAL | 20/20 | – |
 | scaled:cls=SVMWithL1Regularization:s=0.5 | CPP_EVAL | 20/20 | – |
 | scaled:cls=SVMWithL1Regularization:s=2 | CPP_EVAL | 20/20 | – |
-| scaled:cls=SVMWithL1Regularization:s=4 | – | 4/12 | first:DIFFENGINE, first:DE_NODENSE, first:de_cached, first:de_cached_nodense, first:de_cached_rebuild, first:de_cached_nodense_rebuild, first:DE_EVAL, first:DE_NODENSE_EVAL |
+| scaled:cls=SVMWithL1Regularization:s=4 | CPP_EVAL | 12/16 | first:DE_NODENSE, first:de_cached_nodense, first:de_cached_nodense_rebuild, first:DE_NODENSE_EVAL |
 | scaled:cls=SemidefiniteProgramming:s=0.25 | CPP | 4/4 | – |
 | scaled:cls=SemidefiniteProgramming:s=0.5 | CPP | 4/4 | – |
 | scaled:cls=SemidefiniteProgramming:s=2 | CPP | 4/4 | – |
@@ -138,7 +138,7 @@
 | scaled:cls=Yitzhaki:s=2 | CPP | 4/4 | – |
 | scaled:cls=Yitzhaki:s=4 | CPP | 4/4 | – |
 
-40 failed (problem, target) checks, of which 40 only ran out of memory (unverified, not wrong).
+35 failed (problem, target) checks, of which 35 only ran out of memory (unverified, not wrong).
 
 Passed with a footnote (NaN in the problem data):
 
@@ -148,6 +148,7 @@ Passed with a footnote (NaN in the problem data):
 - scaled:cls=OptimalAdvertising:s=0.25 `first:DE_NODENSE`: NaN where the reference has a zero (3 in b); every finite entry identical
 - scaled:cls=OptimalAdvertising:s=0.5 `first:DIFFENGINE`: NaN where the reference has a zero (3 in b); every finite entry identical
 - scaled:cls=OptimalAdvertising:s=0.5 `first:DE_NODENSE`: NaN where the reference has a zero (3 in b); every finite entry identical
+- scaled:cls=OptimalAdvertising:s=2 `first:DIFFENGINE`: NaN where the reference has a zero (1 in b); every finite entry identical
 - scaled:cls=OptimalAdvertising:s=2 `first:DE_NODENSE`: NaN where the reference has a zero (1 in b); every finite entry identical
 - scaled:cls=OptimalAdvertising:s=4 `first:DE_NODENSE`: NaN where the reference has a zero (1 in b); every finite entry identical
 
@@ -403,7 +404,7 @@ diffengine / best CVXPY backend, medians of 5 replicates (s = 1 from the suite r
 | HuberRegression | 0.18 | 0.17 | 0.17 | 6,765,987–27,040,636 |
 | LeastSquares | 0.15 | 0.17 | 0.17 | 7,004,250–28,004,271 |
 | Murray | 1.14 | 0.95 | 1.01 | 758,935–2,987,920 |
-| OptimalAdvertising | 1.09 | 1.67 | unverified | 500,500–2,000,500 |
+| OptimalAdvertising | 1.09 | 1.67 | 3.06 | 500,500–2,000,500 |
 | ParamConeMatrixStuffing | 0.51 | 0.53 | 0.53 | 142–282 |
 | ParamSmallMatrixStuffing | 0.52 | 0.52 | 0.51 | 212–424 |
 | ParametrizedQPBenchmark | 0.23 | 0.24 | 0.23 | 7,208,008–28,813,363 |
@@ -429,8 +430,8 @@ diffengine / best CVXPY backend, medians of 5 replicates (s = 1 from the suite r
 |---|---:|---:|---:|---:|---:|---|
 | HuberRegression | 0.15 | 0.18 | 0.17 | 0.17 | 0.17 | 3,388,500–54,054,000 |
 | FactorCovarianceModel | 0.16 | 0.15 | 0.14 | 0.18 | 0.22 | 1,612,750–25,800,250 |
-| OptimalAdvertising | 0.78 | 1.09 | 1.67 | unverified | cap | 250,500–4,000,500 |
-| SVMWithL1Regularization | 0.15 | 0.14 | 0.14 | 0.15 | unverified | 3,146,251–50,302,501 |
+| OptimalAdvertising | 0.78 | 1.09 | 1.67 | 3.06 | cap | 250,500–4,000,500 |
+| SVMWithL1Regularization | 0.15 | 0.14 | 0.14 | 0.15 | 0.16 | 3,146,251–50,302,501 |
 | LeastSquares | 0.15 | 0.15 | 0.17 | 0.17 | 0.18 | 3,503,500–56,014,000 |
 | SimpleQPBenchmark | 0.15 | 0.15 | 0.15 | 0.16 | 0.16 | 3,216,000–51,264,000 |
 | Yitzhaki | 0.13 | 0.15 | 0.14 | 0.14 | 0.13 | 1,139,950–18,329,500 |
