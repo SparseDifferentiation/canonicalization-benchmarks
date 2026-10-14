@@ -300,6 +300,39 @@
    "reference": "CPP_ND",
    "rewrites": 0,
    "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=2",
+   "checks": {
+    "first:COO_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:CPP_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_ND_RA": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_ND",
+   "rewrites": 0,
+   "done": true
   }
  ]
 }

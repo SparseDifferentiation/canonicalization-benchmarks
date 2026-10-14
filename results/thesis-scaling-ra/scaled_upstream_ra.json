@@ -829,6 +829,105 @@
     "n_param_entries": 0,
     "density_A": 2.6184538653366582e-05
    }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=2",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 5.017710665997583,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 5.047971207997762,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.102938915981213,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 5.25068995798938,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 5.226488749991404,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 1.005650582985254,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.0042749999847729,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.013365166989388,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.0608420830103569,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1085420419985894,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.9613366249832325,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.9586185830121394,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.9621946249972098,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.010544166987529,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.969062959018629,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 500250,
+    "m": 502750,
+    "nnz_A": 2000500,
+    "nnz_P": 0,
+    "n_vars_user": 500000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 7.954252610144456e-06
+   }
   }
  ]
 }

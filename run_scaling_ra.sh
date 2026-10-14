@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # #3524 rewrite on the stock backends for the scaled instances of the five problems where it
-# applies (results/thesis-reassoc covers s = 1). Instances where diffengine is capped or
-# unverified have no ratio and are skipped. Same hygiene as run_scaling.sh.
+# applies (results/thesis-reassoc covers s = 1). Instances where diffengine is capped have no
+# ratio and are skipped; OptimalAdvertising at s = 2 was added once its check passed. Same hygiene as run_scaling.sh.
 set -euo pipefail
 cd "$(dirname "$0")"
 if [ "$(uname)" = Darwin ] && [ -z "${CAFFEINATED:-}" ]; then
@@ -14,6 +14,7 @@ UP=.venv-upstream/bin/python
 SET="scaled:cls=UnconstrainedQP:s=0.5,scaled:cls=UnconstrainedQP:s=2,\
 scaled:cls=QuantumHilbertMatrix:s=0.5,scaled:cls=SDPSegfault1132Benchmark:s=0.5,\
 scaled:cls=OptimalAdvertising:s=0.25,scaled:cls=OptimalAdvertising:s=0.5,\
+scaled:cls=OptimalAdvertising:s=2,\
 scaled:cls=SlowPruningBenchmark:s=0.5,scaled:cls=SlowPruningBenchmark:s=2"
 mkdir -p "$OUT"
 $UP thesis_final_benchmarks.py verify-ra --set "$SET" --out "$OUT/verify_ra.json"
