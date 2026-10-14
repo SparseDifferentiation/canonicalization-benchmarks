@@ -1,0 +1,9 @@
+\multicolumn{6}{l}{\textit{First canonicalization, $25$ problems}} \\
+no dense blocks        & \texttt{diffengine}  & 1.27 & 1.01--1.55 & 0.014 & 23/$25$ \\
+fully sparse           & \texttt{diffengine}  & 1.33 & 1.06--1.63 & 0.002 & 24/$25$ \\
+no dense blocks        & best \texttt{CVXPY}  & 0.51 & 0.39--0.69 & $4.3 \times 10^{-4}$ & 25/$25$ \\
+\addlinespace
+\multicolumn{6}{l}{\textit{Re-solve, $7$ \ac{DPP} problems}} \\
+no dense blocks        & \texttt{diffengine}  & 1.01 & 0.99--1.04 & 0.938 & 5/$7$ \\
+no split               & \texttt{diffengine}  & 2.56 & 1.54--4.37 & 0.016 & 7/$7$ \\
+neither                & \texttt{diffengine}  & 3.29 & 1.93--5.56 & 0.016 & 7/$7$ \\

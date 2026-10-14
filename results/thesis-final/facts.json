@@ -1,0 +1,1634 @@
+{
+ "t41": {
+  "geomean": 0.40446759249778735,
+  "lo": 0.28169993629356493,
+  "hi": 0.6015792284498072,
+  "wilcoxon": 0.0005564093589782715,
+  "fastest": 20,
+  "sig_faster": 20,
+  "sig_slower": 5,
+  "twice": 15,
+  "beats_cpp": 22,
+  "ra_used": [
+   "OptimalAdvertising:CPP_ND",
+   "OptimalAdvertising:SCIPY_ND",
+   "QuantumHilbertMatrix:COO_ND",
+   "QuantumHilbertMatrix:CPP_ND",
+   "QuantumHilbertMatrix:SCIPY_ND",
+   "SDPSegfault1132:COO_ND",
+   "SlowPruning:CPP_ND",
+   "SlowPruning:SCIPY_ND",
+   "UnconstrainedQP:COO_ND",
+   "UnconstrainedQP:CPP_ND",
+   "UnconstrainedQP:SCIPY_ND"
+  ],
+  "slower": [
+   [
+    "ConvexPlasticity",
+    6.943,
+    "COO_ND",
+    1.6989037820433392e-06
+   ],
+   [
+    "OptimalAdvertising",
+    1.667,
+    "COO_ND",
+    1.6989037820433392e-06
+   ],
+   [
+    "QuantumHilbertMatrix",
+    1.849,
+    "CPP_ND",
+    1.6989037820433392e-06
+   ],
+   [
+    "SDPSegfault1132",
+    1.267,
+    "SCIPY_ND",
+    1.6989037820433392e-06
+   ],
+   [
+    "UnconstrainedQP",
+    1.203,
+    "CPP_ND",
+    1.6989037820433392e-06
+   ]
+  ]
+ },
+ "order": [
+  "SVMWithL1Regularization",
+  "FactorCovarianceModel",
+  "Yitzhaki",
+  "SimpleQP",
+  "HuberRegression",
+  "LeastSquares",
+  "SimpleLP",
+  "SimpleScalarParametrizedLP",
+  "SimpleFullyParametrizedLP",
+  "SlowPruning",
+  "ParametrizedQP",
+  "Cajas",
+  "ConeMatrixStuffing",
+  "SmallMatrixStuffing",
+  "TvInpainting",
+  "ParamSmallMatrixStuffing",
+  "ParamConeMatrixStuffing",
+  "SemidefiniteProgramming",
+  "CVaR",
+  "Murray",
+  "UnconstrainedQP",
+  "SDPSegfault1132",
+  "OptimalAdvertising",
+  "QuantumHilbertMatrix",
+  "ConvexPlasticity"
+ ],
+ "phase": {
+  "CVaR": {
+   "time": 4.27345871464895,
+   "share": [
+    1.1768418206212212,
+    15.658362989649188,
+    13.342158264717607,
+    25.392288964661724,
+    35.4238208910809,
+    9.00652706926935
+   ]
+  },
+  "Cajas": {
+   "time": 0.2005161249500816,
+   "share": [
+    47.383678737812204,
+    18.510840187757417,
+    9.621202725567171,
+    5.745604156988501,
+    7.00735568951054,
+    11.731318502364177
+   ]
+  },
+  "ConeMatrixStuffing": {
+   "time": 0.6342485541001224,
+   "share": [
+    68.34587984425148,
+    23.162099258938877,
+    0.3962673016357261,
+    8.014879473567401,
+    0.03556889381636645,
+    0.045305227790159636
+   ]
+  },
+  "ConvexPlasticity": {
+   "time": 0.49929244375016424,
+   "share": [
+    6.133496057300465,
+    2.5323921046809037,
+    47.49149274950006,
+    5.8308506852030115,
+    37.79421953092827,
+    0.21754887238728537
+   ]
+  },
+  "FactorCovarianceModel": {
+   "time": 0.16463914799933263,
+   "share": [
+    2.9246270501090095,
+    9.549154143827684,
+    19.535613172675315,
+    17.271547832137397,
+    28.68824718768343,
+    22.03081061356717
+   ]
+  },
+  "HuberRegression": {
+   "time": 0.4753563687994756,
+   "share": [
+    1.3309160552587573,
+    8.04067444331372,
+    19.87023456248131,
+    9.81147362541673,
+    28.22849156339668,
+    32.71820975013279
+   ]
+  },
+  "LeastSquares": {
+   "time": 0.41609550209977897,
+   "share": [
+    1.4725476111682543,
+    7.403272406094957,
+    10.601871270885175,
+    11.500023335192347,
+    31.380378569076594,
+    37.64190680758267
+   ]
+  },
+  "Murray": {
+   "time": 1.1636500668001646,
+   "share": [
+    0.3618597606914434,
+    94.0829779023456,
+    2.0184919946775555,
+    1.2331152819091777,
+    0.8786537164690318,
+    1.4249013439071956
+   ]
+  },
+  "OptimalAdvertising": {
+   "time": 0.8894191250485164,
+   "share": [
+    4.137926087501493,
+    1.0918677906234224,
+    89.72364800359517,
+    3.080574853414404,
+    0.8848176055358897,
+    1.0811656593296022
+   ]
+  },
+  "ParamConeMatrixStuffing": {
+   "time": 0.0224972917996638,
+   "share": [
+    83.88260023690346,
+    13.622290578516633,
+    0.5570303640534527,
+    0.7014512445174587,
+    0.540553519920443,
+    0.6960740560885571
+   ]
+  },
+  "ParamSmallMatrixStuffing": {
+   "time": 0.03290101444908942,
+   "share": [
+    83.6705066844291,
+    13.943535152827,
+    0.5394138001520328,
+    0.9670699882318876,
+    0.38355074600380024,
+    0.49592362835618464
+   ]
+  },
+  "ParametrizedQP": {
+   "time": 0.730483002049732,
+   "share": [
+    21.76059638120301,
+    16.940296238281565,
+    6.2562344310404905,
+    13.711185550386732,
+    18.80780730457249,
+    22.52388009451573
+   ]
+  },
+  "QuantumHilbertMatrix": {
+   "time": 0.4922941939490556,
+   "share": [
+    3.5448280159634136,
+    12.736084103546311,
+    63.48457172618398,
+    19.92241390688787,
+    0.14220631454543442,
+    0.16989593287299212
+   ]
+  },
+  "SDPSegfault1132": {
+   "time": 1.9033753707997676,
+   "share": [
+    0.1865270017837224,
+    0.06316035644279193,
+    46.290731184917874,
+    49.49623376677946,
+    3.6363224422240976,
+    0.3270252478520538
+   ]
+  },
+  "SVMWithL1Regularization": {
+   "time": 0.3626757602491125,
+   "share": [
+    2.6922318455849923,
+    7.503602790248255,
+    18.096878469455294,
+    26.52613154651976,
+    23.50430083891256,
+    21.67685450927915
+   ]
+  },
+  "SemidefiniteProgramming": {
+   "time": 0.3963834311999562,
+   "share": [
+    4.527282296744907,
+    14.056625354391569,
+    40.02793775004784,
+    33.57901174369508,
+    4.211855721338359,
+    3.597287133782243
+   ]
+  },
+  "SimpleFullyParametrizedLP": {
+   "time": 0.1109841374498501,
+   "share": [
+    9.606819889561024,
+    6.456874918098595,
+    22.25269256667739,
+    15.723569409452493,
+    11.184930879581078,
+    34.77511233662942
+   ]
+  },
+  "SimpleLP": {
+   "time": 1.0978460916001496,
+   "share": [
+    8.413857170679684,
+    5.713242854794115,
+    22.749361756054494,
+    15.640225436451477,
+    12.192454918835596,
+    35.290857863184634
+   ]
+  },
+  "SimpleQP": {
+   "time": 0.4326688832999935,
+   "share": [
+    1.3597753702751036,
+    8.401404271186234,
+    14.790390306292393,
+    13.753761393675996,
+    34.269589649889554,
+    27.425079008680708
+   ]
+  },
+  "SimpleScalarParametrizedLP": {
+   "time": 0.21984684985000058,
+   "share": [
+    8.258662796216068,
+    6.6977425557115975,
+    22.86950137367373,
+    16.59584584379676,
+    11.216509239076721,
+    34.36173819152513
+   ]
+  },
+  "SlowPruning": {
+   "time": 0.39298091040145666,
+   "share": [
+    1.9596151639475767,
+    0.8377157458840132,
+    35.20149242584235,
+    10.48518146506707,
+    19.12188593522687,
+    32.39410926403212
+   ]
+  },
+  "SmallMatrixStuffing": {
+   "time": 0.4995413395994547,
+   "share": [
+    71.32666586741165,
+    20.983191611739198,
+    0.4015125788232389,
+    7.189888865843754,
+    0.04365569283793657,
+    0.05508538334422341
+   ]
+  },
+  "TvInpainting": {
+   "time": 0.24377889159986807,
+   "share": [
+    12.872424179298381,
+    4.335588438518437,
+    24.571114024368836,
+    20.855871472890335,
+    13.730461940793809,
+    23.634539944130193
+   ]
+  },
+  "UnconstrainedQP": {
+   "time": 0.01585291444971517,
+   "share": [
+    14.038739663800321,
+    12.930360168202796,
+    42.73183215428455,
+    27.126316712824543,
+    1.5910556711532058,
+    1.5816956297345908
+   ]
+  },
+  "Yitzhaki": {
+   "time": 0.13329444999981205,
+   "share": [
+    2.7602262244547573,
+    6.02217204114727,
+    10.28660979813519,
+    16.616438496352902,
+    20.131618074537236,
+    44.182935365372636
+   ]
+  }
+ },
+ "phase_median": [
+  4.527282296744907,
+  8.401404271186234,
+  19.535613172675315,
+  13.753761393675996,
+  11.216509239076721,
+  11.731318502364177
+ ],
+ "param": [
+  {
+   "name": "ParamSmallMatrixStuffing",
+   "first": {
+    "CPP_ND": 2.003932695750154,
+    "SCIPY_ND": 7.280368174849718,
+    "COO_ND": 0.08366952085016237
+   },
+   "de_first": 0.03290101444908942,
+   "tensor_by": "dpp_coo",
+   "tensor": [
+    1.8392875501376693,
+    0.007973652017157492
+   ],
+   "de": [
+    0.4802604507858632,
+    0.008284010994196128
+   ],
+   "ratio": 0.26017022108270976,
+   "p": 6.78603861673863e-08,
+   "status": {},
+   "nodense": [
+    0.47563755069859326,
+    0.03407573082503166
+   ],
+   "rebuild": [
+    4.069808300118893,
+    0.03653067913156723
+   ],
+   "neither": [
+    4.201964699313976,
+    0.040678535544500814
+   ],
+   "recompile": [
+    57.70114779970754,
+    0.31176452191890985
+   ],
+   "p_holm": 4.7502270317170405e-07
+  },
+  {
+   "name": "ParamConeMatrixStuffing",
+   "first": {
+    "CPP_ND": 0.744248149950181,
+    "SCIPY_ND": 1.8477528999501374,
+    "COO_ND": 0.05521323939992726
+   },
+   "de_first": 0.0224972917996638,
+   "tensor_by": "dpp_scipy",
+   "tensor": [
+    0.9599250999599462,
+    0.00567369832448918
+   ],
+   "de": [
+    0.3053875501791481,
+    0.004343182744991446
+   ],
+   "ratio": 0.3168160048536188,
+   "p": 6.795615128173357e-08,
+   "status": {},
+   "nodense": [
+    0.29962719927425496,
+    0.0039112909592879715
+   ],
+   "rebuild": [
+    2.6758562511531636,
+    0.021425410102739236
+   ],
+   "neither": [
+    2.671675049714395,
+    0.021756567770117682
+   ],
+   "recompile": [
+    38.29496665002807,
+    1.7381954636388135
+   ],
+   "p_holm": 4.7502270317170405e-07
+  },
+  {
+   "name": "SimpleFullyParametrizedLP",
+   "first": {
+    "CPP_ND": null,
+    "SCIPY_ND": null,
+    "COO_ND": 0.5647998918000667
+   },
+   "de_first": 0.1109841374498501,
+   "tensor_by": "dpp_coo",
+   "tensor": [
+    46.799568850474316,
+    0.10920563172469093
+   ],
+   "de": [
+    52.71473954890098,
+    0.20038314913233962
+   ],
+   "ratio": 1.1245118254072786,
+   "p": 6.795615128173357e-08,
+   "status": {
+    "dpp": "MEMCAP(>20000MB)",
+    "dpp_scipy": "MEMCAP(>20000MB)"
+   },
+   "nodense": [
+    52.6712791484897,
+    0.1723033921356778
+   ],
+   "rebuild": [
+    84.3164688005345,
+    0.6067388433799785
+   ],
+   "neither": [
+    84.07037905017205,
+    0.4861083339782888
+   ],
+   "recompile": [
+    520.328662349857,
+    1.7306635986565686
+   ],
+   "p_holm": 4.7502270317170405e-07
+  },
+  {
+   "name": "ParametrizedQP",
+   "first": {
+    "CPP_ND": null,
+    "SCIPY_ND": null,
+    "COO_ND": 2.6216912146497635
+   },
+   "de_first": 0.730483002049732,
+   "tensor_by": "dpp_coo",
+   "tensor": [
+    305.79675210046844,
+    11.961224889703734
+   ],
+   "de": [
+    424.67578965079156,
+    7.62657395006705
+   ],
+   "ratio": 1.3898419212570996,
+   "p": 6.795615128173357e-08,
+   "status": {
+    "dpp": "MEMCAP(>20000MB)",
+    "dpp_scipy": "TIMEOUT(>1800s)"
+   },
+   "nodense": [
+    417.73494179869886,
+    5.778242627038183
+   ],
+   "rebuild": [
+    560.6138395509333,
+    14.125176316724092
+   ],
+   "neither": [
+    568.2229688496591,
+    20.31507304213929
+   ],
+   "recompile": [
+    2866.2014540999735,
+    22.11527162664274
+   ],
+   "p_holm": 4.7502270317170405e-07
+  },
+  {
+   "name": "SimpleScalarParametrizedLP",
+   "first": {
+    "CPP_ND": 1.3109806958000263,
+    "SCIPY_ND": 1.1670689916003538,
+    "COO_ND": 1.1784106083505321
+   },
+   "de_first": 0.21984684985000058,
+   "tensor_by": "dpp_scipy",
+   "tensor": [
+    62.909854149620514,
+    0.5603929837175783
+   ],
+   "de": [
+    104.44452299925615,
+    0.9123955624171685
+   ],
+   "ratio": 1.6600706704385964,
+   "p": 6.795615128173357e-08,
+   "status": {},
+   "nodense": [
+    104.34180849988479,
+    1.3380718046306679
+   ],
+   "rebuild": [
+    166.7183230012597,
+    0.8275014115768379
+   ],
+   "neither": [
+    167.02905215024657,
+    0.9174056989004387
+   ],
+   "recompile": [
+    1078.1498270998782,
+    1.770767279115683
+   ],
+   "p_holm": 4.7502270317170405e-07
+  },
+  {
+   "name": "FactorCovarianceModel",
+   "first": {
+    "CPP_ND": 1.1942798165002386,
+    "SCIPY_ND": 1.1389925770503395,
+    "COO_ND": 1.1847668916501788
+   },
+   "de_first": 0.16463914799933263,
+   "tensor_by": "dpp_coo",
+   "tensor": [
+    20.550135449957452,
+    0.12433575368143635
+   ],
+   "de": [
+    80.64552510040812,
+    0.1198262586349477
+   ],
+   "ratio": 3.932798167845481,
+   "p": 6.795615128173357e-08,
+   "status": {},
+   "nodense": [
+    87.0800644494011,
+    0.1020281734265842
+   ],
+   "rebuild": [
+    129.057374900367,
+    0.2567821197002394
+   ],
+   "neither": [
+    315.24229169990576,
+    1.287010058966642
+   ],
+   "recompile": [
+    1138.1174374504553,
+    1.8758150592550895
+   ],
+   "p_holm": 4.7502270317170405e-07
+  },
+  {
+   "name": "SVMWithL1Regularization",
+   "first": {
+    "CPP_ND": 2.7894488563006234,
+    "SCIPY_ND": 2.5737608831504986,
+    "COO_ND": 2.8324125583496427
+   },
+   "de_first": 0.3626757602491125,
+   "tensor_by": "dpp_scipy",
+   "tensor": [
+    38.27674799995293,
+    0.1395143780322474
+   ],
+   "de": [
+    152.70603755052434,
+    0.7817571378793226
+   ],
+   "ratio": 3.983748777130384,
+   "p": 6.795615128173357e-08,
+   "status": {},
+   "nodense": [
+    163.4902209003485,
+    0.3395436016095056
+   ],
+   "rebuild": [
+    272.2976105000271,
+    1.3093913322829234
+   ],
+   "neither": [
+    609.389760400154,
+    5.776298223202198
+   ],
+   "recompile": [
+    2568.5239251499297,
+    4.5945054346750975
+   ],
+   "p_holm": 4.7502270317170405e-07
+  }
+ ],
+ "nondpp": {
+  "lasso:dpp": {
+   "cvxpy": 6.419354000172461,
+   "cvxpy_mean": 6.416949999584176,
+   "cvxpy_by": "tensor",
+   "cached": 26.413735349888157,
+   "cached_med": 26.403333500638837,
+   "rebuild": 35.63083959979849,
+   "rebuild_med": 35.63337500054331,
+   "ratio": 4.113082640391773,
+   "p": 6.78603861673863e-08
+  },
+  "lasso:nondpp": {
+   "cvxpy": 315.08591650163,
+   "cvxpy_mean": 315.2508167502674,
+   "cvxpy_by": "nodpp_cpp",
+   "cached": 26.425160499820777,
+   "cached_med": 26.41435399891634,
+   "rebuild": 35.74304994999693,
+   "rebuild_med": 35.741187499297666,
+   "ratio": 0.08383222675323762,
+   "p": 6.795615128173357e-08
+  },
+  "lasso:free": {
+   "cvxpy": 333.82929150138807,
+   "cvxpy_mean": 333.74138544986636,
+   "cvxpy_by": "CPP_ND",
+   "cached": null,
+   "cached_med": null,
+   "rebuild": 46.21186669955932,
+   "rebuild_med": 46.16529150007409,
+   "ratio": 0.13829011616220663,
+   "p": 6.795615128173357e-08
+  },
+  "factor_cov:dpp": {
+   "cvxpy": 1.244062001205748,
+   "cvxpy_mean": 1.2446688500858727,
+   "cvxpy_by": "tensor",
+   "cached": 3.5838042495015543,
+   "cached_med": 3.578853998988052,
+   "rebuild": 6.937370900050155,
+   "rebuild_med": 6.941541500054882,
+   "ratio": 2.8767489044110484,
+   "p": 6.795615128173357e-08
+  },
+  "factor_cov:nondpp": {
+   "cvxpy": 45.79197900056897,
+   "cvxpy_mean": 45.86120620060683,
+   "cvxpy_by": "nodpp_coo",
+   "cached": 3.5935645002609817,
+   "cached_med": 3.588416500861058,
+   "rebuild": 6.957116850207967,
+   "rebuild_med": 6.964938000237453,
+   "ratio": 0.07836342912404969,
+   "p": 6.795615128173357e-08
+  },
+  "factor_cov:free": {
+   "cvxpy": 47.198312498949235,
+   "cvxpy_mean": 47.14083949984342,
+   "cvxpy_by": "COO_ND",
+   "cached": null,
+   "cached_med": null,
+   "rebuild": 10.821416650287574,
+   "rebuild_med": 10.80970799921488,
+   "ratio": 0.22902742549228922,
+   "p": 6.795615128173357e-08
+  }
+ },
+ "ablation": {
+  "nodense_cold": {
+   "g": 1.2693209838758637,
+   "lo": 1.0141182187124793,
+   "hi": 1.5505351828721419,
+   "p": 0.013554692268371582,
+   "sig": 23,
+   "n": 25,
+   "below": 8,
+   "per": {
+    "CVaR": 0.6451034448925492,
+    "Cajas": 1.0196175554629583,
+    "ConeMatrixStuffing": 3.0140243406563383,
+    "ConvexPlasticity": 0.19611743972618612,
+    "FactorCovarianceModel": 2.1044694226815945,
+    "HuberRegression": 2.1135812539733676,
+    "LeastSquares": 2.156255370339103,
+    "Murray": 1.0095703423640883,
+    "OptimalAdvertising": 0.9375017371384801,
+    "ParamConeMatrixStuffing": 1.2146758282842574,
+    "ParamSmallMatrixStuffing": 1.225888712680963,
+    "ParametrizedQP": 0.9887757373503853,
+    "QuantumHilbertMatrix": 1.0269212844285245,
+    "SDPSegfault1132": 1.734301583269716,
+    "SVMWithL1Regularization": 2.062325167420318,
+    "SemidefiniteProgramming": 0.9969010114102038,
+    "SimpleFullyParametrizedLP": 0.9856810742875272,
+    "SimpleLP": 1.3605822171953181,
+    "SimpleQP": 2.107675263678422,
+    "SimpleScalarParametrizedLP": 0.9725762354054602,
+    "SlowPruning": 1.0573433897200835,
+    "SmallMatrixStuffing": 2.70292186345013,
+    "TvInpainting": 0.9787367084842129,
+    "UnconstrainedQP": 1.396539099690421,
+    "Yitzhaki": 1.9008557247450921
+   }
+  },
+  "fullycsr_cold": {
+   "g": 1.3338475500473863,
+   "lo": 1.0646086148881637,
+   "hi": 1.6267190486772352,
+   "p": 0.002025127410888672,
+   "sig": 24,
+   "n": 25,
+   "below": 5,
+   "per": {
+    "CVaR": 0.6451034448925492,
+    "Cajas": 1.0196175554629583,
+    "ConeMatrixStuffing": 3.0140243406563383,
+    "ConvexPlasticity": 0.2157648353034575,
+    "FactorCovarianceModel": 2.1022806360731097,
+    "HuberRegression": 2.1135812539733676,
+    "LeastSquares": 2.156255370339103,
+    "Murray": 1.0095703423640883,
+    "OptimalAdvertising": 0.9375017371384801,
+    "ParamConeMatrixStuffing": 1.047636402590049,
+    "ParamSmallMatrixStuffing": 1.0814796136815583,
+    "ParametrizedQP": 2.180953030378031,
+    "QuantumHilbertMatrix": 1.0269212844285245,
+    "SDPSegfault1132": 1.734301583269716,
+    "SVMWithL1Regularization": 2.0502186062258487,
+    "SemidefiniteProgramming": 0.9969010114102038,
+    "SimpleFullyParametrizedLP": 1.349580170297092,
+    "SimpleLP": 1.3605822171953181,
+    "SimpleQP": 2.107675263678422,
+    "SimpleScalarParametrizedLP": 1.3381605821533422,
+    "SlowPruning": 1.0573433897200835,
+    "SmallMatrixStuffing": 2.70292186345013,
+    "TvInpainting": 0.9787367084842129,
+    "UnconstrainedQP": 1.396539099690421,
+    "Yitzhaki": 1.9008557247450921
+   }
+  },
+  "nodense_vs_best": {
+   "g": 0.5133992024551932,
+   "lo": 0.3864558556228778,
+   "hi": 0.6935490444052773,
+   "p": 0.000429689884185791,
+   "sig": 25,
+   "n": 25,
+   "below": 20,
+   "per": {
+    "CVaR": 0.42420780742897185,
+    "Cajas": 0.29807811788183686,
+    "ConeMatrixStuffing": 0.889686694238353,
+    "ConvexPlasticity": 1.3617038744866046,
+    "FactorCovarianceModel": 0.301713006765,
+    "HuberRegression": 0.36594679266388225,
+    "LeastSquares": 0.3737189838404495,
+    "Murray": 0.963980468176683,
+    "OptimalAdvertising": 1.563191041304238,
+    "ParamConeMatrixStuffing": 0.6386813278781647,
+    "ParamSmallMatrixStuffing": 0.6354184552341878,
+    "ParametrizedQP": 0.24215828931713607,
+    "QuantumHilbertMatrix": 1.8989435616524086,
+    "SDPSegfault1132": 2.19744732196275,
+    "SVMWithL1Regularization": 0.2843608051987115,
+    "SemidefiniteProgramming": 0.6268214115672633,
+    "SimpleFullyParametrizedLP": 0.20826676371553648,
+    "SimpleLP": 0.2499298697548675,
+    "SimpleQP": 0.31708177656933045,
+    "SimpleScalarParametrizedLP": 0.19645431377827308,
+    "SlowPruning": 0.23348974617038148,
+    "SmallMatrixStuffing": 0.808943874943888,
+    "TvInpainting": 0.29303553939075183,
+    "UnconstrainedQP": 1.6804191258609433,
+    "Yitzhaki": 0.2749357533821425
+   }
+  },
+  "nodense_warm": {
+   "g": 1.0126396833234017,
+   "lo": 0.9858452618261977,
+   "hi": 1.0435798306144437,
+   "p": 0.9375,
+   "sig": 5,
+   "n": 7,
+   "below": 5,
+   "per": {
+    "FactorCovarianceModel": 1.0797796285877819,
+    "ParamConeMatrixStuffing": 0.982247566970001,
+    "ParamSmallMatrixStuffing": 0.9771829825058261,
+    "ParametrizedQP": 0.9837386908681087,
+    "SVMWithL1Regularization": 1.072469748006226,
+    "SimpleFullyParametrizedLP": 0.9997731994334117,
+    "SimpleScalarParametrizedLP": 0.9988179007176327
+   }
+  },
+  "rebuild_warm": {
+   "g": 2.5616312959230245,
+   "lo": 1.5411930135428777,
+   "hi": 4.369585402472104,
+   "p": 0.015625,
+   "sig": 7,
+   "n": 7,
+   "below": 0,
+   "per": {
+    "FactorCovarianceModel": 1.600225235466121,
+    "ParamConeMatrixStuffing": 8.787931504789556,
+    "ParamSmallMatrixStuffing": 8.481926858330695,
+    "ParametrizedQP": 1.3292352127074456,
+    "SVMWithL1Regularization": 1.7828256037222705,
+    "SimpleFullyParametrizedLP": 1.5999586773170567,
+    "SimpleScalarParametrizedLP": 1.6004222319777888
+   }
+  },
+  "neither_warm": {
+   "g": 3.288361018381352,
+   "lo": 1.9316143185495311,
+   "hi": 5.5622882362148385,
+   "p": 0.015625,
+   "sig": 7,
+   "n": 7,
+   "below": 0,
+   "per": {
+    "FactorCovarianceModel": 3.9062926604817663,
+    "ParamConeMatrixStuffing": 8.801092828077714,
+    "ParamSmallMatrixStuffing": 8.790949476287487,
+    "ParametrizedQP": 1.3509759744772518,
+    "SVMWithL1Regularization": 3.9839910390950095,
+    "SimpleFullyParametrizedLP": 1.596326164826923,
+    "SimpleScalarParametrizedLP": 1.601148691392979
+   }
+  }
+ },
+ "memory": {
+  "CVaR": {
+   "DIFFENGINE": 6282.625,
+   "DE_NODENSE": 2211.015625,
+   "CPP_ND": 4021.65625,
+   "SCIPY_ND": 2803.859375,
+   "COO_ND": 3587.015625
+  },
+  "FactorCovarianceModel": {
+   "DIFFENGINE": 759.78125,
+   "DE_NODENSE": 999.21875,
+   "CPP_ND": 1129.125,
+   "SCIPY_ND": 1046.796875,
+   "COO_ND": 1334.0625,
+   "DE_EVAL": 759.65625,
+   "DE_NODENSE_EVAL": 999.234375
+  },
+  "Cajas": {
+   "DIFFENGINE": 341.0625,
+   "DE_NODENSE": 342.484375,
+   "CPP_ND": 1192.828125,
+   "SCIPY_ND": 298.359375,
+   "COO_ND": 320.015625
+  },
+  "Murray": {
+   "DIFFENGINE": 307.90625,
+   "DE_NODENSE": 305.84375,
+   "CPP_ND": 2849.46875,
+   "SCIPY_ND": 219.75,
+   "COO_ND": 305.34375
+  },
+  "Yitzhaki": {
+   "DIFFENGINE": 476.453125,
+   "DE_NODENSE": 572.21875,
+   "CPP_ND": 448.984375,
+   "SCIPY_ND": 437.09375,
+   "COO_ND": 504.484375
+  },
+  "ConvexPlasticity": {
+   "DIFFENGINE": 1329.53125,
+   "DE_NODENSE": 25.578125,
+   "CPP_ND": 82.53125,
+   "SCIPY_ND": 82.421875,
+   "COO_ND": 82.46875,
+   "DE_EVAL": 1327.640625,
+   "DE_NODENSE_EVAL": 24.140625
+  },
+  "HuberRegression": {
+   "DIFFENGINE": 1412.890625,
+   "DE_NODENSE": 1834.421875,
+   "CPP_ND": 2223.171875,
+   "SCIPY_ND": 2245.734375,
+   "COO_ND": 3121.171875
+  },
+  "ConeMatrixStuffing": {
+   "DIFFENGINE": 478.71875,
+   "DE_NODENSE": 1623.21875,
+   "CPP_ND": 2009.890625,
+   "SCIPY_ND": 963.515625,
+   "COO_ND": 3729.984375
+  },
+  "ParamConeMatrixStuffing": {
+   "DIFFENGINE": 5.90625,
+   "DE_NODENSE": 6.25,
+   "CPP_ND": 9.71875,
+   "SCIPY_ND": 8.265625,
+   "COO_ND": 12.28125,
+   "DE_EVAL": 7.046875,
+   "DE_NODENSE_EVAL": 8.53125
+  },
+  "ParamSmallMatrixStuffing": {
+   "DIFFENGINE": 10.625,
+   "DE_NODENSE": 10.578125,
+   "CPP_ND": 17.1875,
+   "SCIPY_ND": 12.984375,
+   "COO_ND": 21.921875,
+   "DE_EVAL": 11.46875,
+   "DE_NODENSE_EVAL": 14.921875
+  },
+  "SmallMatrixStuffing": {
+   "DIFFENGINE": 322.34375,
+   "DE_NODENSE": 1117.3125,
+   "CPP_ND": 1189.671875,
+   "SCIPY_ND": 633.96875,
+   "COO_ND": 2405.09375
+  },
+  "OptimalAdvertising": {
+   "DIFFENGINE": 6066.25,
+   "DE_NODENSE": 944.796875,
+   "CPP_ND": 172.625,
+   "SCIPY_ND": 181.40625,
+   "COO_ND": 196.859375
+  },
+  "QuantumHilbertMatrix": {
+   "DIFFENGINE": 909.625,
+   "DE_NODENSE": 909.734375,
+   "CPP_ND": 221.703125,
+   "SCIPY_ND": 217.6875,
+   "COO_ND": 287.953125
+  },
+  "SDPSegfault1132": {
+   "DIFFENGINE": 9253.8125,
+   "DE_NODENSE": 11186.03125,
+   "CPP_ND": 7536.53125,
+   "SCIPY_ND": 3460.140625,
+   "COO_ND": 12983.21875
+  },
+  "SemidefiniteProgramming": {
+   "DIFFENGINE": 1137.890625,
+   "DE_NODENSE": 1137.71875,
+   "CPP_ND": 1317.140625,
+   "SCIPY_ND": 350.0,
+   "COO_ND": 640.0625
+  },
+  "SimpleFullyParametrizedLP": {
+   "DIFFENGINE": 492.15625,
+   "DE_NODENSE": 492.125,
+   "CPP_ND": 517.21875,
+   "SCIPY_ND": 493.5625,
+   "COO_ND": 526.015625,
+   "DE_EVAL": 480.640625,
+   "DE_NODENSE_EVAL": 513.671875
+  },
+  "SimpleLP": {
+   "DIFFENGINE": 4792.15625,
+   "DE_NODENSE": 5056.765625,
+   "CPP_ND": 5352.5,
+   "SCIPY_ND": 4960.71875,
+   "COO_ND": 5027.4375
+  },
+  "SimpleScalarParametrizedLP": {
+   "DIFFENGINE": 1008.890625,
+   "DE_NODENSE": 1008.890625,
+   "CPP_ND": 1087.75,
+   "SCIPY_ND": 1024.078125,
+   "COO_ND": 1067.90625,
+   "DE_EVAL": 963.015625,
+   "DE_NODENSE_EVAL": 1021.109375
+  },
+  "LeastSquares": {
+   "DIFFENGINE": 1459.34375,
+   "DE_NODENSE": 1893.578125,
+   "CPP_ND": 2140.046875,
+   "SCIPY_ND": 2326.71875,
+   "COO_ND": 3020.65625
+  },
+  "ParametrizedQP": {
+   "DIFFENGINE": 1775.40625,
+   "DE_NODENSE": 1775.546875,
+   "CPP_ND": 2035.171875,
+   "SCIPY_ND": 2173.90625,
+   "COO_ND": 2997.84375,
+   "DE_EVAL": 1501.5,
+   "DE_NODENSE_EVAL": 2001.390625
+  },
+  "SimpleQP": {
+   "DIFFENGINE": 1655.0625,
+   "DE_NODENSE": 2204.171875,
+   "CPP_ND": 2194.109375,
+   "SCIPY_ND": 2355.171875,
+   "COO_ND": 3236.46875
+  },
+  "UnconstrainedQP": {
+   "DIFFENGINE": 52.921875,
+   "DE_NODENSE": 41.421875,
+   "CPP_ND": 1427.078125,
+   "SCIPY_ND": 1057.828125,
+   "COO_ND": 2105.015625
+  },
+  "SlowPruning": {
+   "DIFFENGINE": 1796.9375,
+   "DE_NODENSE": 1120.296875,
+   "CPP_ND": 1351.78125,
+   "SCIPY_ND": 1425.03125,
+   "COO_ND": 1827.84375
+  },
+  "SVMWithL1Regularization": {
+   "DIFFENGINE": 2033.671875,
+   "DE_NODENSE": 2416.859375,
+   "CPP_ND": 1976.296875,
+   "SCIPY_ND": 2041.828125,
+   "COO_ND": 2904.421875,
+   "DE_EVAL": 2033.640625,
+   "DE_NODENSE_EVAL": 2416.8125
+  },
+  "TvInpainting": {
+   "DIFFENGINE": 1048.359375,
+   "DE_NODENSE": 1048.296875,
+   "CPP_ND": 704.96875,
+   "SCIPY_ND": 857.84375,
+   "COO_ND": 993.875
+  }
+ },
+ "mem_summary": {
+  "n": 25,
+  "scipy_lowest": 8,
+  "lowest": {
+   "CPP_ND": 4,
+   "SCIPY_ND": 8,
+   "COO_ND": 0,
+   "DIFFENGINE": 13
+  },
+  "de_over": {
+   "CPP_ND": 0.8745026838472412,
+   "SCIPY_ND": 1.2170189233361914,
+   "COO_ND": 0.8252811723003135
+  },
+  "nodense_over_de": 0.873632376785914
+ },
+ "verify": {
+  "lasso:variant=dpp:n=1000:seed=0": {
+   "first": true,
+   "update": true,
+   "n": 16,
+   "passed": 16,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "lasso:variant=nondpp:n=1000:seed=0": {
+   "first": true,
+   "update": true,
+   "n": 16,
+   "passed": 16,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "lasso:variant=free:n=1000:seed=0": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "factor_cov:variant=dpp:n=5000:seed=0": {
+   "first": true,
+   "update": true,
+   "n": 16,
+   "passed": 16,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "factor_cov:variant=nondpp:n=5000:seed=0": {
+   "first": true,
+   "update": true,
+   "n": 16,
+   "passed": 16,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "factor_cov:variant=free:n=5000:seed=0": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "CVaR": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "FactorCovarianceModel": {
+   "first": true,
+   "update": true,
+   "n": 20,
+   "passed": 20,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "Cajas": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "Murray": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "Yitzhaki": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "ConvexPlasticity": {
+   "first": true,
+   "update": true,
+   "n": 20,
+   "passed": 20,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 5.551115123125783e-17
+  },
+  "HuberRegression": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "ConeMatrixStuffing": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 1.3358203432289883e-12
+  },
+  "ParamConeMatrixStuffing": {
+   "first": true,
+   "update": true,
+   "n": 20,
+   "passed": 20,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 3.552713678800501e-14
+  },
+  "ParamSmallMatrixStuffing": {
+   "first": true,
+   "update": true,
+   "n": 20,
+   "passed": 20,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 7.105427357601002e-14
+  },
+  "SmallMatrixStuffing": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 1.0800249583553523e-12
+  },
+  "OptimalAdvertising": {
+   "first": true,
+   "update": null,
+   "n": 3,
+   "passed": 3,
+   "reference": "CPP_ND",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "QuantumHilbertMatrix": {
+   "first": true,
+   "update": null,
+   "n": 3,
+   "passed": 3,
+   "reference": "CPP_ND",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "SDPSegfault1132": {
+   "first": true,
+   "update": null,
+   "n": 3,
+   "passed": 3,
+   "reference": "CPP_ND",
+   "nan": false,
+   "maxabs": 2.220446049250313e-16
+  },
+  "SemidefiniteProgramming": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "SimpleFullyParametrizedLP": {
+   "first": true,
+   "update": true,
+   "n": 20,
+   "passed": 20,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "SimpleLP": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "SimpleScalarParametrizedLP": {
+   "first": true,
+   "update": true,
+   "n": 20,
+   "passed": 20,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "LeastSquares": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "ParametrizedQP": {
+   "first": true,
+   "update": true,
+   "n": 20,
+   "passed": 20,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "SimpleQP": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "UnconstrainedQP": {
+   "first": true,
+   "update": null,
+   "n": 3,
+   "passed": 3,
+   "reference": "CPP_ND",
+   "nan": false,
+   "maxabs": 1.7053025658242404e-13
+  },
+  "SlowPruning": {
+   "first": true,
+   "update": null,
+   "n": 3,
+   "passed": 3,
+   "reference": "CPP_ND",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "SVMWithL1Regularization": {
+   "first": true,
+   "update": true,
+   "n": 20,
+   "passed": 20,
+   "reference": "CPP_EVAL",
+   "nan": false,
+   "maxabs": 0.0
+  },
+  "TvInpainting": {
+   "first": true,
+   "update": null,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": false,
+   "maxabs": 0.0
+  }
+ },
+ "profile": {
+  "diffengine": {
+   "fastest": 20,
+   "tau100": 6.94330844002338,
+   "tau96": 1.8491617521679466,
+   "tau92": 1.6674006877848977,
+   "mem_lowest": 13,
+   "mem_tau100": 35.14120202751629
+  },
+  "CPP": {
+   "fastest": 2,
+   "tau100": 17.828753488000757,
+   "tau96": 7.6822538990447695,
+   "tau92": 7.303403659179655,
+   "mem_lowest": 4,
+   "mem_tau100": 26.96575140242102
+  },
+  "SCIPY": {
+   "fastest": 1,
+   "tau100": 7.3078227064025105,
+   "tau96": 7.252494470815568,
+   "tau92": 7.037383510664505,
+   "mem_lowest": 8,
+   "mem_tau100": 19.988485385296723
+  },
+  "COO": {
+   "fastest": 2,
+   "tau100": 7.568705602363036,
+   "tau96": 7.442361264770633,
+   "tau92": 7.065959776381263,
+   "mem_lowest": 0,
+   "mem_tau100": 39.775907883082375
+  }
+ },
+ "breakeven": {
+  "SimpleFullyParametrizedLP": 76.7206522832763,
+  "ParametrizedQP": 15.908677018010492,
+  "SimpleScalarParametrizedLP": 22.80557827918406,
+  "FactorCovarianceModel": 16.213447233113996,
+  "SVMWithL1Regularization": 19.32272000975947
+ },
+ "coo_vs_cpp_first": 6,
+ "uqp_old_engine": [
+  22.927993618549863,
+  0.012004439843087423
+ ],
+ "short_reps": [],
+ "dims": {
+  "CVaR": {
+   "m": 263681,
+   "n": 131841,
+   "nnz_A": 25691649,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "Cajas": {
+   "m": 640851,
+   "n": 2450,
+   "nnz_A": 1960900,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "ConeMatrixStuffing": {
+   "m": 5000,
+   "n": 5000,
+   "nnz_A": 5000,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "ConvexPlasticity": {
+   "m": 36000,
+   "n": 33000,
+   "nnz_A": 72000,
+   "nnz_P": 9048000,
+   "n_param_objects": 3
+  },
+  "FactorCovarianceModel": {
+   "m": 75252,
+   "n": 75250,
+   "nnz_A": 6450250,
+   "nnz_P": 87500,
+   "n_param_objects": 2
+  },
+  "HuberRegression": {
+   "m": 13500,
+   "n": 16500,
+   "nnz_A": 13527000,
+   "nnz_P": 4500,
+   "n_param_objects": 0
+  },
+  "LeastSquares": {
+   "m": 7000,
+   "n": 9000,
+   "nnz_A": 14007000,
+   "nnz_P": 7000,
+   "n_param_objects": 0
+  },
+  "Murray": {
+   "m": 490051,
+   "n": 245400,
+   "nnz_A": 1503700,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "OptimalAdvertising": {
+   "m": 251750,
+   "n": 250250,
+   "nnz_A": 1000500,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "ParamConeMatrixStuffing": {
+   "m": 200,
+   "n": 200,
+   "nnz_A": 200,
+   "nnz_P": 0,
+   "n_param_objects": 3
+  },
+  "ParamSmallMatrixStuffing": {
+   "m": 300,
+   "n": 300,
+   "nnz_A": 300,
+   "nnz_P": 0,
+   "n_param_objects": 3
+  },
+  "ParametrizedQP": {
+   "m": 10800,
+   "n": 8400,
+   "nnz_A": 14410800,
+   "nnz_P": 6000,
+   "n_param_objects": 2
+  },
+  "QuantumHilbertMatrix": {
+   "m": 6176,
+   "n": 6176,
+   "nnz_A": 81072,
+   "nnz_P": 4096,
+   "n_param_objects": 0
+  },
+  "SDPSegfault1132": {
+   "m": 14951,
+   "n": 4951,
+   "nnz_A": 1014157,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "SVMWithL1Regularization": {
+   "m": 51001,
+   "n": 26002,
+   "nnz_A": 12577501,
+   "nnz_P": 0,
+   "n_param_objects": 1
+  },
+  "SemidefiniteProgramming": {
+   "m": 20220,
+   "n": 20100,
+   "nnz_A": 2432100,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "SimpleFullyParametrizedLP": {
+   "m": 2000000,
+   "n": 1000000,
+   "nnz_A": 2000000,
+   "nnz_P": 0,
+   "n_param_objects": 1
+  },
+  "SimpleLP": {
+   "m": 20000000,
+   "n": 10000000,
+   "nnz_A": 20000000,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "SimpleQP": {
+   "m": 8020,
+   "n": 1600,
+   "nnz_A": 12832000,
+   "nnz_P": 2560000,
+   "n_param_objects": 0
+  },
+  "SimpleScalarParametrizedLP": {
+   "m": 4000000,
+   "n": 2000000,
+   "nnz_A": 4000000,
+   "nnz_P": 0,
+   "n_param_objects": 1
+  },
+  "SlowPruning": {
+   "m": 400000,
+   "n": 402000,
+   "nnz_A": 8400000,
+   "nnz_P": 400000,
+   "n_param_objects": 0
+  },
+  "SmallMatrixStuffing": {
+   "m": 4000,
+   "n": 4000,
+   "nnz_A": 4000,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "TvInpainting": {
+   "m": 2614279,
+   "n": 1047553,
+   "nnz_A": 3630958,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "UnconstrainedQP": {
+   "m": 1009,
+   "n": 289,
+   "nnz_A": 18649,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  },
+  "Yitzhaki": {
+   "m": 89751,
+   "n": 44900,
+   "nnz_A": 4574800,
+   "nnz_P": 0,
+   "n_param_objects": 0
+  }
+ },
+ "warm_phase": {
+  "FactorCovarianceModel": {
+   "numeric": 3.672341014109722,
+   "assemble": 49.64996193757471,
+   "format": 43.94363990419299,
+   "ms": 81.9399804805289
+  },
+  "ParamConeMatrixStuffing": {
+   "numeric": 42.5330713151783,
+   "assemble": 12.047844942080355,
+   "format": 23.326575997440376,
+   "ms": 0.3158933399390662
+  },
+  "ParamSmallMatrixStuffing": {
+   "numeric": 53.66910778314639,
+   "assemble": 8.027204556555368,
+   "format": 15.724757923625795,
+   "ms": 0.493852500221692
+  },
+  "ParametrizedQP": {
+   "numeric": 20.12536011199131,
+   "assemble": 28.62657359871464,
+   "format": 37.24355372074469,
+   "ms": 426.46953422023216
+  },
+  "SVMWithL1Regularization": {
+   "numeric": 2.958132507149465,
+   "assemble": 44.972573630996536,
+   "format": 49.43464779407975,
+   "ms": 156.62057497036585
+  },
+  "SimpleFullyParametrizedLP": {
+   "numeric": 11.197491479902574,
+   "assemble": 19.228038650475305,
+   "format": 66.40485979133281,
+   "ms": 53.52604796025844
+  },
+  "SimpleScalarParametrizedLP": {
+   "numeric": 11.814610197830836,
+   "assemble": 19.17343979861527,
+   "format": 67.28334117650793,
+   "ms": 106.18937214007019
+  }
+ }
+}

@@ -6,10 +6,11 @@
 2. memory_profile        The same profile on peak memory (delta max-RSS).
 3. profiles_combined     (a) and (b) side by side, as \\includegraphics'd by the thesis.
 
-Sources: the single-run data of the submitted thesis, under results/v1-submission/.
-Five parametric rows of Table 4.1 were the fastest of three replicate runs in
-results/repl/, which were never committed; they will be replaced by the replicated
-final-deposit runs (results/thesis/, run_thesis_final.sh).
+Sources: the final-deposit runs, through results/thesis-final/profile_data.json
+(written by thesis_numbers.py): per-problem medians, each CVXPY backend credited with the
+faster of its times with and without the #3524 rewrite, and the cold peak-RSS deltas.
+Without that file, the single-run data of the submitted thesis under results/v1-submission/
+is used, as before.
 
 Usage: python plot_thesis_figures.py [--thesis]
 """
@@ -33,6 +34,7 @@ from plot_sparsity_correlations import (  # noqa: E402
 from run_backend_benchmarks import _parse_table  # noqa: E402
 
 RESULTS = HERE / "results" / "v1-submission"  # single-run data of the submitted thesis
+FINAL_PROFILES = HERE / "results" / "thesis-final" / "profile_data.json"
 PLOTS = HERE / "results" / "plots"
 REPL_DIR = RESULTS / "repl"
 BIGPARAM_TXT = RESULTS / "results_backends_upstream192_nodpp_20260808_bigparam.txt"
@@ -223,9 +225,23 @@ def _profile_times():
     return problems, oneshot, dpp
 
 
+def _final_ratios(key):
+    """Ratio-to-best per backend from the final runs, {label: [ratio]}."""
+    vals = json.loads(FINAL_PROFILES.read_text())[key]
+    series = ["diffengine", "CPP", "SCIPY", "COO"]
+    ratios = {s: [] for s in series}
+    for row in vals.values():
+        best = min(row.values())
+        for s in series:
+            ratios[s].append(row[s] / best)
+    return len(vals), series, ratios
+
+
 def _oneshot_ratios():
     """Per-backend ratio-to-best on the one-shot job, {label: [ratio]}.
     Missing cells count as failures (ratio inf)."""
+    if FINAL_PROFILES.exists():
+        return _final_ratios("time")
     problems, oneshot, _dpp = _profile_times()
     series = list(next(iter(oneshot.values())))
     ratios = {s: [] for s in series}
@@ -367,6 +383,8 @@ def _memory_ratios():
     mem_cp_devbuild.json) against 3.4-4.1 MB for the CVXPY backends, all below
     the resolution of the measurement, so the four are scored as tied (ratio 1).
     Before 2026-08-22 the pinned build's 1.2 GB was censored as inf."""
+    if FINAL_PROFILES.exists():
+        return _final_ratios("memory")
     eng = {r["class"]: r["mem_cold"]["DIFFENGINE"]["delta_mb"]
            for r in json.loads(MEM_ENGINE_JSON.read_text())}
     nd = {r["class"]: r["mem_cold"] for r in json.loads(MEM_ND_JSON.read_text())}
@@ -458,8 +476,11 @@ def fig_profiles_combined(plt, written):
     # takes ~1.2 in, so 7.7 in puts each panel back at the singles' ~4 in.
     fig, axes = plt.subplots(2, 1, figsize=_figsize((7.4, 9.6),
                                                     (TEXTWIDTH_IN, 7.7)))
+    # The final runs top out below 32x; the submitted data reached 512x.
+    hi_t, ticks_t = ((32, [1, 2, 4, 8, 16, 32]) if FINAL_PROFILES.exists()
+                     else (512, [1, 2, 4, 8, 16, 32, 64, 128, 256, 512]))
     panels = [
-        (axes[0], ratios_t, n_t, 512, [1, 2, 4, 8, 16, 32, 64, 128, 256, 512],
+        (axes[0], ratios_t, n_t, hi_t, ticks_t,
          "(a) canonicalization time", r"within factor $\tau$ of the best backend", True),
         (axes[1], ratios_m, n_m, 64, [1, 2, 4, 8, 16, 32, 64],
          "(b) peak memory", r"within factor $\tau$ of the lowest-memory backend", False),

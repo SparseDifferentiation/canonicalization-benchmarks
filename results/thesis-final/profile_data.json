@@ -1,0 +1,306 @@
+{
+ "time": {
+  "SVMWithL1Regularization": {
+   "diffengine": 0.3619906040003116,
+   "CPP": 2.7809037289989647,
+   "SCIPY": 2.6253348539994477,
+   "COO": 2.7398003124999377
+  },
+  "FactorCovarianceModel": {
+   "diffengine": 0.16485327050031628,
+   "CPP": 1.2039899789997435,
+   "SCIPY": 1.160135687498041,
+   "COO": 1.149863145499694
+  },
+  "Yitzhaki": {
+   "diffengine": 0.13331308299893863,
+   "CPP": 0.9217023754990805,
+   "SCIPY": 0.9742283750001661,
+   "COO": 0.9921641249984532
+  },
+  "SimpleQP": {
+   "diffengine": 0.4325432500008901,
+   "CPP": 2.8751595829999133,
+   "SCIPY": 2.933550333000312,
+   "COO": 2.929998125000566
+  },
+  "HuberRegression": {
+   "diffengine": 0.47478106299968204,
+   "CPP": 2.7421701040002517,
+   "SCIPY": 2.852050292000058,
+   "COO": 2.8000270830016234
+  },
+  "LeastSquares": {
+   "diffengine": 0.4159251669989317,
+   "CPP": 2.3997733960004553,
+   "SCIPY": 2.899329124500582,
+   "COO": 2.9389104999991105
+  },
+  "SimpleLP": {
+   "diffengine": 1.0985840000030294,
+   "CPP": 6.844920270999864,
+   "SCIPY": 6.323219270499976,
+   "COO": 5.9805330830022285
+  },
+  "SimpleScalarParametrizedLP": {
+   "diffengine": 0.21965514550174703,
+   "CPP": 1.265296458501325,
+   "SCIPY": 1.1478125830017234,
+   "COO": 1.0874353960007284
+  },
+  "SimpleFullyParametrizedLP": {
+   "diffengine": 0.1109981664994848,
+   "CPP": 0.6128391665006347,
+   "SCIPY": 0.5561479374991904,
+   "COO": 0.5253300624990516
+  },
+  "SlowPruning": {
+   "diffengine": 0.39302518750264426,
+   "CPP": 1.7797894375034957,
+   "SCIPY": 2.1731229164943215,
+   "COO": 2.146642499999871
+  },
+  "ParametrizedQP": {
+   "diffengine": 0.7247710835035832,
+   "CPP": 2.959370354499697,
+   "SCIPY": 3.0100270625007397,
+   "COO": 2.991969958498885
+  },
+  "Cajas": {
+   "diffengine": 0.1999612290001096,
+   "CPP": 3.565059459000622,
+   "SCIPY": 0.6839951250003651,
+   "COO": 0.690548853999644
+  },
+  "ConeMatrixStuffing": {
+   "diffengine": 0.6335340619989438,
+   "CPP": 2.4888410415005637,
+   "SCIPY": 2.1462466459997813,
+   "COO": 3.4971643130011216
+  },
+  "SmallMatrixStuffing": {
+   "diffengine": 0.4984866244994919,
+   "CPP": 1.6655919375007215,
+   "SCIPY": 1.8159620624992385,
+   "COO": 2.48995331200058
+  },
+  "TvInpainting": {
+   "diffengine": 0.24371229149983265,
+   "CPP": 0.9205650415005948,
+   "SCIPY": 0.9064610209989041,
+   "COO": 0.8139973960005591
+  },
+  "ParamSmallMatrixStuffing": {
+   "diffengine": 0.03287662499860744,
+   "CPP": 0.06342762500025856,
+   "SCIPY": 0.12751564549944305,
+   "COO": 0.11305650000031164
+  },
+  "ParamConeMatrixStuffing": {
+   "diffengine": 0.022491854502732167,
+   "CPP": 0.04277612450096058,
+   "SCIPY": 0.07207891649886733,
+   "COO": 0.08902524999939487
+  },
+  "SemidefiniteProgramming": {
+   "diffengine": 0.3978514165000888,
+   "CPP": 1.1698851870005456,
+   "SCIPY": 0.6327455830014515,
+   "COO": 0.993793187000847
+  },
+  "CVaR": {
+   "diffengine": 4.272446666996984,
+   "CPP": 7.20172837550308,
+   "SCIPY": 6.5052292504988145,
+   "COO": 6.497216728998865
+  },
+  "Murray": {
+   "diffengine": 1.1633160629990016,
+   "CPP": 1.2351873545012495,
+   "SCIPY": 1.2234065209995606,
+   "COO": 1.2183331870000984
+  },
+  "UnconstrainedQP": {
+   "diffengine": 0.01586035400396213,
+   "CPP": 0.01318100000207778,
+   "SCIPY": 0.021517875502468087,
+   "COO": 0.02499091649951879
+  },
+  "SDPSegfault1132": {
+   "diffengine": 1.8986633745043946,
+   "CPP": 7.967612417000055,
+   "SCIPY": 1.4984909370014066,
+   "COO": 7.799870875503984
+  },
+  "OptimalAdvertising": {
+   "diffengine": 0.8912257709998812,
+   "CPP": 2.574764770499314,
+   "SCIPY": 0.5934440830023959,
+   "COO": 0.5345000620000064
+  },
+  "QuantumHilbertMatrix": {
+   "diffengine": 0.4932118129981973,
+   "CPP": 0.26672183351183776,
+   "SCIPY": 0.34260333299607737,
+   "COO": 0.44495252050546696
+  },
+  "ConvexPlasticity": {
+   "diffengine": 0.49861662550028996,
+   "CPP": 0.0786599170005502,
+   "SCIPY": 0.07446787499975471,
+   "COO": 0.07181254150054883
+  }
+ },
+ "memory": {
+  "CVaR": {
+   "diffengine": 6282.625,
+   "CPP": 4021.65625,
+   "SCIPY": 2803.859375,
+   "COO": 3587.015625
+  },
+  "FactorCovarianceModel": {
+   "diffengine": 759.78125,
+   "CPP": 1129.125,
+   "SCIPY": 1046.796875,
+   "COO": 1334.0625
+  },
+  "Cajas": {
+   "diffengine": 341.0625,
+   "CPP": 1192.828125,
+   "SCIPY": 298.359375,
+   "COO": 320.015625
+  },
+  "Murray": {
+   "diffengine": 307.90625,
+   "CPP": 2849.46875,
+   "SCIPY": 219.75,
+   "COO": 305.34375
+  },
+  "Yitzhaki": {
+   "diffengine": 476.453125,
+   "CPP": 448.984375,
+   "SCIPY": 437.09375,
+   "COO": 504.484375
+  },
+  "ConvexPlasticity": {
+   "diffengine": 1329.53125,
+   "CPP": 82.53125,
+   "SCIPY": 82.421875,
+   "COO": 82.46875
+  },
+  "HuberRegression": {
+   "diffengine": 1412.890625,
+   "CPP": 2223.171875,
+   "SCIPY": 2245.734375,
+   "COO": 3121.171875
+  },
+  "ConeMatrixStuffing": {
+   "diffengine": 478.71875,
+   "CPP": 2009.890625,
+   "SCIPY": 963.515625,
+   "COO": 3729.984375
+  },
+  "ParamConeMatrixStuffing": {
+   "diffengine": 5.90625,
+   "CPP": 9.71875,
+   "SCIPY": 8.265625,
+   "COO": 12.28125
+  },
+  "ParamSmallMatrixStuffing": {
+   "diffengine": 10.625,
+   "CPP": 17.1875,
+   "SCIPY": 12.984375,
+   "COO": 21.921875
+  },
+  "SmallMatrixStuffing": {
+   "diffengine": 322.34375,
+   "CPP": 1189.671875,
+   "SCIPY": 633.96875,
+   "COO": 2405.09375
+  },
+  "OptimalAdvertising": {
+   "diffengine": 6066.25,
+   "CPP": 172.625,
+   "SCIPY": 181.40625,
+   "COO": 196.859375
+  },
+  "QuantumHilbertMatrix": {
+   "diffengine": 909.625,
+   "CPP": 221.703125,
+   "SCIPY": 217.6875,
+   "COO": 287.953125
+  },
+  "SDPSegfault1132": {
+   "diffengine": 9253.8125,
+   "CPP": 7536.53125,
+   "SCIPY": 3460.140625,
+   "COO": 12983.21875
+  },
+  "SemidefiniteProgramming": {
+   "diffengine": 1137.890625,
+   "CPP": 1317.140625,
+   "SCIPY": 350.0,
+   "COO": 640.0625
+  },
+  "SimpleFullyParametrizedLP": {
+   "diffengine": 492.15625,
+   "CPP": 517.21875,
+   "SCIPY": 493.5625,
+   "COO": 526.015625
+  },
+  "SimpleLP": {
+   "diffengine": 4792.15625,
+   "CPP": 5352.5,
+   "SCIPY": 4960.71875,
+   "COO": 5027.4375
+  },
+  "SimpleScalarParametrizedLP": {
+   "diffengine": 1008.890625,
+   "CPP": 1087.75,
+   "SCIPY": 1024.078125,
+   "COO": 1067.90625
+  },
+  "LeastSquares": {
+   "diffengine": 1459.34375,
+   "CPP": 2140.046875,
+   "SCIPY": 2326.71875,
+   "COO": 3020.65625
+  },
+  "ParametrizedQP": {
+   "diffengine": 1775.40625,
+   "CPP": 2035.171875,
+   "SCIPY": 2173.90625,
+   "COO": 2997.84375
+  },
+  "SimpleQP": {
+   "diffengine": 1655.0625,
+   "CPP": 2194.109375,
+   "SCIPY": 2355.171875,
+   "COO": 3236.46875
+  },
+  "UnconstrainedQP": {
+   "diffengine": 52.921875,
+   "CPP": 1427.078125,
+   "SCIPY": 1057.828125,
+   "COO": 2105.015625
+  },
+  "SlowPruning": {
+   "diffengine": 1796.9375,
+   "CPP": 1351.78125,
+   "SCIPY": 1425.03125,
+   "COO": 1827.84375
+  },
+  "SVMWithL1Regularization": {
+   "diffengine": 2033.671875,
+   "CPP": 1976.296875,
+   "SCIPY": 2041.828125,
+   "COO": 2904.421875
+  },
+  "TvInpainting": {
+   "diffengine": 1048.359375,
+   "CPP": 704.96875,
+   "SCIPY": 857.84375,
+   "COO": 993.875
+  }
+ }
+}
