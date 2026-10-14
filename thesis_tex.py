@@ -118,11 +118,51 @@ def cellv(x):
     return f"{v:.2f}" if v >= 0.01 else f"{v:.3f}"
 
 
+# Best-of-both on the size tables, as in Table 4.1: each CVXPY backend gets the faster of its
+# times with and without the #3524 rewrite (thesis-scaling-ra), and s = 1 is Table 4.1's ratio.
+def medians(path):
+    out = {}
+    for r in json.load(open(path))["rows"]:
+        for t, xs in r["samples"].items():
+            ts = sorted(x["time"] for x in xs if x.get("time") is not None)
+            if ts:
+                out[(r["class"], t)] = ts[len(ts) // 2]
+    return out
+
+
+MED = {}
+for f in ("scaled25_fork", "scaled25_upstream", "families_fork", "families_upstream"):
+    MED.update(medians(RES / f"thesis-scaling/{f}.json"))
+RA = medians(RES / "thesis-scaling-ra/scaled_upstream_ra.json")
+T41 = {ln.split("&")[0].strip(): ln.split("&")[-1].split("$")[0].strip()
+       for ln in (HERE / "t41.tex").read_text().splitlines() if "&" in ln}
+
+
+def best_of_both(cls, s, cell):
+    if cell in ("cap", "unverified"):
+        return cell
+    if s == "1":
+        return T41.get(nm(cls), cell)
+    spec = f"scaled:cls={cls}:s={s}"
+    if not any(c == spec for c, _ in RA):
+        return cell
+    best = min(min(MED[(spec, f"{b}_ND")], RA[(spec, f"{b}_ND_RA")])
+               for b in ("CPP", "SCIPY", "COO"))
+    return f"{MED[(spec, 'DIFFENGINE')] / best:.4f}"
+
+
 S = RES / "thesis-scaling/summary.md"
 for title, out in (("Scaling: 25 problems", "app_scaled25.tex"),
                    ("Scaling: 10 families", "t_families.tex"),
                    ("Density: 5 problems", "t_density.tex")):
     rows = md_table(S, title)
+    if out != "t_density.tex":
+        txt = S.read_text()
+        head = next(ln for ln in txt[txt.index("## " + title):].splitlines()
+                    if ln.startswith("| problem"))
+        scales = [h.strip().removeprefix("s ") for h in head.strip("|").split("|")[1:-1]]
+        rows = [[r[0]] + [best_of_both(r[0], s, c) for s, c in zip(scales, r[1:-1])] + [r[-1]]
+                for r in rows]
     if out == "app_scaled25.tex":
         rows.sort(key=lambda r: ORDER.index(nm(r[0])))
     write(out, [f"{nm(r[0]):<27} & " + " & ".join(cellv(c) for c in r[1:-1]) + " \\\\"

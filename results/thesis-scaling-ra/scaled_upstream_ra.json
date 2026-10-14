@@ -1,0 +1,834 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-upstream/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "1.9.2",
+   "sparsediffpy": "0.3.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": null,
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": null,
+   "engine_commit": null,
+   "engine_so_sha256": "11635606f60c6704bdc2d118b151a10b809f488fbf99205fd6ecd36de9757209",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "CPP_ND_RA",
+   "SCIPY_ND_RA",
+   "COO_ND_RA"
+  ],
+  "reps": 5,
+  "slow_s": 30.0,
+  "slow_reps": 5,
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=0.5",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.00962920900201425,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.009267832996556535,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.009525833011139184,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.00955962500302121,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.009605541010387242,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.014970958000048995,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.01483337499666959,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.01611266698455438,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.016918292007176206,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.017250665987376124,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.01688845900935121,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.01662275000126101,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.017485499993199483,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.017098457989050075,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.018853875022614375,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 217,
+    "m": 721,
+    "nnz_A": 13321,
+    "nnz_P": 0,
+    "n_vars_user": 18,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.08514160440248758
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=2",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.021836542000528425,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.02157816701219417,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.02616620800108649,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.028146083001047373,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.026717625005403534,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.03502100001787767,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.03565220898599364,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.04833179200068116,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.04167095900629647,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.03599250002298504,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.04267016702215187,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.04369116699672304,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.06867329200031236,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.049003583000740036,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.04358695799601264,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 397,
+    "m": 1441,
+    "nnz_A": 26641,
+    "nnz_P": 0,
+    "n_vars_user": 18,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.046568905933991406
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=QuantumHilbertMatrix:s=0.5",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.011582915991311893,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.011350749991834164,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.011739499983377755,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.012475291994633153,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.012501332996180281,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.03375733399298042,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.0335427499958314,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.03400070802308619,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.03645745798712596,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.036135583999566734,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.03367704100674018,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.03354116599075496,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.033323042007396,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.036899167025694624,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.03929795799194835,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 392,
+    "m": 392,
+    "nnz_A": 1560,
+    "nnz_P": 256,
+    "n_vars_user": 256,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.010152019991670137
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SDPSegfault1132Benchmark:s=0.5",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 3.36135458300123,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 3.2625498339766636,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 3.128224209009204,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 3.2371694589965045,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 3.2224837499961723,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 2.2342522499966435,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.190018124994822,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.1337792499980424,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.138962833007099,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.1899046250036918,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 2.7527640830085147,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 2.647403540991945,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 2.6497666249924805,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 2.573088250006549,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 2.588328541984083,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 3082,
+    "m": 9323,
+    "nnz_A": 501736,
+    "nnz_P": 0,
+    "n_vars_user": 6084,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.017461716966747438
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=0.25",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.7363895419985056,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.7207662499858998,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.7207232920045499,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.7160689999873284,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.7371278750069905,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.3296191249974072,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.28500329100643285,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2857691670069471,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.28654858301160857,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.2883375000092201,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.24355624997406267,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.21881570800906047,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.2195672910020221,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.2202007500163745,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.24257100000977516,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 62750,
+    "m": 63500,
+    "nnz_A": 250500,
+    "nnz_P": 0,
+    "n_vars_user": 62500,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 6.286664366157417e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=0.5",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 1.4108755420020316,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.3912676670006476,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.3707449579960667,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.4232877909962554,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.3810881669924129,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.428961249999702,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.4094381670001894,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.4145710419979878,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.4368825420096982,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.4253615830093622,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.37239945799228735,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.3300870420061983,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.35897737499908544,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.36102174999541603,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.37432887498289347,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 125250,
+    "m": 126250,
+    "nnz_A": 500500,
+    "nnz_P": 0,
+    "n_vars_user": 125000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 3.1651548388371774e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=0.5",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 0.8615492090175394,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 0.9362194590212312,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 0.8547754999890458,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 0.8500829999975394,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 0.9011424589843955,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 1.1147138749947771,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.145941666996805,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.1016453339834698,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.0504945419961587,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.1455169999971986,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 1.078013791993726,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 1.0992415840155445,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 1.0843426249921322,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 1.0538575829996262,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 1.132090832979884,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 202000,
+    "m": 200000,
+    "nnz_A": 4200000,
+    "nnz_P": 200000,
+    "n_vars_user": 2000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00010396039603960396
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=2",
+   "samples": {
+    "CPP_ND_RA": [
+     {
+      "seed": 0,
+      "time": 4.206702958996175,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.137614417006262,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 4.241064084024401,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.130360832990846,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.0915592499950435,
+      "phases": null
+     }
+    ],
+    "SCIPY_ND_RA": [
+     {
+      "seed": 0,
+      "time": 4.894557916995836,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.953909375006333,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.442678292019991,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.78519199998118,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 5.0487297080107965,
+      "phases": null
+     }
+    ],
+    "COO_ND_RA": [
+     {
+      "seed": 0,
+      "time": 4.774603791011032,
+      "phases": null
+     },
+     {
+      "seed": 1,
+      "time": 4.95087225001771,
+      "phases": null
+     },
+     {
+      "seed": 2,
+      "time": 5.312959957984276,
+      "phases": null
+     },
+     {
+      "seed": 3,
+      "time": 4.73973591599497,
+      "phases": null
+     },
+     {
+      "seed": 4,
+      "time": 4.942624125018483,
+      "phases": null
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 802000,
+    "m": 800000,
+    "nnz_A": 16800000,
+    "nnz_P": 800000,
+    "n_vars_user": 2000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 2.6184538653366582e-05
+   }
+  }
+ ]
+}
