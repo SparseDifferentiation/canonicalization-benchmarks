@@ -2,14 +2,21 @@
 
 Combines results/thesis (first M2 sweep), results/thesis-pr3524 (the rerun on fork + #3524,
 whose rows replace the first sweep's) and results/thesis-reassoc (the #3524 rewrite applied
-to the stock backends). Each CVXPY backend is credited with the faster of its times with and
-without the rewrite. Writes facts.json, profile_data.json (Figure 4.1) and the LaTeX rows of
+to the stock backends). Writes facts.json, profile_data.json (Figure 4.1) and the LaTeX rows of
 the tables to results/thesis-final/; thesis_tex.py writes the remaining rows.
+
+Baseline (THESIS_BASELINE):
+  no-rewrite (default, the thesis): no backend uses #3524. On the five problems where it
+      fires, the diffengine rows (time, memory, verify) come from the first sweep, which ran
+      fork 35e81b1 = 5c07151 minus #3524 on the same engine 4f42e05; CVXPY is 1.9.2 as released.
+  best-of-both: each CVXPY backend gets the faster of its times with and without #3524, and
+      diffengine always has it (the earlier draft).
 
 Usage: .venv-thesis-pr3524/bin/python thesis_numbers.py
 """
 import json
 import math
+import os
 import sys
 from pathlib import Path
 
@@ -28,6 +35,19 @@ FILES = (G(T, "verify_*.json") + G(T, "cold_*.json") + G(T, "warm_*.json") +
          G(P, "memory_*.json") + G(R, "*.json"))
 rows, envs = ts.load(FILES)
 memory, verify = ts.load_aux(FILES)
+BASELINE = os.environ.get("THESIS_BASELINE", "no-rewrite")
+assert BASELINE in ("no-rewrite", "best-of-both"), BASELINE
+# The five problems where #3524 rewrites a chain (CHANGES.md, C9).
+REWRITTEN = ["UnconstrainedQP", "QuantumHilbertMatrix", "SlowPruningBenchmark",
+             "SDPSegfault1132Benchmark", "OptimalAdvertising"]
+if BASELINE == "no-rewrite":
+    TF = G(T, "verify_*.json") + G(T, "cold_*.json") + G(T, "memory_*.json")
+    rowsT, _ = ts.load(TF)
+    memT, verT = ts.load_aux(TF)
+    for n in REWRITTEN:
+        rows[("cold", n)] = rowsT[("cold", n)]
+        memory[("cold", n)] = memT[("cold", n)]
+        verify[n] = verT[n]
 
 # Thesis order and names (Table 4.1 order is by ratio, decided below).
 NAME = {"CVaRBenchmark": "CVaR", "ConeMatrixStuffingBench": "ConeMatrixStuffing",
@@ -50,13 +70,13 @@ def ms(a, scale=1.0):
     return float(np.mean(a)) * scale, (float(np.std(a, ddof=1)) * scale if len(a) > 1 else 0.0)
 
 
-# ---- Table 4.1: best of stock / with the rewrite, per backend ----------------------------
+# ---- Table 4.1: stock backends, or best of stock / with the rewrite per backend ----------
 recs = []
 for n in SUITE:
     de = t("cold", n, "DIFFENGINE")
     back = {}
     for b in STOCK:
-        cands = [x for x in (b, RA[b]) if len(t("cold", n, x))]
+        cands = [b] if BASELINE == "no-rewrite" else [x for x in (b, RA[b]) if len(t("cold", n, x))]
         best = min(cands, key=lambda x: med(t("cold", n, x)))
         back[b] = (best, t("cold", n, best))
     bb = min(back, key=lambda b: med(back[b][1]))
@@ -132,6 +152,16 @@ for n in ORDER:
     lines.append(f"{nm(n)} & " + " & ".join(cell(*ms(t("cold", n, RA[b]))) for b in STOCK) +
                  " \\\\")
 (OUT / "app_ra.tex").write_text("\n".join(lines) + "\n")
+
+# Appendix table without the dense blocks: with, without, ratio (Holm over the 25 problems).
+nd_adj = dict(zip(SUITE, ts.holm([ts.mwu(t("cold", n, "DE_NODENSE"), t("cold", n, "DIFFENGINE"))
+                                  for n in SUITE])))
+lines = []
+for n in ORDER:
+    a_, b_ = t("cold", n, "DE_NODENSE"), t("cold", n, "DIFFENGINE")
+    star = "$^{*}$" if nd_adj[n] < .05 else ""
+    lines.append(f"{nm(n)} & {cell(*ms(b_))} & {cell(*ms(a_))} & {med(a_) / med(b_):.2f}{star} \\\\")
+(OUT / "app_nodense.tex").write_text("\n".join(lines) + "\n")
 
 # ---- Phases --------------------------------------------------------------------------------
 PH = ["front", "convert", "symbolic", "numeric", "assemble", "format"]
@@ -295,6 +325,7 @@ for n, r in verify.items():
                                  for c in d.values() if isinstance(c, dict)))
 F["verify"] = ver
 
+F["baseline"] = BASELINE
 json.dump(F, open(OUT / "facts.json", "w"), indent=1, default=float)
 print(json.dumps({k: F[k] for k in ("t41", "mem_summary")}, indent=1, default=float))
 

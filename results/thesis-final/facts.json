@@ -1,27 +1,15 @@
 {
  "t41": {
-  "geomean": 0.40446759249778735,
-  "lo": 0.28169993629356493,
-  "hi": 0.6015792284498072,
-  "wilcoxon": 0.0005564093589782715,
-  "fastest": 20,
-  "sig_faster": 20,
-  "sig_slower": 5,
+  "geomean": 0.42979482762353016,
+  "lo": 0.2828892374647606,
+  "hi": 0.6968004063311828,
+  "wilcoxon": 0.0030878782272338867,
+  "fastest": 21,
+  "sig_faster": 21,
+  "sig_slower": 4,
   "twice": 15,
-  "beats_cpp": 22,
-  "ra_used": [
-   "OptimalAdvertising:CPP_ND",
-   "OptimalAdvertising:SCIPY_ND",
-   "QuantumHilbertMatrix:COO_ND",
-   "QuantumHilbertMatrix:CPP_ND",
-   "QuantumHilbertMatrix:SCIPY_ND",
-   "SDPSegfault1132:COO_ND",
-   "SlowPruning:CPP_ND",
-   "SlowPruning:SCIPY_ND",
-   "UnconstrainedQP:COO_ND",
-   "UnconstrainedQP:CPP_ND",
-   "UnconstrainedQP:SCIPY_ND"
-  ],
+  "beats_cpp": 23,
+  "ra_used": [],
   "slower": [
    [
     "ConvexPlasticity",
@@ -31,25 +19,19 @@
    ],
    [
     "OptimalAdvertising",
-    1.667,
+    1.664,
     "COO_ND",
     1.6989037820433392e-06
    ],
    [
-    "QuantumHilbertMatrix",
-    1.849,
-    "CPP_ND",
-    1.6989037820433392e-06
-   ],
-   [
     "SDPSegfault1132",
-    1.267,
+    1.351,
     "SCIPY_ND",
     1.6989037820433392e-06
    ],
    [
     "UnconstrainedQP",
-    1.203,
+    11.759,
     "CPP_ND",
     1.6989037820433392e-06
    ]
@@ -75,12 +57,12 @@
   "ParamConeMatrixStuffing",
   "SemidefiniteProgramming",
   "CVaR",
+  "QuantumHilbertMatrix",
   "Murray",
-  "UnconstrainedQP",
   "SDPSegfault1132",
   "OptimalAdvertising",
-  "QuantumHilbertMatrix",
-  "ConvexPlasticity"
+  "ConvexPlasticity",
+  "UnconstrainedQP"
  ],
  "phase": {
   "CVaR": {
@@ -172,14 +154,14 @@
    ]
   },
   "OptimalAdvertising": {
-   "time": 0.8894191250485164,
+   "time": 0.8895391602999553,
    "share": [
-    4.137926087501493,
-    1.0918677906234224,
-    89.72364800359517,
-    3.080574853414404,
-    0.8848176055358897,
-    1.0811656593296022
+    4.149502704001634,
+    1.0822805329454566,
+    89.73706973674129,
+    3.067551977213174,
+    0.8826377451346462,
+    1.0809573039637965
    ]
   },
   "ParamConeMatrixStuffing": {
@@ -216,25 +198,25 @@
    ]
   },
   "QuantumHilbertMatrix": {
-   "time": 0.4922941939490556,
+   "time": 0.6425237333002769,
    "share": [
-    3.5448280159634136,
-    12.736084103546311,
-    63.48457172618398,
-    19.92241390688787,
-    0.14220631454543442,
-    0.16989593287299212
+    2.7242494372267956,
+    8.791517438069608,
+    64.06776284055061,
+    24.176602083321775,
+    0.10925316817527457,
+    0.13061503265593882
    ]
   },
   "SDPSegfault1132": {
-   "time": 1.9033753707997676,
+   "time": 2.0242120311500913,
    "share": [
-    0.1865270017837224,
-    0.06316035644279193,
-    46.290731184917874,
-    49.49623376677946,
-    3.6363224422240976,
-    0.3270252478520538
+    0.17302931633758536,
+    0.05633434517160686,
+    47.694351545510486,
+    48.34295752008499,
+    3.424729650259442,
+    0.3085976226358902
    ]
   },
   "SVMWithL1Regularization": {
@@ -304,14 +286,14 @@
    ]
   },
   "SlowPruning": {
-   "time": 0.39298091040145666,
+   "time": 0.39188083954995817,
    "share": [
-    1.9596151639475767,
-    0.8377157458840132,
-    35.20149242584235,
-    10.48518146506707,
-    19.12188593522687,
-    32.39410926403212
+    1.9601915699099595,
+    0.8284821292224406,
+    35.18501702307604,
+    10.53601787144112,
+    19.14896358462391,
+    32.34132782172653
    ]
   },
   "SmallMatrixStuffing": {
@@ -337,14 +319,14 @@
    ]
   },
   "UnconstrainedQP": {
-   "time": 0.01585291444971517,
+   "time": 22.927993618549863,
    "share": [
-    14.038739663800321,
-    12.930360168202796,
-    42.73183215428455,
-    27.126316712824543,
-    1.5910556711532058,
-    1.5816956297345908
+    0.009977591785789233,
+    0.010546959023064,
+    1.6498371924946964,
+    98.32716662250738,
+    0.0013239873519004755,
+    0.0011476468371803832
    ]
   },
   "Yitzhaki": {
@@ -360,9 +342,9 @@
   }
  },
  "phase_median": [
-  4.527282296744907,
-  8.401404271186234,
-  19.535613172675315,
+  4.149502704001634,
+  8.04067444331372,
+  18.096878469455294,
   13.753761393675996,
   11.216509239076721,
   11.731318502364177
@@ -711,13 +693,13 @@
  },
  "ablation": {
   "nodense_cold": {
-   "g": 1.2693209838758637,
-   "lo": 1.0141182187124793,
-   "hi": 1.5505351828721419,
-   "p": 0.013554692268371582,
+   "g": 1.0732659978326666,
+   "lo": 0.709533367863945,
+   "hi": 1.4732063282924983,
+   "p": 0.0709836483001709,
    "sig": 23,
    "n": 25,
-   "below": 8,
+   "below": 9,
    "per": {
     "CVaR": 0.6451034448925492,
     "Cajas": 1.0196175554629583,
@@ -727,33 +709,33 @@
     "HuberRegression": 2.1135812539733676,
     "LeastSquares": 2.156255370339103,
     "Murray": 1.0095703423640883,
-    "OptimalAdvertising": 0.9375017371384801,
+    "OptimalAdvertising": 0.9412297162568832,
     "ParamConeMatrixStuffing": 1.2146758282842574,
     "ParamSmallMatrixStuffing": 1.225888712680963,
     "ParametrizedQP": 0.9887757373503853,
-    "QuantumHilbertMatrix": 1.0269212844285245,
-    "SDPSegfault1132": 1.734301583269716,
+    "QuantumHilbertMatrix": 1.0236105352656406,
+    "SDPSegfault1132": 1.747935221332076,
     "SVMWithL1Regularization": 2.062325167420318,
     "SemidefiniteProgramming": 0.9969010114102038,
     "SimpleFullyParametrizedLP": 0.9856810742875272,
     "SimpleLP": 1.3605822171953181,
     "SimpleQP": 2.107675263678422,
     "SimpleScalarParametrizedLP": 0.9725762354054602,
-    "SlowPruning": 1.0573433897200835,
+    "SlowPruning": 1.0337506383672732,
     "SmallMatrixStuffing": 2.70292186345013,
     "TvInpainting": 0.9787367084842129,
-    "UnconstrainedQP": 1.396539099690421,
+    "UnconstrainedQP": 0.021356460872738726,
     "Yitzhaki": 1.9008557247450921
    }
   },
   "fullycsr_cold": {
-   "g": 1.3338475500473863,
-   "lo": 1.0646086148881637,
-   "hi": 1.6267190486772352,
-   "p": 0.002025127410888672,
+   "g": 1.1278260108699738,
+   "lo": 0.7234094945960974,
+   "hi": 1.554974538841797,
+   "p": 0.017312347888946533,
    "sig": 24,
    "n": 25,
-   "below": 5,
+   "below": 6,
    "per": {
     "CVaR": 0.6451034448925492,
     "Cajas": 1.0196175554629583,
@@ -763,33 +745,33 @@
     "HuberRegression": 2.1135812539733676,
     "LeastSquares": 2.156255370339103,
     "Murray": 1.0095703423640883,
-    "OptimalAdvertising": 0.9375017371384801,
+    "OptimalAdvertising": 0.9412297162568832,
     "ParamConeMatrixStuffing": 1.047636402590049,
     "ParamSmallMatrixStuffing": 1.0814796136815583,
     "ParametrizedQP": 2.180953030378031,
-    "QuantumHilbertMatrix": 1.0269212844285245,
-    "SDPSegfault1132": 1.734301583269716,
+    "QuantumHilbertMatrix": 1.0236105352656406,
+    "SDPSegfault1132": 1.747935221332076,
     "SVMWithL1Regularization": 2.0502186062258487,
     "SemidefiniteProgramming": 0.9969010114102038,
     "SimpleFullyParametrizedLP": 1.349580170297092,
     "SimpleLP": 1.3605822171953181,
     "SimpleQP": 2.107675263678422,
     "SimpleScalarParametrizedLP": 1.3381605821533422,
-    "SlowPruning": 1.0573433897200835,
+    "SlowPruning": 1.0337506383672732,
     "SmallMatrixStuffing": 2.70292186345013,
     "TvInpainting": 0.9787367084842129,
-    "UnconstrainedQP": 1.396539099690421,
+    "UnconstrainedQP": 0.021356460872738726,
     "Yitzhaki": 1.9008557247450921
    }
   },
   "nodense_vs_best": {
-   "g": 0.5133992024551932,
-   "lo": 0.3864558556228778,
-   "hi": 0.6935490444052773,
-   "p": 0.000429689884185791,
+   "g": 0.46128417453268694,
+   "lo": 0.3578449334589536,
+   "hi": 0.6124640240223703,
+   "p": 3.814697265625e-05,
    "sig": 25,
    "n": 25,
-   "below": 20,
+   "below": 22,
    "per": {
     "CVaR": 0.42420780742897185,
     "Cajas": 0.29807811788183686,
@@ -799,22 +781,22 @@
     "HuberRegression": 0.36594679266388225,
     "LeastSquares": 0.3737189838404495,
     "Murray": 0.963980468176683,
-    "OptimalAdvertising": 1.563191041304238,
+    "OptimalAdvertising": 1.5666708117243344,
     "ParamConeMatrixStuffing": 0.6386813278781647,
     "ParamSmallMatrixStuffing": 0.6354184552341878,
     "ParametrizedQP": 0.24215828931713607,
-    "QuantumHilbertMatrix": 1.8989435616524086,
-    "SDPSegfault1132": 2.19744732196275,
+    "QuantumHilbertMatrix": 0.8378047538032445,
+    "SDPSegfault1132": 2.361009079628012,
     "SVMWithL1Regularization": 0.2843608051987115,
     "SemidefiniteProgramming": 0.6268214115672633,
     "SimpleFullyParametrizedLP": 0.20826676371553648,
     "SimpleLP": 0.2499298697548675,
     "SimpleQP": 0.31708177656933045,
     "SimpleScalarParametrizedLP": 0.19645431377827308,
-    "SlowPruning": 0.23348974617038148,
+    "SlowPruning": 0.22639171643149064,
     "SmallMatrixStuffing": 0.808943874943888,
     "TvInpainting": 0.29303553939075183,
-    "UnconstrainedQP": 1.6804191258609433,
+    "UnconstrainedQP": 0.25112121048822117,
     "Yitzhaki": 0.2749357533821425
    }
   },
@@ -961,21 +943,21 @@
   },
   "OptimalAdvertising": {
    "DIFFENGINE": 6066.25,
-   "DE_NODENSE": 944.796875,
+   "DE_NODENSE": 944.71875,
    "CPP_ND": 172.625,
    "SCIPY_ND": 181.40625,
    "COO_ND": 196.859375
   },
   "QuantumHilbertMatrix": {
-   "DIFFENGINE": 909.625,
-   "DE_NODENSE": 909.734375,
+   "DIFFENGINE": 1195.03125,
+   "DE_NODENSE": 1194.84375,
    "CPP_ND": 221.703125,
    "SCIPY_ND": 217.6875,
    "COO_ND": 287.953125
   },
   "SDPSegfault1132": {
-   "DIFFENGINE": 9253.8125,
-   "DE_NODENSE": 11186.03125,
+   "DIFFENGINE": 10413.3125,
+   "DE_NODENSE": 12885.203125,
    "CPP_ND": 7536.53125,
    "SCIPY_ND": 3460.140625,
    "COO_ND": 12983.21875
@@ -1036,15 +1018,15 @@
    "COO_ND": 3236.46875
   },
   "UnconstrainedQP": {
-   "DIFFENGINE": 52.921875,
-   "DE_NODENSE": 41.421875,
+   "DIFFENGINE": 1753.921875,
+   "DE_NODENSE": 644.28125,
    "CPP_ND": 1427.078125,
    "SCIPY_ND": 1057.828125,
    "COO_ND": 2105.015625
   },
   "SlowPruning": {
-   "DIFFENGINE": 1796.9375,
-   "DE_NODENSE": 1120.296875,
+   "DIFFENGINE": 1796.859375,
+   "DE_NODENSE": 1120.359375,
    "CPP_ND": 1351.78125,
    "SCIPY_ND": 1425.03125,
    "COO_ND": 1827.84375
@@ -1068,19 +1050,19 @@
  },
  "mem_summary": {
   "n": 25,
-  "scipy_lowest": 8,
+  "scipy_lowest": 9,
   "lowest": {
    "CPP_ND": 4,
-   "SCIPY_ND": 8,
+   "SCIPY_ND": 9,
    "COO_ND": 0,
-   "DIFFENGINE": 13
+   "DIFFENGINE": 12
   },
   "de_over": {
-   "CPP_ND": 0.8745026838472412,
-   "SCIPY_ND": 1.2170189233361914,
-   "COO_ND": 0.8252811723003135
+   "CPP_ND": 1.0218021107441437,
+   "SCIPY_ND": 1.422011078582019,
+   "COO_ND": 0.9642898293965277
   },
-  "nodense_over_de": 0.873632376785914
+  "nodense_over_de": 0.8483770351568212
  },
  "verify": {
   "lasso:variant=dpp:n=1000:seed=0": {
@@ -1239,27 +1221,27 @@
   "OptimalAdvertising": {
    "first": true,
    "update": null,
-   "n": 3,
-   "passed": 3,
-   "reference": "CPP_ND",
-   "nan": false,
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
+   "nan": true,
    "maxabs": 0.0
   },
   "QuantumHilbertMatrix": {
    "first": true,
    "update": null,
-   "n": 3,
-   "passed": 3,
-   "reference": "CPP_ND",
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
    "nan": false,
    "maxabs": 0.0
   },
   "SDPSegfault1132": {
    "first": true,
    "update": null,
-   "n": 3,
-   "passed": 3,
-   "reference": "CPP_ND",
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
    "nan": false,
    "maxabs": 2.220446049250313e-16
   },
@@ -1329,18 +1311,18 @@
   "UnconstrainedQP": {
    "first": true,
    "update": null,
-   "n": 3,
-   "passed": 3,
-   "reference": "CPP_ND",
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
    "nan": false,
-   "maxabs": 1.7053025658242404e-13
+   "maxabs": 0.0
   },
   "SlowPruning": {
    "first": true,
    "update": null,
-   "n": 3,
-   "passed": 3,
-   "reference": "CPP_ND",
+   "n": 4,
+   "passed": 4,
+   "reference": "CPP",
    "nan": false,
    "maxabs": 0.0
   },
@@ -1363,30 +1345,31 @@
    "maxabs": 0.0
   }
  },
+ "baseline": "no-rewrite",
  "profile": {
   "diffengine": {
-   "fastest": 20,
-   "tau100": 6.94330844002338,
-   "tau96": 1.8491617521679466,
-   "tau92": 1.6674006877848977,
-   "mem_lowest": 13,
+   "fastest": 21,
+   "tau100": 11.758559247462882,
+   "tau96": 6.94330844002338,
+   "tau92": 1.6644935711918745,
+   "mem_lowest": 12,
    "mem_tau100": 35.14120202751629
   },
   "CPP": {
-   "fastest": 2,
+   "fastest": 1,
    "tau100": 17.828753488000757,
    "tau96": 7.6822538990447695,
    "tau92": 7.303403659179655,
    "mem_lowest": 4,
-   "mem_tau100": 26.96575140242102
+   "mem_tau100": 12.966865756541525
   },
   "SCIPY": {
    "fastest": 1,
    "tau100": 7.3078227064025105,
    "tau96": 7.252494470815568,
    "tau92": 7.037383510664505,
-   "mem_lowest": 8,
-   "mem_tau100": 19.988485385296723
+   "mem_lowest": 9,
+   "mem_tau100": 2.0126966512174422
   },
   "COO": {
    "fastest": 2,
@@ -1394,7 +1377,7 @@
    "tau96": 7.442361264770633,
    "tau92": 7.065959776381263,
    "mem_lowest": 0,
-   "mem_tau100": 39.775907883082375
+   "mem_tau100": 7.791598668320386
   }
  },
  "breakeven": {

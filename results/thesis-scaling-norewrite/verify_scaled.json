@@ -1,0 +1,423 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-thesis/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "0.1.0.dev4044+g35e81b129",
+   "sparsediffpy": "0.7.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": "35e81b1296627ba8ee06caf2d79e055287152d7e",
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": "4f42e05",
+   "engine_commit": "4f42e05",
+   "engine_so_sha256": "77ee8cd5550bcc650622eb05a5dabbe247a33b673a6513fba62bb4e036933115",
+   "numpy_blas": []
+  }
+ },
+ "rows": [
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=QuantumHilbertMatrix:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SDPSegfault1132Benchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 2.7755575615628914e-17,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 2.7755575615628914e-17,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 3
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 3
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 3
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 3
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 1
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 1
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  }
+ ]
+}

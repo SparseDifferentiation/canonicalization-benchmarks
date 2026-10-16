@@ -1,0 +1,715 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-thesis/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "0.1.0.dev4044+g35e81b129",
+   "sparsediffpy": "0.7.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": "35e81b1296627ba8ee06caf2d79e055287152d7e",
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": "4f42e05",
+   "engine_commit": "4f42e05",
+   "engine_so_sha256": "77ee8cd5550bcc650622eb05a5dabbe247a33b673a6513fba62bb4e036933115",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "DIFFENGINE"
+  ],
+  "reps": 5,
+  "slow_s": 30.0,
+  "slow_reps": 5,
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=0.5",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 3.0054605420446023,
+      "phases": {
+       "convert": 0.0014013340114615858,
+       "symbolic": 0.1451792920124717,
+       "numeric": 2.8562545419554226,
+       "assemble": 0.00028033298440277576,
+       "format": 0.0002493340289220214
+      }
+     },
+     {
+      "seed": 1,
+      "time": 3.0072430000291206,
+      "phases": {
+       "convert": 0.0014301249757409096,
+       "symbolic": 0.14782183297211304,
+       "numeric": 2.8540054179611616,
+       "assemble": 0.0002728329855017364,
+       "format": 0.00023425003746524453
+      }
+     },
+     {
+      "seed": 2,
+      "time": 3.062557958008256,
+      "phases": {
+       "convert": 0.0013890409609302878,
+       "symbolic": 0.14521433296613395,
+       "numeric": 2.913279209053144,
+       "assemble": 0.00028741598362103105,
+       "format": 0.00024387502344325185
+      }
+     },
+     {
+      "seed": 3,
+      "time": 3.0430167919839732,
+      "phases": {
+       "convert": 0.0013573329779319465,
+       "symbolic": 0.14487804204691201,
+       "numeric": 2.894178373971954,
+       "assemble": 0.0002684580394998193,
+       "format": 0.000238874985370785
+      }
+     },
+     {
+      "seed": 4,
+      "time": 3.060476957994979,
+      "phases": {
+       "convert": 0.0013985830009914935,
+       "symbolic": 0.14459745801286772,
+       "numeric": 2.911921833001543,
+       "assemble": 0.00027900002896785736,
+       "format": 0.00024029199266806245
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 217,
+    "m": 721,
+    "nnz_A": 13319,
+    "nnz_P": 0,
+    "n_vars_user": 18,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0851288213374921
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=2",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 94.59420329198474,
+      "phases": {
+       "convert": 0.0046682090032845736,
+       "symbolic": 1.1052627500030212,
+       "numeric": 93.48075287498068,
+       "assemble": 0.00032770802499726415,
+       "format": 0.0002959169796667993
+      }
+     },
+     {
+      "seed": 1,
+      "time": 94.88801587501075,
+      "phases": {
+       "convert": 0.004555375024210662,
+       "symbolic": 1.1401171669713221,
+       "numeric": 93.73985712497961,
+       "assemble": 0.00034920801408588886,
+       "format": 0.00029749999521300197
+      }
+     },
+     {
+      "seed": 2,
+      "time": 95.16364595905179,
+      "phases": {
+       "convert": 0.004592624958604574,
+       "symbolic": 1.1286337499623187,
+       "numeric": 94.0269181249896,
+       "assemble": 0.00036279199412092566,
+       "format": 0.0002982090227305889
+      }
+     },
+     {
+      "seed": 3,
+      "time": 95.14530870801536,
+      "phases": {
+       "convert": 0.004580583015922457,
+       "symbolic": 1.1266306660254486,
+       "numeric": 94.01053270796547,
+       "assemble": 0.0004102079547010362,
+       "format": 0.00031583302188664675
+      }
+     },
+     {
+      "seed": 4,
+      "time": 95.52043441700516,
+      "phases": {
+       "convert": 0.004551917023491114,
+       "symbolic": 1.1331387920072302,
+       "numeric": 94.3791885409737,
+       "assemble": 0.00037479097954928875,
+       "format": 0.00030979199800640345
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 397,
+    "m": 1441,
+    "nnz_A": 26641,
+    "nnz_P": 0,
+    "n_vars_user": 18,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.046568905933991406
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=QuantumHilbertMatrix:s=0.5",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 0.012823375000152737,
+      "phases": {
+       "convert": 0.0043102080235257745,
+       "symbolic": 0.0029067089781165123,
+       "numeric": 0.0010418760357424617,
+       "assemble": 9.904202306643128e-05,
+       "format": 0.000138582952786237
+      }
+     },
+     {
+      "seed": 1,
+      "time": 0.01781645801384002,
+      "phases": {
+       "convert": 0.006106959015596658,
+       "symbolic": 0.0033317499910481274,
+       "numeric": 0.0011834580800496042,
+       "assemble": 0.00013087503612041473,
+       "format": 0.00017466599820181727
+      }
+     },
+     {
+      "seed": 2,
+      "time": 0.014592125022318214,
+      "phases": {
+       "convert": 0.004950875008944422,
+       "symbolic": 0.0034515830338932574,
+       "numeric": 0.001173917029518634,
+       "assemble": 0.00012220896314829588,
+       "format": 0.00015170802362263203
+      }
+     },
+     {
+      "seed": 3,
+      "time": 0.017679332988336682,
+      "phases": {
+       "convert": 0.006572208018042147,
+       "symbolic": 0.003107291995547712,
+       "numeric": 0.0011407919810153544,
+       "assemble": 0.00011629197979345918,
+       "format": 0.00016250001499429345
+      }
+     },
+     {
+      "seed": 4,
+      "time": 0.0162244169623591,
+      "phases": {
+       "convert": 0.004830624966416508,
+       "symbolic": 0.0035651670186780393,
+       "numeric": 0.0012479169527068734,
+       "assemble": 0.0001477920450270176,
+       "format": 0.0001752499956637621
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 392,
+    "m": 392,
+    "nnz_A": 1560,
+    "nnz_P": 256,
+    "n_vars_user": 256,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.010152019991670137
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SDPSegfault1132Benchmark:s=0.5",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 1.0077752090292051,
+      "phases": {
+       "convert": 0.0011576249962672591,
+       "symbolic": 0.4873587909969501,
+       "numeric": 0.48054941598093137,
+       "assemble": 0.03162883297773078,
+       "format": 0.003207916975952685
+      }
+     },
+     {
+      "seed": 1,
+      "time": 1.238520042039454,
+      "phases": {
+       "convert": 0.0009121669572778046,
+       "symbolic": 0.46414345799712464,
+       "numeric": 0.6663011249620467,
+       "assemble": 0.09242699999595061,
+       "format": 0.010521541989874095
+      }
+     },
+     {
+      "seed": 2,
+      "time": 0.8787059579626657,
+      "phases": {
+       "convert": 0.0010167500004172325,
+       "symbolic": 0.43093033297918737,
+       "numeric": 0.4105768339941278,
+       "assemble": 0.02960616600466892,
+       "format": 0.002968417014926672
+      }
+     },
+     {
+      "seed": 3,
+      "time": 0.8960395419853739,
+      "phases": {
+       "convert": 0.0009337909868918359,
+       "symbolic": 0.40245074999984354,
+       "numeric": 0.4521094180527143,
+       "assemble": 0.034097959054633975,
+       "format": 0.003502083010971546
+      }
+     },
+     {
+      "seed": 4,
+      "time": 0.8834289590013213,
+      "phases": {
+       "convert": 0.0009151250123977661,
+       "symbolic": 0.40036187501391396,
+       "numeric": 0.4203685840475373,
+       "assemble": 0.05562629096675664,
+       "format": 0.003267834021244198
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 3082,
+    "m": 9323,
+    "nnz_A": 501736,
+    "nnz_P": 0,
+    "n_vars_user": 6084,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.017461716966747438
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=0.25",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 0.17382200004067272,
+      "phases": {
+       "convert": 0.007495208003092557,
+       "symbolic": 0.1184468749561347,
+       "numeric": 0.00784520898014307,
+       "assemble": 0.001896291971206665,
+       "format": 0.002279207983519882
+      }
+     },
+     {
+      "seed": 1,
+      "time": 0.17467266699532047,
+      "phases": {
+       "convert": 0.006919333012774587,
+       "symbolic": 0.11948162503540516,
+       "numeric": 0.008259875001385808,
+       "assemble": 0.001864165998995304,
+       "format": 0.002286874980200082
+      }
+     },
+     {
+      "seed": 2,
+      "time": 0.1895224999752827,
+      "phases": {
+       "convert": 0.008057124970946461,
+       "symbolic": 0.12796841701492667,
+       "numeric": 0.009514749981462955,
+       "assemble": 0.002026083995588124,
+       "format": 0.002862458990421146
+      }
+     },
+     {
+      "seed": 3,
+      "time": 0.1801807499723509,
+      "phases": {
+       "convert": 0.007541791012044996,
+       "symbolic": 0.12113449996104464,
+       "numeric": 0.008432124915998429,
+       "assemble": 0.0019311670330353081,
+       "format": 0.0023197500267997384
+      }
+     },
+     {
+      "seed": 4,
+      "time": 0.17354349995730445,
+      "phases": {
+       "convert": 0.006627166992984712,
+       "symbolic": 0.11909324995940551,
+       "numeric": 0.008298749977257103,
+       "assemble": 0.0018229580018669367,
+       "format": 0.002298958017490804
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 62750,
+    "m": 63500,
+    "nnz_A": 250500,
+    "nnz_P": 0,
+    "n_vars_user": 62500,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 6.286664366157417e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=0.5",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 0.37811004102695733,
+      "phases": {
+       "convert": 0.008936166996136308,
+       "symbolic": 0.2970483750104904,
+       "numeric": 0.018176456971559674,
+       "assemble": 0.0040285419672727585,
+       "format": 0.0054144999594427645
+      }
+     },
+     {
+      "seed": 1,
+      "time": 0.4406825420446694,
+      "phases": {
+       "convert": 0.008488666964694858,
+       "symbolic": 0.36704574996838346,
+       "numeric": 0.018234207993373275,
+       "assemble": 0.004480083996895701,
+       "format": 0.0048643340123817325
+      }
+     },
+     {
+      "seed": 2,
+      "time": 0.36775949998991564,
+      "phases": {
+       "convert": 0.008426249958574772,
+       "symbolic": 0.2954487500246614,
+       "numeric": 0.016946167044807225,
+       "assemble": 0.0037478749873116612,
+       "format": 0.004767124948557466
+      }
+     },
+     {
+      "seed": 3,
+      "time": 0.36569129198323935,
+      "phases": {
+       "convert": 0.00831212499178946,
+       "symbolic": 0.2951056250021793,
+       "numeric": 0.017339623940642923,
+       "assemble": 0.003730167052708566,
+       "format": 0.00466308300383389
+      }
+     },
+     {
+      "seed": 4,
+      "time": 0.3696687499759719,
+      "phases": {
+       "convert": 0.008254249987658113,
+       "symbolic": 0.29837641696212813,
+       "numeric": 0.01797987404279411,
+       "assemble": 0.0038610000046901405,
+       "format": 0.004690832982305437
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 125250,
+    "m": 126250,
+    "nnz_A": 500500,
+    "nnz_P": 0,
+    "n_vars_user": 125000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 3.1651548388371774e-05
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=2",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 3.3484282919671386,
+      "phases": {
+       "convert": 0.012606750009581447,
+       "symbolic": 3.1308685410185717,
+       "numeric": 0.11282795888837427,
+       "assemble": 0.0251671249861829,
+       "format": 0.02759591699577868
+      }
+     },
+     {
+      "seed": 1,
+      "time": 3.3787274170317687,
+      "phases": {
+       "convert": 0.013086542021483183,
+       "symbolic": 3.167083917011041,
+       "numeric": 0.10782362503232434,
+       "assemble": 0.021942708001006395,
+       "format": 0.027311209007166326
+      }
+     },
+     {
+      "seed": 2,
+      "time": 3.3182139580021612,
+      "phases": {
+       "convert": 0.012372833967674524,
+       "symbolic": 3.075354625005275,
+       "numeric": 0.13475666794693097,
+       "assemble": 0.029681041021831334,
+       "format": 0.026520292041823268
+      }
+     },
+     {
+      "seed": 3,
+      "time": 3.2746807080111466,
+      "phases": {
+       "convert": 0.013087333994917572,
+       "symbolic": 3.062022707948927,
+       "numeric": 0.10955624905182049,
+       "assemble": 0.024262666003778577,
+       "format": 0.024741333967540413
+      }
+     },
+     {
+      "seed": 4,
+      "time": 3.215859708026983,
+      "phases": {
+       "convert": 0.011778249987401068,
+       "symbolic": 3.004578042018693,
+       "numeric": 0.11343258299166337,
+       "assemble": 0.02237500000046566,
+       "format": 0.02464654197683558
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 500250,
+    "m": 502750,
+    "nnz_A": 2000500,
+    "nnz_P": 0,
+    "n_vars_user": 500000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 7.954252610144456e-06
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=0.5",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 0.19110158301191404,
+      "phases": {
+       "convert": 0.0017422910314053297,
+       "symbolic": 0.07454820803832263,
+       "numeric": 0.02447074995143339,
+       "assemble": 0.03293083398602903,
+       "format": 0.05260100000305101
+      }
+     },
+     {
+      "seed": 1,
+      "time": 0.18836845899932086,
+      "phases": {
+       "convert": 0.0017819589702412486,
+       "symbolic": 0.0743262079777196,
+       "numeric": 0.022031372995115817,
+       "assemble": 0.03370791702764109,
+       "format": 0.051835875026881695
+      }
+     },
+     {
+      "seed": 2,
+      "time": 0.18749329197453335,
+      "phases": {
+       "convert": 0.0017296670121140778,
+       "symbolic": 0.0742131249862723,
+       "numeric": 0.021947667002677917,
+       "assemble": 0.033300291979685426,
+       "format": 0.05165329104056582
+      }
+     },
+     {
+      "seed": 3,
+      "time": 0.1884492919780314,
+      "phases": {
+       "convert": 0.0017288329545408487,
+       "symbolic": 0.07389620796311647,
+       "numeric": 0.023208208847790956,
+       "assemble": 0.03336604102514684,
+       "format": 0.0516538749798201
+      }
+     },
+     {
+      "seed": 4,
+      "time": 0.19249420799314976,
+      "phases": {
+       "convert": 0.0017740830080583692,
+       "symbolic": 0.0743321250192821,
+       "numeric": 0.022042542055714875,
+       "assemble": 0.03392400004668161,
+       "format": 0.053697749972343445
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 202000,
+    "m": 200000,
+    "nnz_A": 4200000,
+    "nnz_P": 200000,
+    "n_vars_user": 2000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.00010396039603960396
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=2",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 0.8299435409717262,
+      "phases": {
+       "convert": 0.00713550002546981,
+       "symbolic": 0.2952972080092877,
+       "numeric": 0.09211387496907264,
+       "assemble": 0.16229770699283108,
+       "format": 0.25843074999284
+      }
+     },
+     {
+      "seed": 1,
+      "time": 0.828395166026894,
+      "phases": {
+       "convert": 0.007075458008330315,
+       "symbolic": 0.29342208296293393,
+       "numeric": 0.09167229197919369,
+       "assemble": 0.1626132089877501,
+       "format": 0.25921508303144947
+      }
+     },
+     {
+      "seed": 2,
+      "time": 0.8383254169602878,
+      "phases": {
+       "convert": 0.006904124980792403,
+       "symbolic": 0.2940831250161864,
+       "numeric": 0.09174524998525158,
+       "assemble": 0.1620298339985311,
+       "format": 0.2662852500216104
+      }
+     },
+     {
+      "seed": 3,
+      "time": 0.8288569169817492,
+      "phases": {
+       "convert": 0.007143374998122454,
+       "symbolic": 0.29411304101813585,
+       "numeric": 0.09031008399324492,
+       "assemble": 0.16281587502453476,
+       "format": 0.2600137499975972
+      }
+     },
+     {
+      "seed": 4,
+      "time": 0.8309129580156878,
+      "phases": {
+       "convert": 0.007246292021591216,
+       "symbolic": 0.2953918339917436,
+       "numeric": 0.09004070801893249,
+       "assemble": 0.16386487404815853,
+       "format": 0.25968920899322256
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 802000,
+    "m": 800000,
+    "nnz_A": 16800000,
+    "nnz_P": 800000,
+    "n_vars_user": 2000,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 2.6184538653366582e-05
+   }
+  }
+ ]
+}

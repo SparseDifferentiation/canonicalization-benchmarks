@@ -88,6 +88,19 @@ and numpy's BLAS (threadpoolctl).
   still reads it. Five parametric rows of Table 4.1 were the fastest of three replicate
   runs whose files (`results/repl/`) were never committed, so the submitted tables can
   only be regenerated approximately from here.
+- `results/thesis-pr3524/`, `results/thesis-reassoc/`, `results/thesis-scaling-ra/`: the
+  fork with CVXPY #3524, and #3524 applied to the stock backends.
+- `results/thesis-scaling-norewrite/`: diffengine without #3524 (`.venv-thesis`) on the
+  scaled instances of the five problems where #3524 fires (`run_scaling_norewrite.sh`).
+- `results/thesis-final/`: every number and table row of Chapter 4 and Appendix A, written
+  by `thesis_numbers.py` and `thesis_tex.py`.
+
+The thesis tables use the **no-rewrite** baseline: no backend uses #3524. On the five
+problems where it fires, the diffengine rows come from `results/thesis/` (fork 35e81b1, the
+same engine 4f42e05), and CVXPY is 1.9.2 as released. `THESIS_BASELINE=best-of-both`
+reproduces the earlier draft, in which each CVXPY backend got the faster of its times with
+and without #3524 while diffengine always had it.
+
 - `results/supplementary/pr125_ab/`: a warm A/B of SparseDiffEngine #125
   (parameter-free subtree pruning) on cvxpy #3449, Apple M2, 2026-09-19. It is not in
   the thesis. The write-up is in its `results_backends_pr125_summary_20260919.md`; the
