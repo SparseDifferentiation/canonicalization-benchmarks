@@ -41,7 +41,7 @@ ablation switches can isolate it. Pinned builds:
 | C6 | `b7bb765` (= cvxpy #3449 head) | `ConeProg` split: `DiffengineConeProg` carries no parameter tensors. | No switch. |
 | C7 | `35e81b1` | Benchmark-only switches and phase timers (below). | — |
 | C8 | older converter code | Constant matmuls below density 0.05 go to CSR at conversion; `_build_jacobian_csc` drops exact zeros. | **No switch.** The 0.05 routing already sends sparse constants to CSR in both variants. |
-| C9 | #3524 (`6207f12`), on branch `thesis-ablation-pr3524` @ `5c07151` | Matmul chains that end in a parameter-free constant are reassociated so the constant moves toward the leaves (`(A @ B) @ c -> A @ (B @ c)`), keeping intermediates narrow (issue #2205). Fires on UnconstrainedQP, QuantumHilbertMatrix, SDPSegfault1132, OptimalAdvertising, SlowPruning. Measured in `results/thesis-pr3524/` (UnconstrainedQP cold 22.9 s -> 0.016 s). | No switch. Rerun only on the affected problems; see `run_pr3524_rerun.sh`. |
+| C9 | #3524 (`6207f12`), on branch `thesis-ablation-pr3524` @ `5c07151` | Matmul chains that end in a parameter-free constant are reassociated so the constant moves toward the leaves (`(A @ B) @ c -> A @ (B @ c)`), keeping intermediates narrow (issue #2205). Fires on UnconstrainedQP, QuantumHilbertMatrix, SDPSegfault1132, OptimalAdvertising, SlowPruning. Measured in `results/thesis-pr3524/` (UnconstrainedQP cold 22.9 s -> 0.016 s). | No switch. Rerun only on the affected problems; see `run_pr3524_rerun.sh`. The thesis tables leave it out on every backend (`THESIS_BASELINE`, README). |
 
 ## Ablation switches (fork `35e81b1`)
 

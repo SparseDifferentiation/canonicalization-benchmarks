@@ -118,8 +118,11 @@ def cellv(x):
     return f"{v:.2f}" if v >= 0.01 else f"{v:.3f}"
 
 
-# Best-of-both on the size tables, as in Table 4.1: each CVXPY backend gets the faster of its
-# times with and without the #3524 rewrite (thesis-scaling-ra), and s = 1 is Table 4.1's ratio.
+# Size tables on the baseline of Table 4.1 (facts.json "baseline"); s = 1 is Table 4.1's ratio.
+# no-rewrite: on the scaled instances of the five problems where #3524 fires, diffengine comes
+#   from thesis-scaling-norewrite (fork 35e81b1, no #3524) against the stock backends.
+# best-of-both: each CVXPY backend gets the faster of its times with and without #3524
+#   (thesis-scaling-ra).
 def medians(path):
     out = {}
     for r in json.load(open(path))["rows"]:
@@ -134,6 +137,9 @@ MED = {}
 for f in ("scaled25_fork", "scaled25_upstream", "families_fork", "families_upstream"):
     MED.update(medians(RES / f"thesis-scaling/{f}.json"))
 RA = medians(RES / "thesis-scaling-ra/scaled_upstream_ra.json")
+NR = medians(RES / "thesis-scaling-norewrite/scaled_fork.json")
+# UnconstrainedQP at s = 1/2, rerun alone: its first timing overlapped another job.
+NR.update(medians(RES / "thesis-scaling-norewrite/scaled_fork_uqp05_rerun.json"))
 T41 = {ln.split("&")[0].strip(): ln.split("&")[-1].split("$")[0].strip()
        for ln in (HERE / "t41.tex").read_text().splitlines() if "&" in ln}
 
@@ -144,6 +150,11 @@ def best_of_both(cls, s, cell):
     if s == "1":
         return T41.get(nm(cls), cell)
     spec = f"scaled:cls={cls}:s={s}"
+    if F.get("baseline", "no-rewrite") == "no-rewrite":
+        if (spec, "DIFFENGINE") not in NR:
+            return cell
+        best = min(MED[(spec, f"{b}_ND")] for b in ("CPP", "SCIPY", "COO"))
+        return f"{NR[(spec, 'DIFFENGINE')] / best:.4f}"
     if not any(c == spec for c, _ in RA):
         return cell
     best = min(min(MED[(spec, f"{b}_ND")], RA[(spec, f"{b}_ND_RA")])

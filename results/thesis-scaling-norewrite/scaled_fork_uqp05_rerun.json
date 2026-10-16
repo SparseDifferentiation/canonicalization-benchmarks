@@ -1,0 +1,115 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-thesis/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "0.1.0.dev4044+g35e81b129",
+   "sparsediffpy": "0.7.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": "35e81b1296627ba8ee06caf2d79e055287152d7e",
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": "4f42e05",
+   "engine_commit": "4f42e05",
+   "engine_so_sha256": "77ee8cd5550bcc650622eb05a5dabbe247a33b673a6513fba62bb4e036933115",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "DIFFENGINE"
+  ],
+  "reps": 5,
+  "slow_s": 30.0,
+  "slow_reps": 5,
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=0.5",
+   "samples": {
+    "DIFFENGINE": [
+     {
+      "seed": 0,
+      "time": 3.067844624980353,
+      "phases": {
+       "convert": 0.0014377079787664115,
+       "symbolic": 0.14992595900548622,
+       "numeric": 2.913765584002249,
+       "assemble": 0.0002639999729581177,
+       "format": 0.00024641695199534297
+      }
+     },
+     {
+      "seed": 1,
+      "time": 3.0977982499753125,
+      "phases": {
+       "convert": 0.0013803329784423113,
+       "symbolic": 0.14824408298591152,
+       "numeric": 2.945562709006481,
+       "assemble": 0.0002804580144584179,
+       "format": 0.00023845804389566183
+      }
+     },
+     {
+      "seed": 2,
+      "time": 3.071898083027918,
+      "phases": {
+       "convert": 0.0013908750261180103,
+       "symbolic": 0.1490208330214955,
+       "numeric": 2.918809542024974,
+       "assemble": 0.0002835829509422183,
+       "format": 0.000250167038757354
+      }
+     },
+     {
+      "seed": 3,
+      "time": 3.1324459169991314,
+      "phases": {
+       "convert": 0.0014427920104935765,
+       "symbolic": 0.14963800000259653,
+       "numeric": 2.9786502909846604,
+       "assemble": 0.0002639999729581177,
+       "format": 0.0002434590132907033
+      }
+     },
+     {
+      "seed": 4,
+      "time": 3.0745319580310024,
+      "phases": {
+       "convert": 0.0014669999945908785,
+       "symbolic": 0.14896500000031665,
+       "numeric": 2.92147495795507,
+       "assemble": 0.000272915989626199,
+       "format": 0.0002460420364513993
+      }
+     }
+    ]
+   },
+   "status": {},
+   "is_dpp": true,
+   "dims": {
+    "n": 217,
+    "m": 721,
+    "nnz_A": 13319,
+    "nnz_P": 0,
+    "n_vars_user": 18,
+    "n_param_objects": 0,
+    "n_param_entries": 0,
+    "density_A": 0.0851288213374921
+   }
+  }
+ ]
+}
