@@ -153,14 +153,19 @@ for n in ORDER:
                  " \\\\")
 (OUT / "app_ra.tex").write_text("\n".join(lines) + "\n")
 
-# Appendix table without the dense blocks: with, without, ratio (Holm over the 25 problems).
+# Appendix table without the dense blocks: with, without, ratio (Holm over the 25 problems),
+# then the ratio to the best CVXPY backend with and without them.
 nd_adj = dict(zip(SUITE, ts.holm([ts.mwu(t("cold", n, "DE_NODENSE"), t("cold", n, "DIFFENGINE"))
                                   for n in SUITE])))
+by_name = {r["name"]: r for r in recs}
 lines = []
 for n in ORDER:
     a_, b_ = t("cold", n, "DE_NODENSE"), t("cold", n, "DIFFENGINE")
+    r = by_name[n]
+    best = med(r["back"][r["best"]][1])
     star = "$^{*}$" if nd_adj[n] < .05 else ""
-    lines.append(f"{nm(n)} & {cell(*ms(b_))} & {cell(*ms(a_))} & {med(a_) / med(b_):.2f}{star} \\\\")
+    lines.append(f"{nm(n)} & {cell(*ms(b_))} & {cell(*ms(a_))} & {med(a_) / med(b_):.2f}{star}"
+                 f" & {med(b_) / best:.2f} & {med(a_) / best:.2f} \\\\")
 (OUT / "app_nodense.tex").write_text("\n".join(lines) + "\n")
 
 # ---- Phases --------------------------------------------------------------------------------
