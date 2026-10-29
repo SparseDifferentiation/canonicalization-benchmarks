@@ -1,0 +1,1382 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-thesis/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "0.1.0.dev4044+g35e81b129",
+   "sparsediffpy": "0.7.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": "35e81b1296627ba8ee06caf2d79e055287152d7e",
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": "4f42e05",
+   "engine_commit": "4f42e05",
+   "engine_so_sha256": "77ee8cd5550bcc650622eb05a5dabbe247a33b673a6513fba62bb4e036933115",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "DIFFENGINE",
+   "DE_NODENSE"
+  ],
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:density=0.01",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.01",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 26.3125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.01",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 26.40625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:density=0.02",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.02",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 43.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.02",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 43.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:density=0.05",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.05",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1096.28125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.05",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 102.078125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:density=0.1",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.1",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1109.46875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.1",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 200.609375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:density=0.2",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.2",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1168.375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.2",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 404.828125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:density=0.5",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.5",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1258.96875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=LeastSquares:density=0.5",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 887.390625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:density=0.01",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.01",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 30.546875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.01",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 30.484375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:density=0.02",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.02",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 47.203125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.02",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 47.265625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:density=0.05",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.05",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1075.640625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.05",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 102.359375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:density=0.1",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.1",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1077.921875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.1",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 190.15625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:density=0.2",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.2",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1134.875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.2",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 393.6875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:density=0.5",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.5",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1232.546875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=HuberRegression:density=0.5",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 877.609375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:density=0.01",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.01",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 43.5625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.01",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 43.53125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:density=0.02",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.02",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 67.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.02",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 67.703125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:density=0.05",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.05",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1721.984375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.05",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 140.8125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:density=0.1",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.1",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1723.171875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.1",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 258.09375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:density=0.2",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.2",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1776.578125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.2",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 508.3125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:density=0.5",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.5",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1866.765625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SVMWithL1Regularization:density=0.5",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1169.875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:density=0.01",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.01",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 257.765625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.01",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 316.515625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:density=0.02",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.02",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 276.765625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.02",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 336.9375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:density=0.05",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.05",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1332.984375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.05",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 405.0,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:density=0.1",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.1",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1337.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.1",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 508.828125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:density=0.2",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.2",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1371.984375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.2",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 680.546875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:density=0.5",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.5",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1469.765625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SimpleQPBenchmark:density=0.5",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1191.953125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:density=0.01",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.01",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 72.609375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.01",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 73.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:density=0.02",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.02",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 82.578125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.02",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 82.828125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:density=0.05",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.05",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 597.390625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.05",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 108.609375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:density=0.1",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.1",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 612.671875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.1",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 155.71875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:density=0.2",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.2",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 631.796875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.2",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 256.296875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:density=0.5",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.5",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 676.296875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=FactorCovarianceModel:density=0.5",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 503.875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:density=0.01",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.01",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 0.0,
+     "floor": true,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.01",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 0.0,
+     "floor": true,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:density=0.02",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.02",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1.40625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.02",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1.359375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:density=0.05",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.05",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 328.90625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.05",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 17.46875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:density=0.1",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.1",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 331.328125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.1",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 33.90625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:density=0.2",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.2",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 351.640625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.2",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 78.375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:density=0.5",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.5",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 360.796875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=Yitzhaki:density=0.5",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 109.96875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:density=0.01",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.01",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1073.9375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.01",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1073.921875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:density=0.02",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.02",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1076.578125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.02",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1078.421875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:density=0.05",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.05",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1081.609375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.05",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1082.96875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:density=0.1",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.1",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1089.765625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.1",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1089.796875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:density=0.2",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.2",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1102.09375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.2",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1102.171875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:density=0.5",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.5",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 1120.453125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "scaled:cls=SemidefiniteProgramming:density=0.5",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 1120.375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.01:seed=0",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.01:seed=0",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 3.015625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.01:seed=0",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 2.96875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.02:seed=0",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.02:seed=0",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 5.28125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.02:seed=0",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 5.296875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.05:seed=0",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.05:seed=0",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 14.84375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.05:seed=0",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 14.765625,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.1:seed=0",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.1:seed=0",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 159.84375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.1:seed=0",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 33.28125,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.2:seed=0",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.2:seed=0",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 171.25,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.2:seed=0",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 61.9375,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:density=0.5:seed=0",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.5:seed=0",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 182.546875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    },
+    "DE_NODENSE": {
+     "module": "extra",
+     "class": "lasso:variant=free:n=1000:density=0.5:seed=0",
+     "kind": "cold",
+     "target": "DE_NODENSE",
+     "delta_mb": 129.1875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  }
+ ]
+}

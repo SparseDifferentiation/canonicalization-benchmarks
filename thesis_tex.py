@@ -3,10 +3,13 @@
 Usage: python thesis_tex.py   (after thesis_numbers.py)
 """
 import json
+import os
 import re
+import sys
 from pathlib import Path
 
-HERE = Path(__file__).parent / "results" / "thesis-final"
+N30 = os.environ.get("THESIS_RESULTS") == "n30"
+HERE = Path(__file__).parent / "results" / ("thesis-n30-final" if N30 else "thesis-final")
 F = json.load(open(HERE / "facts.json"))
 RES = Path(__file__).parent / "results"
 NAME = {"CVaRBenchmark": "CVaR", "ConeMatrixStuffingBench": "ConeMatrixStuffing",
@@ -68,7 +71,7 @@ def arow(lab, ref, k, n):
 write("ablation.tex", [
     "\\multicolumn{6}{l}{\\textit{First canonicalization, $25$ problems}} \\\\",
     arow("no dense blocks", "\\texttt{diffengine}", "nodense_cold", 25),
-    arow("fully sparse", "\\texttt{diffengine}", "fullycsr_cold", 25),
+    *([] if N30 else [arow("fully sparse", "\\texttt{diffengine}", "fullycsr_cold", 25)]),
     arow("no dense blocks", "best \\texttt{CVXPY}", "nodense_vs_best", 25),
     "\\addlinespace",
     "\\multicolumn{6}{l}{\\textit{Re-solve, $7$ \\ac{DPP} problems}} \\\\",
@@ -96,6 +99,9 @@ for p in ORDER:
     mx = re.sub(r"\{-0*(\d+)\}", r"{-\1}", mx)
     lines.append(f"{p} & {st(v['first'])} & {st(v['update'])} & {v['passed']}/{v['n']} & {mx} \\\\")
 write("app_verify.tex", lines)
+if N30:  # the size and density tables are figures now (thesis_figures_n30.py)
+    print("ok")
+    sys.exit()
 
 
 # Scaling tables, parsed from the results repo's own summary.

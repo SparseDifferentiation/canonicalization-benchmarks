@@ -36,8 +36,10 @@ import run_backend_benchmarks as rbb
 # exactly that many times (default once), so a change in the suite source fails loudly.
 RULES = {
     "CVaRBenchmark": [("np.random.randn(131072, 192)", "np.random.randn(int(131072 * _S), 192)", 2)],
-    "FactorCovarianceModel": [("n = 25000", "n = int(25000 * _S)")],
-    "Yitzhaki": [("T = 300", "T = int(round(300 * math.sqrt(_S)))")],
+    "FactorCovarianceModel": [("n = 25000", "n = int(25000 * _S)"),
+                              ("F = np.random.randn(n, m)", "F = _mask(np.random.randn(n, m))")],
+    "Yitzhaki": [("T = 300", "T = int(round(300 * math.sqrt(_S)))"),
+                 ("all_pairs_ret_diff = D @ w", "all_pairs_ret_diff = _mask(D) @ w")],
     "Murray": [("T = 700", "T = int(round(700 * math.sqrt(_S)))")],
     "Cajas": [("T = 800", "T = int(round(800 * math.sqrt(_S)))")],
     "ConvexPlasticity": [("deps_dummy = np.full((4000, 4), particular_deps)",
@@ -56,7 +58,10 @@ RULES = {
     "OptimalAdvertising": [("n = 1000", "n = int(1000 * _S)")],
     "QuantumHilbertMatrix": [("N = 3  # number of qubits", "N = {0.5: 2, 1: 3, 2: 4}[_S]")],
     "SDPSegfault1132Benchmark": [("n = 100\n", "n = int(round(100 * _S ** (1 / 3)))\n")],
-    "SemidefiniteProgramming": [("n = 200", "n = int(round(200 * math.sqrt(_S)))")],
+    "SemidefiniteProgramming": [("n = 200", "n = int(round(200 * math.sqrt(_S)))"),
+                                ("C = np.random.randn(n, n)", "C = _mask(np.random.randn(n, n))"),
+                                ("A.append(np.random.randn(n, n))",
+                                 "A.append(_mask(np.random.randn(n, n)))")],
     "SimpleLPBenchmark": [("n = int(1e7)", "n = int(1e7 * _S)")],
     "SimpleFullyParametrizedLPBenchmark": [("n = int(1e6)", "n = int(1e6 * _S)")],
     "SimpleScalarParametrizedLPBenchmark": [("n = int(2e6)", "n = int(2e6 * _S)")],
@@ -79,7 +84,8 @@ RULES = {
 # The density knob: the data matrix is multiplied by a 0/1 mask (kept as a dense numpy
 # array, as in the lasso grid), drawn from its own generator so the data are unchanged.
 DENSITY_PROBLEMS = ("LeastSquares", "HuberRegression", "SVMWithL1Regularization",
-                    "SimpleQPBenchmark")
+                    "SimpleQPBenchmark", "FactorCovarianceModel", "Yitzhaki",
+                    "SemidefiniteProgramming")
 
 
 def _suite():
@@ -128,4 +134,16 @@ FAMILY_EXTRA = ([f"scaled:cls={c}:s={s}" for c in FAMILIES10 for s in (0.25, 4)]
                 + [f"lasso:variant=free:n={n}:seed=0" for n in (250, 500, 1000, 2000, 4000)])
 DENSITIES = (0.01, 0.05, 0.2, 0.5)
 DENSITY = [f"scaled:cls={c}:density={d}" for c in DENSITY_PROBLEMS for d in DENSITIES]
-SETS = {"scaled25": SCALED25, "families": FAMILY_EXTRA, "density": DENSITY}
+# The final grid (30 runs): every problem at every size, and the density sweep on every
+# problem whose data matrix is a dense array, plus lasso. QuantumHilbertMatrix has no
+# qubit count for s = 1/4 or 4. Lasso keeps nnz(A) proportional to s: n = 1000 sqrt(s).
+GRID_S = (0.25, 0.5, 2, 4)
+QUBITS_S = (0.5, 2)
+GRID25 = ([f"scaled:cls={c}:s={s}" for c in ALL25
+           for s in (QUBITS_S if c == "QuantumHilbertMatrix" else GRID_S)]
+          + [f"lasso:variant=free:n={round(1000 * math.sqrt(s))}:seed=0" for s in (*GRID_S, 1)])
+GRID_DENSITIES = (0.01, 0.02, 0.05, 0.1, 0.2, 0.5)
+DENSITY8 = ([f"scaled:cls={c}:density={d}" for c in DENSITY_PROBLEMS for d in GRID_DENSITIES]
+            + [f"lasso:variant=free:n=1000:density={d}:seed=0" for d in GRID_DENSITIES])
+SETS = {"scaled25": SCALED25, "families": FAMILY_EXTRA, "density": DENSITY,
+        "grid25": GRID25, "density8": DENSITY8}

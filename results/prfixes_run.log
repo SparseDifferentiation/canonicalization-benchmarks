@@ -1,0 +1,18 @@
+[verify] UnconstrainedQP
+[verify] ConvexPlasticity
+[verify] OptimalAdvertising
+[cold] UnconstrainedQP
+[cold] ConvexPlasticity
+[cold] OptimalAdvertising
+[memory cold] UnconstrainedQP
+[memory cold] ConvexPlasticity
+[memory cold] OptimalAdvertising
+[verify] UnconstrainedQP
+[cold] UnconstrainedQP
+[memory cold] UnconstrainedQP
+[verify] OptimalAdvertising
+[cold] OptimalAdvertising
+[memory cold] OptimalAdvertising
+[verify] ConvexPlasticity
+[cold] ConvexPlasticity
+[memory cold] ConvexPlasticity
