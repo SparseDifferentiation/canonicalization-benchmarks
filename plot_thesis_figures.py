@@ -17,6 +17,7 @@ Usage: python plot_thesis_figures.py [--thesis]
 from __future__ import annotations
 
 import json
+import os
 import math
 import sys
 from pathlib import Path
@@ -34,7 +35,9 @@ from plot_sparsity_correlations import (  # noqa: E402
 from run_backend_benchmarks import _parse_table  # noqa: E402
 
 RESULTS = HERE / "results" / "v1-submission"  # single-run data of the submitted thesis
-FINAL_PROFILES = HERE / "results" / "thesis-final" / "profile_data.json"
+FINAL_PROFILES = HERE / "results" / (
+    "thesis-n30-final" if os.environ.get("THESIS_RESULTS") == "n30" else "thesis-final"
+) / "profile_data.json"
 PLOTS = HERE / "results" / "plots"
 REPL_DIR = RESULTS / "repl"
 BIGPARAM_TXT = RESULTS / "results_backends_upstream192_nodpp_20260808_bigparam.txt"

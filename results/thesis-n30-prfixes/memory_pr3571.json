@@ -1,0 +1,54 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-thesis-quad/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "1.10.0.dev125+g3369771a5",
+   "sparsediffpy": "0.7.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": null,
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": "4f42e05",
+   "engine_commit": "4f42e05",
+   "engine_so_sha256": "77ee8cd5550bcc650622eb05a5dabbe247a33b673a6513fba62bb4e036933115",
+   "numpy_blas": []
+  },
+  "kind": "cold",
+  "targets": [
+   "DIFFENGINE"
+  ],
+  "iters": 5
+ },
+ "rows": [
+  {
+   "module": "high_dim_convex_plasticity",
+   "class": "ConvexPlasticity",
+   "targets": {
+    "DIFFENGINE": {
+     "module": "high_dim_convex_plasticity",
+     "class": "ConvexPlasticity",
+     "kind": "cold",
+     "target": "DIFFENGINE",
+     "delta_mb": 592.171875,
+     "floor": false,
+     "engine_peak_mb": null,
+     "engine_pre_live_mb": null,
+     "done": true
+    }
+   }
+  }
+ ]
+}

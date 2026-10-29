@@ -12,6 +12,10 @@ Baseline (THESIS_BASELINE):
   best-of-both: each CVXPY backend gets the faster of its times with and without #3524, and
       diffengine always has it (the earlier draft).
 
+THESIS_RESULTS=n30 reads only results/thesis-n30 (30 runs, every backend without #3524, the
+suite at s = 1; the grid and density files are left to thesis_figures_n30.py) and writes to
+results/thesis-n30-final/.
+
 Usage: .venv-thesis-pr3524/bin/python thesis_numbers.py
 """
 import json
@@ -25,11 +29,18 @@ import numpy as np
 sys.path.insert(0, ".")
 import thesis_stats as ts  # noqa: E402
 
-OUT = Path(__file__).parent / "results" / "thesis-final"
+N30 = os.environ.get("THESIS_RESULTS") == "n30"
+OUT = Path(__file__).parent / "results" / ("thesis-n30-final" if N30 else "thesis-final")
 OUT.mkdir(exist_ok=True)
 T, P, R = "results/thesis", "results/thesis-pr3524", "results/thesis-reassoc"
+N = "results/thesis-n30"
 G = lambda d, pat: sorted(str(p) for p in Path(d).glob(pat))  # noqa: E731
-FILES = (G(T, "verify_*.json") + G(T, "cold_*.json") + G(T, "warm_*.json") +
+# THESIS_DE_DIR overlays the diffengine re-solve rows (warm, non-DPP warm) from a run of the
+# fork without CVXPY #3525 (results/thesis-n30-no3525), which reorders the rows of A at every
+# re-solve; later files replace a target's samples. The cold rows keep the main run.
+DE = os.environ.get("THESIS_DE_DIR")
+DE_FILES = G(DE, "*warm_fork.json") if DE else []
+FILES = [f for f in G(N, "*.json") if "grid25" not in f and "density8" not in f] + DE_FILES if N30 else (G(T, "verify_*.json") + G(T, "cold_*.json") + G(T, "warm_*.json") +
          G(T, "nondpp_*.json") + G(T, "memory_*.json") +
          G(P, "verify_*.json") + G(P, "cold_*.json") + G(P, "warm_*.json") +
          G(P, "memory_*.json") + G(R, "*.json"))
@@ -40,7 +51,7 @@ assert BASELINE in ("no-rewrite", "best-of-both"), BASELINE
 # The five problems where #3524 rewrites a chain (CHANGES.md, C9).
 REWRITTEN = ["UnconstrainedQP", "QuantumHilbertMatrix", "SlowPruningBenchmark",
              "SDPSegfault1132Benchmark", "OptimalAdvertising"]
-if BASELINE == "no-rewrite":
+if BASELINE == "no-rewrite" and not N30:
     TF = G(T, "verify_*.json") + G(T, "cold_*.json") + G(T, "memory_*.json")
     rowsT, _ = ts.load(TF)
     memT, verT = ts.load_aux(TF)
@@ -285,7 +296,8 @@ def parametric(n):
 abl = {}
 abl["nodense_cold"] = suite_contrast([(n, t("cold", n, "DE_NODENSE"),
                                        t("cold", n, "DIFFENGINE")) for n in SUITE])
-abl["fullycsr_cold"] = suite_contrast(
+if not N30:
+  abl["fullycsr_cold"] = suite_contrast(
     [(n, t("cold", n, "DE_NODENSE_EVAL"), t("cold", n, "DE_EVAL")) if parametric(n)
      else (n, t("cold", n, "DE_NODENSE"), t("cold", n, "DIFFENGINE")) for n in SUITE])
 best_back = {r["name"]: r["back"][r["best"]][1] for r in recs}
@@ -357,7 +369,8 @@ for p in par:
 F["breakeven"] = be
 F["coo_vs_cpp_first"] = sum(1 for p in par if p["first"]["CPP_ND"] is None
                             or p["first"]["COO_ND"] < p["first"]["CPP_ND"])
-F["uqp_old_engine"] = ms(ts.times(ts.load([T + "/cold_fork.json"])[0][("cold", "UnconstrainedQP")],
+if not N30:
+  F["uqp_old_engine"] = ms(ts.times(ts.load([T + "/cold_fork.json"])[0][("cold", "UnconstrainedQP")],
                                   "DIFFENGINE"))
 short = {k: v for k, v in rows.items() if any(0 < len(x) < 20 for x in
                                               (s for s in v["samples"].values()))}
@@ -380,6 +393,6 @@ for n in DPP7:
     it = float(np.mean([x for s in ss for x in s["iters"]]))
     F["warm_phase"][nm(n)] = {k: v / cnt / it * 100 for k, v in tot.items()} | {"ms": it * 1e3}
 json.dump(F, open(OUT / "facts.json", "w"), indent=1, default=float)
-print(json.dumps({k: F[k] for k in ("profile", "breakeven", "coo_vs_cpp_first",
+print(json.dumps({k: F.get(k) for k in ("profile", "breakeven", "coo_vs_cpp_first",
                                     "uqp_old_engine", "short_reps", "warm_phase")},
                  indent=1, default=float))

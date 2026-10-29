@@ -1,0 +1,7 @@
+[warm] ParamSmallMatrixStuffing
+[warm] ParamConeMatrixStuffing
+[warm] SimpleFullyParametrizedLPBenchmark
+[warm] ParametrizedQPBenchmark
+[warm] SimpleScalarParametrizedLPBenchmark
+[warm] FactorCovarianceModel
+[warm] SVMWithL1Regularization

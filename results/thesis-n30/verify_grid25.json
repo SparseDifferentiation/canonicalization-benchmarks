@@ -1,0 +1,8357 @@
+{
+ "meta": {
+  "environment": {
+   "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+   "machine": "arm64",
+   "python": "3.13.5",
+   "executable": "/Users/willizz/Documents/diffengine-canonicalization-benchmarks/.venv-thesis/bin/python",
+   "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+   },
+   "cpu": "Apple M2",
+   "cvxpy": "0.1.0.dev4044+g35e81b129",
+   "sparsediffpy": "0.7.0",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "clarabel": "0.11.1",
+   "cvxpy_git": "35e81b1296627ba8ee06caf2d79e055287152d7e",
+   "numpy_blas_build": "accelerate",
+   "engine_blas": [
+    "/System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate"
+   ],
+   "engine_built_commit": "4f42e05",
+   "engine_commit": "4f42e05",
+   "engine_so_sha256": "77ee8cd5550bcc650622eb05a5dabbe247a33b673a6513fba62bb4e036933115",
+   "numpy_blas": []
+  }
+ },
+ "rows": [
+  {
+   "module": "extra",
+   "class": "scaled:cls=CVaRBenchmark:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=CVaRBenchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=CVaRBenchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=CVaRBenchmark:s=4",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": "ERR MEMCAP(>20000MB)",
+    "first:de_cached": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY": "ERR MEMCAP(>20000MB)",
+    "first:COO": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:COO_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE_EVAL": "ERR MEMCAP(>20000MB)"
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference_worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Cajas:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Cajas:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Cajas:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Cajas:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ConeMatrixStuffingBench:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 7.389644451905042e-13,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ConeMatrixStuffingBench:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 1.0089706847793423e-12,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ConeMatrixStuffingBench:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 2.0463630789890885e-12,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ConeMatrixStuffingBench:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 3.240074875066057e-12,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ConvexPlasticity:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ConvexPlasticity:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ConvexPlasticity:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ConvexPlasticity:s=4",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 5.551115123125783e-17,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=FactorCovarianceModel:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=HuberRegression:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=LeastSquares:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Murray:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Murray:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Murray:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Murray:s=4",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": "ERR MEMCAP(>20000MB)",
+    "first:de_cached": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY": "ERR MEMCAP(>20000MB)",
+    "first:COO": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:COO_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE_EVAL": "ERR MEMCAP(>20000MB)"
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference_worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 3
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 3
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 3
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 3
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 1
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 1
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=OptimalAdvertising:s=4",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": {
+     "ok": false,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     },
+     "nan_mismatch": {
+      "b": 1
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParamConeMatrixStuffing:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 1.7763568394002505e-14,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 2.1316282072803006e-14,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParamConeMatrixStuffing:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 1.9539925233402755e-14,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 2.4868995751603507e-14,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParamConeMatrixStuffing:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 5.684341886080802e-14,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 5.684341886080802e-14,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParamConeMatrixStuffing:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 7.815970093361102e-14,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 8.526512829121202e-14,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParamSmallMatrixStuffing:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 2.1316282072803006e-14,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 1.5987211554602254e-14,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParamSmallMatrixStuffing:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 3.552713678800501e-14,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 2.842170943040401e-14,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParamSmallMatrixStuffing:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 7.815970093361102e-14,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 6.750155989720952e-14,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParamSmallMatrixStuffing:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 1.4921397450962104e-13,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 8.526512829121202e-14,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParametrizedQPBenchmark:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParametrizedQPBenchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParametrizedQPBenchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=ParametrizedQPBenchmark:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=QuantumHilbertMatrix:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=QuantumHilbertMatrix:s=2",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": "ERR MEMCAP(>20000MB)",
+    "first:de_cached": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY": "ERR MEMCAP(>20000MB)",
+    "first:COO": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:COO_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE_EVAL": "ERR MEMCAP(>20000MB)"
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference_worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SDPSegfault1132Benchmark:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 2.220446049250313e-16,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SDPSegfault1132Benchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 2.7755575615628914e-17,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 2.7755575615628914e-17,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SDPSegfault1132Benchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": "ERR MEMCAP(>20000MB)"
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SDPSegfault1132Benchmark:s=4",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": "ERR MEMCAP(>20000MB)",
+    "first:de_cached": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY": "ERR MEMCAP(>20000MB)",
+    "first:COO": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:COO_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE_EVAL": "ERR MEMCAP(>20000MB)"
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference_worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SVMWithL1Regularization:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": "ERR MEMCAP(>20000MB)",
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": "ERR MEMCAP(>20000MB)"
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SemidefiniteProgramming:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleFullyParametrizedLPBenchmark:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleFullyParametrizedLPBenchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleFullyParametrizedLPBenchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleFullyParametrizedLPBenchmark:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleLPBenchmark:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleLPBenchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleLPBenchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleLPBenchmark:s=4",
+   "checks": {
+    "first:DIFFENGINE": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE": "ERR MEMCAP(>20000MB)",
+    "first:de_cached": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:de_cached_nodense_rebuild": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY": "ERR MEMCAP(>20000MB)",
+    "first:COO": "ERR MEMCAP(>20000MB)",
+    "first:SCIPY_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:COO_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_EVAL": "ERR MEMCAP(>20000MB)",
+    "first:DE_NODENSE_EVAL": "ERR MEMCAP(>20000MB)"
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference_worker": "MEMCAP(>20000MB)",
+   "reference": null,
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleQPBenchmark:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleScalarParametrizedLPBenchmark:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleScalarParametrizedLPBenchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleScalarParametrizedLPBenchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SimpleScalarParametrizedLPBenchmark:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:de_cached_nodense_rebuild": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:DE_NODENSE_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:SCIPY_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "update:COO_EVAL": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP_EVAL",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SlowPruningBenchmark:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SmallMatrixStuffing:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 3.836930773104541e-13,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SmallMatrixStuffing:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 7.105427357601002e-13,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SmallMatrixStuffing:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 1.4210854715202004e-12,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=SmallMatrixStuffing:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 1.9895196601282805e-12,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=TvInpainting:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=TvInpainting:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=TvInpainting:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=TvInpainting:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=UnconstrainedQP:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "worker": "MEMCAP(>20000MB)",
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:s=0.25",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:s=0.5",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:s=2",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "scaled:cls=Yitzhaki:s=4",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=500:seed=0",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=707:seed=0",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1414:seed=0",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=2000:seed=0",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  },
+  {
+   "module": "extra",
+   "class": "lasso:variant=free:n=1000:seed=0",
+   "checks": {
+    "first:DIFFENGINE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:DE_NODENSE": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:SCIPY": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    },
+    "first:COO": {
+     "ok": true,
+     "max_abs_err": {
+      "P": 0.0,
+      "A": 0.0,
+      "c": 0.0,
+      "b": 0.0
+     }
+    }
+   },
+   "reference": "CPP",
+   "done": true
+  }
+ ]
+}

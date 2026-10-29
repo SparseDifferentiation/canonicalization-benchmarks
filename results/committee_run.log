@@ -1,0 +1,20 @@
+[warm] ParamSmallMatrixStuffing
+[warm] ParamConeMatrixStuffing
+[warm] SimpleFullyParametrizedLPBenchmark
+[warm] ParametrizedQPBenchmark
+[warm] SimpleScalarParametrizedLPBenchmark
+[warm] FactorCovarianceModel
+[warm] SVMWithL1Regularization
+[warm] ParamSmallMatrixStuffing
+[warm] ParamConeMatrixStuffing
+[warm] SimpleFullyParametrizedLPBenchmark
+  worker SimpleFullyParametrizedLPBenchmark warm dpp,dpp_coo,dpp_scipy 0: MEMCAP(>20000MB)
+  worker SimpleFullyParametrizedLPBenchmark warm dpp 0: MEMCAP(>20000MB)
+  worker SimpleFullyParametrizedLPBenchmark warm dpp_scipy 0: MEMCAP(>20000MB)
+[warm] ParametrizedQPBenchmark
+  worker ParametrizedQPBenchmark warm dpp,dpp_coo,dpp_scipy 0: MEMCAP(>20000MB)
+  worker ParametrizedQPBenchmark warm dpp 0: MEMCAP(>20000MB)
+  worker ParametrizedQPBenchmark warm dpp_scipy 0: TIMEOUT(>1800s)
+[warm] SimpleScalarParametrizedLPBenchmark
+[warm] FactorCovarianceModel
+[warm] SVMWithL1Regularization

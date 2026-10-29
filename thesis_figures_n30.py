@@ -79,7 +79,8 @@ def cell(row, engine):
     status = row.get("status", {})
     if not len(de):
         st = str(status.get(engine, ""))
-        return {"cap": "CAP" in st.upper() or "TIME" in st.upper(), "status": st}
+        return {"cap": "CAP" in st.upper() or "TIME" in st.upper(), "status": st,
+                "all_cap": not base}
     if not base:
         return {"cap": False, "status": "no stock"}
     best = min(base, key=lambda t: np.median(base[t]))
@@ -172,8 +173,8 @@ def _style(ax, grid_axis="x"):
     ax.set_axisbelow(True)
 
 
-def _ratio_axis(ax, lo, hi, axis="x"):
-    ticks = [t for t in (1 / 64, 1 / 32, 1 / 16, 1 / 8, 1 / 4, 1 / 2, 1, 2, 4, 8, 16, 32, 64) if lo <= t <= hi]
+def _ratio_axis(ax, lo, hi, axis="x", step=1):
+    ticks = [2.0 ** k for k in range(-6, 7, step) if lo <= 2.0 ** k <= hi]
     lab = [f"1/{round(1 / t)}" if t < 1 else f"{t:g}" for t in ticks]
     if axis == "x":
         ax.set_xscale("log", base=2)
@@ -216,7 +217,7 @@ def fig_forest(plt, F):
          Line2D([], [], color=INK2, marker="D", markersize=4.2, label="without dense blocks"),
          Line2D([], [], color=MUTED, marker="o", markersize=5, markerfacecolor="white",
                 linestyle="none", label="not significant")]
-    ax.legend(handles=h, loc="lower right", fontsize=7.5, frameon=True, framealpha=1,
+    ax.legend(handles=h, loc="upper right", fontsize=7.5, frameon=True, framealpha=1,
               edgecolor=GRID, fancybox=False)
     return fig
 
@@ -251,7 +252,8 @@ def fig_ablation(plt, F):
         ax.axvline(g, color=INK, linestyle=(0, (3, 2)), linewidth=1)
         ax.text(0.98, 0.97, f"geometric mean {g:.2f}", transform=ax.transAxes, fontsize=7,
                 color=INK, va="top", ha="right")
-        _ratio_axis(ax, 1 / 64, 64)
+        _ratio_axis(ax, 1 / 64, 64, step=2)
+        ax.yaxis.set_major_locator(__import__("matplotlib").ticker.MaxNLocator(integer=True))
         ax.set_xlabel(f"> 1: the dense blocks help\n{tag}", fontsize=8, color=INK2,
                       linespacing=1.6)
         ax.set_ylabel("problems", fontsize=8, color=INK2)
@@ -263,8 +265,49 @@ def _diverging():
     return LinearSegmentedColormap.from_list("bd", [BLUE, MID, RED])
 
 
+SLOWER = ("UnconstrainedQP", "ConvexPlasticity", "OptimalAdvertising", "SDPSegfault1132")
+SLOWER_COLORS = ("#2a78d6", "#eb6834", "#1baf7a", "#eda100")  # categorical slots 1-4
+DENSITY_SHOWN = ("LeastSquares", "SVMWithL1Regularization", "HuberRegression",
+                 "SemidefiniteProgramming")
+
+
 def fig_size(plt, F):
-    """Figure C: ratio over problems x sizes."""
+    """Figure C: ratio against the size; the four slower problems highlighted."""
+    fams = F["families"] + [LASSO]
+    fig, ax = plt.subplots(figsize=(TEXTWIDTH_IN, 3.4))
+    _style(ax, "both")
+
+    def series(f):
+        return [(s, F["size"][s][f]["ratio"]) for s in SIZES
+                if "ratio" in (F["size"][s].get(f) or {})]
+
+    for f in fams:
+        if nm(f) in SLOWER:
+            continue
+        pts = series(f)
+        ax.plot(*zip(*pts), color=MUTED, linewidth=0.9, alpha=0.6, zorder=2)
+    for f, color in zip(SLOWER, SLOWER_COLORS):
+        pts = series(next(g for g in fams if nm(g) == f))
+        ax.plot(*zip(*pts), color=color, linewidth=2, marker="o", markersize=4, zorder=3)
+        x, y = pts[-1]
+        ax.annotate(f, (x, y), xytext=(6, 0), textcoords="offset points", fontsize=7.5,
+                    color=INK, va="center")
+    ax.set_xscale("log", base=2)
+    ax.set_xticks(SIZES, ["1/4", "1/2", "1", "2", "4"])
+    ax.xaxis.set_minor_locator(__import__("matplotlib").ticker.NullLocator())
+    ax.set_xlim(0.22, 9)
+    _ratio_axis(ax, 1 / 8, 32, axis="y")
+    ax.set_xlabel("size factor $s$", fontsize=8.5, color=INK2)
+    ax.set_ylabel("diffengine / best CVXPY backend", fontsize=8.5, color=INK2)
+    from matplotlib.lines import Line2D
+    ax.legend(handles=[Line2D([], [], color=MUTED, linewidth=0.9,
+                              label="the other 22 problems")],
+              loc="upper left", fontsize=7.5, frameon=False)
+    return fig
+
+
+def fig_size_heatmap(plt, F):
+    """Former Figure C: ratio over problems x sizes."""
     fams = F["families"] + [LASSO]
     base = F["size"][1]
     order = sorted(fams, key=lambda f: base[f]["ratio"] if "ratio" in (base[f] or {}) else 1e9)
@@ -285,7 +328,7 @@ def fig_size(plt, F):
                 ax.text(j, i, txt, ha="center", va="center", fontsize=7,
                         color="white" if abs(M[i, j]) > 2.6 else INK)
             else:
-                lab = "cap" if c and c.get("cap") else "n/a"
+                lab = ("all cap" if c.get("all_cap") else "cap") if c and c.get("cap") else "n/a"
                 ax.add_patch(__import__("matplotlib").patches.Rectangle(
                     (j - 0.5, i - 0.5), 1, 1, facecolor="white", edgecolor=GRID, hatch="////",
                     linewidth=0))
@@ -306,7 +349,7 @@ def fig_size(plt, F):
 
 def fig_density(plt, F):
     """Figure D: ratio against density, small multiples per problem."""
-    fams = F["density_families"]
+    fams = [f for f in DENSITY_SHOWN if f in F["density_families"]]
     ncol = 4
     nrow = math.ceil(len(fams) / ncol)
     fig, axes = plt.subplots(nrow, ncol, figsize=(TEXTWIDTH_IN, 1.75 * nrow + 0.6),
@@ -328,8 +371,8 @@ def fig_density(plt, F):
                         markeredgewidth=1, zorder=3)
         ax.set_xscale("log")
         ax.set_xticks([0.01, 0.1, 1], ["1%", "10%", "100%"])
-        _ratio_axis(ax, 1 / 16, 8, axis="y")
-        ax.set_title(nm(f), fontsize=8, color=INK, pad=3)
+        _ratio_axis(ax, 1 / 8, 4, axis="y")
+        ax.set_title(nm(f), fontsize=7, color=INK, pad=3)
     for k in range(len(fams), nrow * ncol):
         axes[k // ncol][k % ncol].axis("off")
     fig.supxlabel(r"density $\rho$ of the data matrix (dotted: the 5% sparse threshold)",
@@ -337,10 +380,8 @@ def fig_density(plt, F):
     fig.supylabel("diffengine / best CVXPY backend", fontsize=8, color=INK2)
     from matplotlib.lines import Line2D
     h = [Line2D([], [], color=BLUE, marker="o", markersize=4, label="with dense blocks"),
-         Line2D([], [], color=INK2, marker="D", markersize=3.4, label="without dense blocks"),
-         Line2D([], [], color=MUTED, marker="o", markersize=4, markerfacecolor="white",
-                linestyle="none", label="not significant")]
-    fig.legend(handles=h, loc="upper center", ncol=3, fontsize=7.5, frameon=False,
+         Line2D([], [], color=INK2, marker="D", markersize=3.4, label="without dense blocks")]
+    fig.legend(handles=h, loc="upper center", ncol=2, fontsize=7.5, frameon=False,
                bbox_to_anchor=(0.5, 1.0))
     fig.tight_layout(rect=(0.02, 0.0, 1, 0.93))
     return fig
@@ -371,8 +412,7 @@ def main():
                          "axes.labelcolor": INK2, "figure.facecolor": "white",
                          "savefig.facecolor": "white"})
     PLOTS.mkdir(parents=True, exist_ok=True)
-    for stem, fn in (("forest", fig_forest), ("ablation", fig_ablation), ("size", fig_size),
-                     ("density", fig_density)):
+    for stem, fn in (("size", fig_size), ("density", fig_density)):
         fig = fn(plt, F)
         if stem != "density":
             fig.tight_layout()
